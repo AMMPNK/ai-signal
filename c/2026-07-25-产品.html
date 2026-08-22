@@ -1,0 +1,589 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>产品 · 2026-07-25</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--paper:#fffefb;--ink:#17140f;--ink2:#574f44;--ink3:#9b9387;--hair:#e8e2d7;--hair2:#f2ede4;--red:#b53326;--cream:#f7f3ea}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Songti SC","Noto Serif SC",serif}
+a{color:inherit}
+.mast{text-align:center;padding:28px 20px 0}
+.mast-line{font-size:11px;letter-spacing:4px;color:var(--ink3);text-transform:uppercase;margin-bottom:8px}
+.mast h1{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:44px;letter-spacing:4px}
+.mast h1 a{text-decoration:none}
+.mast .meta{font-size:12.5px;color:var(--ink2);margin-top:10px;padding-bottom:14px}
+.mast .meta b{color:var(--red)}
+.rule{height:3px;background:var(--ink);max-width:1180px;margin:0 auto}
+.nav{position:sticky;top:0;z-index:30;background:rgba(255,254,251,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);display:flex;justify-content:center;align-items:center;gap:2px;padding:9px 10px;flex-wrap:wrap}
+.nav a{font-family:"Songti SC","Noto Serif SC",serif;font-size:15px;color:var(--ink2);padding:6px 15px;text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--red)}
+.nav a.on{color:var(--ink);font-weight:700;border-bottom-color:var(--red)}
+.search-wrap{position:relative;margin-left:14px}
+.search-wrap input{font-family:inherit;font-size:13px;border:1px solid var(--hair);border-radius:18px;padding:6px 14px 6px 32px;width:170px;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239b9387' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E") no-repeat 11px center;outline:none;transition:.2s}
+.search-wrap input:focus{width:230px;border-color:var(--red)}
+.search-res{position:absolute;top:40px;right:0;width:430px;max-height:60vh;overflow-y:auto;background:var(--paper);border:1px solid var(--hair);border-radius:10px;box-shadow:0 8px 30px rgba(80,60,40,.13);padding:8px;display:none;z-index:40}
+.search-res.show{display:block}
+.search-res .sr-h{font-size:11px;color:var(--ink3);padding:6px 10px;letter-spacing:1px}
+.search-res a{display:block;padding:9px 10px;text-decoration:none;border-radius:7px;border-bottom:1px solid var(--hair2)}
+.search-res a:last-child{border:none}
+.search-res a:hover{background:var(--cream)}
+.search-res .srt{font-size:13.5px;color:var(--ink);font-weight:500}
+.search-res .srm{font-size:11px;color:var(--ink3);margin-top:2px}
+.search-res .sr-empty{padding:16px;color:var(--ink3);font-size:13px;text-align:center}
+.page{max-width:1180px;margin:0 auto;padding:0 24px}
+.leads{display:grid;grid-template-columns:1fr 1fr;margin:22px 0 0;border-top:1px solid var(--hair)}
+.lead{padding:28px 32px}
+.lead.l{border-right:1px solid var(--hair)}
+.kick{font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.kick .dot{width:7px;height:7px;border-radius:50%}
+.kick.sk{color:var(--ink2)}.kick.sk .dot{background:var(--ink2)}
+.kick.tk{color:var(--red)}.kick.tk .dot{background:var(--red)}
+.scbig{float:right;font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:40px;line-height:.8;color:var(--hair);margin-left:14px}
+.scbig.tkc{color:#eccfc8}
+.lead h2{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:26px;line-height:1.28;margin-bottom:14px}
+.lead h2 a{text-decoration:none}.lead h2 a:hover{color:var(--red)}
+.why{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;border-left:3px solid var(--red);padding-left:15px;margin-bottom:14px;line-height:1.6}
+.sum{font-size:13.5px;color:var(--ink2);margin-bottom:14px;line-height:1.7}
+.src{font-size:12px;color:var(--ink3);margin-bottom:16px}
+.lead-foot a{font-weight:600;font-size:13.5px;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+.ai-pending{background:var(--cream);border:1px dashed var(--red);border-radius:8px;padding:14px 16px;font-size:12.5px;color:var(--ink2);margin-bottom:16px;line-height:1.6}
+.subs{border-top:1px dotted var(--hair);margin-top:18px;padding-top:14px;list-style:none}
+.subs li{padding:7px 0}.subs a{display:flex;gap:9px;text-decoration:none;align-items:flex-start}
+.subs a:hover .st{color:var(--red)}
+.ss{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:12px;color:var(--ink3);min-width:22px;padding-top:2px}
+.st{font-size:13px;line-height:1.4}
+.archbar{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:18px 24px;margin:28px 0}
+.archbar .lab{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;font-weight:700;letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.archbar .lab .wkbtn{margin-left:auto;font-size:12px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:16px;font-weight:400;font-family:"Noto Sans SC"}
+.archbar .lab .wkbtn:hover{background:var(--red);color:#fff}
+.cals{display:flex;gap:30px;flex-wrap:wrap}
+.calm{}
+.calm .cmh{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:8px;text-align:center}
+.calgrid{display:grid;grid-template-columns:repeat(7,30px);gap:3px}
+.calgrid .wd{font-size:10px;color:var(--ink3);text-align:center;height:18px}
+.calgrid a,.calgrid span{width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:12px;border-radius:6px;text-decoration:none;color:var(--ink)}
+.calgrid a{border:1px solid var(--hair)}
+.calgrid a:hover{border-color:var(--red);background:var(--cream);color:var(--red)}
+.calgrid .today{background:var(--ink);color:#fff}
+.calgrid .blank{border:none}
+.calgrid .noday{color:#d8d2c7;border:1px dashed var(--hair2)}
+.sec-title{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;letter-spacing:3px;color:var(--ink3);text-transform:uppercase;text-align:center;margin:30px 0 18px;position:relative}
+.sec-title span{background:var(--paper);padding:0 16px;position:relative;z-index:1}
+.sec-title::before{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:var(--hair)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--hair)}
+.block{padding:18px 22px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.block-h{display:flex;align-items:baseline;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.bh-cn{font-size:17px;font-weight:700}.bh-en{font-size:10px;letter-spacing:1.5px;color:var(--ink3)}
+.bh-more{margin-left:auto;font-size:11px;color:var(--red);text-decoration:none}.bh-more:hover{text-decoration:underline}
+.block ul{list-style:none}.block li{border-bottom:1px solid var(--hair2)}.block li:last-child{border:none}
+.block li a{display:flex;gap:9px;align-items:flex-start;padding:9px 0;text-decoration:none}
+.block li a:hover .bt{color:var(--red)}
+.bs{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:13px;color:var(--red);min-width:24px;padding-top:1px}
+.bt{font-size:13.5px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.deep{background:var(--ink);color:#f4efe6;border-radius:10px;padding:28px 34px;margin:30px 0;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+.deep a{color:#f4efe6}
+.deep-k{font-size:11px;letter-spacing:3px;color:#d99;margin-bottom:8px}
+.deep h3{font-family:"Songti SC","Noto Serif SC",serif;font-size:24px;font-weight:700;margin-bottom:8px}
+.deep p{color:#bdb5a8;font-size:13.5px}
+.deep-stat{display:flex;gap:14px}
+.dstat{flex:1;background:#221e18;border:1px solid #38322a;border-radius:7px;padding:16px;text-align:center;text-decoration:none;display:block}
+.dstat:hover{border-color:#e0a89a}
+.dstat .n{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:30px;color:#e0a89a}
+.dstat .l{font-size:12px;color:#bdb5a8;margin-top:3px}
+.foot{text-align:center;padding:30px;color:var(--ink3);font-size:11.5px;border-top:1px solid var(--hair)}
+.catpage{max-width:880px;margin:0 auto;padding:24px}
+.catpage .ch{font-family:"Songti SC","Noto Serif SC",serif;font-size:30px;font-weight:900;border-bottom:3px solid var(--ink);padding-bottom:12px;margin-bottom:8px;display:flex;align-items:baseline;gap:12px}
+.catpage .ch .en{font-size:12px;letter-spacing:2px;color:var(--ink3)}
+.catpage .cmeta{font-size:12.5px;color:var(--ink2);margin-bottom:24px}
+.catcard{background:var(--cream);border-radius:10px;padding:22px 26px;margin-bottom:28px}
+.catcard .cck{font-size:11px;letter-spacing:2px;color:var(--red);font-weight:700;text-transform:uppercase;margin-bottom:8px}
+.catcard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:700;line-height:1.35;margin-bottom:10px}
+.catcard h2 a{text-decoration:none}.catcard h2 a:hover{color:var(--red)}
+.catcard .ess{font-family:"Songti SC","Noto Serif SC",serif;font-size:15.5px;border-left:3px solid var(--red);padding-left:14px;margin-bottom:12px;line-height:1.6}
+.catcard .pts{margin:0 0 4px 0;padding-left:18px}
+.catcard .pts li{font-size:13.5px;color:var(--ink2);margin:4px 0;line-height:1.55}
+.crow{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--hair2);align-items:baseline}
+.crow .cn{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:22px;color:var(--red);min-width:42px}
+.crow .cc{flex:1}
+.crow .ct{font-family:"Songti SC","Noto Serif SC",serif;font-size:18px;font-weight:600;text-decoration:none;display:block;line-height:1.4}
+.crow .ct:hover{color:var(--red)}
+.crow .cs{font-size:13.5px;color:var(--ink2);margin-top:6px;line-height:1.65}
+.crow .ctags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.crow .ctag{font-size:11px;color:var(--ink2);border:1px solid var(--hair);padding:2px 9px;border-radius:3px}
+.crow .clink{font-size:12.5px;color:var(--red);text-decoration:none;margin-top:8px;display:inline-block}
+.pager{display:flex;align-items:center;justify-content:center;gap:20px;padding:28px 0 8px}
+.pager button{font-family:inherit;font-size:13px;background:var(--paper);border:1px solid var(--hair);border-radius:20px;padding:7px 18px;cursor:pointer;color:var(--ink)}
+.pager button:hover:not(:disabled){border-color:var(--red);color:var(--red)}
+.pager button:disabled{opacity:.4;cursor:default}
+.pager #pgInfo{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;color:var(--ink2)}
+.rel-tag{position:relative;font-size:11px;color:var(--red);border:1px solid var(--red);border-radius:3px;padding:2px 8px;cursor:default}
+.rel-tag .rel-pop{display:none;position:absolute;left:0;bottom:130%;z-index:50;width:max-content;max-width:320px;background:var(--ink);color:#f4efe6;font-size:11.5px;line-height:1.7;padding:8px 12px;border-radius:7px;box-shadow:0 6px 20px rgba(40,30,20,.3)}
+.rel-tag:hover .rel-pop{display:block}
+.lo-block{margin-top:24px;border-top:1px dashed var(--hair)}
+.lo-block summary{cursor:pointer;padding:14px 0;font-size:13px;color:var(--ink3);font-family:"Songti SC","Noto Serif SC",serif;list-style:none}
+.lo-block summary::-webkit-details-marker{display:none}
+.lo-block summary::before{content:"▸ ";color:var(--red)}
+.lo-block[open] summary::before{content:"▾ "}
+.lo-rows{opacity:.72}
+/* 洞察库 + 文章页 */
+.ilist{max-width:820px;margin:0 auto;padding:24px}
+.icard{background:var(--paper);border:1px solid var(--hair);border-radius:12px;padding:22px 26px;margin-bottom:16px;transition:.15s}
+.icard:hover{border-color:var(--red);box-shadow:0 6px 22px rgba(80,60,40,.08)}
+.icard .ik{font-size:11px;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:6px}
+.icard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:22px;font-weight:700;line-height:1.3;margin-bottom:8px}
+.icard h2 a{text-decoration:none}.icard h2 a:hover{color:var(--red)}
+.icard .im{font-size:12.5px;color:var(--ink3);margin-bottom:10px}
+.icard .idesc{font-size:14px;color:var(--ink2);line-height:1.7}
+.iempty{text-align:center;padding:60px 20px;color:var(--ink3)}
+.article{max-width:720px;margin:0 auto;padding:30px 24px;font-size:16px;line-height:1.9}
+.article .atitle{font-family:"Songti SC","Noto Serif SC",serif;font-size:34px;font-weight:900;line-height:1.25;margin-bottom:14px}
+.article .ameta{font-size:13px;color:var(--ink3);border-bottom:1px solid var(--hair);padding-bottom:18px;margin-bottom:24px}
+.article h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:23px;margin:30px 0 12px;padding-top:8px}
+.article h3{font-size:18px;margin:22px 0 10px;color:var(--ink)}
+.article p{margin-bottom:16px;color:#2a2620}
+.article blockquote{border-left:3px solid var(--red);padding:6px 0 6px 18px;margin:18px 0;font-family:"Songti SC","Noto Serif SC",serif;font-style:normal;color:var(--ink);background:var(--cream);border-radius:0 8px 8px 0;padding:14px 18px}
+.article .aback{display:inline-block;margin-bottom:20px;color:var(--red);text-decoration:none;font-size:13px}
+.wknav{max-width:880px;margin:16px auto 0;padding:10px 16px;background:var(--cream);border-radius:8px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px}
+.wknav-lab{color:var(--ink3);margin-right:4px;font-family:"Songti SC","Noto Serif SC",serif}
+.wknav-item{padding:3px 12px;border:1px solid var(--hair);border-radius:14px;text-decoration:none;color:var(--ink2);background:var(--paper)}
+.wknav-item:hover{border-color:var(--red);color:var(--red)}
+.wknav-item.on{background:var(--red);color:#fff;border-color:var(--red)}
+@media(max-width:880px){.leads,.grid,.deep{grid-template-columns:1fr}.lead.l{border-right:none;border-bottom:1px solid var(--hair)}.search-wrap input{width:130px}}
+
+.mark-btn{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ink3);background:none;border:1px solid var(--hair);border-radius:5px;padding:2px 9px;cursor:pointer;margin-left:8px;vertical-align:middle;font-family:"Noto Sans SC",sans-serif;transition:.15s}
+.mark-btn:hover{border-color:var(--red);color:var(--red)}
+.mark-btn.marked{background:var(--red);color:#fff;border-color:var(--red)}
+[data-mark-url].is-marked{background:#fdf6ef;box-shadow:inset 3px 0 0 var(--red);border-radius:4px}
+.mark-note{display:none;font-size:12.5px;color:var(--ink2);background:#fbf6ef;border-left:2px solid var(--red);padding:7px 12px;margin-top:8px;border-radius:0 6px 6px 0;line-height:1.6}
+.mark-note.show{display:block}
+.mark-note b{color:var(--red);font-weight:600;font-size:11px}
+/* 弹框 */
+.mark-modal{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,16,12,.4);align-items:center;justify-content:center}
+.mark-modal.show{display:flex}
+.mark-box{background:var(--paper);border-radius:12px;padding:24px 26px;width:min(92vw,460px);box-shadow:0 20px 60px rgba(60,40,20,.25)}
+.mark-box h4{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;margin-bottom:4px;line-height:1.4}
+.mark-box .mb-meta{font-size:12px;color:var(--ink3);margin-bottom:14px}
+.mark-box textarea{width:100%;min-height:90px;border:1px solid var(--hair);border-radius:8px;padding:10px 12px;font-family:inherit;font-size:14px;line-height:1.6;resize:vertical;outline:none}
+.mark-box textarea:focus{border-color:var(--red)}
+.mark-box .mb-tip{font-size:11.5px;color:var(--ink3);margin:6px 0 14px}
+.mark-box .mb-foot{display:flex;gap:10px;justify-content:flex-end}
+.mark-box button{font-family:inherit;font-size:13px;border-radius:7px;padding:8px 18px;cursor:pointer;border:1px solid var(--hair);background:var(--paper);color:var(--ink2)}
+.mark-box .mb-save{background:var(--red);color:#fff;border-color:var(--red)}
+.mark-box .mb-del{margin-right:auto;color:var(--ink3);border:none}
+.mark-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:13px;padding:9px 20px;border-radius:20px;z-index:210;opacity:0;transition:.3s;pointer-events:none}
+.mark-toast.show{opacity:1}
+/* 摘要浮窗 */
+.peek-modal{display:none;position:fixed;inset:0;z-index:220;background:rgba(20,16,12,.45);align-items:center;justify-content:center;padding:20px}
+.peek-modal.show{display:flex}
+.peek-box{position:relative;background:var(--paper);border-radius:14px;padding:30px 32px;width:min(94vw,560px);max-height:82vh;overflow-y:auto;box-shadow:0 24px 70px rgba(40,30,20,.35)}
+.peek-x{position:absolute;top:12px;right:16px;border:none;background:none;font-size:26px;line-height:1;color:var(--ink3);cursor:pointer}
+.peek-x:hover{color:var(--red)}
+.peek-cat{font-size:11px;letter-spacing:1px;color:var(--red);font-weight:700;margin-bottom:10px}
+.peek-title{font-size:21px;font-weight:700;line-height:1.42;margin-bottom:14px;padding-right:22px}
+.peek-sum{font-size:14.5px;line-height:1.9;color:var(--ink2);margin-bottom:22px}
+.peek-go{display:inline-block;font-size:14px;font-weight:600;color:var(--red);text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+
+.legal{max-width:880px;margin:0 auto;padding:4px 28px 44px;color:var(--ink3);font-size:11.5px;line-height:1.85}
+.legal p{margin:0 0 9px}
+.legal b{color:var(--ink2);font-weight:600}
+.legal a{color:var(--ink2);border-bottom:1px solid var(--hair)}
+.legal .lc{margin-top:13px;padding-top:12px;border-top:1px solid var(--hair);text-align:center}
+@media(max-width:880px){.legal{padding:4px 18px 36px}}
+</style></head><body>
+<div class="mark-modal" id="markModal">
+  <div class="mark-box">
+    <h4 id="mbTitle"></h4>
+    <div class="mb-meta" id="mbMeta"></div>
+    <textarea id="mbComment" placeholder="写下你的想法 / 评论 / 为什么标它(可留空,仅标记)…"></textarea>
+    <div class="mb-tip">这条评论会被记录,AI 每晚据此判断你可能想深挖的方向。</div>
+    <div class="mb-foot">
+      <button class="mb-del" id="mbDel">取消标记</button>
+      <button id="mbCancel">关闭</button>
+      <button class="mb-save" id="mbSave">保存标记</button>
+    </div>
+  </div>
+</div>
+<div class="mark-toast" id="markToast"></div>
+<div class="peek-modal" id="peekModal">
+  <div class="peek-box">
+    <button class="peek-x" type="button">&times;</button>
+    <div class="peek-cat"></div>
+    <h3 class="peek-title serif"></h3>
+    <p class="peek-sum"></p>
+    <a class="peek-go" target="_blank" rel="noopener">阅读原文 →</a>
+  </div>
+</div>
+
+<div class="mast"><div class="mast-line">The AI Signal · 产品</div>
+<h1 class="serif"><a href="../index.html">AI 信号站</a></h1>
+<div class="meta">2026-07-25 · 产品 版块 · 共 <b>39</b> 条</div></div>
+<div class="rule"></div>
+<nav class="nav"><a href="../d/2026-07-25.html">头版</a><a href="../c/2026-07-25-Agent.html">Agent</a><a href="../c/2026-07-25-产品.html" class="on">产品</a><a href="../c/2026-07-25-行业.html">行业</a><a href="../c/2026-07-25-论文.html">论文</a><a href="../c/2026-07-25-模型.html">模型</a><a href="../c/2026-07-25-技巧.html">技巧</a><a href="../weekly.html" style="color:var(--red)">上周·周报</a><a href="../insights.html" style="color:var(--red)">深度洞察</a><span class="search-wrap"><input type="text" id="siteSearch" placeholder="站内搜索…" autocomplete="off"><div class="search-res" id="searchRes"></div></span></nav>
+<div class="catpage">
+  <div class="ch serif">产品<span class="en">PRODUCT</span></div>
+  <div class="cmeta">2026-07-25 · 该版块全部 39 条,按精选分排序 · <a href="../d/2026-07-25.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="cmeta">2026-07-25 · 全量 39 条 → 去重聚类 37 条 · 默认展示 AIHOT 精选 5 条,其余折叠 · <a href="../d/2026-07-25.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="catcard">
+              <div class="cck">本版块 · 最值得你思考</div>
+              <h2 class="serif"><a href="https://x.com/OpenAIDevs/status/2080707685448847418" target="_blank">ChatGPT Work 智能体支持登录网站</a></h2>
+              <div class="ess serif">让智能体跨过登录墙，意味着自动化开始进入真实工作系统；产品难点也随之从演示效果转向凭证隔离、授权范围与操作审计。</div>
+              <div class="cck" style="margin-bottom:6px">思考切口</div><ul class="pts"><li>一次登录后长期保留会话虽降低使用门槛，却也放大越权风险，授权应绑定任务而非仅绑定用户。</li><li>企业 Agent 的价值不在能否打开网页，而在失败时能否解释执行路径并让人及时接管。</li></ul>
+            </div>
+  <div class="sec-title"><span>本版块精选 · 5 条</span></div>
+  <div class="crow crow-pg" data-i="0" data-mark-url="https://x.com/dotey/status/2080770347977113983" data-mark-title="BaoCut 新增视频画面翻译功能，支持 Agent 自动化" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">68</span><div class="cc">
+        <a class="ct serif" href="https://x.com/dotey/status/2080770347977113983" target="_blank">BaoCut 新增视频画面翻译功能，支持 Agent 自动化</a>
+        <div class="cs">BaoCut v0.8.2 上线视频画面翻译功能，可对视频帧进行 OCR 识别并叠加翻译字幕。支持通过 Agent（推荐 Codex）自动化操作，无需人工干预；翻译结果可直接导出到剪映（CapCut）二次处理。用户也可在 GUI 中手动暂停、选择文字区域，批量翻译效率更高。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://x.com/dotey/status/2080770347977113983" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="1" data-mark-url="https://x.com/perplexity_ai/status/2080778151962214575" data-mark-title="Perplexity 上线 Claude Opus 5，性能超群且成本低 57%" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">61</span><div class="cc">
+        <a class="ct serif" href="https://x.com/perplexity_ai/status/2080778151962214575" target="_blank">Perplexity 上线 Claude Opus 5，性能超群且成本低 57%</a>
+        <div class="cs">Claude Opus 5 现已在 Perplexity 和 Perplexity Computer 中可用。
+
+我们在 WANDR 上将其与其他六个模型进行了评估。它的表现优于除 Fable 5 之外的所有模型，同时成本低 57%。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">产品更新</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://x.com/perplexity_ai/status/2080778151962214575" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="2" data-mark-url="https://x.com/OpenAIDevs/status/2080707685448847418" data-mark-title="ChatGPT Work 智能体支持登录网站" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">60</span><div class="cc">
+        <a class="ct serif" href="https://x.com/OpenAIDevs/status/2080707685448847418" target="_blank">ChatGPT Work 智能体支持登录网站</a>
+        <div class="cs">你的 ChatGPT Work 智能体现在可以使用需要登录的网站了。
+
+接管云端浏览器进行登录，然后让智能体继续执行任务。你的登录状态会在会话间保持，因此只需登录一次。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">OpenAI</span><span class="ctag">产品更新</span><span class="rel-tag">关联报道 1 条<span class="rel-pop">X：Greg Brockman (@gdb)</span></span></div>
+        <a class="clink" href="https://x.com/OpenAIDevs/status/2080707685448847418" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="3" data-mark-url="https://x.com/cb_doge/status/2080716713600119177" data-mark-title="Grok 免费入驻 Google Workspace 办公套件" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">59</span><div class="cc">
+        <a class="ct serif" href="https://x.com/cb_doge/status/2080716713600119177" target="_blank">Grok 免费入驻 Google Workspace 办公套件</a>
+        <div class="cs">BREAKING: Grok 现已集成至 Google Workspace，且该插件完全免费。  
+
+一次安装即可将 Grok 直接带入 Docs、Sheets 和 Slides，用于撰写文档、分析数据、创建公式与图表、制作演示文稿等。  
+
+AI 现已融入你的工作流。🚀…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Google</span><span class="ctag">xAI</span><span class="ctag">产品更新</span></div>
+        <a class="clink" href="https://x.com/cb_doge/status/2080716713600119177" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="4" data-mark-url="https://x.com/Replit/status/2080699531662967018" data-mark-title="Replit 本月推出语音对话与Claude集成" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">59</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Replit/status/2080699531662967018" target="_blank">Replit 本月推出语音对话与Claude集成</a>
+        <div class="cs">Replit 本月发货量很大。用语音与 Agent 对话，从 Claude 或 Slack 构建，再也不用向 Agent 重新解释你的技术栈。完整概述：…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">产品更新</span><span class="ctag">语音</span></div>
+        <a class="clink" href="https://x.com/Replit/status/2080699531662967018" target="_blank">阅读原文 →</a></div></div>
+  
+  <details class="lo-block"><summary>展开其余 32 条(非精选,已默认收起)</summary><div class="lo-rows"><div class="crow crow-pg" data-i="5" data-mark-url="https://x.com/shao__meng/status/2080963123826360716" data-mark-title="ego lite：AI智能体原生Chromium浏览器登顶GitHub" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">58</span><div class="cc">
+        <a class="ct serif" href="https://x.com/shao__meng/status/2080963123826360716" target="_blank">ego lite：AI智能体原生Chromium浏览器登顶GitHub</a>
+        <div class="cs">ego lite 是一款“Agent 原生”的 Chromium 浏览器，允许 Claude Code、Codex 等任意 Agent CLI 通过 `ego-browser` skill 在隔离的 Space 中并行驱动浏览器，不抢占用户标签页或登录态。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">产品更新</span><span class="ctag">开源/仓库</span></div>
+        <a class="clink" href="https://x.com/shao__meng/status/2080963123826360716" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="6" data-mark-url="https://www.unitree.com/As2-W" data-mark-title="Unitree As2-W 发布：轮腿混合机器人，可爬80厘米台阶与45°斜坡" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://www.unitree.com/As2-W" target="_blank">Unitree As2-W 发布：轮腿混合机器人，可爬80厘米台阶与45°斜坡</a>
+        <div class="cs">Unitree 发布轮腿混合机器人 As2-W，结合轮式高速移动与腿部越障能力，可自动适应楼梯、碎石和陡坡，最大爬高80厘米、爬坡45°。搭载95 N·m工业级关节模组与648 Wh电池，空载续航超30公里，支持150 TOPS高性能扩展模块与ISS 3.0智能侧跟系统。整机约2…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span><span class="ctag">具身智能</span></div>
+        <a class="clink" href="https://www.unitree.com/As2-W" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="7" data-mark-url="https://www.ithome.com/0/981/548.htm" data-mark-title="阿里 Qoder Mobile 移动端 App 上线，iOS / Android / 鸿蒙三大版本同步发布" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">56</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/981/548.htm" target="_blank">阿里 Qoder Mobile 移动端 App 上线，iOS / Android / 鸿蒙三大版本同步发布</a>
+        <div class="cs">阿里今日发布 Qoder Mobile 移动端 App，iOS、Android、鸿蒙三大版本同步上线，功能层面完全一致。该 App 支持远程控制 Qoder CLI 和 Qoder Desktop，用户可随时查看进度、审批操作、追加指令，并支持委派任务到云端运行。未来还将支持手机…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">产品更新</span><span class="ctag">端侧</span></div>
+        <a class="clink" href="https://www.ithome.com/0/981/548.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="8" data-mark-url="https://www.marktechpost.com/2026/07/24/datalab-marker-v2-vs-mineru-docling-and-liteparse-benchmark-breakdown" data-mark-title="Datalab Marker v2 发布：三模式管道在 olmOCR-bench 上达 76.0，速度超 MinerU 5 倍以上" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://www.marktechpost.com/2026/07/24/datalab-marker-v2-vs-mineru-docling-and-liteparse-benchmark-breakdown" target="_blank">Datalab Marker v2 发布：三模式管道在 olmOCR-bench 上达 76.0，速度超 MinerU 5 倍以上</a>
+        <div class="cs">Datalab 将 Marker 重写为三模式管道，v2 版本在 olmOCR-bench 上达到 76.0 分，单张 B200 上每秒处理 2.9 页——速度是 MinerU 管道后端的 5 倍以上，同时在准确率和速度上均优于 Docling。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">RAG</span><span class="ctag">产品更新</span><span class="ctag">数据/训练</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://www.marktechpost.com/2026/07/24/datalab-marker-v2-vs-mineru-docling-and-liteparse-benchmark-breakdown" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="9" data-mark-url="https://www.theverge.com/tech/970570/meta-ai-chatbot-productivity-update" data-mark-title="Meta AI 升级为个人助手：接入日历生成简报，支持深度研究与持续任务" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">54</span><div class="cc">
+        <a class="ct serif" href="https://www.theverge.com/tech/970570/meta-ai-chatbot-productivity-update" target="_blank">Meta AI 升级为个人助手：接入日历生成简报，支持深度研究与持续任务</a>
+        <div class="cs">Meta 为其 AI 聊天机器人推出新生产力功能，使其能接入日历生成每日简报、规划活动，并执行可中途调整方向的深度研究。该更新由新发布的 Muse Spark 1.1 模型驱动，标志着 Meta 从“娱乐优先”转向“个人超级智能”战略。新版 Meta AI 即日起在 Meta A…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Meta</span><span class="ctag">产品更新</span></div>
+        <a class="clink" href="https://www.theverge.com/tech/970570/meta-ai-chatbot-productivity-update" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="10" data-mark-url="https://x.com/OpenAIDevs/status/2080747505474736162" data-mark-title="OpenAI 宠物功能支持分享链接给好友收养" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">53</span><div class="cc">
+        <a class="ct serif" href="https://x.com/OpenAIDevs/status/2080747505474736162" target="_blank">OpenAI 宠物功能支持分享链接给好友收养</a>
+        <div class="cs">你的宠物已准备好与其他开发者见面。
+在 ChatGPT 网页版上，为你的自定义宠物创建一个可分享链接，发送给朋友收养。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">产品更新</span><span class="rel-tag">关联报道 1 条<span class="rel-pop">X：Greg Brockman (@gdb)</span></span></div>
+        <a class="clink" href="https://x.com/OpenAIDevs/status/2080747505474736162" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="11" data-mark-url="https://x.com/opencode/status/2080724859366117579" data-mark-title="OpenCode 上线 Opus 5 模型" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">52</span><div class="cc">
+        <a class="ct serif" href="https://x.com/opencode/status/2080724859366117579" target="_blank">OpenCode 上线 Opus 5 模型</a>
+        <div class="cs">Opus 5 现已在 OpenCode 中可用。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">产品更新</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/opencode/status/2080724859366117579" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="12" data-mark-url="https://x.com/OpenRouter/status/2080743252215619645" data-mark-title="OpenRouter 上线 xAI Grok STT 服务" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://x.com/OpenRouter/status/2080743252215619645" target="_blank">OpenRouter 上线 xAI Grok STT 服务</a>
+        <div class="cs">Grok STT 来自 @SpaceXAI 现已上线 OpenRouter。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">xAI</span><span class="ctag">产品更新</span><span class="ctag">语音</span></div>
+        <a class="clink" href="https://x.com/OpenRouter/status/2080743252215619645" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="13" data-mark-url="https://github.com/anthropics/claude-code/releases/tag/v2.1.219" data-mark-title="Claude Code v2.1.219 发布：新增 Claude Opus 5，支持 1M 上下文与嵌套子智能体" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.219" target="_blank">Claude Code v2.1.219 发布：新增 Claude Opus 5，支持 1M 上下文与嵌套子智能体</a>
+        <div class="cs">Claude Code v2.1.219 新增 Claude Opus 5 作为默认 Opus 模型，支持 1M 上下文窗口，快速模式定价为 $10/$50 每百万 token。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">产品更新</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.219" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="14" data-mark-url="https://x.com/Replit/status/2080775766921400660" data-mark-title="Replit 本周四大更新：移动端与降价" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">47</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Replit/status/2080775766921400660" target="_blank">Replit 本周四大更新：移动端与降价</a>
+        <div class="cs">本周 Replit 动态
+
+本周四大重磅发布：
+
+1) 全新移动端应用体验，随时随地构建
+2) 部署成本降低 50% 以上，部分情况高达 80%
+3) 全新统一工具面板，一切尽在一处
+4) Replit MCP 进入测试版，可从任何地方调用 Replit Agent
+
+详细内容 …</div>
+        <div class="ctags mark-anchor"><span class="ctag">MCP/工具调用</span><span class="ctag">产品更新</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/Replit/status/2080775766921400660" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="15" data-mark-url="https://x.com/jxnlco/status/2081031994847240418" data-mark-title="OpenAI 员工演示用语音控制 ChatGPT 桌面 Agent" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">45</span><div class="cc">
+        <a class="ct serif" href="https://x.com/jxnlco/status/2081031994847240418" target="_blank">OpenAI 员工演示用语音控制 ChatGPT 桌面 Agent</a>
+        <div class="cs">OpenAI 在桌面端上线 ChatGPT Voice，支持用语音控制电脑并指挥 ChatGPT Work 或 Codex 中的多个 AI 智能体。该功能由 GPT-Live 驱动，可同时说话、聆听和协调工作，即日起向 macOS 和 Windows 的 Plus、Pro、Bus…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">产品更新</span><span class="ctag">语音</span></div>
+        <a class="clink" href="https://x.com/jxnlco/status/2081031994847240418" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="16" data-mark-url="https://x.com/joshwoodward/status/2080771183944073347" data-mark-title="Gemini Spark 新增日历 PDF 自动导入功能" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">45</span><div class="cc">
+        <a class="ct serif" href="https://x.com/joshwoodward/status/2080771183944073347" target="_blank">Gemini Spark 新增日历 PDF 自动导入功能</a>
+        <div class="cs">Gemini 不仅能聊天，还能帮你完成任务。
+今天的用例：放入一份学校日历 PDF。告诉 Gemini 将所有“无课日”添加到你的 Google 日历中。搞定。  
+📍Gemini Spark 现已面向美国所有 Google AI Pro 订阅用户上线，接下来将全球扩展。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Google</span><span class="ctag">产品更新</span></div>
+        <a class="clink" href="https://x.com/joshwoodward/status/2080771183944073347" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="17" data-mark-url="https://x.com/elonmusk/status/2080831716550209981" data-mark-title="Grok Build v0.2.112 发布，新增教程与工作流恢复" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">43</span><div class="cc">
+        <a class="ct serif" href="https://x.com/elonmusk/status/2080831716550209981" target="_blank">Grok Build v0.2.112 发布，新增教程与工作流恢复</a>
+        <div class="cs">xAI 发布 Grok Build v0.2.112 更新，新增 `/tutorial` 引导教程、搜索工具日期与域名覆盖设置，以及实时工作流进度追踪与一键失败恢复。该版本还修复了文件附件、Linux 语音听写及 MCP 工具显示等多项问题，Web 搜索默认模型切换为 grok-…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span><span class="ctag">编码</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/elonmusk/status/2080831716550209981" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="18" data-mark-url="https://x.com/AYi_AInotes/status/2080735295817826325" data-mark-title="Cursor 上线 Claude Opus 5：性能持平 Fable 5，价格减半" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">43</span><div class="cc">
+        <a class="ct serif" href="https://x.com/AYi_AInotes/status/2080735295817826325" target="_blank">Cursor 上线 Claude Opus 5：性能持平 Fable 5，价格减半</a>
+        <div class="cs">Cursor 正式上线 Claude Opus 5，在 CursorBench 编码基准测试中得分为 66.7，与 Fable 5 的 66.5 分几乎持平，但价格仅为后者一半（输入 5 美元、输出 25 美元每百万 token）。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">产品更新</span><span class="ctag">推理</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/AYi_AInotes/status/2080735295817826325" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="19" data-mark-url="https://x.com/thsottiaux/status/2080876712439747052" data-mark-title="ChatGPT Work 面向所有付费用户全球上线" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">42</span><div class="cc">
+        <a class="ct serif" href="https://x.com/thsottiaux/status/2080876712439747052" target="_blank">ChatGPT Work 面向所有付费用户全球上线</a>
+        <div class="cs">怎么说呢🙈ChatGPT Work 现已面向所有付费计划，在移动端/网页端/桌面端全球可用。大概已经在你手机上了。
+给你的 ChatGPT 装上了喷气背包。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">产品更新</span></div>
+        <a class="clink" href="https://x.com/thsottiaux/status/2080876712439747052" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="20" data-mark-url="https://www.ithome.com/0/981/426.htm" data-mark-title="Meta 推出“Facebook Verified”免费徽章，打击 AI 生成虚假账号" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">42</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/981/426.htm" target="_blank">Meta 推出“Facebook Verified”免费徽章，打击 AI 生成虚假账号</a>
+        <div class="cs">Meta 宣布推出“Facebook Verified”免费服务，用户通过录制视频自拍验证身份后即可获得勾号标记。该功能面向年满 18 岁、符合社区标准且无欺诈行为的个人账号，旨在确保账号背后是真实用户而非 AI 生成的虚假账号。徽章将分阶段推出，计划未来扩展至全球市场。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Meta</span><span class="ctag">产品更新</span><span class="ctag">安全/对齐</span></div>
+        <a class="clink" href="https://www.ithome.com/0/981/426.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="21" data-mark-url="https://www.ithome.com/0/981/588.htm" data-mark-title="ACEMAGIC 公布 2.1L 迷你工作站 F9A，搭载 AMD 锐龙 AI Max+ 395" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">40</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/981/588.htm" target="_blank">ACEMAGIC 公布 2.1L 迷你工作站 F9A，搭载 AMD 锐龙 AI Max+ 395</a>
+        <div class="cs">ACEMAGIC 推出体积仅 2.1L 的迷你工作站 F9A，搭载 AMD 锐龙 AI Max+ 395 处理器，支持 140W 峰值性能释放。该设备采用 CNC 一体成型铝合金机身，板载至高 128GB LPDDR5X 内存，提供 2 个 M.2 PCIe Gen4 SSD 盘…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span><span class="ctag">端侧</span></div>
+        <a class="clink" href="https://www.ithome.com/0/981/588.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="22" data-mark-url="https://www.ithome.com/0/981/500.htm" data-mark-title="理想 AI 眼镜 Livis 七月 OTA 升级：直连 OpenClaw 终端，接入小红书 Agent" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">40</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/981/500.htm" target="_blank">理想 AI 眼镜 Livis 七月 OTA 升级：直连 OpenClaw 终端，接入小红书 Agent</a>
+        <div class="cs">理想汽车公布理想 AI 眼镜 Livis 七月 OTA 升级内容，新增眼镜直连个人终端 OpenClaw 与接入小红书 Agent 两项功能。OpenClaw 可远程接管处理本地文件、跑脚本等任务，小红书 Agent 则支持边走边问的地标、店铺查询。此外，AI 理想同学语义理解速…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">产品更新</span><span class="ctag">端侧</span></div>
+        <a class="clink" href="https://www.ithome.com/0/981/500.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="23" data-mark-url="https://x.com/hongming731/status/2080804744109658534" data-mark-title="Anthropic 发布 Claude Opus 5，腾讯 WorkBuddy 拆解 Agent 控制系统，袁晓辉追问组织效率瓶颈" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">40</span><div class="cc">
+        <a class="ct serif" href="https://x.com/hongming731/status/2080804744109658534" target="_blank">Anthropic 发布 Claude Opus 5，腾讯 WorkBuddy 拆解 Agent 控制系统，袁晓辉追问组织效率瓶颈</a>
+        <div class="cs">Anthropic 发布 Claude Opus 5，在 Frontier-Bench v0.1 上得分超 Opus 4.8 两倍，且每项任务成本更低。腾讯 WorkBuddy 将 Agent 可用性拆解为上下文工程、Memory/Skill 区分及 Harness 控制系统。腾…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span><span class="ctag">模型发布</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/hongming731/status/2080804744109658534" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="24" data-mark-url="https://www.ithome.com/0/981/595.htm" data-mark-title="华为 AI 眼镜推送 6.0.0.157 SP2 更新，新增“看一下支付宝小蓝环”支付与拍照识图功能" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">39</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/981/595.htm" target="_blank">华为 AI 眼镜推送 6.0.0.157 SP2 更新，新增“看一下支付宝小蓝环”支付与拍照识图功能</a>
+        <div class="cs">华为 AI 眼镜今日推送 6.0.0.157 SP2 版本更新（安装包 208.69 MB），新增“看一下支付宝小蓝环”支付功能，看一眼设备蓝环即可完成支付。AI 快捷键新增“拍照识图”功能，按键可获取小艺解答；同时加入“开始/结束录像”人声提醒，并优化了视频导入体验与续航。该眼…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span><span class="ctag">端侧</span></div>
+        <a class="clink" href="https://www.ithome.com/0/981/595.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="25" data-mark-url="https://www.ithome.com/0/981/404.htm" data-mark-title="苹果 macOS 27 邮件应用测试“Write with Siri”，整合 Siri AI 交互" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">37</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/981/404.htm" target="_blank">苹果 macOS 27 邮件应用测试“Write with Siri”，整合 Siri AI 交互</a>
+        <div class="cs">苹果在 macOS 27 Golden Gate Beta 4 中为邮件应用测试“Write with Siri”功能，将 Siri AI 整合到撰写窗口。新设计将格式栏中的“Write with Siri”置于最突出位置，用户输入提示后格式按钮自动折叠，并支持显示 Siri A…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span><span class="ctag">端侧</span></div>
+        <a class="clink" href="https://www.ithome.com/0/981/404.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="26" data-mark-url="https://www.ithome.com/0/981/534.htm" data-mark-title="三星推出 Health Assistant，号称首款全面集成 AI 的个人健康助手" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">36</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/981/534.htm" target="_blank">三星推出 Health Assistant，号称首款全面集成 AI 的个人健康助手</a>
+        <div class="cs">三星本周推出 Health Assistant，号称首款全面集成 AI 的个人健康助手。该产品整合 Samsung Health 平台的睡眠、活动、营养、正念和生命体征五大核心健康数据，结合知识库提供健康建议，并支持每日健康监测与早期风险发现。该服务已面向美国用户提供 Beta …</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span></div>
+        <a class="clink" href="https://www.ithome.com/0/981/534.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="27" data-mark-url="https://www.ithome.com/0/981/602.htm" data-mark-title="腾讯 WorkBuddy 桌面版上架华为鸿蒙电脑 App Gallery，原生适配鸿蒙系统" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">34</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/981/602.htm" target="_blank">腾讯 WorkBuddy 桌面版上架华为鸿蒙电脑 App Gallery，原生适配鸿蒙系统</a>
+        <div class="cs">腾讯 WorkBuddy 桌面版已上架华为鸿蒙电脑 App Gallery 应用商店，原生适配鸿蒙系统。WorkBuddy 是一款全场景 AI 办公智能体桌面工作台，覆盖日常办公、代码开发与设计创意。此前其移动端 App 已于 7 月 18 日同步上线 iOS、安卓及鸿蒙版本，成…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span><span class="ctag">端侧</span></div>
+        <a class="clink" href="https://www.ithome.com/0/981/602.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="28" data-mark-url="https://x.com/thsottiaux/status/2080756403493560652" data-mark-title="OpenAI 推出自定义宠物分享功能" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">32</span><div class="cc">
+        <a class="ct serif" href="https://x.com/thsottiaux/status/2080756403493560652" target="_blank">OpenAI 推出自定义宠物分享功能</a>
+        <div class="cs">秀出你的宠物
+
+[引用 @OpenAIDevs]：你的宠物已准备好与其他开发者见面。
+
+在 ChatGPT 网页版上，为你的自定义宠物创建一个可分享的链接，并发送给朋友领养。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">产品更新</span></div>
+        <a class="clink" href="https://x.com/thsottiaux/status/2080756403493560652" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="29" data-mark-url="https://x.com/thexpin/status/2080710581330530659" data-mark-title="Unitree 发布 AS2-W 机器人，支持 16kg 负载" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">31</span><div class="cc">
+        <a class="ct serif" href="https://x.com/thexpin/status/2080710581330530659" target="_blank">Unitree 发布 AS2-W 机器人，支持 16kg 负载</a>
+        <div class="cs">这看起来超酷
+
+Unitree Super Athlete AS2-W 😉 动作流畅，紧凑而卓越。支持连续 16kg 负载，空载续航 30+ 公里。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span><span class="ctag">具身智能</span></div>
+        <a class="clink" href="https://x.com/thexpin/status/2080710581330530659" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="30" data-mark-url="https://x.com/elonmusk/status/2080868926397816850" data-mark-title="Grok Build 新增 /tutorial 教程功能" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">30</span><div class="cc">
+        <a class="ct serif" href="https://x.com/elonmusk/status/2080868926397816850" target="_blank">Grok Build 新增 /tutorial 教程功能</a>
+        <div class="cs">试试 Grok Build /tutorial
+
+http://X.ai/cli…</div>
+        <div class="ctags mark-anchor"><span class="ctag">xAI</span><span class="ctag">产品更新</span></div>
+        <a class="clink" href="https://x.com/elonmusk/status/2080868926397816850" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="31" data-mark-url="https://x.com/berryxia/status/2080783394498355427" data-mark-title="Exa 搜索正式接入 Grok Build" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">28</span><div class="cc">
+        <a class="ct serif" href="https://x.com/berryxia/status/2080783394498355427" target="_blank">Exa 搜索正式接入 Grok Build</a>
+        <div class="cs">Exa\u0026Grok 强强联合哈哈
+每天都在用他们搜索，非常方便，速度也快～…</div>
+        <div class="ctags mark-anchor"><span class="ctag">xAI</span><span class="ctag">产品更新</span><span class="ctag">搜索</span></div>
+        <a class="clink" href="https://x.com/berryxia/status/2080783394498355427" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="32" data-mark-url="https://x.com/jxnlco/status/2080798544332492807" data-mark-title="ChatGPT 宠物新增分享领养功能" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">26</span><div class="cc">
+        <a class="ct serif" href="https://x.com/jxnlco/status/2080798544332492807" target="_blank">ChatGPT 宠物新增分享领养功能</a>
+        <div class="cs">你现在可以把你的 ChatGPT 宠物送给朋友。
+创建一只自定义宠物，生成可分享的链接，让别人领养它。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">产品更新</span></div>
+        <a class="clink" href="https://x.com/jxnlco/status/2080798544332492807" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="33" data-mark-url="https://x.com/swyx/status/2080750437133901925" data-mark-title="SmolForge 新增自定义皮肤与动画功能" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">26</span><div class="cc">
+        <a class="ct serif" href="https://x.com/swyx/status/2080750437133901925" target="_blank">SmolForge 新增自定义皮肤与动画功能</a>
+        <div class="cs">ok fine 4 new features - SmolForge 现在支持可自定义皮肤和精灵图动画了…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span></div>
+        <a class="clink" href="https://x.com/swyx/status/2080750437133901925" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="34" data-mark-url="https://x.com/swyx/status/2080705334587605122" data-mark-title="swyx 因 G Suite 默认设置糟糕而开发新工具" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">23</span><div class="cc">
+        <a class="ct serif" href="https://x.com/swyx/status/2080705334587605122" target="_blank">swyx 因 G Suite 默认设置糟糕而开发新工具</a>
+        <div class="cs">我之所以在开发一个新的 G Suite，就是因为像这种极其愚蠢的默认设置。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span><span class="ctag">大佬观点</span></div>
+        <a class="clink" href="https://x.com/swyx/status/2080705334587605122" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="35" data-mark-url="https://github.com/anthropics/claude-code/releases/tag/v2.1.220" data-mark-title="Claude Code v2.1.220 发布" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">19</span><div class="cc">
+        <a class="ct serif" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.220" target="_blank">Claude Code v2.1.220 发布</a>
+        <div class="cs">Claude Code v2.1.220 版本发布，主要包含错误修复和可靠性改进。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">产品更新</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.220" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="36" data-mark-url="https://x.com/Kling_ai/status/2081024688319512697" data-mark-title="可灵AI：生活终于加载出1080p画质" data-mark-date="2026-07-25" data-mark-cat="产品"><span class="cn">12</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Kling_ai/status/2081024688319512697" target="_blank">可灵AI：生活终于加载出1080p画质</a>
+        <div class="cs">POV：生活终于以1080p加载。📷…</div>
+        <div class="ctags mark-anchor"><span class="ctag">产品更新</span><span class="ctag">图像生成</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://x.com/Kling_ai/status/2081024688319512697" target="_blank">阅读原文 →</a></div></div></div></details>
+</div>
+<div class="foot serif">AI 信号站 · 产品 · 2026-07-25</div>
+<script src="../search-index.js"></script><script>(function(){var SR_REL="../";
+var SIDX = window.__SIDX__ || [];
+var inp = document.getElementById('siteSearch'), box = document.getElementById('searchRes');
+if(inp){
+  var K1=1.5, B=0.75, TITLE_BOOST=3, COV=0.6;
+  // 停用词:连接词/虚词不参与 AND 覆盖判定(避免"claude和gemini"里"和"稀释召回条件)
+  var STOP={}, _sw='的 了 和 与 及 或 跟 并 在 是 有 这 那 就 也 还 又 吗 呢 吧 啊 把 被 让 给 对 从 到 为 之 以 且 等 以及 还有 并且 而且'.split(' ');
+  for(var si=0;si<_sw.length;si++) STOP[_sw[si]]=1;
+  // 分词:英文/数字按词;中文按 bigram(单字则保留);query 与文档同一套切法
+  function toks(s){
+    var out=[], segs=(String(s).toLowerCase().match(/[a-z0-9]+|[\u4e00-\u9fff]+/g)||[]);
+    for(var i=0;i<segs.length;i++){
+      var seg=segs[i];
+      if(/[a-z0-9]/.test(seg)) out.push(seg);
+      else if(seg.length===1) out.push(seg);
+      else for(var j=0;j<seg.length-1;j++) out.push(seg.slice(j,j+2));
+    }
+    return out;
+  }
+  // 加载时一次性建 BM25 索引:每篇词频 tf(标题×TITLE_BOOST)、全局文档频率 DF、平均长度 avgdl
+  var DF={}, docs=[], totalLen=0, t;
+  for(var d=0; d<SIDX.length; d++){
+    var x=SIDX[d];
+    var body=(x.g||'')+' '+(x.c||'')+' '+(x.tag||'')+' '+(x.src||'');
+    var tf={};
+    var tt=toks(x.t||''); for(var a=0;a<tt.length;a++){ tf[tt[a]]=(tf[tt[a]]||0)+TITLE_BOOST; }
+    var bb=toks(body); for(var b2=0;b2<bb.length;b2++){ tf[bb[b2]]=(tf[bb[b2]]||0)+1; }
+    var dl=0; for(t in tf) dl+=tf[t];
+    totalLen+=dl;
+    for(t in tf) DF[t]=(DF[t]||0)+1;
+    docs.push({x:x, tf:tf, dl:dl});
+  }
+  var N=docs.length||1, avgdl=totalLen/N;
+  function idf(w){ var df=DF[w]||0; return Math.log((N-df+0.5)/(df+0.5)+1); }
+  inp.addEventListener('input', function(){
+    var q=inp.value.trim(); if(!q){ box.classList.remove('show'); return; }
+    var raw=toks(q), seen={}, qts=[];
+    for(var i=0;i<raw.length;i++){ if(!seen[raw[i]] && !STOP[raw[i]]){ seen[raw[i]]=1; qts.push(raw[i]); } }
+    if(!qts.length){ box.classList.remove('show'); return; }
+    // AND 覆盖召回:命中实词数须达 ceil(词数×COV),容忍中文 bigram 的 junction 噪声(如"面壁具身"切出的"壁具")
+    var need=Math.max(1, Math.ceil(qts.length*COV));
+    var scored=[];
+    for(var d2=0; d2<docs.length; d2++){
+      var doc=docs[d2], sc=0, m=0;
+      for(var k=0;k<qts.length;k++){
+        var f=doc.tf[qts[k]]; if(!f) continue;
+        m++; sc += idf(qts[k])*(f*(K1+1))/(f + K1*(1-B+B*doc.dl/avgdl));
+      }
+      if(m>=need) scored.push({x:doc.x, sc:sc, m:m});
+    }
+    // 排序:BM25 分降序 → 命中词数 → 日期新
+    scored.sort(function(p,r){ return (r.sc-p.sc) || (r.m-p.m) || (p.x.d<r.x.d?1:-1); });
+    var hits=scored.slice(0,20);
+    if(!hits.length){ box.innerHTML='<div class="sr-empty">本站无匹配结果</div>'; box.classList.add('show'); return; }
+    box.innerHTML='<div class="sr-h">站内命中 '+hits.length+' 条 · BM25 相关度排序</div>' + hits.map(function(o){
+      var x=o.x;
+      return '<a href="'+SR_REL+'d/'+x.d+'.html"><div class="srt">'+x.t+'</div><div class="srm">'+x.d+' · '+x.c+' · 精选 '+x.s+'</div></a>';
+    }).join('');
+    box.classList.add('show');
+  });
+  document.addEventListener('click', function(ev){ if(!ev.target.closest('.search-wrap')) box.classList.remove('show'); });
+}
+})();</script><script>
+(function(){
+  const API='http://localhost:8765';
+  // 标记功能只在本机启用。同一份构建产物:本地全功能、公网只读。
+  // 原因:标记数据的用途是喂给 Analyst 做个性化(marks 工具),陌生访客的口味不是站主的口味,
+  // 收集反而会污染个性化信号。所以公网不需要写接口 —— 也就不需要任何鉴权。
+  const LOCAL = ['localhost','127.0.0.1','::1'].indexOf(location.hostname) >= 0
+                || location.protocol === 'file:';
+  if(!LOCAL){
+    // 移除标记入口与弹窗,避免公网访客点了没反应(以及暴露本地 API 地址)
+    document.querySelectorAll('.mark-btn').forEach(b=>b.remove());
+    const m=document.getElementById('markModal'); if(m) m.remove();
+    const t=document.getElementById('markToast'); if(t) t.remove();
+    return;
+  }
+  let marks={}, cur=null;
+  const modal=document.getElementById('markModal');
+  if(!modal) return;
+  const elTitle=document.getElementById('mbTitle'),elMeta=document.getElementById('mbMeta'),
+        elC=document.getElementById('mbComment'),toast=document.getElementById('markToast');
+  function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);}
+  // 标记优先存 localStorage(不依赖常开服务);服务开着则合并后端(供 AI 读取的权威源)
+  const LS='ai_signal_marks';
+  function loadLocal(){try{return JSON.parse(localStorage.getItem(LS)||'{}');}catch(e){return {};}}
+  function saveLocal(){try{localStorage.setItem(LS,JSON.stringify(marks));}catch(e){}}
+  marks=loadLocal();renderMarks();
+  fetch(API+'/api/marks').then(r=>r.json()).then(m=>{if(m&&typeof m==='object'){marks=Object.assign({},marks,m);saveLocal();renderMarks();}}).catch(()=>{});
+  function renderMarks(){
+    document.querySelectorAll('[data-mark-url]').forEach(el=>{
+      const u=el.getAttribute('data-mark-url');
+      const btn=el.querySelector('.mark-btn'); if(!btn)return;
+      if(marks[u]){
+        el.classList.add('is-marked'); btn.classList.add('marked'); btn.textContent='✓ 已标记';
+        let note=el.querySelector('.mark-note');
+        if(marks[u].comment){
+          if(!note){note=document.createElement('div');note.className='mark-note';el.appendChild(note);}
+          note.innerHTML='<b>我的标记 · '+(marks[u].marked_at||'')+'</b><br>'+marks[u].comment.replace(/</g,'&lt;');
+          note.classList.add('show');
+        }
+      }else{
+        el.classList.remove('is-marked'); btn.classList.remove('marked'); btn.textContent='标记';
+        const note=el.querySelector('.mark-note'); if(note)note.classList.remove('show');
+      }
+    });
+  }
+  // 给每个可标记元素注入按钮
+  document.querySelectorAll('[data-mark-url]').forEach(el=>{
+    if(el.querySelector('.mark-btn'))return;
+    const btn=document.createElement('button');btn.className='mark-btn';btn.textContent='标记';
+    btn.onclick=(e)=>{e.preventDefault();e.stopPropagation();openModal(el);};
+    const anchor=el.querySelector('.mark-anchor')||el;
+    anchor.appendChild(btn);
+  });
+  function openModal(el){
+    cur={url:el.getAttribute('data-mark-url'),title:el.getAttribute('data-mark-title')||'',
+         date:el.getAttribute('data-mark-date')||'',cat:el.getAttribute('data-mark-cat')||''};
+    elTitle.textContent=cur.title;
+    elMeta.textContent=cur.date+(cur.cat?' · '+cur.cat:'');
+    elC.value=(marks[cur.url]&&marks[cur.url].comment)||'';
+    document.getElementById('mbDel').style.display=marks[cur.url]?'':'none';
+    modal.classList.add('show');elC.focus();
+  }
+  function close(){modal.classList.remove('show');cur=null;}
+  document.getElementById('mbCancel').onclick=close;
+  modal.onclick=(e)=>{if(e.target===modal)close();};
+  function today(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  document.getElementById('mbSave').onclick=()=>{
+    if(!cur)return;
+    const rec={...cur,comment:elC.value.trim(),marked_at:today()};
+    marks[cur.url]=rec;saveLocal();renderMarks();close();
+    fetch(API+'/api/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(rec)})
+      .then(r=>r.json()).then(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(已同步)'))
+      .catch(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(本地已存,启动服务后同步给AI)'));
+  };
+  document.getElementById('mbDel').onclick=()=>{
+    if(!cur)return;
+    delete marks[cur.url];saveLocal();renderMarks();close();showToast('已取消标记');
+    fetch(API+'/api/unmark',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:cur.url})}).catch(()=>{});
+  };
+  // ---- 摘要浮窗:点标题先看摘要(复用搜索索引 SIDX,按 url 反查),点"阅读原文"仍直接跳 ----
+  var _SIDX = window.__SIDX__ || [];
+  var pk = document.getElementById('peekModal');
+  if(pk){
+    var pkClose = function(){ pk.classList.remove('show'); };
+    pk.addEventListener('click', function(e){ if(e.target===pk || e.target.classList.contains('peek-x')) pkClose(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') pkClose(); });
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[target="_blank"]'); if(!a) return;
+      var txt = (a.textContent||'').trim();
+      if(txt.indexOf('原文') >= 0) return;               // "阅读原文"类→直接跳
+      var href = a.getAttribute('href') || '';
+      var rec = null;
+      for(var i=0;i<_SIDX.length;i++){ if(_SIDX[i].u===href){ rec=_SIDX[i]; break; } }
+      if(!rec) return;                                    // 非索引条目(导航/月历/全部)→直接跳
+      e.preventDefault();
+      pk.querySelector('.peek-cat').textContent = [rec.c, rec.src, '精选 ' + rec.s, rec.d].filter(Boolean).join(' · ');
+      pk.querySelector('.peek-title').textContent = rec.t;
+      pk.querySelector('.peek-sum').textContent = rec.g;
+      pk.querySelector('.peek-go').href = rec.u;
+      pk.classList.add('show');
+    });
+  }
+})();
+</script><div class="legal">
+<p><b>来源与版权</b>　本站为个人非商业实验项目,不生产原始报道。所收录条目的标题与摘要均来自公开渠道,每条都标注来源并链接回原文;文字、图片及其他内容的著作权归原作者与原发布方所有。本站只摘录足以判断「是否值得点开」的信息,完整内容请访问原文。</p>
+<p><b>AI 生成内容</b>　标注为「判断」「洞察」「速览」的段落由大语言模型生成,可能包含事实错误、过时信息或过度推断,仅为本站的实验性观点,<b>不构成投资、就业、技术选型或任何专业建议</b>。请以原文与一手信源为准。</p>
+<p><b>侵权与更正</b>　若您是权利人且不希望相关内容出现在此,或发现事实性错误,请通过 <a href="https://github.com/AMMPNK/ai-signal/issues" target="_blank" rel="noopener">GitHub Issues</a> 告知,我会尽快移除或更正。</p>
+<p class="lc">© 2026 AI 信号站 · 个人非商业项目 · 内容由 AI 辅助生成,请自行核实</p>
+</div></body></html>
