@@ -1,0 +1,858 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>行业 · 2026-07-19</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--paper:#fffefb;--ink:#17140f;--ink2:#574f44;--ink3:#9b9387;--hair:#e8e2d7;--hair2:#f2ede4;--red:#b53326;--cream:#f7f3ea}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Songti SC","Noto Serif SC",serif}
+a{color:inherit}
+.mast{text-align:center;padding:28px 20px 0}
+.mast-line{font-size:11px;letter-spacing:4px;color:var(--ink3);text-transform:uppercase;margin-bottom:8px}
+.mast h1{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:44px;letter-spacing:4px}
+.mast h1 a{text-decoration:none}
+.mast .meta{font-size:12.5px;color:var(--ink2);margin-top:10px;padding-bottom:14px}
+.mast .meta b{color:var(--red)}
+.rule{height:3px;background:var(--ink);max-width:1180px;margin:0 auto}
+.nav{position:sticky;top:0;z-index:30;background:rgba(255,254,251,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);display:flex;justify-content:center;align-items:center;gap:2px;padding:9px 10px;flex-wrap:wrap}
+.nav a{font-family:"Songti SC","Noto Serif SC",serif;font-size:15px;color:var(--ink2);padding:6px 15px;text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--red)}
+.nav a.on{color:var(--ink);font-weight:700;border-bottom-color:var(--red)}
+.search-wrap{position:relative;margin-left:14px}
+.search-wrap input{font-family:inherit;font-size:13px;border:1px solid var(--hair);border-radius:18px;padding:6px 14px 6px 32px;width:170px;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239b9387' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E") no-repeat 11px center;outline:none;transition:.2s}
+.search-wrap input:focus{width:230px;border-color:var(--red)}
+.search-res{position:absolute;top:40px;right:0;width:430px;max-height:60vh;overflow-y:auto;background:var(--paper);border:1px solid var(--hair);border-radius:10px;box-shadow:0 8px 30px rgba(80,60,40,.13);padding:8px;display:none;z-index:40}
+.search-res.show{display:block}
+.search-res .sr-h{font-size:11px;color:var(--ink3);padding:6px 10px;letter-spacing:1px}
+.search-res a{display:block;padding:9px 10px;text-decoration:none;border-radius:7px;border-bottom:1px solid var(--hair2)}
+.search-res a:last-child{border:none}
+.search-res a:hover{background:var(--cream)}
+.search-res .srt{font-size:13.5px;color:var(--ink);font-weight:500}
+.search-res .srm{font-size:11px;color:var(--ink3);margin-top:2px}
+.search-res .sr-empty{padding:16px;color:var(--ink3);font-size:13px;text-align:center}
+.page{max-width:1180px;margin:0 auto;padding:0 24px}
+.leads{display:grid;grid-template-columns:1fr 1fr;margin:22px 0 0;border-top:1px solid var(--hair)}
+.lead{padding:28px 32px}
+.lead.l{border-right:1px solid var(--hair)}
+.kick{font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.kick .dot{width:7px;height:7px;border-radius:50%}
+.kick.sk{color:var(--ink2)}.kick.sk .dot{background:var(--ink2)}
+.kick.tk{color:var(--red)}.kick.tk .dot{background:var(--red)}
+.scbig{float:right;font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:40px;line-height:.8;color:var(--hair);margin-left:14px}
+.scbig.tkc{color:#eccfc8}
+.lead h2{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:26px;line-height:1.28;margin-bottom:14px}
+.lead h2 a{text-decoration:none}.lead h2 a:hover{color:var(--red)}
+.why{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;border-left:3px solid var(--red);padding-left:15px;margin-bottom:14px;line-height:1.6}
+.sum{font-size:13.5px;color:var(--ink2);margin-bottom:14px;line-height:1.7}
+.src{font-size:12px;color:var(--ink3);margin-bottom:16px}
+.lead-foot a{font-weight:600;font-size:13.5px;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+.ai-pending{background:var(--cream);border:1px dashed var(--red);border-radius:8px;padding:14px 16px;font-size:12.5px;color:var(--ink2);margin-bottom:16px;line-height:1.6}
+.subs{border-top:1px dotted var(--hair);margin-top:18px;padding-top:14px;list-style:none}
+.subs li{padding:7px 0}.subs a{display:flex;gap:9px;text-decoration:none;align-items:flex-start}
+.subs a:hover .st{color:var(--red)}
+.ss{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:12px;color:var(--ink3);min-width:22px;padding-top:2px}
+.st{font-size:13px;line-height:1.4}
+.archbar{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:18px 24px;margin:28px 0}
+.archbar .lab{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;font-weight:700;letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.archbar .lab .wkbtn{margin-left:auto;font-size:12px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:16px;font-weight:400;font-family:"Noto Sans SC"}
+.archbar .lab .wkbtn:hover{background:var(--red);color:#fff}
+.cals{display:flex;gap:30px;flex-wrap:wrap}
+.calm{}
+.calm .cmh{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:8px;text-align:center}
+.calgrid{display:grid;grid-template-columns:repeat(7,30px);gap:3px}
+.calgrid .wd{font-size:10px;color:var(--ink3);text-align:center;height:18px}
+.calgrid a,.calgrid span{width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:12px;border-radius:6px;text-decoration:none;color:var(--ink)}
+.calgrid a{border:1px solid var(--hair)}
+.calgrid a:hover{border-color:var(--red);background:var(--cream);color:var(--red)}
+.calgrid .today{background:var(--ink);color:#fff}
+.calgrid .blank{border:none}
+.calgrid .noday{color:#d8d2c7;border:1px dashed var(--hair2)}
+.sec-title{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;letter-spacing:3px;color:var(--ink3);text-transform:uppercase;text-align:center;margin:30px 0 18px;position:relative}
+.sec-title span{background:var(--paper);padding:0 16px;position:relative;z-index:1}
+.sec-title::before{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:var(--hair)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--hair)}
+.block{padding:18px 22px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.block-h{display:flex;align-items:baseline;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.bh-cn{font-size:17px;font-weight:700}.bh-en{font-size:10px;letter-spacing:1.5px;color:var(--ink3)}
+.bh-more{margin-left:auto;font-size:11px;color:var(--red);text-decoration:none}.bh-more:hover{text-decoration:underline}
+.block ul{list-style:none}.block li{border-bottom:1px solid var(--hair2)}.block li:last-child{border:none}
+.block li a{display:flex;gap:9px;align-items:flex-start;padding:9px 0;text-decoration:none}
+.block li a:hover .bt{color:var(--red)}
+.bs{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:13px;color:var(--red);min-width:24px;padding-top:1px}
+.bt{font-size:13.5px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.deep{background:var(--ink);color:#f4efe6;border-radius:10px;padding:28px 34px;margin:30px 0;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+.deep a{color:#f4efe6}
+.deep-k{font-size:11px;letter-spacing:3px;color:#d99;margin-bottom:8px}
+.deep h3{font-family:"Songti SC","Noto Serif SC",serif;font-size:24px;font-weight:700;margin-bottom:8px}
+.deep p{color:#bdb5a8;font-size:13.5px}
+.deep-stat{display:flex;gap:14px}
+.dstat{flex:1;background:#221e18;border:1px solid #38322a;border-radius:7px;padding:16px;text-align:center;text-decoration:none;display:block}
+.dstat:hover{border-color:#e0a89a}
+.dstat .n{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:30px;color:#e0a89a}
+.dstat .l{font-size:12px;color:#bdb5a8;margin-top:3px}
+.foot{text-align:center;padding:30px;color:var(--ink3);font-size:11.5px;border-top:1px solid var(--hair)}
+.catpage{max-width:880px;margin:0 auto;padding:24px}
+.catpage .ch{font-family:"Songti SC","Noto Serif SC",serif;font-size:30px;font-weight:900;border-bottom:3px solid var(--ink);padding-bottom:12px;margin-bottom:8px;display:flex;align-items:baseline;gap:12px}
+.catpage .ch .en{font-size:12px;letter-spacing:2px;color:var(--ink3)}
+.catpage .cmeta{font-size:12.5px;color:var(--ink2);margin-bottom:24px}
+.catcard{background:var(--cream);border-radius:10px;padding:22px 26px;margin-bottom:28px}
+.catcard .cck{font-size:11px;letter-spacing:2px;color:var(--red);font-weight:700;text-transform:uppercase;margin-bottom:8px}
+.catcard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:700;line-height:1.35;margin-bottom:10px}
+.catcard h2 a{text-decoration:none}.catcard h2 a:hover{color:var(--red)}
+.catcard .ess{font-family:"Songti SC","Noto Serif SC",serif;font-size:15.5px;border-left:3px solid var(--red);padding-left:14px;margin-bottom:12px;line-height:1.6}
+.catcard .pts{margin:0 0 4px 0;padding-left:18px}
+.catcard .pts li{font-size:13.5px;color:var(--ink2);margin:4px 0;line-height:1.55}
+.crow{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--hair2);align-items:baseline}
+.crow .cn{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:22px;color:var(--red);min-width:42px}
+.crow .cc{flex:1}
+.crow .ct{font-family:"Songti SC","Noto Serif SC",serif;font-size:18px;font-weight:600;text-decoration:none;display:block;line-height:1.4}
+.crow .ct:hover{color:var(--red)}
+.crow .cs{font-size:13.5px;color:var(--ink2);margin-top:6px;line-height:1.65}
+.crow .ctags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.crow .ctag{font-size:11px;color:var(--ink2);border:1px solid var(--hair);padding:2px 9px;border-radius:3px}
+.crow .clink{font-size:12.5px;color:var(--red);text-decoration:none;margin-top:8px;display:inline-block}
+.pager{display:flex;align-items:center;justify-content:center;gap:20px;padding:28px 0 8px}
+.pager button{font-family:inherit;font-size:13px;background:var(--paper);border:1px solid var(--hair);border-radius:20px;padding:7px 18px;cursor:pointer;color:var(--ink)}
+.pager button:hover:not(:disabled){border-color:var(--red);color:var(--red)}
+.pager button:disabled{opacity:.4;cursor:default}
+.pager #pgInfo{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;color:var(--ink2)}
+.rel-tag{position:relative;font-size:11px;color:var(--red);border:1px solid var(--red);border-radius:3px;padding:2px 8px;cursor:default}
+.rel-tag .rel-pop{display:none;position:absolute;left:0;bottom:130%;z-index:50;width:max-content;max-width:320px;background:var(--ink);color:#f4efe6;font-size:11.5px;line-height:1.7;padding:8px 12px;border-radius:7px;box-shadow:0 6px 20px rgba(40,30,20,.3)}
+.rel-tag:hover .rel-pop{display:block}
+.lo-block{margin-top:24px;border-top:1px dashed var(--hair)}
+.lo-block summary{cursor:pointer;padding:14px 0;font-size:13px;color:var(--ink3);font-family:"Songti SC","Noto Serif SC",serif;list-style:none}
+.lo-block summary::-webkit-details-marker{display:none}
+.lo-block summary::before{content:"▸ ";color:var(--red)}
+.lo-block[open] summary::before{content:"▾ "}
+.lo-rows{opacity:.72}
+/* 洞察库 + 文章页 */
+.ilist{max-width:820px;margin:0 auto;padding:24px}
+.icard{background:var(--paper);border:1px solid var(--hair);border-radius:12px;padding:22px 26px;margin-bottom:16px;transition:.15s}
+.icard:hover{border-color:var(--red);box-shadow:0 6px 22px rgba(80,60,40,.08)}
+.icard .ik{font-size:11px;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:6px}
+.icard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:22px;font-weight:700;line-height:1.3;margin-bottom:8px}
+.icard h2 a{text-decoration:none}.icard h2 a:hover{color:var(--red)}
+.icard .im{font-size:12.5px;color:var(--ink3);margin-bottom:10px}
+.icard .idesc{font-size:14px;color:var(--ink2);line-height:1.7}
+.iempty{text-align:center;padding:60px 20px;color:var(--ink3)}
+.article{max-width:720px;margin:0 auto;padding:30px 24px;font-size:16px;line-height:1.9}
+.article .atitle{font-family:"Songti SC","Noto Serif SC",serif;font-size:34px;font-weight:900;line-height:1.25;margin-bottom:14px}
+.article .ameta{font-size:13px;color:var(--ink3);border-bottom:1px solid var(--hair);padding-bottom:18px;margin-bottom:24px}
+.article h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:23px;margin:30px 0 12px;padding-top:8px}
+.article h3{font-size:18px;margin:22px 0 10px;color:var(--ink)}
+.article p{margin-bottom:16px;color:#2a2620}
+.article blockquote{border-left:3px solid var(--red);padding:6px 0 6px 18px;margin:18px 0;font-family:"Songti SC","Noto Serif SC",serif;font-style:normal;color:var(--ink);background:var(--cream);border-radius:0 8px 8px 0;padding:14px 18px}
+.article .aback{display:inline-block;margin-bottom:20px;color:var(--red);text-decoration:none;font-size:13px}
+.wknav{max-width:880px;margin:16px auto 0;padding:10px 16px;background:var(--cream);border-radius:8px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px}
+.wknav-lab{color:var(--ink3);margin-right:4px;font-family:"Songti SC","Noto Serif SC",serif}
+.wknav-item{padding:3px 12px;border:1px solid var(--hair);border-radius:14px;text-decoration:none;color:var(--ink2);background:var(--paper)}
+.wknav-item:hover{border-color:var(--red);color:var(--red)}
+.wknav-item.on{background:var(--red);color:#fff;border-color:var(--red)}
+@media(max-width:880px){.leads,.grid,.deep{grid-template-columns:1fr}.lead.l{border-right:none;border-bottom:1px solid var(--hair)}.search-wrap input{width:130px}}
+
+.mark-btn{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ink3);background:none;border:1px solid var(--hair);border-radius:5px;padding:2px 9px;cursor:pointer;margin-left:8px;vertical-align:middle;font-family:"Noto Sans SC",sans-serif;transition:.15s}
+.mark-btn:hover{border-color:var(--red);color:var(--red)}
+.mark-btn.marked{background:var(--red);color:#fff;border-color:var(--red)}
+[data-mark-url].is-marked{background:#fdf6ef;box-shadow:inset 3px 0 0 var(--red);border-radius:4px}
+.mark-note{display:none;font-size:12.5px;color:var(--ink2);background:#fbf6ef;border-left:2px solid var(--red);padding:7px 12px;margin-top:8px;border-radius:0 6px 6px 0;line-height:1.6}
+.mark-note.show{display:block}
+.mark-note b{color:var(--red);font-weight:600;font-size:11px}
+/* 弹框 */
+.mark-modal{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,16,12,.4);align-items:center;justify-content:center}
+.mark-modal.show{display:flex}
+.mark-box{background:var(--paper);border-radius:12px;padding:24px 26px;width:min(92vw,460px);box-shadow:0 20px 60px rgba(60,40,20,.25)}
+.mark-box h4{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;margin-bottom:4px;line-height:1.4}
+.mark-box .mb-meta{font-size:12px;color:var(--ink3);margin-bottom:14px}
+.mark-box textarea{width:100%;min-height:90px;border:1px solid var(--hair);border-radius:8px;padding:10px 12px;font-family:inherit;font-size:14px;line-height:1.6;resize:vertical;outline:none}
+.mark-box textarea:focus{border-color:var(--red)}
+.mark-box .mb-tip{font-size:11.5px;color:var(--ink3);margin:6px 0 14px}
+.mark-box .mb-foot{display:flex;gap:10px;justify-content:flex-end}
+.mark-box button{font-family:inherit;font-size:13px;border-radius:7px;padding:8px 18px;cursor:pointer;border:1px solid var(--hair);background:var(--paper);color:var(--ink2)}
+.mark-box .mb-save{background:var(--red);color:#fff;border-color:var(--red)}
+.mark-box .mb-del{margin-right:auto;color:var(--ink3);border:none}
+.mark-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:13px;padding:9px 20px;border-radius:20px;z-index:210;opacity:0;transition:.3s;pointer-events:none}
+.mark-toast.show{opacity:1}
+/* 摘要浮窗 */
+.peek-modal{display:none;position:fixed;inset:0;z-index:220;background:rgba(20,16,12,.45);align-items:center;justify-content:center;padding:20px}
+.peek-modal.show{display:flex}
+.peek-box{position:relative;background:var(--paper);border-radius:14px;padding:30px 32px;width:min(94vw,560px);max-height:82vh;overflow-y:auto;box-shadow:0 24px 70px rgba(40,30,20,.35)}
+.peek-x{position:absolute;top:12px;right:16px;border:none;background:none;font-size:26px;line-height:1;color:var(--ink3);cursor:pointer}
+.peek-x:hover{color:var(--red)}
+.peek-cat{font-size:11px;letter-spacing:1px;color:var(--red);font-weight:700;margin-bottom:10px}
+.peek-title{font-size:21px;font-weight:700;line-height:1.42;margin-bottom:14px;padding-right:22px}
+.peek-sum{font-size:14.5px;line-height:1.9;color:var(--ink2);margin-bottom:22px}
+.peek-go{display:inline-block;font-size:14px;font-weight:600;color:var(--red);text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+
+.legal{max-width:880px;margin:0 auto;padding:4px 28px 44px;color:var(--ink3);font-size:11.5px;line-height:1.85}
+.legal p{margin:0 0 9px}
+.legal b{color:var(--ink2);font-weight:600}
+.legal a{color:var(--ink2);border-bottom:1px solid var(--hair)}
+.legal .lc{margin-top:13px;padding-top:12px;border-top:1px solid var(--hair);text-align:center}
+@media(max-width:880px){.legal{padding:4px 18px 36px}}
+</style></head><body>
+<div class="mark-modal" id="markModal">
+  <div class="mark-box">
+    <h4 id="mbTitle"></h4>
+    <div class="mb-meta" id="mbMeta"></div>
+    <textarea id="mbComment" placeholder="写下你的想法 / 评论 / 为什么标它(可留空,仅标记)…"></textarea>
+    <div class="mb-tip">这条评论会被记录,AI 每晚据此判断你可能想深挖的方向。</div>
+    <div class="mb-foot">
+      <button class="mb-del" id="mbDel">取消标记</button>
+      <button id="mbCancel">关闭</button>
+      <button class="mb-save" id="mbSave">保存标记</button>
+    </div>
+  </div>
+</div>
+<div class="mark-toast" id="markToast"></div>
+<div class="peek-modal" id="peekModal">
+  <div class="peek-box">
+    <button class="peek-x" type="button">&times;</button>
+    <div class="peek-cat"></div>
+    <h3 class="peek-title serif"></h3>
+    <p class="peek-sum"></p>
+    <a class="peek-go" target="_blank" rel="noopener">阅读原文 →</a>
+  </div>
+</div>
+
+<div class="mast"><div class="mast-line">The AI Signal · 行业</div>
+<h1 class="serif"><a href="../index.html">AI 信号站</a></h1>
+<div class="meta">2026-07-19 · 行业 版块 · 共 <b>103</b> 条</div></div>
+<div class="rule"></div>
+<nav class="nav"><a href="../d/2026-07-19.html">头版</a><a href="../c/2026-07-19-Agent.html">Agent</a><a href="../c/2026-07-19-产品.html">产品</a><a href="../c/2026-07-19-行业.html" class="on">行业</a><a href="../c/2026-07-19-论文.html">论文</a><a href="../c/2026-07-19-模型.html">模型</a><a href="../c/2026-07-19-技巧.html">技巧</a><a href="../weekly.html" style="color:var(--red)">上周·周报</a><a href="../insights.html" style="color:var(--red)">深度洞察</a><span class="search-wrap"><input type="text" id="siteSearch" placeholder="站内搜索…" autocomplete="off"><div class="search-res" id="searchRes"></div></span></nav>
+<div class="catpage">
+  <div class="ch serif">行业<span class="en">INDUSTRY</span></div>
+  <div class="cmeta">2026-07-19 · 该版块全部 103 条,按精选分排序 · <a href="../d/2026-07-19.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="cmeta">2026-07-19 · 全量 103 条 → 去重聚类 103 条 · 默认展示 AIHOT 精选 5 条,其余折叠 · <a href="../d/2026-07-19.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="catcard">
+              <div class="cck">本版块 · 最值得你思考</div>
+              <h2 class="serif"><a href="https://x.com/hongming731/status/2078635024623231068" target="_blank">开放权重模型逼近前沿，部署治理成新焦点</a></h2>
+              <div class="ess serif">开放权重逼近前沿后，企业选型的胜负手不再是榜单分数，而是部署治理、总拥有成本与供应商独立性。</div>
+              <div class="cck" style="margin-bottom:6px">思考切口</div><ul class="pts"><li>选型表应同时纳入推理成本、运维人力、权限体系、合规要求和迁移难度，避免只比单次价格。</li><li>若数据主权与供应商独立性并非刚需，自部署开放模型未必比托管闭源方案更经济。</li></ul>
+            </div>
+  <div class="sec-title"><span>本版块精选 · 5 条</span></div>
+  <div class="crow crow-pg" data-i="0" data-mark-url="https://workshop.cjpais.com/projects/transcribe-cpp" data-mark-title="transcribe.cpp 发布：基于 ggml 的跨平台语音转录库，支持 16 个 ASR 模型族" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">78</span><div class="cc">
+        <a class="ct serif" href="https://workshop.cjpais.com/projects/transcribe-cpp" target="_blank">transcribe.cpp 发布：基于 ggml 的跨平台语音转录库，支持 16 个 ASR 模型族</a>
+        <div class="cs">transcribe.cpp v0.1.0 发布，一个基于 ggml 的语音转录库，支持 16 个 ASR 模型族（60+ 模型），并通过 Vulkan、Metal、CUDA 和 TinyBLAS 实现 GPU 加速。…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">开源/仓库</span><span class="ctag">语音</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://workshop.cjpais.com/projects/transcribe-cpp" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="1" data-mark-url="https://x.com/vista8/status/2078685312105189767" data-mark-title="发布AI自动视频剪辑Skill" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">72</span><div class="cc">
+        <a class="ct serif" href="https://x.com/vista8/status/2078685312105189767" target="_blank">发布AI自动视频剪辑Skill</a>
+        <div class="cs">写了个 AI 自动视频剪辑 skill，感觉立马可以抖音小红书起号了，嘿嘿。
+
+买个33台词会员，没有也可以用pexels免费空镜头，加上Listenhub账号，完全可以让AI做各种视频了。
+
+https://github.com/joeseesun/qiaomu-cut-ski…</div>
+        <div class="ctags mark-anchor"><span class="ctag">GitHub</span><span class="ctag">开源/仓库</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://x.com/vista8/status/2078685312105189767" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="2" data-mark-url="https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making" data-mark-title="AI 热潮正在瓦解全球决策机制" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">71</span><div class="cc">
+        <a class="ct serif" href="https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making" target="_blank">AI 热潮正在瓦解全球决策机制</a>
+        <div class="cs">一位拥有 300 多次行业交流经验的从业者观察到，全球公私机构正陷入集体性 AI 狂热，决策层要么没有计划，要么只能低头回避。过去一年半中，其团队所见的所有 AI 项目均以失败告终（成功率 0%），失败原因常与 LLM 能力无关，而是企业本就难以有效运行软件项目，且 AI 项目叠…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">现象/趋势</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="3" data-mark-url="https://techcrunch.com/2026/07/18/kimi-threat-or-menace" data-mark-title="Moonshot AI 发布开源模型 Kimi K3，性能接近前沿闭源模型" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">67</span><div class="cc">
+        <a class="ct serif" href="https://techcrunch.com/2026/07/18/kimi-threat-or-menace" target="_blank">Moonshot AI 发布开源模型 Kimi K3，性能接近前沿闭源模型</a>
+        <div class="cs">中国公司 Moonshot AI 本周发布新版开源模型 Kimi K3。Moonshot 称其虽仍落后于 Claude Fable 5 和 GPT 5.6 Sol，但在评测中持续优于其他测试模型，Arena.ai 和 Vals AI 的独立分析也表明 Kimi 可与前沿旗舰模型竞…</div>
+        <div class="ctags mark-anchor"><span class="ctag">DeepSeek</span><span class="ctag">OpenAI</span><span class="ctag">开源生态</span><span class="ctag">政策/监管</span><span class="rel-tag">关联讨论 6 条</span></div>
+        <a class="clink" href="https://techcrunch.com/2026/07/18/kimi-threat-or-menace" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="4" data-mark-url="https://x.com/kimmonismus/status/2078759256183210476" data-mark-title="月之暗面拟赴港IPO，Kimi K3突破后估值超300亿美元" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">62</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2078759256183210476" target="_blank">月之暗面拟赴港IPO，Kimi K3突破后估值超300亿美元</a>
+        <div class="cs">月之暗面（Moonshot AI）据报正筹备未来六个月内赴港IPO，此前Kimi K3重塑了外界对中国前沿AI能力的认知。该公司已分发股东决议案，并接近完成一轮融资，估值或超300亿美元。其年经常性收入从4月的2亿美元增至6月的3亿美元，以约3%的Anthropic估值和4%的O…</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2078759256183210476" target="_blank">阅读原文 →</a></div></div>
+  
+  <details class="lo-block"><summary>展开其余 98 条(非精选,已默认收起)</summary><div class="lo-rows"><div class="crow crow-pg" data-i="5" data-mark-url="https://x.com/emollick/status/2078847609309991342" data-mark-title="美前沿闭源与开源模型监管矛盾待解" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">60</span><div class="cc">
+        <a class="ct serif" href="https://x.com/emollick/status/2078847609309991342" target="_blank">美前沿闭源与开源模型监管矛盾待解</a>
+        <div class="cs">无论你认为答案应该是什么，美国对前沿闭源模型日益增长的监管/审批体系与开源模型缺乏监管之间的固有矛盾，将在不久的将来以某种方式得到解决，并产生重大影响。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">开源生态</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://x.com/emollick/status/2078847609309991342" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="6" data-mark-url="https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all" data-mark-title="非营利组织 Current AI 正构建开放、公共的 AI 基础设施" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">59</span><div class="cc">
+        <a class="ct serif" href="https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all" target="_blank">非营利组织 Current AI 正构建开放、公共的 AI 基础设施</a>
+        <div class="cs">非营利组织 Current AI 正构建类似万维网的免费公共 AI 替代方案，已获法国政府、福特基金会、DeepMind 等机构共计 4 亿美元资助。其最新成果包括与印度政府合作的离线设备 Suno Sutra（支持 22 种印度语言），以及开源聊天机器人 Alpha Chat。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">DeepMind</span><span class="ctag">Hugging Face</span><span class="ctag">多模态</span><span class="ctag">开源生态</span></div>
+        <a class="clink" href="https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="7" data-mark-url="https://www.ithome.com/0/978/739.htm" data-mark-title="韩国棋手申真谞受让两子战胜围棋 AI KataGo，扳平三番棋比分" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">58</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/739.htm" target="_blank">韩国棋手申真谞受让两子战胜围棋 AI KataGo，扳平三番棋比分</a>
+        <div class="cs">世界排名第一的韩国棋手申真谞在“精锐数学·韩经棋神战”第二局中，以四目半战胜围棋 AI KataGo，成为首位在正式比赛中受让两子击败 KataGo 的职业棋手。比赛配置四块 RTX 3090 显卡（合计 96GB 显存），申真谞每局 5 小时基本用时加一次 30 秒读秒，Kat…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/739.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="8" data-mark-url="https://www.ithome.com/0/978/607.htm" data-mark-title="作家埃格斯受邀给 OpenAI 员工演讲，批评 ChatGPT 正夺走一代人的表达能力" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">58</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/607.htm" target="_blank">作家埃格斯受邀给 OpenAI 员工演讲，批评 ChatGPT 正夺走一代人的表达能力</a>
+        <div class="cs">美国作家戴夫·埃格斯（Dave Eggers）应 OpenAI CEO 萨姆·奥尔特曼邀请，为约 200 名 OpenAI 员工发表演讲。他批评 ChatGPT 给教育工作者带来“灾难性”影响，称学生若用它写作将永远学不会真正表达，自己的声音会被夺走，导致一两代人陷入沉默。埃格斯…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/607.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="9" data-mark-url="https://x.com/natolambert/status/2078847722128633910" data-mark-title="探访中国AI实验室：低成本造LLM的独特文化" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://x.com/natolambert/status/2078847722128633910" target="_blank">探访中国AI实验室：低成本造LLM的独特文化</a>
+        <div class="cs">Nathan Lambert 在走访中国主流 AI 实验室后指出，其文化极适合用更少资源构建大语言模型，但生态与硅谷截然不同：更多公司参与竞争，几乎不存在独立数据标注行业。Kimi K3 等近期事件是理解这一差异的契机。完整报告见其博客。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span></div>
+        <a class="clink" href="https://x.com/natolambert/status/2078847722128633910" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="10" data-mark-url="https://www.ithome.com/0/978/725.htm" data-mark-title="国家数据局：全国已建成高质量数据集12万个，总体量超1565 PB" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/725.htm" target="_blank">国家数据局：全国已建成高质量数据集12万个，总体量超1565 PB</a>
+        <div class="cs">截至今年6月底，全国已建成科学研究、工业制造、医疗卫生等行业的高质量数据集12万个，总体量超1565 PB，较一季度末增长超60%。七个数据标注先行先试城市标注规模超119 PB，从业人员达14万人。国家数据局下一步将构建服务AI的高质量数据供给体系，推动数据集有偿使用。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">政策/监管</span><span class="ctag">数据/训练</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/725.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="11" data-mark-url="https://x.com/emollick/status/2078719596849189323" data-mark-title="Kimi K3 32页推理链分析AI现状" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">56</span><div class="cc">
+        <a class="ct serif" href="https://x.com/emollick/status/2078719596849189323" target="_blank">Kimi K3 32页推理链分析AI现状</a>
+        <div class="cs">当我问 Kimi K3：“我想让你推荐两首你认为适用于当前像你这样的生成式AI模型状态的诗。不要只选热门诗，认真思考。”它的思维链长达32页（而且很有趣）：https://docs.google.com/document/d/13XTd9cc0-FQSkw_uuNeJ3R4G1M…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">推理</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://x.com/emollick/status/2078719596849189323" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="12" data-mark-url="https://x.com/Kimi_Moonshot/status/2078855608565207130" data-mark-title="Kimi K3 需求暴增，暂停新订阅并拆分会员计划" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Kimi_Moonshot/status/2078855608565207130" target="_blank">Kimi K3 需求暴增，暂停新订阅并拆分会员计划</a>
+        <div class="cs">Kimi K3 上线 48 小时内需求逼近算力上限，Kimi.ai 宣布暂停新订阅以保障现有用户体验，已订阅用户不受影响。团队正加速扩容，将分批重新开放新订阅。未来会员将拆分为 Kimi Membership（Web/App/Work）和 Kimi Code Membership…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span><span class="rel-tag">关联讨论 6 条</span></div>
+        <a class="clink" href="https://x.com/Kimi_Moonshot/status/2078855608565207130" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="13" data-mark-url="https://www.ithome.com/0/978/745.htm" data-mark-title="世界人工智能大会·学术平台首届录用57篇论文，覆盖12个国家及地区" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/745.htm" target="_blank">世界人工智能大会·学术平台首届录用57篇论文，覆盖12个国家及地区</a>
+        <div class="cs">7月18日，2026世界人工智能大会在上海召开，中国发起的世界人工智能大会·学术平台首次亮相。首届会议收到282篇有效投稿，录用57篇，录用率约20.21%，作者覆盖全球12个国家及港澳台地区。会议首创“AI辅助初筛+全程序委员会委员开放点评+多方协同裁定”三维评审机制，所有录用…</div>
+        <div class="ctags mark-anchor"><span class="ctag">开源生态</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/745.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="14" data-mark-url="https://x.com/emollick/status/2078621842508587318" data-mark-title="Kimi K3 中文请求下思维链 95.5% 为英文" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://x.com/emollick/status/2078621842508587318" target="_blank">Kimi K3 中文请求下思维链 95.5% 为英文</a>
+        <div class="cs">有趣的是，当我用中文请求 Kimi K3 挑选两首适用于大语言模型的非陈腐诗歌时，其思维链中 95.5% 的字符（88% 的词汇）为英文，即便它明确是在为中文读者考虑中文诗歌。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">现象/趋势</span><span class="rel-tag">关联讨论 2 条</span></div>
+        <a class="clink" href="https://x.com/emollick/status/2078621842508587318" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="15" data-mark-url="https://www.theverge.com/ai-artificial-intelligence/967630/dave-eggers-openai-chatgpt-silencing-an-entire-generation" data-mark-title="Dave Eggers 对 OpenAI 员工称 ChatGPT 对教育工作者影响“灾难性”" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://www.theverge.com/ai-artificial-intelligence/967630/dave-eggers-openai-chatgpt-silencing-an-entire-generation" target="_blank">Dave Eggers 对 OpenAI 员工称 ChatGPT 对教育工作者影响“灾难性”</a>
+        <div class="cs">作家 Dave Eggers 去年应 Sam Altman 邀请，向约 200 名 OpenAI 员工发表演讲。他称 ChatGPT 对教育工作者的影响是“灾难性的”，并指责该公司“无论有意与否，已经让每一位教师……”…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">现象/趋势</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://www.theverge.com/ai-artificial-intelligence/967630/dave-eggers-openai-chatgpt-silencing-an-entire-generation" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="16" data-mark-url="https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment" data-mark-title="Kimi K3 与 Claude 对比：质量相当但价格更低，美国AI政策成败笔" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment" target="_blank">Kimi K3 与 Claude 对比：质量相当但价格更低，美国AI政策成败笔</a>
+        <div class="cs">作者在日常编码中对比Kimi K3与Claude，发现两者输出质量和token消耗几乎无差别。K3 API价格为每百万输入token 3美元、输出15美元，远低于Claude的10美元和50美元；订阅计划起价19美元/月，39美元编码版比Claude同价位计划更慷慨。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">开源生态</span><span class="ctag">现象/趋势</span><span class="rel-tag">关联讨论 6 条</span></div>
+        <a class="clink" href="https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="17" data-mark-url="https://x.com/kimmonismus/status/2078508342037954769" data-mark-title="美国收紧AI监管，Kimi K3开源后管制升级" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2078508342037954769" target="_blank">美国收紧AI监管，Kimi K3开源后管制升级</a>
+        <div class="cs">美国政府对前沿AI模型发布管控趋严，白宫启动“Gold Eagle”计划，要求新模型发布须获政府明确批准，企业准入也将受限。此举正值Kimi K3以开源开放权重发布、美国国内呼吁放松管制以追赶中国前沿实验室之际。自愿合规模式可能终结。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">政策/监管</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2078508342037954769" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="18" data-mark-url="https://www.ithome.com/0/978/670.htm" data-mark-title="月之暗面 Kimi K3 大模型登顶全球榜单，彭博社称美国 AI 领先中国认知被打破" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">53</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/670.htm" target="_blank">月之暗面 Kimi K3 大模型登顶全球榜单，彭博社称美国 AI 领先中国认知被打破</a>
+        <div class="cs">月之暗面发布拥有 2.8 万亿参数、100 万 Tokens 上下文的 Kimi K3 大模型，在 Frontend Code Arena 全球榜单中以 1679 分超越 Claude Fable 5 位居第一。彭博社报道称，该模型正在打破美国 AI 领先中国的固有认知，伯克利教…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">OpenAI</span><span class="ctag">现象/趋势</span><span class="ctag">编码</span><span class="rel-tag">关联讨论 18 条</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/670.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="19" data-mark-url="https://www.ithome.com/0/978/808.htm" data-mark-title="月之暗面 Kimi 暂停 C 端新用户订阅，全力保障已有用户" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">52</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/808.htm" target="_blank">月之暗面 Kimi 暂停 C 端新用户订阅，全力保障已有用户</a>
+        <div class="cs">月之暗面 Kimi 宣布即日起暂停 C 端新用户订阅，将全部算力用于服务已有用户，以应对 Kimi K3 发布后远超预期的请求量。Kimi K3 拥有 2.8 万亿参数和 100 万 Tokens 上下文，输入费用为每 100 万 Tokens 2 元（缓存命中）或 20 元（缓…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span><span class="rel-tag">关联讨论 6 条</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/808.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="20" data-mark-url="https://www.ithome.com/0/978/734.htm" data-mark-title="月之暗面 Kimi K3 发布次日 ARR 创历史最大单日增幅" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">52</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/734.htm" target="_blank">月之暗面 Kimi K3 发布次日 ARR 创历史最大单日增幅</a>
+        <div class="cs">月之暗面新一代大模型 Kimi K3 发布次日，年化收入（ARR）创下历史最大单日增幅。该模型拥有 2.8 万亿参数，原生支持视觉理解与 100 万 token 上下文窗口，将于近日开放权重。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">开源生态</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 7 条</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/734.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="21" data-mark-url="https://www.ithome.com/0/978/702.htm" data-mark-title="《大众摄影》刊发AI生成“五腿牛”照片，官方回应已撤下" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">52</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/702.htm" target="_blank">《大众摄影》刊发AI生成“五腿牛”照片，官方回应已撤下</a>
+        <div class="cs">《大众摄影》2025年8月刊发的照片《龙川晨韵》中出现一头五条腿的牛，被网友质疑为AI生成。杂志社社长郑壬杰回应称，作者承认是使用AI后的失误，图片已从线上撤下。杂志“双周争胜”栏目接受AI影像投稿，但要求投稿者主动声明并清晰标识AI内容，不接受纯粹文生图AI影像。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">现象/趋势</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/702.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="22" data-mark-url="https://x.com/natolambert/status/2078518117836472581" data-mark-title="白宫“金鹰”计划收紧AI模型发布管控" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">52</span><div class="cc">
+        <a class="ct serif" href="https://x.com/natolambert/status/2078518117836472581" target="_blank">白宫“金鹰”计划收紧AI模型发布管控</a>
+        <div class="cs">灾难。他们没有理解这项技术的人才，人才都已被排挤出去，过程中也没有清晰的文档记录。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">安全/对齐</span><span class="ctag">政策/监管</span></div>
+        <a class="clink" href="https://x.com/natolambert/status/2078518117836472581" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="23" data-mark-url="https://www.ithome.com/0/978/797.htm" data-mark-title="世界人工智能合作组织在上海成立，29国签署协定鼓励共建开源生态" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">51</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/797.htm" target="_blank">世界人工智能合作组织在上海成立，29国签署协定鼓励共建开源生态</a>
+        <div class="cs">7月16日，29个国家在上海签署《关于成立世界人工智能合作组织的协定》，成为创始成员国。该组织总部设在上海，未来将重点加强人工智能能力建设国际合作、鼓励共建开源生态，并推动构建公正合理的全球治理体系。合作组织是国际交流平台，不影响各国与第三方合作。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">开源生态</span><span class="ctag">政策/监管</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/797.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="24" data-mark-url="https://x.com/shao__meng/status/2078820921947938873" data-mark-title="多款国产大模型密集曝光，SOTA格局每周易主" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://x.com/shao__meng/status/2078820921947938873" target="_blank">多款国产大模型密集曝光，SOTA格局每周易主</a>
+        <div class="cs">DeepSeek V4、GLM 5.2 发布后，Kimi K3 与 Qwen 3.8 接连曝光，直指 Claude Fable 5 和 GPT-5.6 Sol。腾讯 Hy3 提升显著，MiniMax M3 下一代值得期待。开源 AI 模型 SOTA 几乎每周易主，Gemini 3…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">DeepSeek</span><span class="ctag">开源生态</span><span class="ctag">推理</span></div>
+        <a class="clink" href="https://x.com/shao__meng/status/2078820921947938873" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="25" data-mark-url="https://www.ithome.com/0/978/625.htm" data-mark-title="澳大利亚高校为防AI作弊重新拥抱口试和线下考试" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/625.htm" target="_blank">澳大利亚高校为防AI作弊重新拥抱口试和线下考试</a>
+        <div class="cs">澳大利亚高校正加快调整考试和评估方式，以应对学生利用AI完成作业甚至作弊的问题。澳大利亚国立大学提出将课程评估划分为“安全”和“不安全”两类，并鼓励恢复线下考试；昆士兰大学和墨尔本大学也已推进“安全评估”改革，增加口试等互动式考试。部分学者批评当前应对措施过于仓促和“歇斯底里”，…</div>
+        <div class="ctags mark-anchor"><span class="ctag">安全/对齐</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/625.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="26" data-mark-url="https://x.com/swyx/status/2078628617987518855" data-mark-title="欧洲拥有全球顶尖AI工程师人才" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://x.com/swyx/status/2078628617987518855" target="_blank">欧洲拥有全球顶尖AI工程师人才</a>
+        <div class="cs">那些批评欧洲的人忽略了，如果你真正去发掘合适的人才，他们实际上拥有一些世界顶级的AI工程师。
+
+我们基本上正在运营最具竞争力的全球AI人才竞技场（以演讲和研讨会衡量），随着WF进入评估窗口期，这将非常有趣。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">现象/趋势</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/swyx/status/2078628617987518855" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="27" data-mark-url="https://www.ithome.com/0/978/612.htm" data-mark-title="英伟达全球销售体系换帅：微软26年老将尼克·帕克加盟出任销售负责人" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/612.htm" target="_blank">英伟达全球销售体系换帅：微软26年老将尼克·帕克加盟出任销售负责人</a>
+        <div class="cs">英伟达任命微软26年资深高管尼克·帕克（Nick Parker）为全球销售负责人，接替退休的杰伊·普里（Jay Puri）。帕克此前担任微软全球销售与解决方案部门执行副总裁兼首席商务官，其薪酬包括价值4000万美元股票奖励、500万美元签约奖金及100万美元年薪。此次外部空降高管…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/612.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="28" data-mark-url="https://x.com/fchollet/status/2078526645108138382" data-mark-title="模型执行指令能力飙升，决策能力停滞" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://x.com/fchollet/status/2078526645108138382" target="_blank">模型执行指令能力飙升，决策能力停滞</a>
+        <div class="cs">模型精准执行指令的能力（提升极快）与面对指令未覆盖情况时做出合理决策的能力（长期停滞）之间存在有趣的脱节。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">推理</span></div>
+        <a class="clink" href="https://x.com/fchollet/status/2078526645108138382" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="29" data-mark-url="https://www.ithome.com/0/978/773.htm" data-mark-title="蔡磊获“2026 年度 AI 特别贡献人物”，搭建渐冻症“AI 科研大脑”提升研发效率" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">49</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/773.htm" target="_blank">蔡磊获“2026 年度 AI 特别贡献人物”，搭建渐冻症“AI 科研大脑”提升研发效率</a>
+        <div class="cs">蔡磊在 2026 中国 AI 盛典中获“2026 年度 AI 特别贡献人物”，其团队搭建渐冻症“AI 科研大脑”大幅提升研发效率，并在动物模型上验证了渐冻症治愈的可能路径。团队已推动近百个科研合作项目，助力 15 个药物管线及治疗技术实现临床转化突破。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/773.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="30" data-mark-url="https://www.ithome.com/0/978/673.htm" data-mark-title="全国首个具身智能实训场样板点发布，国家地方共建人形机器人创新中心与华为联手打造" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">49</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/673.htm" target="_blank">全国首个具身智能实训场样板点发布，国家地方共建人形机器人创新中心与华为联手打造</a>
+        <div class="cs">国家地方共建人形机器人创新中心与华为在2026 WAIC上发布全国首个具身智能实训场样板点。该实训场打通不同品牌人形机器人的训练数据接口，支持工业搬运、巡检、服务类机器人在高温、雨天、狭小通道等复杂场景的统一仿真训练，并对外开放中小机器人企业试用名额。样板点依托国产算力底座，搭载…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">数据/训练</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/673.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="31" data-mark-url="https://www.ithome.com/0/978/614.htm" data-mark-title="英伟达 CEO 黄仁勋东京行：敲定国家级 AI 工厂合作，送粉丝红豆糕" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">49</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/614.htm" target="_blank">英伟达 CEO 黄仁勋东京行：敲定国家级 AI 工厂合作，送粉丝红豆糕</a>
+        <div class="cs">英伟达 CEO 黄仁勋在东京宣布与日本政府支持的 AI 企业 Noetra 合作，建设一座配备 2.75 万块 GPU 的“AI 工厂”，该项目被定位为全球首个面向机器人产业的国家级 AI 基础设施。黄仁勋还与铠侠、东京电子等多家日本科技企业高层共进晚餐，并在离开居酒屋时向粉丝赠…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/614.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="32" data-mark-url="https://www.ithome.com/0/978/615.htm" data-mark-title="华为 Pura X Max、智慧屏 S7 Pro 获国标人工智能 L3 等级手机、电视首证" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">49</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/615.htm" target="_blank">华为 Pura X Max、智慧屏 S7 Pro 获国标人工智能 L3 等级手机、电视首证</a>
+        <div class="cs">华为 Pura X Max、MateBook Pro 及智慧屏 S7 Pro 获国标人工智能 L3 等级手机、电脑、电视首证。该分级标准由工信部等部门于今年 5 月联合发布，将终端智能化水平划分为 L1 响应级至 L4 协同级，L3 级为目前有明确划分标准的最高智能化水平。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">政策/监管</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/615.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="33" data-mark-url="https://www.ithome.com/0/978/801.htm" data-mark-title="华为靳玉志：“界”与“境”互补，鸿蒙智行主打30万以上样板点" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">48</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/801.htm" target="_blank">华为靳玉志：“界”与“境”互补，鸿蒙智行主打30万以上样板点</a>
+        <div class="cs">华为引望CEO靳玉志称，“界”（问界、享界等）与“境”（启境、奕境等）是互补关系，并非冲突。“界”以30万以上车型为主，打造全栈智能化样板点；“境”则以30万以下车型为主，实现科技普惠。华为乾崑定位为“电子螺丝钉”，帮助车企造好车、卖好车，成为汽车行业智能化的公共平台。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/801.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="34" data-mark-url="https://www.ithome.com/0/978/710.htm" data-mark-title="vivo 首批获颁《人工智能终端智能化分级》国标 L3 评级证书" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">48</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/710.htm" target="_blank">vivo 首批获颁《人工智能终端智能化分级》国标 L3 评级证书</a>
+        <div class="cs">vivo 首批获得《人工智能终端智能化分级》系列国家标准 L3 评级证书，官方称 L3 为当前行业可达到的最高智能化评级。该标准由工信部等部门于今年 5 月联合发布，将终端智能化水平划分为 L1 至 L4 四个等级。vivo 预告小 V 圈搜「圈搜百科」和「猜你想问」功能也将陆续…</div>
+        <div class="ctags mark-anchor"><span class="ctag">端侧</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/710.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="35" data-mark-url="https://x.com/kimmonismus/status/2078808570746077438" data-mark-title="中国AI能源基建优势与模型追赶态势" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">47</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2078808570746077438" target="_blank">中国AI能源基建优势与模型追赶态势</a>
+        <div class="cs">到2030年，电力可能成为AI发展的最大瓶颈，而中国在能源基建上拥有明显优势：正在建设37座核电站，2025年新增太阳能装机容量315GW，相当于美国过去10-15年总和。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">DeepSeek</span><span class="ctag">开源生态</span><span class="ctag">推理</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2078808570746077438" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="36" data-mark-url="https://www.ithome.com/0/978/698.htm" data-mark-title="中国地震局发布“人工智能+防震减灾”三年行动方案，剑指2028年" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">47</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/698.htm" target="_blank">中国地震局发布“人工智能+防震减灾”三年行动方案，剑指2028年</a>
+        <div class="cs">中国地震局在2026世界人工智能大会地震人工智能论坛上发布《“人工智能+防震减灾”行动方案（2026—2028年）》，未来3年将围绕地震智能监测处理、智能化预警技术等九方面任务，构建“数据—模型—平台—应用”四位一体AI技术体系。目标到2028年实现AI技术对防震减灾业务的有效支…</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/698.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="37" data-mark-url="https://simonwillison.net/2026/Jul/19/ai-mania" data-mark-title="AI狂热正在摧毁全球决策能力" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">47</span><div class="cc">
+        <a class="ct serif" href="https://simonwillison.net/2026/Jul/19/ai-mania" target="_blank">AI狂热正在摧毁全球决策能力</a>
+        <div class="cs">咨询顾问Nik Suresh揭露，大型企业高管在从未使用过ChatGPT或任何AI工具的情况下，就为营收超20亿美元的公司制定了完全围绕AI的技术战略。一位工程师透露，为保住工作，他不得不让AI将Go仓库重写为Zig。供应商因担心得罪客户高管而不敢质疑“100倍生产力”等荒谬说法…</div>
+        <div class="ctags mark-anchor"><span class="ctag">现象/趋势</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://simonwillison.net/2026/Jul/19/ai-mania" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="38" data-mark-url="https://x.com/SenseTime_AI/status/2078713495642906877" data-mark-title="2024图灵奖得主Richard Sutton谈未来AI意识与基础模型角色" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">47</span><div class="cc">
+        <a class="ct serif" href="https://x.com/SenseTime_AI/status/2078713495642906877" target="_blank">2024图灵奖得主Richard Sutton谈未来AI意识与基础模型角色</a>
+        <div class="cs">2024图灵奖得主Richard Sutton在2026世界人工智能大会商汤论坛上，以《苦涩的教训》为引，探讨了未来AI是否具备类人意识的问题。他还分享了对基础模型在知识演进中角色的看法。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/SenseTime_AI/status/2078713495642906877" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="39" data-mark-url="https://x.com/xiaohu/status/2078685245122195590" data-mark-title="a16z报告：AI杀跌只针对无护城河软件股" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">47</span><div class="cc">
+        <a class="ct serif" href="https://x.com/xiaohu/status/2078685245122195590" target="_blank">a16z报告：AI杀跌只针对无护城河软件股</a>
+        <div class="cs">a16z 发布“本周图表”报告，用近20张数据图回应市场对AI的四大担忧：软件公司被AI团灭、便宜模型拖垮前沿大模型、AI抢走人类工作、数据中心推高电费。报告核心结论是，市场抛售软件股，但只杀没有护城河的那一半。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/xiaohu/status/2078685245122195590" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="40" data-mark-url="https://mp.weixin.qq.com/s/xE3SffTQWY0yRtqUA3cY4A" data-mark-title="生数科技朱军：从视频生成到世界模型的演进路径" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">46</span><div class="cc">
+        <a class="ct serif" href="https://mp.weixin.qq.com/s/xE3SffTQWY0yRtqUA3cY4A" target="_blank">生数科技朱军：从视频生成到世界模型的演进路径</a>
+        <div class="cs">生数科技创始人朱军阐释了从视频生成到世界模型的演进路径。公司发布的实时交互模型Vidu S1支持无限时长连续生成与语音交互，世界动作模型Motubrain在RoboTwin 2.0的50余项复杂任务中平均成功率超过95%。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">大佬观点</span></div>
+        <a class="clink" href="https://mp.weixin.qq.com/s/xE3SffTQWY0yRtqUA3cY4A" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="41" data-mark-url="https://www.ithome.com/0/978/628.htm" data-mark-title="安谋科技发起“开源 AIOS 联盟”，瑞芯微、紫光展锐等加入" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">46</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/628.htm" target="_blank">安谋科技发起“开源 AIOS 联盟”，瑞芯微、紫光展锐等加入</a>
+        <div class="cs">安谋科技在2026世界人工智能大会期间宣布发起“开源 AIOS 联盟”，已吸引超20家生态伙伴入驻。联盟聚焦AI模型能力、传感与运控等四大技术模块，牵头单位包括芯发科技、紫光展锐、瑞芯微等芯片厂商及面壁智能等软硬件方案提供商。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">开源生态</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/628.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="42" data-mark-url="https://x.com/hongming731/status/2078635024623231068" data-mark-title="开放权重模型逼近前沿，部署治理成新焦点" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">46</span><div class="cc">
+        <a class="ct serif" href="https://x.com/hongming731/status/2078635024623231068" target="_blank">开放权重模型逼近前沿，部署治理成新焦点</a>
+        <div class="cs">Mozilla 报告指出，开放权重模型在编码等任务上已逼近顶尖闭源模型，但生产采用仍有差距，竞争正从权重本身转向部署、权限、合规等 Agent harness 能力。报告强调，评估开放模型需综合考虑算力利用率、运维成本与数据主权等收益，而非仅比较单次推理 token 成本。决策者…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">安全/对齐</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/hongming731/status/2078635024623231068" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="43" data-mark-url="https://www.ithome.com/0/978/622.htm" data-mark-title="谷歌安卓系统漏洞曝光：Gemini 可绕过锁屏密码发送短信，官方即将修复" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">46</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/622.htm" target="_blank">谷歌安卓系统漏洞曝光：Gemini 可绕过锁屏密码发送短信，官方即将修复</a>
+        <div class="cs">谷歌安卓系统存在一项身份验证绕过漏洞，攻击者在拥有物理访问权限时，可不输入锁屏密码通过 Gemini 发送短信或 WhatsApp 消息。该漏洞自今年5月起被发现，最初在 Android 16 系统、Pixel 6a 手机中复现，触发方式为在锁屏界面同时按下“继续”和“添加附件”…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Google</span><span class="ctag">安全/对齐</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/622.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="44" data-mark-url="https://x.com/kimmonismus/status/2078561679332274463" data-mark-title="Kimi K3 缩小中美模型差距至两三月" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">46</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2078561679332274463" target="_blank">Kimi K3 缩小中美模型差距至两三月</a>
+        <div class="cs">Kimi K3 正迫使硅谷承认，中国开源模型已不再落后前沿六到九个月，差距现在可能仅有两到三个月。
+
+来自彭博社。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">开源生态</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2078561679332274463" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="45" data-mark-url="https://x.com/berryxia/status/2078858662328910241" data-mark-title="Kimi 加入算力紧缺，Coding Plan 用户受益" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">45</span><div class="cc">
+        <a class="ct serif" href="https://x.com/berryxia/status/2078858662328910241" target="_blank">Kimi 加入算力紧缺，Coding Plan 用户受益</a>
+        <div class="cs">如… 所料，Kimi 也加入蒜粒紧缺…
+
+之前买了Coding Plan 用户赚到了，暂停C端用户加入了 😂
+
+好东西 看来都缺啊～…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/berryxia/status/2078858662328910241" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="46" data-mark-url="https://x.com/omarsar0/status/2078860085762408747" data-mark-title="开源权重模型本质上是减速主义" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">45</span><div class="cc">
+        <a class="ct serif" href="https://x.com/omarsar0/status/2078860085762408747" target="_blank">开源权重模型本质上是减速主义</a>
+        <div class="cs">DAIR.AI 的 Elvis Saravia 强烈反驳“开源权重模型本质上是减速主义”的观点，称其为“荒谬”且“危险”的骗局。他引用 Epic Games 的 Tim Sweeney 的比喻：这就像一家玉米卷公司反对新品牌进入市场。Saravia 认为，持此论者并未真正使用或理…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">开源生态</span></div>
+        <a class="clink" href="https://x.com/omarsar0/status/2078860085762408747" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="47" data-mark-url="https://www.marktechpost.com/2026/07/18/kimi-k3-vs-deepseek-v4-pro-vs-glm-5-2-open-trillion-scale-moe-models-compared-on-benchmarks-license-and-serving-cost" data-mark-title="Kimi K3、DeepSeek V4 Pro 与 GLM-5.2 三款开源万亿参数 MoE 模型对比" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">45</span><div class="cc">
+        <a class="ct serif" href="https://www.marktechpost.com/2026/07/18/kimi-k3-vs-deepseek-v4-pro-vs-glm-5-2-open-trillion-scale-moe-models-compared-on-benchmarks-license-and-serving-cost" target="_blank">Kimi K3、DeepSeek V4 Pro 与 GLM-5.2 三款开源万亿参数 MoE 模型对比</a>
+        <div class="cs">Kimi K3、DeepSeek V4 Pro 与 GLM-5.2 三款开源万亿参数 MoE 模型在多项基准上对比。Kimi K3 在 MMLU 和 HumanEval 上领先，DeepSeek V4 Pro 在 GPQA 和 AIME 上表现突出，GLM-5.2 在 SWE-b…</div>
+        <div class="ctags mark-anchor"><span class="ctag">DeepSeek</span><span class="ctag">开源生态</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://www.marktechpost.com/2026/07/18/kimi-k3-vs-deepseek-v4-pro-vs-glm-5-2-open-trillion-scale-moe-models-compared-on-benchmarks-license-and-serving-cost" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="48" data-mark-url="https://x.com/kimmonismus/status/2078844125676270037" data-mark-title="开源模型逼近Fable 5，Opus 5面临两难困境" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">44</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2078844125676270037" target="_blank">开源模型逼近Fable 5，Opus 5面临两难困境</a>
+        <div class="cs">中国开源模型正快速逼近美国前沿水平：Qwen-3.8-Max据称已超越GPT-5.6 Sol，仅小幅落后Fable 5；Kimi K3消除了此前6-8个月的差距。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">大佬观点</span><span class="ctag">开源生态</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2078844125676270037" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="49" data-mark-url="https://x.com/cb_doge/status/2078811235383153148" data-mark-title="Grok 网站访问量半年同比增 112.51%" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">44</span><div class="cc">
+        <a class="ct serif" href="https://x.com/cb_doge/status/2078811235383153148" target="_blank">Grok 网站访问量半年同比增 112.51%</a>
+        <div class="cs">突发：Grok 在 2026 年上半年录得网站访问量同比大幅增长 112.51%，仅一年内便翻倍有余。🔥…</div>
+        <div class="ctags mark-anchor"><span class="ctag">xAI</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/cb_doge/status/2078811235383153148" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="50" data-mark-url="https://x.com/frxiaobei/status/2078765985612632196" data-mark-title="AI与互联网是不同技术革命，成本逻辑决定未来" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">44</span><div class="cc">
+        <a class="ct serif" href="https://x.com/frxiaobei/status/2078765985612632196" target="_blank">AI与互联网是不同技术革命，成本逻辑决定未来</a>
+        <div class="cs">AI与互联网是不同技术革命：互联网改变信息分发，边际成本趋近于零；AI带来智能生产，每次调用都需要计算成本。AI产品用户越多，计算成本越高，核心竞争力在于降低智能生产成本，关键基础设施是芯片、能源、模型效率和算力调度。智能平权比互联网更复杂，只有当智能成本降到足够低时，才能像电一…</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/frxiaobei/status/2078765985612632196" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="51" data-mark-url="https://x.com/SenseTime_AI/status/2078555402095165836" data-mark-title="图灵奖得主谈未来AI意识与基础模型角色" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">44</span><div class="cc">
+        <a class="ct serif" href="https://x.com/SenseTime_AI/status/2078555402095165836" target="_blank">图灵奖得主谈未来AI意识与基础模型角色</a>
+        <div class="cs">2024图灵奖得主Richard Sutton教授在2026世界人工智能大会商汤论坛上分享观点，从其著名文章《苦涩的教训》出发，探讨未来AI是否具备类人意识以及基础模型在知识未来中的角色。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/SenseTime_AI/status/2078555402095165836" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="52" data-mark-url="https://x.com/natolambert/status/2078609413884297639" data-mark-title="中国AI实验室资本效率远超美国同行" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">43</span><div class="cc">
+        <a class="ct serif" href="https://x.com/natolambert/status/2078609413884297639" target="_blank">中国AI实验室资本效率远超美国同行</a>
+        <div class="cs">我认为相当明显的一点是，中国实验室在资本效率上远超对手。
+
+在一个实验室规模与智能水平取决于有效资本（用于购买算力、数据和人才）的世界里，这可能是你的AI产业所能拥有的最大优势。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/natolambert/status/2078609413884297639" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="53" data-mark-url="https://x.com/SemiAnalysis_/status/2078594446996787568" data-mark-title="SemiAnalysis：Kimi K3 注意力机制不会缩减网络市场" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">42</span><div class="cc">
+        <a class="ct serif" href="https://x.com/SemiAnalysis_/status/2078594446996787568" target="_blank">SemiAnalysis：Kimi K3 注意力机制不会缩减网络市场</a>
+        <div class="cs">与 2025 年 1 月的 DeepSeek 类似，恐慌者可能认为 AI 网络交换机的总可寻址市场将大幅缩水，因为 Kimi K3 使用了 KDA 注意力机制，可将 KV 传输网络带宽降低多达 10 倍。但事实恰恰相反，如下文所述。👇️ 1/8🧵…</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">现象/趋势</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/SemiAnalysis_/status/2078594446996787568" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="54" data-mark-url="https://x.com/natolambert/status/2078549156520743011" data-mark-title="OpenAI员工因敌意被迫停止公开写作" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">42</span><div class="cc">
+        <a class="ct serif" href="https://x.com/natolambert/status/2078549156520743011" target="_blank">OpenAI员工因敌意被迫停止公开写作</a>
+        <div class="cs">OpenAI员工Dean Ball表示，由于在X上分享分析时持续遭受针对其雇主的敌意和攻击，他已无法像过去那样进行公开写作。反馈信号被“你这么说是因为OpenAI”的偏见污染，导致实时交流不再有效。Nathan Lambert对此感到遗憾，认为这反映了AI行业人才过度集中于少数受…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">大佬观点</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/natolambert/status/2078549156520743011" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="55" data-mark-url="https://mp.weixin.qq.com/s/hW-9QkPewVq-TJxzLg-j2g" data-mark-title="百度智能云与中科天算达成战略合作，共建天基计算产业生态" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">41</span><div class="cc">
+        <a class="ct serif" href="https://mp.weixin.qq.com/s/hW-9QkPewVq-TJxzLg-j2g" target="_blank">百度智能云与中科天算达成战略合作，共建天基计算产业生态</a>
+        <div class="cs">7月18日，百度智能云与中科天算在CCF Chip 2026期间达成战略合作，共同探索“云能力上天、算力服务在轨”的天地一体化智能计算体系。双方将围绕太空云计算基础设施，推动云原生架构、大模型及智能体在星载超高算力平台上的部署，并联合验证高性能AI计算设备的星载适配与大模型在轨运…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://mp.weixin.qq.com/s/hW-9QkPewVq-TJxzLg-j2g" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="56" data-mark-url="https://www.ithome.com/0/978/603.htm" data-mark-title="小米 17 Max 获首批《人工智能终端智能化分级》国家标准 L3 认证证书" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">41</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/603.htm" target="_blank">小米 17 Max 获首批《人工智能终端智能化分级》国家标准 L3 认证证书</a>
+        <div class="cs">小米 17 Max 手机荣获首批《人工智能终端智能化分级》系列国家标准 L3 评级证书，L3 级为目前有明确划分标准的最高智能化水平。该标准由工信部等部门于今年 5 月联合发布，将终端智能化水平划分为 L1 响应级至 L4 协同级，其中 L4 级将在后续修订中明确。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">端侧</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/603.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="57" data-mark-url="https://x.com/rohanpaul_ai/status/2078698052551135571" data-mark-title="月之暗面创始人杨植麟GTC 2026演讲回顾" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">39</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2078698052551135571" target="_blank">月之暗面创始人杨植麟GTC 2026演讲回顾</a>
+        <div class="cs">月之暗面（Moonshot AI）创始人兼CEO杨植麟在GTC 2026上介绍其学术与创业历程。他师从多位AI泰斗，其Transformer-XL和XLNet论文被引超万次。这些研究延续至Kimi K2的1T参数MoE设计，而最新Kimi K3进一步扩展为原生视觉、1M toke…</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2078698052551135571" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="58" data-mark-url="https://x.com/rohanpaul_ai/status/2078657023370232135" data-mark-title="Kimi K3 法律基准测试近乎翻倍领先 Claude Fable 5" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">39</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2078657023370232135" target="_blank">Kimi K3 法律基准测试近乎翻倍领先 Claude Fable 5</a>
+        <div class="cs">Kimi K3 在自主法律工作基准测试中以 26.7% 的成绩近乎翻倍领先 Claude Fable 5 的 14.2%。该测试涵盖 24 个法律领域的 120 项私有任务，要求模型自主处理案卷并生成法律文件，每项评分标准必须全部通过。即使领先者每 100 项任务也仅成功 27 …</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2078657023370232135" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="59" data-mark-url="https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties" data-mark-title="纽约市长马姆达尼：房东不得使用AI生成或编辑的图片进行租赁广告宣传" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">39</span><div class="cc">
+        <a class="ct serif" href="https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties" target="_blank">纽约市长马姆达尼：房东不得使用AI生成或编辑的图片进行租赁广告宣传</a>
+        <div class="cs">纽约市长Zohran Mamdani发布“租赁欺诈报告”，要求房东和中介披露在房源广告中使用AI生成或编辑的图片。该措施旨在打击利用AI美化房产、欺骗租户的行为，尤其保护需远程签约的租户。报告还包含承认租户工会、扩大租户谈判权等建议。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">图像生成</span><span class="ctag">政策/监管</span></div>
+        <a class="clink" href="https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="60" data-mark-url="https://www.ithome.com/0/978/610.htm" data-mark-title="Anthropic 宣布 Claude Fable 5 入驻 Max 和 Team Premium 订阅，限额 50%" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">39</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/610.htm" target="_blank">Anthropic 宣布 Claude Fable 5 入驻 Max 和 Team Premium 订阅，限额 50%</a>
+        <div class="cs">Anthropic 宣布从 7 月 20 日起，Claude Fable 5 模型入驻 Max 和 Team Premium 订阅计划，用户使用限额为 50%。Pro 和 Team Standard 用户需通过用量积分调用，但获赠 100 美元积分。官方称因需求高将分阶段推广，用…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/610.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="61" data-mark-url="https://x.com/oran_ge/status/2078615790010630152" data-mark-title="Kimi 开源被指风险大，网友质疑过度担忧" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">39</span><div class="cc">
+        <a class="ct serif" href="https://x.com/oran_ge/status/2078615790010630152" target="_blank">Kimi 开源被指风险大，网友质疑过度担忧</a>
+        <div class="cs">Kimi 收到 OpenAI 战略部警告，称其开源模型智能水平过高存在安全风险。但网友 Oran Ge 认为 K3 虽是不错模型，距离 AGI 仍差数年，质疑其是否真达到 GPT-5.6 水平。引用推文指出 K3 在智能体编码任务中与 2026 年 Q1 最佳公开模型相当，但 t…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">安全/对齐</span><span class="ctag">开源生态</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/oran_ge/status/2078615790010630152" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="62" data-mark-url="https://x.com/emollick/status/2078522132439433382" data-mark-title="前沿AI实验室员工因敌意被迫停止公开思考分享" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">39</span><div class="cc">
+        <a class="ct serif" href="https://x.com/emollick/status/2078522132439433382" target="_blank">前沿AI实验室员工因敌意被迫停止公开思考分享</a>
+        <div class="cs">OpenAI员工Dean Ball指出，作为前沿实验室成员，他在X上分享分析时收到的反馈几乎完全被对雇主的敌意和怨恨污染，导致反馈信号失效，无法再像过去那样通过实时互动打磨想法。Ethan Mollick认为，大量最敏锐的AI观察者聚集在实验室内部，反而对公众讨论产生了负面影响。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/emollick/status/2078522132439433382" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="63" data-mark-url="https://www.ithome.com/0/978/806.htm" data-mark-title="深空矩阵发布“星环计划”，第一阶段部署约210颗卫星构建太空AI算力星座" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">38</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/806.htm" target="_blank">深空矩阵发布“星环计划”，第一阶段部署约210颗卫星构建太空AI算力星座</a>
+        <div class="cs">深空矩阵在2026世界人工智能大会上发布“星环计划”，第一阶段以约210颗卫星构建低轨遥算一体化验证星座，所有卫星统一采用450公里核心轨道高度。后续扩容后全球覆盖率可提升至约99.8%，实现5-10分钟区域准重访。该计划旨在将AI算力部署至太空，以突破地面算力在电力、土地、散热…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/806.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="64" data-mark-url="https://x.com/natolambert/status/2078860825322991806" data-mark-title="华为获政府空白支票造推理芯片，Kimi K3 火爆致暂停新订阅" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">38</span><div class="cc">
+        <a class="ct serif" href="https://x.com/natolambert/status/2078860825322991806" target="_blank">华为获政府空白支票造推理芯片，Kimi K3 火爆致暂停新订阅</a>
+        <div class="cs">Nathan Lambert 称华为将获政府空白支票用于制造推理芯片。与此同时，Kimi K3 因需求远超预期，GPU 算力逼近极限，Kimi 宣布暂停新订阅以保障现有用户体验，并计划将会员拆分为 Kimi Membership（Web/App/Work）和 Kimi Code …</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/natolambert/status/2078860825322991806" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="65" data-mark-url="https://techcrunch.com/2026/07/19/odyssey-director-christopher-nolan-calls-ai-an-obvious-trojan-horse" data-mark-title="《奥德赛》导演 Christopher Nolan 称 AI 是“人人都知道里面藏着希腊人的透明木马”" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">38</span><div class="cc">
+        <a class="ct serif" href="https://techcrunch.com/2026/07/19/odyssey-director-christopher-nolan-calls-ai-an-obvious-trojan-horse" target="_blank">《奥德赛》导演 Christopher Nolan 称 AI 是“人人都知道里面藏着希腊人的透明木马”</a>
+        <div class="cs">Christopher Nolan 将 AI 比作“人人都知道里面藏着希腊人的特洛伊木马”，并称其为“透明的木马，由玻璃制成”。Nolan 表示从未见过一项技术发展如此迅速却“被公众如此彻底地拒绝”，尤其年轻人将 AI 视频直接称为“AI 垃圾”。他认为这种“非常健康的怀疑态度”…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://techcrunch.com/2026/07/19/odyssey-director-christopher-nolan-calls-ai-an-obvious-trojan-horse" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="66" data-mark-url="https://x.com/vista8/status/2078677845073899640" data-mark-title="WaytoAGI直播：12个AI Coding作品与FDE案例" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">38</span><div class="cc">
+        <a class="ct serif" href="https://x.com/vista8/status/2078677845073899640" target="_blank">WaytoAGI直播：12个AI Coding作品与FDE案例</a>
+        <div class="cs">WaytoAGI“未来硅世界”直播中，12位分享者展示了10个AI Coding作品和2个FDE案例。作品涵盖音乐可视化工具、长视频转图文总结、亲子习惯养成小程序、AI私域运营工具等。FDE案例包括将斯凯奇商品识别准确率从85%提升至95%，并复用到安踏。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">编码</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/vista8/status/2078677845073899640" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="67" data-mark-url="https://x.com/hongming731/status/2078635069061881858" data-mark-title="BestBlogs早报：开源AI现状与具身智能进展" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">38</span><div class="cc">
+        <a class="ct serif" href="https://x.com/hongming731/status/2078635069061881858" target="_blank">BestBlogs早报：开源AI现状与具身智能进展</a>
+        <div class="cs">BestBlogs 7月19日早报指出，开放权重模型在编码任务上已接近闭源模型，但生产落地率仍落后。腾讯发布多款具身智能基座模型，其中HyVLA-0.5在日化工厂实测作业成功率高于95%。Anthropic的Eugene Yan分享了用LLM构建源代码安全防护体系的流程。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">开源生态</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/hongming731/status/2078635069061881858" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="68" data-mark-url="https://x.com/AYi_AInotes/status/2078861650975990246" data-mark-title="X算法转向质量优先，创作者收益翻倍" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">37</span><div class="cc">
+        <a class="ct serif" href="https://x.com/AYi_AInotes/status/2078861650975990246" target="_blank">X算法转向质量优先，创作者收益翻倍</a>
+        <div class="cs">X平台算法调整，从堆数量换曝光转向单条质量权重极高。有创作者在发推极少的情况下，4个月内创作者收益从约$0翻倍至$1,751.33，月收入可达$3,500-4,000。该创作者据此推出Growth\u0026AI Club社群（一次性399美元，永久），提供AI增长方案、工作流库…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">数据/训练</span></div>
+        <a class="clink" href="https://x.com/AYi_AInotes/status/2078861650975990246" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="69" data-mark-url="https://x.com/berryxia/status/2078851241338401262" data-mark-title="Berry Xia 实测：Claude 3D 建模与视频生成能力惊人" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">37</span><div class="cc">
+        <a class="ct serif" href="https://x.com/berryxia/status/2078851241338401262" target="_blank">Berry Xia 实测：Claude 3D 建模与视频生成能力惊人</a>
+        <div class="cs">Berry Xia 实测发现，Claude 不仅能出色完成 3D 建模，还能在无任何 Skills 辅助下，一次成型生成高质量视频。他认为若配合 Skills 能力将更强大，并称“好久没有如此的兴奋了”。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">多模态</span><span class="ctag">视频</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://x.com/berryxia/status/2078851241338401262" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="70" data-mark-url="https://mp.weixin.qq.com/s/iMgdTaSQN2si43397aV4Xw" data-mark-title="百度袁佛玉：天基计算从概念走向工程落地，百度智能云发布全栈AI解决方案" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">37</span><div class="cc">
+        <a class="ct serif" href="https://mp.weixin.qq.com/s/iMgdTaSQN2si43397aV4Xw" target="_blank">百度袁佛玉：天基计算从概念走向工程落地，百度智能云发布全栈AI解决方案</a>
+        <div class="cs">百度集团副总裁袁佛玉在CCF Chip 2026上指出，天基计算的近期切入点是服务原生太空数据任务，而非承接地面通用云计算。百度智能云发布“芯、云、模、体”全栈AI解决方案，涵盖昆仑芯P800芯片、千帆大模型平台、伐谋决策智能体及Comate代码助手，旨在解决星上算力适配、模型部…</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://mp.weixin.qq.com/s/iMgdTaSQN2si43397aV4Xw" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="71" data-mark-url="https://x.com/kimmonismus/status/2078736648020591091" data-mark-title="Vercel CEO：Kimi K3 网络安全达前沿水平" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">37</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2078736648020591091" target="_blank">Vercel CEO：Kimi K3 网络安全达前沿水平</a>
+        <div class="cs">Vercel CEO 引用内部评估称，Kimi K3 在隐蔽网络安全评测中表现顶尖，非基准过拟合，具备原始 IQ。Sol 能力更强但成本更高，Fable 则几乎无法完成任务。开源权重模型已触及网络安全前沿。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">安全/对齐</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2078736648020591091" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="72" data-mark-url="https://x.com/natolambert/status/2078549521399992538" data-mark-title="前沿实验室员工因敌意被迫放弃公开写作" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">37</span><div class="cc">
+        <a class="ct serif" href="https://x.com/natolambert/status/2078549521399992538" target="_blank">前沿实验室员工因敌意被迫放弃公开写作</a>
+        <div class="cs">OpenAI研究员Dean Ball表示，由于在X上分享分析时几乎只收到针对其雇主的敌意反馈，他已无法像过去那样进行实时写作。Nathan Lambert对此感到遗憾，认为这反映了顶尖人才过度集中于少数受高度关注的公司，导致行业缺乏多样性。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">安全/对齐</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/natolambert/status/2078549521399992538" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="73" data-mark-url="https://x.com/testingcatalog/status/2078529470894330026" data-mark-title="Claude Code 周限额提升 50% 至 8 月 19 日" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">37</span><div class="cc">
+        <a class="ct serif" href="https://x.com/testingcatalog/status/2078529470894330026" target="_blank">Claude Code 周限额提升 50% 至 8 月 19 日</a>
+        <div class="cs">ANTHROPIC 🔥：所有 Pro、Max、Team 及按席位计费的 Enterprise 用户的 Claude Code 周限额将在 8 月 19 日前提升 50%。
+
+\u003e 今天早些时候，Anthropic 宣布 Claude Fable 5 在 7 月 19 日后…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">编码</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/testingcatalog/status/2078529470894330026" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="74" data-mark-url="https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust" data-mark-title="Claude Code 改用 Rust 编写的 Bun 运行时" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">36</span><div class="cc">
+        <a class="ct serif" href="https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust" target="_blank">Claude Code 改用 Rust 编写的 Bun 运行时</a>
+        <div class="cs">Claude Code 现已将底层运行时切换为用 Rust 编写的 Bun，以提升性能和启动速度。这一变更意味着原本依赖 Node.js 的 CLI 工具现在运行在 Bun 之上，后者通过 Rust 实现带来了更快的脚本执行和更低的资源占用。目前该改动已生效，用户无需额外配置即可…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">大佬观点</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="75" data-mark-url="https://x.com/emollick/status/2078725376562352432" data-mark-title="AI能力曲线持续陡峭，应更关注变化" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">36</span><div class="cc">
+        <a class="ct serif" href="https://x.com/emollick/status/2078725376562352432" target="_blank">AI能力曲线持续陡峭，应更关注变化</a>
+        <div class="cs">我仍然认为，大家都过于关注AI当前的竞争格局（哪些国家的哪些公司在赢、如何控制成本等），而没有足够关注AI能力曲线持续陡峭这一事实。
+在高能力水平下，很多事情变化很快。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/emollick/status/2078725376562352432" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="76" data-mark-url="https://x.com/rohanpaul_ai/status/2078650587797991815" data-mark-title="Fable 让女友失眠夜自建服装管理应用" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">35</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2078650587797991815" target="_blank">Fable 让女友失眠夜自建服装管理应用</a>
+        <div class="cs">这样的故事比比皆是。
+每个个人痛点现在都能在几小时内变成一个可用的应用/产品/Chrome 扩展/网站。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">现象/趋势</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2078650587797991815" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="77" data-mark-url="https://www.ithome.com/0/978/611.htm" data-mark-title="AI 湍流预测系统 SkyPath 正改变飞机安全带指示灯“亮得太晚”的困境" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">35</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/611.htm" target="_blank">AI 湍流预测系统 SkyPath 正改变飞机安全带指示灯“亮得太晚”的困境</a>
+        <div class="cs">多家航空公司采用 AI 湍流预测系统 SkyPath，其模型能以约 90% 的准确率预测未来 24 小时内的湍流情况。系统通过收集空中飞机上传的实时数据，提前 13 分钟向飞行员预警，使其能提前通知空乘并开启安全带指示灯。日本航空 2025 年研究显示，该工具能降低飞行员工作负担…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/611.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="78" data-mark-url="https://www.ithome.com/0/978/613.htm" data-mark-title="分析师：苹果 AI 策略“保守”反而是优势，可降低资本压力并驱动硬件升级" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">35</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/613.htm" target="_blank">分析师：苹果 AI 策略“保守”反而是优势，可降低资本压力并驱动硬件升级</a>
+        <div class="cs">BRI Wealth Management 分析师 Toni Meadows 认为，市场对苹果 AI 策略的看法已发生转变，其相对保守的策略降低了资本支出压力，无需像其他超大规模云计算公司那样持续投入数十亿美元维持 AI 竞争力。苹果通过“软硬件一体”策略将 AI 能力整合到自家…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/613.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="79" data-mark-url="https://codex-resets.com/" data-mark-title="OpenAI 频繁重置 Codex 使用限制：35 次重置记录追踪" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">34</span><div class="cc">
+        <a class="ct serif" href="https://codex-resets.com/" target="_blank">OpenAI 频繁重置 Codex 使用限制：35 次重置记录追踪</a>
+        <div class="cs">OpenAI 已累计 35 次重置 Codex 及 ChatGPT Work 的付费用户使用限制，平均间隔 8.9 天，最长间隔 67.7 天。最近一次重置于昨日进行，由 OpenAI 成员 @thsottiaux 在 X 平台宣布。重置通常伴随用户里程碑（如 9M 活跃用户）或…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">编码</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://codex-resets.com/" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="80" data-mark-url="https://x.com/PixVerse_/status/2078862167034454441" data-mark-title="PixVerse 传奇与后起之秀对决" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">33</span><div class="cc">
+        <a class="ct serif" href="https://x.com/PixVerse_/status/2078862167034454441" target="_blank">PixVerse 传奇与后起之秀对决</a>
+        <div class="cs">开创道路的传奇，  
+直面追随其光芒的天才。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">多模态</span><span class="ctag">行业动态</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://x.com/PixVerse_/status/2078862167034454441" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="81" data-mark-url="https://x.com/natolambert/status/2078611093988233639" data-mark-title="开源模型降低token价格或拖慢AGI进程" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">31</span><div class="cc">
+        <a class="ct serif" href="https://x.com/natolambert/status/2078611093988233639" target="_blank">开源模型降低token价格或拖慢AGI进程</a>
+        <div class="cs">Nathan Lambert 认同“开源权重模型可能延缓AGI”的逻辑链：开源模型压低可接受的token价格，导致利润率下降，进而减少大实验室的投资与收入，最终拖慢研究进度。他认为美国在投资上仍可能领先，因此开源模型+美国领导力+更多理解AI的时间，对各方都是胜利。关键结论是：资…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">安全/对齐</span><span class="ctag">开源生态</span></div>
+        <a class="clink" href="https://x.com/natolambert/status/2078611093988233639" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="82" data-mark-url="https://x.com/EMostaque/status/2078812674868023419" data-mark-title="Emad：开源SD模型加速行业资本投入" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">30</span><div class="cc">
+        <a class="ct serif" href="https://x.com/EMostaque/status/2078812674868023419" target="_blank">Emad：开源SD模型加速行业资本投入</a>
+        <div class="cs">我很确定稳定扩散的开源权重发布是加速主义的，并导致了巨大的资本支出  
+
+至于这是否是AI共产主义，嗯…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">开源生态</span></div>
+        <a class="clink" href="https://x.com/EMostaque/status/2078812674868023419" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="83" data-mark-url="https://mp.weixin.qq.com/s/7iBeX3WdF_ixA5219uJUwQ" data-mark-title="WAIC 京东论坛探讨 AI 进入物理世界的关键要素：模型、数据、终端与场景" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">29</span><div class="cc">
+        <a class="ct serif" href="https://mp.weixin.qq.com/s/7iBeX3WdF_ixA5219uJUwQ" target="_blank">WAIC 京东论坛探讨 AI 进入物理世界的关键要素：模型、数据、终端与场景</a>
+        <div class="cs">7月18日，以“AI进入物理世界：模型、数据、终端与场景”为主题的WAIC京东论坛在上海举办。学界专家与产业代表共同探讨了AI从数字世界跃迁到物理世界的关键要素与路径。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://mp.weixin.qq.com/s/7iBeX3WdF_ixA5219uJUwQ" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="84" data-mark-url="https://x.com/EMostaque/status/2078517620509233232" data-mark-title="K3 可作为教师模型训练更小稠密模型" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">29</span><div class="cc">
+        <a class="ct serif" href="https://x.com/EMostaque/status/2078517620509233232" target="_blank">K3 可作为教师模型训练更小稠密模型</a>
+        <div class="cs">K3 可作为教师模型（含 logits）训练更小稠密模型，甚至可用于生成万亿 token 的完整预训练和后训练数据集以训练更优模型。引用推文指出，K3 是专为递归迭代构建的出色基座，预计 K3.1 将超越 Sol 和 Fable，上限或在拥有足够 SuperPoDs 以跃升至 1…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">数据/训练</span></div>
+        <a class="clink" href="https://x.com/EMostaque/status/2078517620509233232" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="85" data-mark-url="https://www.ithome.com/0/978/788.htm" data-mark-title="蔚来乐道 L90 第 6 万台交付，用时不到一年位列 30 万级纯电大型 SUV 销冠" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">28</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/788.htm" target="_blank">蔚来乐道 L90 第 6 万台交付，用时不到一年位列 30 万级纯电大型 SUV 销冠</a>
+        <div class="cs">蔚来乐道 L90 第 60000 台在浙江湖州完成交付，位列 30 万元级纯电大型 SUV 销冠。该车于 2025 年 7 月 31 日上市，整车购买 26.58 万元起，用时不到一年达成 6 万台交付。2026 款 L90 已开启交付，首次搭载蔚来世界模型，支持点到点全域领航辅…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/788.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="86" data-mark-url="https://x.com/thsottiaux/status/2078642674572419435" data-mark-title="ChatGPT Work 招募早期测试用户" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">28</span><div class="cc">
+        <a class="ct serif" href="https://x.com/thsottiaux/status/2078642674572419435" target="_blank">ChatGPT Work 招募早期测试用户</a>
+        <div class="cs">如果你在使用 ChatGPT Work。我计划组建一个 50-100 人的小组，提供功能早期访问权限，并讨论如何改进它。
+
+给我发私信，提及 ChatGPT Work，说明你如何使用它以及你认为我们应该修复什么，我会在接下来 48 小时内组建这个小组。这次不找开发者！…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">其他</span></div>
+        <a class="clink" href="https://x.com/thsottiaux/status/2078642674572419435" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="87" data-mark-url="https://x.com/natolambert/status/2078517386240762210" data-mark-title="需加速国家能力与前沿模型独立评估" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">28</span><div class="cc">
+        <a class="ct serif" href="https://x.com/natolambert/status/2078517386240762210" target="_blank">需加速国家能力与前沿模型独立评估</a>
+        <div class="cs">我们需要一场“曲速行动”，用于提升国家能力，以及对前沿模型进行其他独立评估（与理解）。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">安全/对齐</span></div>
+        <a class="clink" href="https://x.com/natolambert/status/2078517386240762210" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="88" data-mark-url="https://x.com/LumaLabsAI/status/2078740370876502278" data-mark-title="Luma AI 生成暗黑舞台追舞短片" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">27</span><div class="cc">
+        <a class="ct serif" href="https://x.com/LumaLabsAI/status/2078740370876502278" target="_blank">Luma AI 生成暗黑舞台追舞短片</a>
+        <div class="cs">黑暗的舞台上，一位舞者永不停歇地舞动，被一台不愿移开视线的摄像机追逐。
+作者：Joana Haars。使用 Luma 制作。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://x.com/LumaLabsAI/status/2078740370876502278" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="89" data-mark-url="https://x.com/cb_doge/status/2078756784718958741" data-mark-title="Optimus 将改变一切，你尚未察觉" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">26</span><div class="cc">
+        <a class="ct serif" href="https://x.com/cb_doge/status/2078756784718958741" target="_blank">Optimus 将改变一切，你尚未察觉</a>
+        <div class="cs">你尚未意识到，但 Optimus 将改变一切。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">大佬观点</span></div>
+        <a class="clink" href="https://x.com/cb_doge/status/2078756784718958741" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="90" data-mark-url="https://x.com/Kling_ai/status/2078615808268230717" data-mark-title="可灵AI大赛获奖作品《玛纳斯》发布" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">25</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Kling_ai/status/2078615808268230717" target="_blank">可灵AI大赛获奖作品《玛纳斯》发布</a>
+        <div class="cs">Where legends take flight. 🦅  
+
+探索王世奇、贾子博、杨一航、王培泽与胡金龙创作的《玛纳斯》——一部关于传承、勇气以及人与自然纽带的有力故事。  
+
+祝贺可灵AI NEXTGEN 2026校园AIGC创作大赛巅峰奖得主！…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://x.com/Kling_ai/status/2078615808268230717" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="91" data-mark-url="https://x.com/LumaLabsAI/status/2078702507308556738" data-mark-title="Luma AI 生成楼梯间深夜短片" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">24</span><div class="cc">
+        <a class="ct serif" href="https://x.com/LumaLabsAI/status/2078702507308556738" target="_blank">Luma AI 生成楼梯间深夜短片</a>
+        <div class="cs">一段楼梯，深夜时分，一台不肯放他走的相机。
+作者：Misho。使用 Luma 制作。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://x.com/LumaLabsAI/status/2078702507308556738" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="92" data-mark-url="https://x.com/shao__meng/status/2078719844976079090" data-mark-title="AI 概念泛滥引吐槽：Loop/Graph Engineering 是啥？" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">23</span><div class="cc">
+        <a class="ct serif" href="https://x.com/shao__meng/status/2078719844976079090" target="_blank">AI 概念泛滥引吐槽：Loop/Graph Engineering 是啥？</a>
+        <div class="cs">推文吐槽 AI 领域概念泛滥，认为“Loop Engineering”“Graph Engineering”等新术语只是消耗 token 的“AI Slop”，对实际应用毫无帮助。作者以“啊？”和“😂😂😂”表达对频繁造词现象的无奈与嘲讽。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/shao__meng/status/2078719844976079090" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="93" data-mark-url="https://x.com/Yuchenj_UW/status/2078698612276740399" data-mark-title="Kimi K3 试用困难，API 稳定性存疑" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">23</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Yuchenj_UW/status/2078698612276740399" target="_blank">Kimi K3 试用困难，API 稳定性存疑</a>
+        <div class="cs">我非常想在 Kimi 网页应用上试用 Kimi K3，但过去两天反复尝试，始终没有收到回复。
+
+大家是怎么使用 K3 的？API 的稳定性好吗？  
+
+Kimi 需要更多 GPU 用于推理。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/Yuchenj_UW/status/2078698612276740399" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="94" data-mark-url="https://x.com/LumaLabsAI/status/2078780132819361953" data-mark-title="Luma AI生成时尚大片：单眼串联全片" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">21</span><div class="cc">
+        <a class="ct serif" href="https://x.com/LumaLabsAI/status/2078780132819361953" target="_blank">Luma AI生成时尚大片：单眼串联全片</a>
+        <div class="cs">一部完整的时尚大片，由一只眼睛和无数细微抉择串联而成。制作团队采纳了修改意见，而视觉始终坚定不移。作者：Eli Coleman。使用 Luma 制作。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">多模态</span><span class="ctag">行业动态</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://x.com/LumaLabsAI/status/2078780132819361953" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="95" data-mark-url="https://x.com/Kling_ai/status/2078772778015330362" data-mark-title="可灵AI制作伪纪录片致敬幕后工作者" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">21</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Kling_ai/status/2078772778015330362" target="_blank">可灵AI制作伪纪录片致敬幕后工作者</a>
+        <div class="cs">当所有人都在看比赛时，总有人得面向另一边。一部受现实生活中激情与奉献启发的AI生成伪纪录片。献给那些让每场比赛成为可能的人。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span></div>
+        <a class="clink" href="https://x.com/Kling_ai/status/2078772778015330362" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="96" data-mark-url="https://x.com/Yuchenj_UW/status/2078691540952834053" data-mark-title="最佳模型不由开源或闭源定义" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">21</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Yuchenj_UW/status/2078691540952834053" target="_blank">最佳模型不由开源或闭源定义</a>
+        <div class="cs">最好的模型既不由闭源定义，也不由开源定义。
+
+它们是自由市场中持续创新的创造性表达。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">开源生态</span></div>
+        <a class="clink" href="https://x.com/Yuchenj_UW/status/2078691540952834053" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="97" data-mark-url="https://x.com/fofrAI/status/2078832364839481586" data-mark-title="Giraffe SD2 技能更新发布" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">17</span><div class="cc">
+        <a class="ct serif" href="https://x.com/fofrAI/status/2078832364839481586" target="_blank">Giraffe SD2 技能更新发布</a>
+        <div class="cs">Giraffe 获得了技能（SD2）…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">图像生成</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://x.com/fofrAI/status/2078832364839481586" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="98" data-mark-url="https://x.com/EMostaque/status/2078512484206469146" data-mark-title="128GB显存NVIDIA 5090定价引热议" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">13</span><div class="cc">
+        <a class="ct serif" href="https://x.com/EMostaque/status/2078512484206469146" target="_blank">128GB显存NVIDIA 5090定价引热议</a>
+        <div class="cs">你愿意为一款配备128GB显存的NVIDIA 5090支付多少钱？…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/EMostaque/status/2078512484206469146" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="99" data-mark-url="https://x.com/thsottiaux/status/2078624985363706343" data-mark-title="ChatGPT 改进建议：如何带来更多愉悦" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">11</span><div class="cc">
+        <a class="ct serif" href="https://x.com/thsottiaux/status/2078624985363706343" target="_blank">ChatGPT 改进建议：如何带来更多愉悦</a>
+        <div class="cs">如何让 ChatGPT 变得更好。
+它已经在你的手机上了，但你希望打开应用时，哪些事情能更多或更少地发生？它如何能给你带来更多愉悦？…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">其他</span></div>
+        <a class="clink" href="https://x.com/thsottiaux/status/2078624985363706343" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="100" data-mark-url="https://www.ithome.com/0/978/783.htm" data-mark-title="全新坦克 300 上市：提供 Hi4-T/Hi4-Z 混动、汽油、柴油版，19.98 万元起" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">7</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/783.htm" target="_blank">全新坦克 300 上市：提供 Hi4-T/Hi4-Z 混动、汽油、柴油版，19.98 万元起</a>
+        <div class="cs">全新坦克 300 正式上市，推出 5 款车型，售价 19.98 万至 25.98 万元。新车提供 Hi4-T、Hi4-Z 混动及汽油、柴油多动力版本，其中 Hi4-Z 版配备 180kW 前电机 +200kW 后电机及 59.6kWh 电池，WLTC 纯电续航 200km，0-1…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">语音</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/783.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="101" data-mark-url="https://www.ithome.com/0/978/742.htm" data-mark-title="小鹏 MONA L03 上市首周末带动全系试驾量创历史新高" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">0</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/978/742.htm" target="_blank">小鹏 MONA L03 上市首周末带动全系试驾量创历史新高</a>
+        <div class="cs">小鹏 MONA L03 上市后首个周末单日试驾量创小鹏历史车型上市同期新高，并带动全系车型试驾量创历史新高。MONA L03 于 7 月 16 日上市，提供纯电与增程版本，售价 12.38 万元起，增程版 8 月下旬交付。该车搭载自研图灵 AI 芯片，Max 版单芯片 750TO…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span></div>
+        <a class="clink" href="https://www.ithome.com/0/978/742.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="102" data-mark-url="https://github.com/stupside/castor" data-mark-title="Castor：开源命令行工具，从终端向电视投屏任意网页视频" data-mark-date="2026-07-19" data-mark-cat="行业"><span class="cn">0</span><div class="cc">
+        <a class="ct serif" href="https://github.com/stupside/castor" target="_blank">Castor：开源命令行工具，从终端向电视投屏任意网页视频</a>
+        <div class="cs">Castor 是一款开源命令行工具，能从终端向电视投屏任意网页视频，支持 DLNA/UPnP 和实验性 Chromecast。它通过 headless Chrome 提取视频流、ffmpeg 转码并实时投屏，支持 IMDB/TMDB ID、直接流 URL 或网页播放器三种输入方式…</div>
+        <div class="ctags mark-anchor"><span class="ctag">GitHub</span><span class="ctag">开源/仓库</span></div>
+        <a class="clink" href="https://github.com/stupside/castor" target="_blank">阅读原文 →</a></div></div></div></details>
+</div>
+<div class="foot serif">AI 信号站 · 行业 · 2026-07-19</div>
+<script src="../search-index.js"></script><script>(function(){var SR_REL="../";
+var SIDX = window.__SIDX__ || [];
+var inp = document.getElementById('siteSearch'), box = document.getElementById('searchRes');
+if(inp){
+  var K1=1.5, B=0.75, TITLE_BOOST=3, COV=0.6;
+  // 停用词:连接词/虚词不参与 AND 覆盖判定(避免"claude和gemini"里"和"稀释召回条件)
+  var STOP={}, _sw='的 了 和 与 及 或 跟 并 在 是 有 这 那 就 也 还 又 吗 呢 吧 啊 把 被 让 给 对 从 到 为 之 以 且 等 以及 还有 并且 而且'.split(' ');
+  for(var si=0;si<_sw.length;si++) STOP[_sw[si]]=1;
+  // 分词:英文/数字按词;中文按 bigram(单字则保留);query 与文档同一套切法
+  function toks(s){
+    var out=[], segs=(String(s).toLowerCase().match(/[a-z0-9]+|[\u4e00-\u9fff]+/g)||[]);
+    for(var i=0;i<segs.length;i++){
+      var seg=segs[i];
+      if(/[a-z0-9]/.test(seg)) out.push(seg);
+      else if(seg.length===1) out.push(seg);
+      else for(var j=0;j<seg.length-1;j++) out.push(seg.slice(j,j+2));
+    }
+    return out;
+  }
+  // 加载时一次性建 BM25 索引:每篇词频 tf(标题×TITLE_BOOST)、全局文档频率 DF、平均长度 avgdl
+  var DF={}, docs=[], totalLen=0, t;
+  for(var d=0; d<SIDX.length; d++){
+    var x=SIDX[d];
+    var body=(x.g||'')+' '+(x.c||'')+' '+(x.tag||'')+' '+(x.src||'');
+    var tf={};
+    var tt=toks(x.t||''); for(var a=0;a<tt.length;a++){ tf[tt[a]]=(tf[tt[a]]||0)+TITLE_BOOST; }
+    var bb=toks(body); for(var b2=0;b2<bb.length;b2++){ tf[bb[b2]]=(tf[bb[b2]]||0)+1; }
+    var dl=0; for(t in tf) dl+=tf[t];
+    totalLen+=dl;
+    for(t in tf) DF[t]=(DF[t]||0)+1;
+    docs.push({x:x, tf:tf, dl:dl});
+  }
+  var N=docs.length||1, avgdl=totalLen/N;
+  function idf(w){ var df=DF[w]||0; return Math.log((N-df+0.5)/(df+0.5)+1); }
+  inp.addEventListener('input', function(){
+    var q=inp.value.trim(); if(!q){ box.classList.remove('show'); return; }
+    var raw=toks(q), seen={}, qts=[];
+    for(var i=0;i<raw.length;i++){ if(!seen[raw[i]] && !STOP[raw[i]]){ seen[raw[i]]=1; qts.push(raw[i]); } }
+    if(!qts.length){ box.classList.remove('show'); return; }
+    // AND 覆盖召回:命中实词数须达 ceil(词数×COV),容忍中文 bigram 的 junction 噪声(如"面壁具身"切出的"壁具")
+    var need=Math.max(1, Math.ceil(qts.length*COV));
+    var scored=[];
+    for(var d2=0; d2<docs.length; d2++){
+      var doc=docs[d2], sc=0, m=0;
+      for(var k=0;k<qts.length;k++){
+        var f=doc.tf[qts[k]]; if(!f) continue;
+        m++; sc += idf(qts[k])*(f*(K1+1))/(f + K1*(1-B+B*doc.dl/avgdl));
+      }
+      if(m>=need) scored.push({x:doc.x, sc:sc, m:m});
+    }
+    // 排序:BM25 分降序 → 命中词数 → 日期新
+    scored.sort(function(p,r){ return (r.sc-p.sc) || (r.m-p.m) || (p.x.d<r.x.d?1:-1); });
+    var hits=scored.slice(0,20);
+    if(!hits.length){ box.innerHTML='<div class="sr-empty">本站无匹配结果</div>'; box.classList.add('show'); return; }
+    box.innerHTML='<div class="sr-h">站内命中 '+hits.length+' 条 · BM25 相关度排序</div>' + hits.map(function(o){
+      var x=o.x;
+      return '<a href="'+SR_REL+'d/'+x.d+'.html"><div class="srt">'+x.t+'</div><div class="srm">'+x.d+' · '+x.c+' · 精选 '+x.s+'</div></a>';
+    }).join('');
+    box.classList.add('show');
+  });
+  document.addEventListener('click', function(ev){ if(!ev.target.closest('.search-wrap')) box.classList.remove('show'); });
+}
+})();</script><script>
+(function(){
+  const API='http://localhost:8765';
+  // 标记功能只在本机启用。同一份构建产物:本地全功能、公网只读。
+  // 原因:标记数据的用途是喂给 Analyst 做个性化(marks 工具),陌生访客的口味不是站主的口味,
+  // 收集反而会污染个性化信号。所以公网不需要写接口 —— 也就不需要任何鉴权。
+  const LOCAL = ['localhost','127.0.0.1','::1'].indexOf(location.hostname) >= 0
+                || location.protocol === 'file:';
+  if(!LOCAL){
+    // 移除标记入口与弹窗,避免公网访客点了没反应(以及暴露本地 API 地址)
+    document.querySelectorAll('.mark-btn').forEach(b=>b.remove());
+    const m=document.getElementById('markModal'); if(m) m.remove();
+    const t=document.getElementById('markToast'); if(t) t.remove();
+    return;
+  }
+  let marks={}, cur=null;
+  const modal=document.getElementById('markModal');
+  if(!modal) return;
+  const elTitle=document.getElementById('mbTitle'),elMeta=document.getElementById('mbMeta'),
+        elC=document.getElementById('mbComment'),toast=document.getElementById('markToast');
+  function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);}
+  // 标记优先存 localStorage(不依赖常开服务);服务开着则合并后端(供 AI 读取的权威源)
+  const LS='ai_signal_marks';
+  function loadLocal(){try{return JSON.parse(localStorage.getItem(LS)||'{}');}catch(e){return {};}}
+  function saveLocal(){try{localStorage.setItem(LS,JSON.stringify(marks));}catch(e){}}
+  marks=loadLocal();renderMarks();
+  fetch(API+'/api/marks').then(r=>r.json()).then(m=>{if(m&&typeof m==='object'){marks=Object.assign({},marks,m);saveLocal();renderMarks();}}).catch(()=>{});
+  function renderMarks(){
+    document.querySelectorAll('[data-mark-url]').forEach(el=>{
+      const u=el.getAttribute('data-mark-url');
+      const btn=el.querySelector('.mark-btn'); if(!btn)return;
+      if(marks[u]){
+        el.classList.add('is-marked'); btn.classList.add('marked'); btn.textContent='✓ 已标记';
+        let note=el.querySelector('.mark-note');
+        if(marks[u].comment){
+          if(!note){note=document.createElement('div');note.className='mark-note';el.appendChild(note);}
+          note.innerHTML='<b>我的标记 · '+(marks[u].marked_at||'')+'</b><br>'+marks[u].comment.replace(/</g,'&lt;');
+          note.classList.add('show');
+        }
+      }else{
+        el.classList.remove('is-marked'); btn.classList.remove('marked'); btn.textContent='标记';
+        const note=el.querySelector('.mark-note'); if(note)note.classList.remove('show');
+      }
+    });
+  }
+  // 给每个可标记元素注入按钮
+  document.querySelectorAll('[data-mark-url]').forEach(el=>{
+    if(el.querySelector('.mark-btn'))return;
+    const btn=document.createElement('button');btn.className='mark-btn';btn.textContent='标记';
+    btn.onclick=(e)=>{e.preventDefault();e.stopPropagation();openModal(el);};
+    const anchor=el.querySelector('.mark-anchor')||el;
+    anchor.appendChild(btn);
+  });
+  function openModal(el){
+    cur={url:el.getAttribute('data-mark-url'),title:el.getAttribute('data-mark-title')||'',
+         date:el.getAttribute('data-mark-date')||'',cat:el.getAttribute('data-mark-cat')||''};
+    elTitle.textContent=cur.title;
+    elMeta.textContent=cur.date+(cur.cat?' · '+cur.cat:'');
+    elC.value=(marks[cur.url]&&marks[cur.url].comment)||'';
+    document.getElementById('mbDel').style.display=marks[cur.url]?'':'none';
+    modal.classList.add('show');elC.focus();
+  }
+  function close(){modal.classList.remove('show');cur=null;}
+  document.getElementById('mbCancel').onclick=close;
+  modal.onclick=(e)=>{if(e.target===modal)close();};
+  function today(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  document.getElementById('mbSave').onclick=()=>{
+    if(!cur)return;
+    const rec={...cur,comment:elC.value.trim(),marked_at:today()};
+    marks[cur.url]=rec;saveLocal();renderMarks();close();
+    fetch(API+'/api/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(rec)})
+      .then(r=>r.json()).then(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(已同步)'))
+      .catch(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(本地已存,启动服务后同步给AI)'));
+  };
+  document.getElementById('mbDel').onclick=()=>{
+    if(!cur)return;
+    delete marks[cur.url];saveLocal();renderMarks();close();showToast('已取消标记');
+    fetch(API+'/api/unmark',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:cur.url})}).catch(()=>{});
+  };
+  // ---- 摘要浮窗:点标题先看摘要(复用搜索索引 SIDX,按 url 反查),点"阅读原文"仍直接跳 ----
+  var _SIDX = window.__SIDX__ || [];
+  var pk = document.getElementById('peekModal');
+  if(pk){
+    var pkClose = function(){ pk.classList.remove('show'); };
+    pk.addEventListener('click', function(e){ if(e.target===pk || e.target.classList.contains('peek-x')) pkClose(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') pkClose(); });
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[target="_blank"]'); if(!a) return;
+      var txt = (a.textContent||'').trim();
+      if(txt.indexOf('原文') >= 0) return;               // "阅读原文"类→直接跳
+      var href = a.getAttribute('href') || '';
+      var rec = null;
+      for(var i=0;i<_SIDX.length;i++){ if(_SIDX[i].u===href){ rec=_SIDX[i]; break; } }
+      if(!rec) return;                                    // 非索引条目(导航/月历/全部)→直接跳
+      e.preventDefault();
+      pk.querySelector('.peek-cat').textContent = [rec.c, rec.src, '精选 ' + rec.s, rec.d].filter(Boolean).join(' · ');
+      pk.querySelector('.peek-title').textContent = rec.t;
+      pk.querySelector('.peek-sum').textContent = rec.g;
+      pk.querySelector('.peek-go').href = rec.u;
+      pk.classList.add('show');
+    });
+  }
+})();
+</script><div class="legal">
+<p><b>来源与版权</b>　本站为个人非商业实验项目,不生产原始报道。所收录条目的标题与摘要均来自公开渠道,每条都标注来源并链接回原文;文字、图片及其他内容的著作权归原作者与原发布方所有。本站只摘录足以判断「是否值得点开」的信息,完整内容请访问原文。</p>
+<p><b>AI 生成内容</b>　标注为「判断」「洞察」「速览」的段落由大语言模型生成,可能包含事实错误、过时信息或过度推断,仅为本站的实验性观点,<b>不构成投资、就业、技术选型或任何专业建议</b>。请以原文与一手信源为准。</p>
+<p><b>侵权与更正</b>　若您是权利人且不希望相关内容出现在此,或发现事实性错误,请通过 <a href="https://github.com/AMMPNK/ai-signal/issues" target="_blank" rel="noopener">GitHub Issues</a> 告知,我会尽快移除或更正。</p>
+<p class="lc">© 2026 AI 信号站 · 个人非商业项目 · 内容由 AI 辅助生成,请自行核实</p>
+</div></body></html>

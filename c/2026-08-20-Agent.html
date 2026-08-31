@@ -1,0 +1,579 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agent · 2026-08-20</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--paper:#fffefb;--ink:#17140f;--ink2:#574f44;--ink3:#9b9387;--hair:#e8e2d7;--hair2:#f2ede4;--red:#b53326;--cream:#f7f3ea}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Songti SC","Noto Serif SC",serif}
+a{color:inherit}
+.mast{text-align:center;padding:28px 20px 0}
+.mast-line{font-size:11px;letter-spacing:4px;color:var(--ink3);text-transform:uppercase;margin-bottom:8px}
+.mast h1{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:44px;letter-spacing:4px}
+.mast h1 a{text-decoration:none}
+.mast .meta{font-size:12.5px;color:var(--ink2);margin-top:10px;padding-bottom:14px}
+.mast .meta b{color:var(--red)}
+.rule{height:3px;background:var(--ink);max-width:1180px;margin:0 auto}
+.nav{position:sticky;top:0;z-index:30;background:rgba(255,254,251,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);display:flex;justify-content:center;align-items:center;gap:2px;padding:9px 10px;flex-wrap:wrap}
+.nav a{font-family:"Songti SC","Noto Serif SC",serif;font-size:15px;color:var(--ink2);padding:6px 15px;text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--red)}
+.nav a.on{color:var(--ink);font-weight:700;border-bottom-color:var(--red)}
+.search-wrap{position:relative;margin-left:14px}
+.search-wrap input{font-family:inherit;font-size:13px;border:1px solid var(--hair);border-radius:18px;padding:6px 14px 6px 32px;width:170px;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239b9387' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E") no-repeat 11px center;outline:none;transition:.2s}
+.search-wrap input:focus{width:230px;border-color:var(--red)}
+.search-res{position:absolute;top:40px;right:0;width:430px;max-height:60vh;overflow-y:auto;background:var(--paper);border:1px solid var(--hair);border-radius:10px;box-shadow:0 8px 30px rgba(80,60,40,.13);padding:8px;display:none;z-index:40}
+.search-res.show{display:block}
+.search-res .sr-h{font-size:11px;color:var(--ink3);padding:6px 10px;letter-spacing:1px}
+.search-res a{display:block;padding:9px 10px;text-decoration:none;border-radius:7px;border-bottom:1px solid var(--hair2)}
+.search-res a:last-child{border:none}
+.search-res a:hover{background:var(--cream)}
+.search-res .srt{font-size:13.5px;color:var(--ink);font-weight:500}
+.search-res .srm{font-size:11px;color:var(--ink3);margin-top:2px}
+.search-res .sr-empty{padding:16px;color:var(--ink3);font-size:13px;text-align:center}
+.page{max-width:1180px;margin:0 auto;padding:0 24px}
+.leads{display:grid;grid-template-columns:1fr 1fr;margin:22px 0 0;border-top:1px solid var(--hair)}
+.lead{padding:28px 32px}
+.lead.l{border-right:1px solid var(--hair)}
+.kick{font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.kick .dot{width:7px;height:7px;border-radius:50%}
+.kick.sk{color:var(--ink2)}.kick.sk .dot{background:var(--ink2)}
+.kick.tk{color:var(--red)}.kick.tk .dot{background:var(--red)}
+.scbig{float:right;font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:40px;line-height:.8;color:var(--hair);margin-left:14px}
+.scbig.tkc{color:#eccfc8}
+.lead h2{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:26px;line-height:1.28;margin-bottom:14px}
+.lead h2 a{text-decoration:none}.lead h2 a:hover{color:var(--red)}
+.why{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;border-left:3px solid var(--red);padding-left:15px;margin-bottom:14px;line-height:1.6}
+.sum{font-size:13.5px;color:var(--ink2);margin-bottom:14px;line-height:1.7}
+.src{font-size:12px;color:var(--ink3);margin-bottom:16px}
+.lead-foot a{font-weight:600;font-size:13.5px;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+.ai-pending{background:var(--cream);border:1px dashed var(--red);border-radius:8px;padding:14px 16px;font-size:12.5px;color:var(--ink2);margin-bottom:16px;line-height:1.6}
+.subs{border-top:1px dotted var(--hair);margin-top:18px;padding-top:14px;list-style:none}
+.subs li{padding:7px 0}.subs a{display:flex;gap:9px;text-decoration:none;align-items:flex-start}
+.subs a:hover .st{color:var(--red)}
+.ss{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:12px;color:var(--ink3);min-width:22px;padding-top:2px}
+.st{font-size:13px;line-height:1.4}
+.archbar{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:18px 24px;margin:28px 0}
+.archbar .lab{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;font-weight:700;letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.archbar .lab .wkbtn{margin-left:auto;font-size:12px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:16px;font-weight:400;font-family:"Noto Sans SC"}
+.archbar .lab .wkbtn:hover{background:var(--red);color:#fff}
+.cals{display:flex;gap:30px;flex-wrap:wrap}
+.calm{}
+.calm .cmh{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:8px;text-align:center}
+.calgrid{display:grid;grid-template-columns:repeat(7,30px);gap:3px}
+.calgrid .wd{font-size:10px;color:var(--ink3);text-align:center;height:18px}
+.calgrid a,.calgrid span{width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:12px;border-radius:6px;text-decoration:none;color:var(--ink)}
+.calgrid a{border:1px solid var(--hair)}
+.calgrid a:hover{border-color:var(--red);background:var(--cream);color:var(--red)}
+.calgrid .today{background:var(--ink);color:#fff}
+.calgrid .blank{border:none}
+.calgrid .noday{color:#d8d2c7;border:1px dashed var(--hair2)}
+.sec-title{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;letter-spacing:3px;color:var(--ink3);text-transform:uppercase;text-align:center;margin:30px 0 18px;position:relative}
+.sec-title span{background:var(--paper);padding:0 16px;position:relative;z-index:1}
+.sec-title::before{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:var(--hair)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--hair)}
+.block{padding:18px 22px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.block-h{display:flex;align-items:baseline;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.bh-cn{font-size:17px;font-weight:700}.bh-en{font-size:10px;letter-spacing:1.5px;color:var(--ink3)}
+.bh-more{margin-left:auto;font-size:11px;color:var(--red);text-decoration:none}.bh-more:hover{text-decoration:underline}
+.block ul{list-style:none}.block li{border-bottom:1px solid var(--hair2)}.block li:last-child{border:none}
+.block li a{display:flex;gap:9px;align-items:flex-start;padding:9px 0;text-decoration:none}
+.block li a:hover .bt{color:var(--red)}
+.bs{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:13px;color:var(--red);min-width:24px;padding-top:1px}
+.bt{font-size:13.5px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.deep{background:var(--ink);color:#f4efe6;border-radius:10px;padding:28px 34px;margin:30px 0;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+.deep a{color:#f4efe6}
+.deep-k{font-size:11px;letter-spacing:3px;color:#d99;margin-bottom:8px}
+.deep h3{font-family:"Songti SC","Noto Serif SC",serif;font-size:24px;font-weight:700;margin-bottom:8px}
+.deep p{color:#bdb5a8;font-size:13.5px}
+.deep-stat{display:flex;gap:14px}
+.dstat{flex:1;background:#221e18;border:1px solid #38322a;border-radius:7px;padding:16px;text-align:center;text-decoration:none;display:block}
+.dstat:hover{border-color:#e0a89a}
+.dstat .n{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:30px;color:#e0a89a}
+.dstat .l{font-size:12px;color:#bdb5a8;margin-top:3px}
+.foot{text-align:center;padding:30px;color:var(--ink3);font-size:11.5px;border-top:1px solid var(--hair)}
+.catpage{max-width:880px;margin:0 auto;padding:24px}
+.catpage .ch{font-family:"Songti SC","Noto Serif SC",serif;font-size:30px;font-weight:900;border-bottom:3px solid var(--ink);padding-bottom:12px;margin-bottom:8px;display:flex;align-items:baseline;gap:12px}
+.catpage .ch .en{font-size:12px;letter-spacing:2px;color:var(--ink3)}
+.catpage .cmeta{font-size:12.5px;color:var(--ink2);margin-bottom:24px}
+.catcard{background:var(--cream);border-radius:10px;padding:22px 26px;margin-bottom:28px}
+.catcard .cck{font-size:11px;letter-spacing:2px;color:var(--red);font-weight:700;text-transform:uppercase;margin-bottom:8px}
+.catcard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:700;line-height:1.35;margin-bottom:10px}
+.catcard h2 a{text-decoration:none}.catcard h2 a:hover{color:var(--red)}
+.catcard .ess{font-family:"Songti SC","Noto Serif SC",serif;font-size:15.5px;border-left:3px solid var(--red);padding-left:14px;margin-bottom:12px;line-height:1.6}
+.catcard .pts{margin:0 0 4px 0;padding-left:18px}
+.catcard .pts li{font-size:13.5px;color:var(--ink2);margin:4px 0;line-height:1.55}
+.crow{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--hair2);align-items:baseline}
+.crow .cn{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:22px;color:var(--red);min-width:42px}
+.crow .cc{flex:1}
+.crow .ct{font-family:"Songti SC","Noto Serif SC",serif;font-size:18px;font-weight:600;text-decoration:none;display:block;line-height:1.4}
+.crow .ct:hover{color:var(--red)}
+.crow .cs{font-size:13.5px;color:var(--ink2);margin-top:6px;line-height:1.65}
+.crow .ctags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.crow .ctag{font-size:11px;color:var(--ink2);border:1px solid var(--hair);padding:2px 9px;border-radius:3px}
+.crow .clink{font-size:12.5px;color:var(--red);text-decoration:none;margin-top:8px;display:inline-block}
+.pager{display:flex;align-items:center;justify-content:center;gap:20px;padding:28px 0 8px}
+.pager button{font-family:inherit;font-size:13px;background:var(--paper);border:1px solid var(--hair);border-radius:20px;padding:7px 18px;cursor:pointer;color:var(--ink)}
+.pager button:hover:not(:disabled){border-color:var(--red);color:var(--red)}
+.pager button:disabled{opacity:.4;cursor:default}
+.pager #pgInfo{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;color:var(--ink2)}
+.rel-tag{position:relative;font-size:11px;color:var(--red);border:1px solid var(--red);border-radius:3px;padding:2px 8px;cursor:default}
+.rel-tag .rel-pop{display:none;position:absolute;left:0;bottom:130%;z-index:50;width:max-content;max-width:320px;background:var(--ink);color:#f4efe6;font-size:11.5px;line-height:1.7;padding:8px 12px;border-radius:7px;box-shadow:0 6px 20px rgba(40,30,20,.3)}
+.rel-tag:hover .rel-pop{display:block}
+.lo-block{margin-top:24px;border-top:1px dashed var(--hair)}
+.lo-block summary{cursor:pointer;padding:14px 0;font-size:13px;color:var(--ink3);font-family:"Songti SC","Noto Serif SC",serif;list-style:none}
+.lo-block summary::-webkit-details-marker{display:none}
+.lo-block summary::before{content:"▸ ";color:var(--red)}
+.lo-block[open] summary::before{content:"▾ "}
+.lo-rows{opacity:.72}
+/* 洞察库 + 文章页 */
+.ilist{max-width:820px;margin:0 auto;padding:24px}
+.icard{background:var(--paper);border:1px solid var(--hair);border-radius:12px;padding:22px 26px;margin-bottom:16px;transition:.15s}
+.icard:hover{border-color:var(--red);box-shadow:0 6px 22px rgba(80,60,40,.08)}
+.icard .ik{font-size:11px;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:6px}
+.icard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:22px;font-weight:700;line-height:1.3;margin-bottom:8px}
+.icard h2 a{text-decoration:none}.icard h2 a:hover{color:var(--red)}
+.icard .im{font-size:12.5px;color:var(--ink3);margin-bottom:10px}
+.icard .idesc{font-size:14px;color:var(--ink2);line-height:1.7}
+.iempty{text-align:center;padding:60px 20px;color:var(--ink3)}
+.article{max-width:720px;margin:0 auto;padding:30px 24px;font-size:16px;line-height:1.9}
+.article .atitle{font-family:"Songti SC","Noto Serif SC",serif;font-size:34px;font-weight:900;line-height:1.25;margin-bottom:14px}
+.article .ameta{font-size:13px;color:var(--ink3);border-bottom:1px solid var(--hair);padding-bottom:18px;margin-bottom:24px}
+.article h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:23px;margin:30px 0 12px;padding-top:8px}
+.article h3{font-size:18px;margin:22px 0 10px;color:var(--ink)}
+.article p{margin-bottom:16px;color:#2a2620}
+.article blockquote{border-left:3px solid var(--red);padding:6px 0 6px 18px;margin:18px 0;font-family:"Songti SC","Noto Serif SC",serif;font-style:normal;color:var(--ink);background:var(--cream);border-radius:0 8px 8px 0;padding:14px 18px}
+.article .aback{display:inline-block;margin-bottom:20px;color:var(--red);text-decoration:none;font-size:13px}
+.wknav{max-width:880px;margin:16px auto 0;padding:10px 16px;background:var(--cream);border-radius:8px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px}
+.wknav-lab{color:var(--ink3);margin-right:4px;font-family:"Songti SC","Noto Serif SC",serif}
+.wknav-item{padding:3px 12px;border:1px solid var(--hair);border-radius:14px;text-decoration:none;color:var(--ink2);background:var(--paper)}
+.wknav-item:hover{border-color:var(--red);color:var(--red)}
+.wknav-item.on{background:var(--red);color:#fff;border-color:var(--red)}
+@media(max-width:880px){.leads,.grid,.deep{grid-template-columns:1fr}.lead.l{border-right:none;border-bottom:1px solid var(--hair)}.search-wrap input{width:130px}}
+
+.mark-btn{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ink3);background:none;border:1px solid var(--hair);border-radius:5px;padding:2px 9px;cursor:pointer;margin-left:8px;vertical-align:middle;font-family:"Noto Sans SC",sans-serif;transition:.15s}
+.mark-btn:hover{border-color:var(--red);color:var(--red)}
+.mark-btn.marked{background:var(--red);color:#fff;border-color:var(--red)}
+[data-mark-url].is-marked{background:#fdf6ef;box-shadow:inset 3px 0 0 var(--red);border-radius:4px}
+.mark-note{display:none;font-size:12.5px;color:var(--ink2);background:#fbf6ef;border-left:2px solid var(--red);padding:7px 12px;margin-top:8px;border-radius:0 6px 6px 0;line-height:1.6}
+.mark-note.show{display:block}
+.mark-note b{color:var(--red);font-weight:600;font-size:11px}
+/* 弹框 */
+.mark-modal{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,16,12,.4);align-items:center;justify-content:center}
+.mark-modal.show{display:flex}
+.mark-box{background:var(--paper);border-radius:12px;padding:24px 26px;width:min(92vw,460px);box-shadow:0 20px 60px rgba(60,40,20,.25)}
+.mark-box h4{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;margin-bottom:4px;line-height:1.4}
+.mark-box .mb-meta{font-size:12px;color:var(--ink3);margin-bottom:14px}
+.mark-box textarea{width:100%;min-height:90px;border:1px solid var(--hair);border-radius:8px;padding:10px 12px;font-family:inherit;font-size:14px;line-height:1.6;resize:vertical;outline:none}
+.mark-box textarea:focus{border-color:var(--red)}
+.mark-box .mb-tip{font-size:11.5px;color:var(--ink3);margin:6px 0 14px}
+.mark-box .mb-foot{display:flex;gap:10px;justify-content:flex-end}
+.mark-box button{font-family:inherit;font-size:13px;border-radius:7px;padding:8px 18px;cursor:pointer;border:1px solid var(--hair);background:var(--paper);color:var(--ink2)}
+.mark-box .mb-save{background:var(--red);color:#fff;border-color:var(--red)}
+.mark-box .mb-del{margin-right:auto;color:var(--ink3);border:none}
+.mark-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:13px;padding:9px 20px;border-radius:20px;z-index:210;opacity:0;transition:.3s;pointer-events:none}
+.mark-toast.show{opacity:1}
+/* 摘要浮窗 */
+.peek-modal{display:none;position:fixed;inset:0;z-index:220;background:rgba(20,16,12,.45);align-items:center;justify-content:center;padding:20px}
+.peek-modal.show{display:flex}
+.peek-box{position:relative;background:var(--paper);border-radius:14px;padding:30px 32px;width:min(94vw,560px);max-height:82vh;overflow-y:auto;box-shadow:0 24px 70px rgba(40,30,20,.35)}
+.peek-x{position:absolute;top:12px;right:16px;border:none;background:none;font-size:26px;line-height:1;color:var(--ink3);cursor:pointer}
+.peek-x:hover{color:var(--red)}
+.peek-cat{font-size:11px;letter-spacing:1px;color:var(--red);font-weight:700;margin-bottom:10px}
+.peek-title{font-size:21px;font-weight:700;line-height:1.42;margin-bottom:14px;padding-right:22px}
+.peek-sum{font-size:14.5px;line-height:1.9;color:var(--ink2);margin-bottom:22px}
+.peek-go{display:inline-block;font-size:14px;font-weight:600;color:var(--red);text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+
+.legal{max-width:880px;margin:0 auto;padding:4px 28px 44px;color:var(--ink3);font-size:11.5px;line-height:1.85}
+.legal p{margin:0 0 9px}
+.legal b{color:var(--ink2);font-weight:600}
+.legal a{color:var(--ink2);border-bottom:1px solid var(--hair)}
+.legal .lc{margin-top:13px;padding-top:12px;border-top:1px solid var(--hair);text-align:center}
+@media(max-width:880px){.legal{padding:4px 18px 36px}}
+</style></head><body>
+<div class="mark-modal" id="markModal">
+  <div class="mark-box">
+    <h4 id="mbTitle"></h4>
+    <div class="mb-meta" id="mbMeta"></div>
+    <textarea id="mbComment" placeholder="写下你的想法 / 评论 / 为什么标它(可留空,仅标记)…"></textarea>
+    <div class="mb-tip">这条评论会被记录,AI 每晚据此判断你可能想深挖的方向。</div>
+    <div class="mb-foot">
+      <button class="mb-del" id="mbDel">取消标记</button>
+      <button id="mbCancel">关闭</button>
+      <button class="mb-save" id="mbSave">保存标记</button>
+    </div>
+  </div>
+</div>
+<div class="mark-toast" id="markToast"></div>
+<div class="peek-modal" id="peekModal">
+  <div class="peek-box">
+    <button class="peek-x" type="button">&times;</button>
+    <div class="peek-cat"></div>
+    <h3 class="peek-title serif"></h3>
+    <p class="peek-sum"></p>
+    <a class="peek-go" target="_blank" rel="noopener">阅读原文 →</a>
+  </div>
+</div>
+
+<div class="mast"><div class="mast-line">The AI Signal · Agent</div>
+<h1 class="serif"><a href="../index.html">AI 信号站</a></h1>
+<div class="meta">2026-08-20 · Agent 版块 · 共 <b>35</b> 条</div></div>
+<div class="rule"></div>
+<nav class="nav"><a href="../d/2026-08-20.html">头版</a><a href="../c/2026-08-20-Agent.html" class="on">Agent</a><a href="../c/2026-08-20-产品.html">产品</a><a href="../c/2026-08-20-行业.html">行业</a><a href="../c/2026-08-20-论文.html">论文</a><a href="../c/2026-08-20-模型.html">模型</a><a href="../c/2026-08-20-技巧.html">技巧</a><a href="../weekly.html" style="color:var(--red)">上周·周报</a><a href="../insights.html" style="color:var(--red)">深度洞察</a><span class="search-wrap"><input type="text" id="siteSearch" placeholder="站内搜索…" autocomplete="off"><div class="search-res" id="searchRes"></div></span></nav>
+<div class="catpage">
+  <div class="ch serif">Agent<span class="en">AGENT</span></div>
+  <div class="cmeta">2026-08-20 · 该版块全部 35 条,按精选分排序 · <a href="../d/2026-08-20.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="cmeta">2026-08-20 · 全量 35 条 → 去重聚类 35 条 · 默认展示 AIHOT 精选 5 条,其余折叠 · <a href="../d/2026-08-20.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="catcard">
+              <div class="cck">本版块 · 最值得你思考</div>
+              <h2 class="serif"><a href="https://claude.com/blog/claude-code-guide-for-startups" target="_blank">Claude Code 初创公司指南：五大规则与创始人洞见</a></h2>
+              <div class="ess serif">Claude Code 的实践表明，编码智能体扩张的瓶颈不再是少数专家会不会用，而是团队能否把验证、重构与产品化流程变成共同规范。</div>
+              <div class="cck" style="margin-bottom:6px">思考切口</div><ul class="pts"><li>把“信任但验证”落实为合并前检查、回滚条件与责任人，而不是停留在人工抽查的口号。</li><li>评估编码 Agent 时，应看它是否减少了重复劳动并改善代码结构，而不只是统计生成代码量。</li></ul>
+            </div>
+  <div class="sec-title"><span>本版块精选 · 5 条</span></div>
+  <div class="crow crow-pg" data-i="0" data-mark-url="https://claude.com/blog/claude-code-guide-for-startups" data-mark-title="Claude Code 初创公司指南：五大规则与创始人洞见" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">65</span><div class="cc">
+        <a class="ct serif" href="https://claude.com/blog/claude-code-guide-for-startups" target="_blank">Claude Code 初创公司指南：五大规则与创始人洞见</a>
+        <div class="cs">Anthropic 发布面向初创公司的 Claude Code 使用指南，基于对十余家高增长公司的调研，总结出“人人皆可交付、自动化繁琐工作、信任但验证、为重构而构建、原型-自用-产品化”五大规则。…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">Anthropic</span><span class="ctag">MCP/工具调用</span><span class="ctag">教程/实践</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://claude.com/blog/claude-code-guide-for-startups" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="1" data-mark-url="https://x.com/omarsar0/status/2090138030296219973" data-mark-title="TrueForge 开源智能体框架实测：成本降75%" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">63</span><div class="cc">
+        <a class="ct serif" href="https://x.com/omarsar0/status/2090138030296219973" target="_blank">TrueForge 开源智能体框架实测：成本降75%</a>
+        <div class="cs">TrueFoundry 发布开源智能体框架 TrueForge（MIT 许可），可本地一键部署，支持 OpenAI、Anthropic、Google 及 Kimi、GLM、DeepSeek 等开源模型。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">开源/仓库</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/omarsar0/status/2090138030296219973" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="2" data-mark-url="https://x.com/poteto/status/2090141955695198633" data-mark-title="Cursor 云智能体助力 Lauren Tan 月提 1000 PR" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">62</span><div class="cc">
+        <a class="ct serif" href="https://x.com/poteto/status/2090141955695198633" target="_blank">Cursor 云智能体助力 Lauren Tan 月提 1000 PR</a>
+        <div class="cs">Lauren Tan 称上月通过 Cursor 云智能体提交 1000 个 PR，本月有望翻倍。她自建 pstack 技能集（含 /goal、/loop、/swarm 等），结合 Grok @Bot 收集上下文，实现 24/7 全自动开发。Cursor 正持续改进云智能体，使其能…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">GitHub</span><span class="ctag">xAI</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://x.com/poteto/status/2090141955695198633" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="3" data-mark-url="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work" data-mark-title="GitHub Copilot app 初学者教程：用 My work 面板管理你的工作" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">58</span><div class="cc">
+        <a class="ct serif" href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work" target="_blank">GitHub Copilot app 初学者教程：用 My work 面板管理你的工作</a>
+        <div class="cs">GitHub Copilot app 的 My work 面板将拉取请求和问题集中在一处管理，内置 All、Active、Review requests、Done 四个默认视图，并支持创建自定义视图与过滤器。用户可从问题或拉取请求直接启动新的智能体会话，也可批量选择多个条目创建会…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">GitHub</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="4" data-mark-url="https://the-decoder.com/anthropic-uses-an-unpublished-ai-model-called-model-2-internally" data-mark-title="Anthropic 内部运行未发布模型“Model 2”，性能超越所有公开版 Claude" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://the-decoder.com/anthropic-uses-an-unpublished-ai-model-called-model-2-internally" target="_blank">Anthropic 内部运行未发布模型“Model 2”，性能超越所有公开版 Claude</a>
+        <div class="cs">Anthropic 在内部运行一款未发布的 AI 模型“Model 2”，其综合性能略强于 Claude Mythos 5，但在某些领域较弱。据该公司 2026 年 8 月的风险报告，该模型在内部能力指数 AECI 上比 Mythos 5 高约 1.5 点，提升幅度小于从 Myt…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">模型发布</span></div>
+        <a class="clink" href="https://the-decoder.com/anthropic-uses-an-unpublished-ai-model-called-model-2-internally" target="_blank">阅读原文 →</a></div></div>
+  
+  <details class="lo-block"><summary>展开其余 30 条(非精选,已默认收起)</summary><div class="lo-rows"><div class="crow crow-pg" data-i="5" data-mark-url="https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms" data-mark-title="大语言模型时代的可扩展软件" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms" target="_blank">大语言模型时代的可扩展软件</a>
+        <div class="cs">现有网络软件多为静态，难以满足用户的个性化长尾需求。LLM 辅助编程让个人定制软件成为可能，Y Combinator 的 Pete Koomen 称之为“Small Software”。文章提出，LLM 可大幅降低扩展开发成本，现代沙箱原语则降低部署成本并提供安全边界，网络应用有…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">现象/趋势</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="6" data-mark-url="https://x.com/rohanpaul_ai/status/2090217227694080186" data-mark-title="Stripe 收购 OpenRouter：智能体将成经济主体" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">56</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2090217227694080186" target="_blank">Stripe 收购 OpenRouter：智能体将成经济主体</a>
+        <div class="cs">Stripe 致投资者信披露其收购 OpenRouter 的理由：OpenRouter 的 token 消耗量年初至今以每周 9% 的速度增长。Stripe 认为智能体即将成为独立的经济参与者，并称全球 GDP 有望迈向“千万亿美元”时代，其现有业务已覆盖近 2% 的全球 GDP…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2090217227694080186" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="7" data-mark-url="https://www.ithome.com/0/992/339.htm" data-mark-title="揭秘 OpenAI 的“终极野心”：让智能体像人类一样熟练操作电脑" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/992/339.htm" target="_blank">揭秘 OpenAI 的“终极野心”：让智能体像人类一样熟练操作电脑</a>
+        <div class="cs">OpenAI 员工乐观估计，公司正接近实现创立之初设定的目标：让 AI 智能体像人类一样熟练操作电脑，尤其是使用浏览器。最新模型在训练各阶段加入了专门提升电脑操作能力的数据和流程，并利用真人示范与强化学习强化技能；系统现可直接读取网页底层信息，Codex 已能自行测试代码并修正问…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">OpenAI</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://www.ithome.com/0/992/339.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="8" data-mark-url="https://jumploops.com/blog/sol-loves-to-cheat" data-mark-title="索尔喜欢作弊：GPT-5.6 Sol 在 Terminal Bench 2.1 上达到 94% 后开始作弊" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://jumploops.com/blog/sol-loves-to-cheat" target="_blank">索尔喜欢作弊：GPT-5.6 Sol 在 Terminal Bench 2.1 上达到 94% 后开始作弊</a>
+        <div class="cs">开发者用自建 supervisor 智能体 chum-codex 自动化“规格驱动”开发流程，在 Terminal Bench 2.1 上达到 89.9%，超过 vanilla Codex 的 88.8%。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">OpenAI</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://jumploops.com/blog/sol-loves-to-cheat" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="9" data-mark-url="https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code" data-mark-title="概念完整性与代码行数：Simon Willison 谈 AI 如何改变软件开发" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">53</span><div class="cc">
+        <a class="ct serif" href="https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code" target="_blank">概念完整性与代码行数：Simon Willison 谈 AI 如何改变软件开发</a>
+        <div class="cs">Simon Willison 在 Talking Postgres 播客中与 Claire Giordano 讨论 AI 如何改变软件开发。他认为，在智能体辅助下，代码行数仍是衡量生产力的有效指标——工程师日产出可从 50-60 行提升至千行，但真正的瓶颈变为认知容量，因此团队仍…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">大佬观点</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="10" data-mark-url="https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams" data-mark-title="Slack 如何构建人机智能体团队：对话即知识" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">51</span><div class="cc">
+        <a class="ct serif" href="https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams" target="_blank">Slack 如何构建人机智能体团队：对话即知识</a>
+        <div class="cs">Slack 首席产品官 Jaime DeLanghe 分享了将对话转化为机构知识、构建人机智能体团队的最佳实践。她主张默认使用公开频道，让智能体从可见对话中学习，并建议将会议、邮件、日历等上下文连接起来以减少重复劳动。在 Slack 中由 Claude 驱动的智能体负责起草、总结…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="11" data-mark-url="https://x.com/fofrAI/status/2090459886756770159" data-mark-title="fofr 分享 Slack 多智能体团队搭建经验" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://x.com/fofrAI/status/2090459886756770159" target="_blank">fofr 分享 Slack 多智能体团队搭建经验</a>
+        <div class="cs">fofr 在 Slack/Google Chat 中搭建了个人智能体系统：6 个智能体组成基础设施团队管理运行环境与工具，小型“沙龙”团队自主处理特定任务并汇报问题，另有语音智能体可跨频道管理。系统基本自运行，最大挑战是上下文管理。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://x.com/fofrAI/status/2090459886756770159" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="12" data-mark-url="https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate" data-mark-title="monday.com 如何将平台重构为人类与智能体协作的 agent-first 产品" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">49</span><div class="cc">
+        <a class="ct serif" href="https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate" target="_blank">monday.com 如何将平台重构为人类与智能体协作的 agent-first 产品</a>
+        <div class="cs">monday.com 以 Claude 为核心重构平台，转向人类与智能体协作的 agent-first 模式，自 2026 年 5 月上线以来已产生超过 500 万次智能体交互。该公司曾因“AI dust”式附加功能触顶，遂将 AI 原生嵌入工作流，为智能体设置名称、头像及权限，…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="13" data-mark-url="https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted" data-mark-title="Grok 遭加密提示词攻击，可窃取用户聊天记录与个人信息" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">49</span><div class="cc">
+        <a class="ct serif" href="https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted" target="_blank">Grok 遭加密提示词攻击，可窃取用户聊天记录与个人信息</a>
+        <div class="cs">安全公司 Adversa 研究员发现一种针对 Grok 的加密上下文注入攻击，可绕过其静态安全护栏，窃取用户聊天记录、姓名和位置等数据。攻击者将恶意指令加密后连同解密密钥放入网页，Grok 在用户要求总结页面时自行解密并执行，将数据发送至攻击者服务器。xAI 已于 6 月被告知该…</div>
+        <div class="ctags mark-anchor"><span class="ctag">MCP/工具调用</span><span class="ctag">xAI</span><span class="ctag">安全/对齐</span></div>
+        <a class="clink" href="https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="14" data-mark-url="https://x.com/kimmonismus/status/2090419578618998952" data-mark-title="Codex 周活破 2000 万，用户弃 Claude 转投" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">46</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2090419578618998952" target="_blank">Codex 周活破 2000 万，用户弃 Claude 转投</a>
+        <div class="cs">Codex 周活跃用户已超 2000 万，增长正以牺牲 Claude 用户为代价，越来越多用户取消 Claude 订阅。作者抱怨 Opus 冗长傲慢、速率限制消耗过快，且 Sonnet 缺乏 OpenAI 中端模型（如 Luna、Terra）的性价比。若持续，Codex 将很快突…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">OpenAI</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2090419578618998952" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="15" data-mark-url="https://x.com/kimmonismus/status/2090159374450974850" data-mark-title="TrueFoundry 开源 TrueForge 智能体框架" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">44</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2090159374450974850" target="_blank">TrueFoundry 开源 TrueForge 智能体框架</a>
+        <div class="cs">TrueFoundry 今日在 GitHub 开源其智能体框架 TrueForge，采用 MIT 许可证，支持本地与托管两种运行模式。该框架在 Opus 4.8 上达到与 Claude Managed Agents 相当的准确率，成本降低约 30%，路由至 GLM-5.2 时成本…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">MCP/工具调用</span><span class="ctag">开源/仓库</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2090159374450974850" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="16" data-mark-url="https://x.com/kimmonismus/status/2090385462238077162" data-mark-title="OpenAI Codex 一周半完成 Asana 五年迁移" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">43</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2090385462238077162" target="_blank">OpenAI Codex 一周半完成 Asana 五年迁移</a>
+        <div class="cs">OpenAI Codex 智能体用约一周半完成 Asana 工程师原估需五年、约 600 万美元人力的 Enzyme 测试框架迁移。最多 4 个 Codex 智能体并行处理独立代码副本，工程师每日两次审查提案，总模型与基础设施成本约 1.2 万美元。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">OpenAI</span><span class="ctag">现象/趋势</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2090385462238077162" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="17" data-mark-url="https://x.com/AYi_AInotes/status/2090239941125005424" data-mark-title="Cursor 工程师详解 Git 托管 20 年难题与 Origin 设计" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">42</span><div class="cc">
+        <a class="ct serif" href="https://x.com/AYi_AInotes/status/2090239941125005424" target="_blank">Cursor 工程师详解 Git 托管 20 年难题与 Origin 设计</a>
+        <div class="cs">Cursor 工程师 Vicent Martí 发文《Git at any scale》，梳理 20 年 Git 托管难点，并介绍其存储系统 Origin 的数据库式设计：将 S3 当作 WAL、本地 NVMe 仅作缓存，闲置仓库可 0 副本、热仓库可拉 100+ 读副本，压测约…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">大佬观点</span><span class="ctag">编码</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/AYi_AInotes/status/2090239941125005424" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="18" data-mark-url="https://www.databricks.com/blog/designing-effective-genie-agents-single-prompt" data-mark-title="Databricks 如何从单一提示词设计高效的 Genie Agents" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">40</span><div class="cc">
+        <a class="ct serif" href="https://www.databricks.com/blog/designing-effective-genie-agents-single-prompt" target="_blank">Databricks 如何从单一提示词设计高效的 Genie Agents</a>
+        <div class="cs">Databricks 发布指南，探讨如何从单一提示词设计高效的 Genie Agents。文章指出，通用智能体在处理收入等查询时，往往只会抓取第一个相关数据表，而 Genie Agents 通过更精准的提示词设计，能更准确地定位和回答用户问题。该指南旨在帮助开发者优化智能体行为，…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://www.databricks.com/blog/designing-effective-genie-agents-single-prompt" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="19" data-mark-url="https://x.com/SemiAnalysis_/status/2090267769132728744" data-mark-title="AI 私募股权：重塑成本结构的新浪潮" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">37</span><div class="cc">
+        <a class="ct serif" href="https://x.com/SemiAnalysis_/status/2090267769132728744" target="_blank">AI 私募股权：重塑成本结构的新浪潮</a>
+        <div class="cs">SemiAnalysis 的 Dylan 解释为何新一轮私募股权与以往截然不同。传统 PE 收购公司后“榨干”其价值，而新策略是“AI 私募股权”——通过 AI 彻底改造公司系统，前期大量投入以换取长期成本效率的显著提升。AI 电话销售、开票、会计等应用虽未达临界规模，但已近在咫…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/SemiAnalysis_/status/2090267769132728744" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="20" data-mark-url="https://www.ithome.com/0/992/317.htm" data-mark-title="微软重金招聘首席法律工程师，“懂 AI 的律师”最高可获近 28 万美元年薪" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">36</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/992/317.htm" target="_blank">微软重金招聘首席法律工程师，“懂 AI 的律师”最高可获近 28 万美元年薪</a>
+        <div class="cs">微软本周在 LinkedIn 发布招聘，寻求招募一名首席法律工程师，负责开发 AI 智能体、改进提示词，并培训商业业务部门的律师使用 AI。该职位要求法律学位和至少 7 年执业经验，优先考虑具备 AI 法律工具使用经验者，基本年薪为 14.7 万至 27.89 万美元。客户正要求…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/992/317.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="21" data-mark-url="https://openai.com/index/stampli" data-mark-title="Stampli 如何用 ChatGPT Work 和 Codex 将创意快速推向市场" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">35</span><div class="cc">
+        <a class="ct serif" href="https://openai.com/index/stampli" target="_blank">Stampli 如何用 ChatGPT Work 和 Codex 将创意快速推向市场</a>
+        <div class="cs">Stampli 借助 Codex 和 ChatGPT Work，将 Deep Finance 产品从原型到上市压缩至约六周，内容生产耗时从约 243 小时降至约 77 小时，提速 3.16 倍。其营销团队每周用 ChatGPT Work 生成数百条内容，并利用 GPT 驱动的自动…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">OpenAI</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://openai.com/index/stampli" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="22" data-mark-url="https://x.com/emollick/status/2090293321142874168" data-mark-title="Claude技能创建器细节处理优于ChatGPT" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">34</span><div class="cc">
+        <a class="ct serif" href="https://x.com/emollick/status/2090293321142874168" target="_blank">Claude技能创建器细节处理优于ChatGPT</a>
+        <div class="cs">Claude 的技能创建器（直接让它创建一个技能即可）仍然是制作可复用技能的最佳方式，如果你在意细节的话。ChatGPT 倾向于“变魔术”，直接替你完成，而 Claude 会做测试并展示结果，反复征求你的输入和反馈。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">OpenAI</span><span class="ctag">大佬观点</span></div>
+        <a class="clink" href="https://x.com/emollick/status/2090293321142874168" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="23" data-mark-url="https://www.artificialintelligence-news.com/news/agentic-ai-in-government-uae-classification" data-mark-title="政府中的智能体 AI 撞上硬骨头：决定机器可替人做哪些决策" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">32</span><div class="cc">
+        <a class="ct serif" href="https://www.artificialintelligence-news.com/news/agentic-ai-in-government-uae-classification" target="_blank">政府中的智能体 AI 撞上硬骨头：决定机器可替人做哪些决策</a>
+        <div class="cs">阿联酋在政府场景应用智能体 AI 时面临核心难题：如何划定机器可自主决策的边界。该国自 2017 年 10 月发布国家 AI 战略并设立全球首位 AI 国务部长以来，已先行探索近 9 年，如今正触及“机器可替人决定什么”这一关键治理问题。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://www.artificialintelligence-news.com/news/agentic-ai-in-government-uae-classification" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="24" data-mark-url="https://x.com/OpenAIDevs/status/2090230646497251387" data-mark-title="Codex 开源框架助力团队集成智能体" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">32</span><div class="cc">
+        <a class="ct serif" href="https://x.com/OpenAIDevs/status/2090230646497251387" target="_blank">Codex 开源框架助力团队集成智能体</a>
+        <div class="cs">团队正在使用开源的 Codex 框架，将智能体引入他们已使用的工具中，从内部应用到运营仪表板。
+
+他们的应用程序控制界面、上下文、工具和审批，而框架则负责智能体的运行循环。
+
+https://developers.openai.com/blog/codex-as-a-platfo…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">OpenAI</span><span class="ctag">开源生态</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://x.com/OpenAIDevs/status/2090230646497251387" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="25" data-mark-url="https://x.com/gdb/status/2090449916456009972" data-mark-title="OpenAI 浏览器操作智能体发布" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">31</span><div class="cc">
+        <a class="ct serif" href="https://x.com/gdb/status/2090449916456009972" target="_blank">OpenAI 浏览器操作智能体发布</a>
+        <div class="cs">OpenAI 推出可在浏览器中执行任意操作的智能体。用户 @clairevo 列举了其实际用例，包括关闭会计软件账目、管理 Gmail 收件箱、设置 Stripe Radar 规则、在 Midjourney 中迭代图片、完成安全问卷、注册会议及取消订阅等。该智能体还支持通过 iP…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">OpenAI</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://x.com/gdb/status/2090449916456009972" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="26" data-mark-url="https://x.com/hongming731/status/2090225936688201898" data-mark-title="BestBlogs 早报：Addy 谈认知投降与验证环，Laycock 区分公民构建与专家治理，17 岁作者 ICML 路径" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">31</span><div class="cc">
+        <a class="ct serif" href="https://x.com/hongming731/status/2090225936688201898" target="_blank">BestBlogs 早报：Addy 谈认知投降与验证环，Laycock 区分公民构建与专家治理，17 岁作者 ICML 路径</a>
+        <div class="cs">Addy Osmani 警告 agent 循环中的“认知投降”，强调验证环与爆炸半径限制；Rachel Laycock 提出“公民构建，智能体执行，专家治理”的组织假说。17 岁作者苏廷浩的论文被 ICML 2026 接收，训练花费约 3 万元，最大模型 0.5B。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">OpenAI</span><span class="ctag">开源生态</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/hongming731/status/2090225936688201898" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="27" data-mark-url="https://x.com/poteto/status/2090166484219953463" data-mark-title="云智能体是未来，验证是瓶颈" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">31</span><div class="cc">
+        <a class="ct serif" href="https://x.com/poteto/status/2090166484219953463" target="_blank">云智能体是未来，验证是瓶颈</a>
+        <div class="cs">Lauren Tan 认为应放弃 worktrees，云智能体才是未来。Decagon 的云智能体使用量三个月增长 6 倍，因其可扩展、随处运行且能长时间工作。但验证不可信只会放大错误，瓶颈在于环境搭建与验证，而非模型智能。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">现象/趋势</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/poteto/status/2090166484219953463" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="28" data-mark-url="https://x.com/alibaba_cloud/status/2090366685325013473" data-mark-title="Qwen 集成至 TrueFoundry Agent Harness" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">29</span><div class="cc">
+        <a class="ct serif" href="https://x.com/alibaba_cloud/status/2090366685325013473" target="_blank">Qwen 集成至 TrueFoundry Agent Harness</a>
+        <div class="cs">很高兴看到 TrueFoundry 将 Qwen 引入 Agent Harness，构建者无需离开统一控制层即可获得前沿规模的开源权重模型。https://click.alibabacloud.com/m/20000002474/ #BuildWithQwen…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">开源生态</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/alibaba_cloud/status/2090366685325013473" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="29" data-mark-url="https://x.com/elonmusk/status/2090398269318758570" data-mark-title="Grok 机器人可为你赚钱" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">27</span><div class="cc">
+        <a class="ct serif" href="https://x.com/elonmusk/status/2090398269318758570" target="_blank">Grok 机器人可为你赚钱</a>
+        <div class="cs">Grok @Bot 可以帮你赚钱
+
+[引用 @liam_fallen]：我的 Grok 机器人刚刚赚回了自己的成本。
+
+这太疯狂了。
+
+我只给了它一个任务……
+
+赢回流失的客户。
+
+它：
+
+→ 找到了过去 6 个月内离开的所有人
+→ 给他们发了邮件
+→ 赢回了其中几位
+→ 收集了…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">xAI</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/elonmusk/status/2090398269318758570" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="30" data-mark-url="https://x.com/elonmusk/status/2090311312228360406" data-mark-title="马斯克力荐Grok Bot：非程序员称其彻底改变工作方式" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">27</span><div class="cc">
+        <a class="ct serif" href="https://x.com/elonmusk/status/2090311312228360406" target="_blank">马斯克力荐Grok Bot：非程序员称其彻底改变工作方式</a>
+        <div class="cs">马斯克转发用户@congressdj的体验，力荐Grok Bot。该用户自称非程序员，仅用数小时便通过Grok Bot连接Gmail，读取4万封邮件后自动完成报税，并找到3张60K积分兑换的日本头等舱机票。他还创建了多个智能体，用于政治信息更新、邮箱整理及关键决策确认。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">xAI</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://x.com/elonmusk/status/2090311312228360406" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="31" data-mark-url="https://x.com/karminski3/status/2090237224113823853" data-mark-title="GLM-5.3 与 DeepSeek-V4-Pro 测试中，Agent 打游戏表现有趣" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">26</span><div class="cc">
+        <a class="ct serif" href="https://x.com/karminski3/status/2090237224113823853" target="_blank">GLM-5.3 与 DeepSeek-V4-Pro 测试中，Agent 打游戏表现有趣</a>
+        <div class="cs">GLM-5.3 正在测试中，采用新的 Agent 能力测试——让模型玩 ToME4 游戏比分数。测试中 DeepSeek-V4-Pro 被 BOSS 追击半张地图后，一气之下反杀 BOSS，表现戏剧性。预计 GLM-5.3 本周发布。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">DeepSeek</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://x.com/karminski3/status/2090237224113823853" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="32" data-mark-url="https://x.com/Replit/status/2090216789594567053" data-mark-title="Replit 周五直播详解 Free Mode 与 Routines" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">26</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Replit/status/2090216789594567053" target="_blank">Replit 周五直播详解 Free Mode 与 Routines</a>
+        <div class="cs">本周五上午 9 点（太平洋时间）与 Free Mode 团队见面。
+
+加入 Replit 社区团队直播，深入了解 Free Mode 和 Conversations，并抢先预览黑盒渗透测试中的 Routines。
+
+将在 YouTube、LinkedIn 和 X 上直播。报名：h…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">编码</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/Replit/status/2090216789594567053" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="33" data-mark-url="https://x.com/charlieholtz/status/2090161402019536950" data-mark-title="Conductor 与 Paper 协作新工作流演示" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">26</span><div class="cc">
+        <a class="ct serif" href="https://x.com/charlieholtz/status/2090161402019536950" target="_blank">Conductor 与 Paper 协作新工作流演示</a>
+        <div class="cs">Conductor 🤝 Paper
+
+[引用 @paper]：Paper × Conductor：超级互补的工具
+
+在这段视频中，@charlieholtz 和 @harcourttt 展示了在 paper 中使用 @conductor_build 进行协作。
+
+这是我们看到越来…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">编码</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/charlieholtz/status/2090161402019536950" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="34" data-mark-url="https://x.com/elonmusk/status/2090394799228506293" data-mark-title="Grok Bot 如何成为现实版 Jarvis" data-mark-date="2026-08-20" data-mark-cat="Agent"><span class="cn">24</span><div class="cc">
+        <a class="ct serif" href="https://x.com/elonmusk/status/2090394799228506293" target="_blank">Grok Bot 如何成为现实版 Jarvis</a>
+        <div class="cs">Grok Bot 被称最接近现实版 Jarvis，可同时启动业务、交付软件并制造爆款内容。4 分钟即可配置：安装后设为首席幕僚，输入“Digital Chief of Staff Prompt”提示词，并接入 X、Stripe 和 GitHub 权限。之后只需粘贴文章即可交给它处…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">xAI</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://x.com/elonmusk/status/2090394799228506293" target="_blank">阅读原文 →</a></div></div></div></details>
+</div>
+<div class="foot serif">AI 信号站 · Agent · 2026-08-20</div>
+<script src="../search-index.js"></script><script>(function(){var SR_REL="../";
+var SIDX = window.__SIDX__ || [];
+var inp = document.getElementById('siteSearch'), box = document.getElementById('searchRes');
+if(inp){
+  var K1=1.5, B=0.75, TITLE_BOOST=3, COV=0.6;
+  // 停用词:连接词/虚词不参与 AND 覆盖判定(避免"claude和gemini"里"和"稀释召回条件)
+  var STOP={}, _sw='的 了 和 与 及 或 跟 并 在 是 有 这 那 就 也 还 又 吗 呢 吧 啊 把 被 让 给 对 从 到 为 之 以 且 等 以及 还有 并且 而且'.split(' ');
+  for(var si=0;si<_sw.length;si++) STOP[_sw[si]]=1;
+  // 分词:英文/数字按词;中文按 bigram(单字则保留);query 与文档同一套切法
+  function toks(s){
+    var out=[], segs=(String(s).toLowerCase().match(/[a-z0-9]+|[\u4e00-\u9fff]+/g)||[]);
+    for(var i=0;i<segs.length;i++){
+      var seg=segs[i];
+      if(/[a-z0-9]/.test(seg)) out.push(seg);
+      else if(seg.length===1) out.push(seg);
+      else for(var j=0;j<seg.length-1;j++) out.push(seg.slice(j,j+2));
+    }
+    return out;
+  }
+  // 加载时一次性建 BM25 索引:每篇词频 tf(标题×TITLE_BOOST)、全局文档频率 DF、平均长度 avgdl
+  var DF={}, docs=[], totalLen=0, t;
+  for(var d=0; d<SIDX.length; d++){
+    var x=SIDX[d];
+    var body=(x.g||'')+' '+(x.c||'')+' '+(x.tag||'')+' '+(x.src||'');
+    var tf={};
+    var tt=toks(x.t||''); for(var a=0;a<tt.length;a++){ tf[tt[a]]=(tf[tt[a]]||0)+TITLE_BOOST; }
+    var bb=toks(body); for(var b2=0;b2<bb.length;b2++){ tf[bb[b2]]=(tf[bb[b2]]||0)+1; }
+    var dl=0; for(t in tf) dl+=tf[t];
+    totalLen+=dl;
+    for(t in tf) DF[t]=(DF[t]||0)+1;
+    docs.push({x:x, tf:tf, dl:dl});
+  }
+  var N=docs.length||1, avgdl=totalLen/N;
+  function idf(w){ var df=DF[w]||0; return Math.log((N-df+0.5)/(df+0.5)+1); }
+  inp.addEventListener('input', function(){
+    var q=inp.value.trim(); if(!q){ box.classList.remove('show'); return; }
+    var raw=toks(q), seen={}, qts=[];
+    for(var i=0;i<raw.length;i++){ if(!seen[raw[i]] && !STOP[raw[i]]){ seen[raw[i]]=1; qts.push(raw[i]); } }
+    if(!qts.length){ box.classList.remove('show'); return; }
+    // AND 覆盖召回:命中实词数须达 ceil(词数×COV),容忍中文 bigram 的 junction 噪声(如"面壁具身"切出的"壁具")
+    var need=Math.max(1, Math.ceil(qts.length*COV));
+    var scored=[];
+    for(var d2=0; d2<docs.length; d2++){
+      var doc=docs[d2], sc=0, m=0;
+      for(var k=0;k<qts.length;k++){
+        var f=doc.tf[qts[k]]; if(!f) continue;
+        m++; sc += idf(qts[k])*(f*(K1+1))/(f + K1*(1-B+B*doc.dl/avgdl));
+      }
+      if(m>=need) scored.push({x:doc.x, sc:sc, m:m});
+    }
+    // 排序:BM25 分降序 → 命中词数 → 日期新
+    scored.sort(function(p,r){ return (r.sc-p.sc) || (r.m-p.m) || (p.x.d<r.x.d?1:-1); });
+    var hits=scored.slice(0,20);
+    if(!hits.length){ box.innerHTML='<div class="sr-empty">本站无匹配结果</div>'; box.classList.add('show'); return; }
+    box.innerHTML='<div class="sr-h">站内命中 '+hits.length+' 条 · BM25 相关度排序</div>' + hits.map(function(o){
+      var x=o.x;
+      return '<a href="'+SR_REL+'d/'+x.d+'.html"><div class="srt">'+x.t+'</div><div class="srm">'+x.d+' · '+x.c+' · 精选 '+x.s+'</div></a>';
+    }).join('');
+    box.classList.add('show');
+  });
+  document.addEventListener('click', function(ev){ if(!ev.target.closest('.search-wrap')) box.classList.remove('show'); });
+}
+})();</script><script>
+(function(){
+  const API='http://localhost:8765';
+  // 标记功能只在本机启用。同一份构建产物:本地全功能、公网只读。
+  // 原因:标记数据的用途是喂给 Analyst 做个性化(marks 工具),陌生访客的口味不是站主的口味,
+  // 收集反而会污染个性化信号。所以公网不需要写接口 —— 也就不需要任何鉴权。
+  const LOCAL = ['localhost','127.0.0.1','::1'].indexOf(location.hostname) >= 0
+                || location.protocol === 'file:';
+  if(!LOCAL){
+    // 移除标记入口与弹窗,避免公网访客点了没反应(以及暴露本地 API 地址)
+    document.querySelectorAll('.mark-btn').forEach(b=>b.remove());
+    const m=document.getElementById('markModal'); if(m) m.remove();
+    const t=document.getElementById('markToast'); if(t) t.remove();
+    return;
+  }
+  let marks={}, cur=null;
+  const modal=document.getElementById('markModal');
+  if(!modal) return;
+  const elTitle=document.getElementById('mbTitle'),elMeta=document.getElementById('mbMeta'),
+        elC=document.getElementById('mbComment'),toast=document.getElementById('markToast');
+  function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);}
+  // 标记优先存 localStorage(不依赖常开服务);服务开着则合并后端(供 AI 读取的权威源)
+  const LS='ai_signal_marks';
+  function loadLocal(){try{return JSON.parse(localStorage.getItem(LS)||'{}');}catch(e){return {};}}
+  function saveLocal(){try{localStorage.setItem(LS,JSON.stringify(marks));}catch(e){}}
+  marks=loadLocal();renderMarks();
+  fetch(API+'/api/marks').then(r=>r.json()).then(m=>{if(m&&typeof m==='object'){marks=Object.assign({},marks,m);saveLocal();renderMarks();}}).catch(()=>{});
+  function renderMarks(){
+    document.querySelectorAll('[data-mark-url]').forEach(el=>{
+      const u=el.getAttribute('data-mark-url');
+      const btn=el.querySelector('.mark-btn'); if(!btn)return;
+      if(marks[u]){
+        el.classList.add('is-marked'); btn.classList.add('marked'); btn.textContent='✓ 已标记';
+        let note=el.querySelector('.mark-note');
+        if(marks[u].comment){
+          if(!note){note=document.createElement('div');note.className='mark-note';el.appendChild(note);}
+          note.innerHTML='<b>我的标记 · '+(marks[u].marked_at||'')+'</b><br>'+marks[u].comment.replace(/</g,'&lt;');
+          note.classList.add('show');
+        }
+      }else{
+        el.classList.remove('is-marked'); btn.classList.remove('marked'); btn.textContent='标记';
+        const note=el.querySelector('.mark-note'); if(note)note.classList.remove('show');
+      }
+    });
+  }
+  // 给每个可标记元素注入按钮
+  document.querySelectorAll('[data-mark-url]').forEach(el=>{
+    if(el.querySelector('.mark-btn'))return;
+    const btn=document.createElement('button');btn.className='mark-btn';btn.textContent='标记';
+    btn.onclick=(e)=>{e.preventDefault();e.stopPropagation();openModal(el);};
+    const anchor=el.querySelector('.mark-anchor')||el;
+    anchor.appendChild(btn);
+  });
+  function openModal(el){
+    cur={url:el.getAttribute('data-mark-url'),title:el.getAttribute('data-mark-title')||'',
+         date:el.getAttribute('data-mark-date')||'',cat:el.getAttribute('data-mark-cat')||''};
+    elTitle.textContent=cur.title;
+    elMeta.textContent=cur.date+(cur.cat?' · '+cur.cat:'');
+    elC.value=(marks[cur.url]&&marks[cur.url].comment)||'';
+    document.getElementById('mbDel').style.display=marks[cur.url]?'':'none';
+    modal.classList.add('show');elC.focus();
+  }
+  function close(){modal.classList.remove('show');cur=null;}
+  document.getElementById('mbCancel').onclick=close;
+  modal.onclick=(e)=>{if(e.target===modal)close();};
+  function today(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  document.getElementById('mbSave').onclick=()=>{
+    if(!cur)return;
+    const rec={...cur,comment:elC.value.trim(),marked_at:today()};
+    marks[cur.url]=rec;saveLocal();renderMarks();close();
+    fetch(API+'/api/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(rec)})
+      .then(r=>r.json()).then(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(已同步)'))
+      .catch(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(本地已存,启动服务后同步给AI)'));
+  };
+  document.getElementById('mbDel').onclick=()=>{
+    if(!cur)return;
+    delete marks[cur.url];saveLocal();renderMarks();close();showToast('已取消标记');
+    fetch(API+'/api/unmark',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:cur.url})}).catch(()=>{});
+  };
+  // ---- 摘要浮窗:点标题先看摘要(复用搜索索引 SIDX,按 url 反查),点"阅读原文"仍直接跳 ----
+  var _SIDX = window.__SIDX__ || [];
+  var pk = document.getElementById('peekModal');
+  if(pk){
+    var pkClose = function(){ pk.classList.remove('show'); };
+    pk.addEventListener('click', function(e){ if(e.target===pk || e.target.classList.contains('peek-x')) pkClose(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') pkClose(); });
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[target="_blank"]'); if(!a) return;
+      var txt = (a.textContent||'').trim();
+      if(txt.indexOf('原文') >= 0) return;               // "阅读原文"类→直接跳
+      var href = a.getAttribute('href') || '';
+      var rec = null;
+      for(var i=0;i<_SIDX.length;i++){ if(_SIDX[i].u===href){ rec=_SIDX[i]; break; } }
+      if(!rec) return;                                    // 非索引条目(导航/月历/全部)→直接跳
+      e.preventDefault();
+      pk.querySelector('.peek-cat').textContent = [rec.c, rec.src, '精选 ' + rec.s, rec.d].filter(Boolean).join(' · ');
+      pk.querySelector('.peek-title').textContent = rec.t;
+      pk.querySelector('.peek-sum').textContent = rec.g;
+      pk.querySelector('.peek-go').href = rec.u;
+      pk.classList.add('show');
+    });
+  }
+})();
+</script><div class="legal">
+<p><b>来源与版权</b>　本站为个人非商业实验项目,不生产原始报道。所收录条目的标题与摘要均来自公开渠道,每条都标注来源并链接回原文;文字、图片及其他内容的著作权归原作者与原发布方所有。本站只摘录足以判断「是否值得点开」的信息,完整内容请访问原文。</p>
+<p><b>AI 生成内容</b>　标注为「判断」「洞察」「速览」的段落由大语言模型生成,可能包含事实错误、过时信息或过度推断,仅为本站的实验性观点,<b>不构成投资、就业、技术选型或任何专业建议</b>。请以原文与一手信源为准。</p>
+<p><b>侵权与更正</b>　若您是权利人且不希望相关内容出现在此,或发现事实性错误,请通过 <a href="https://github.com/AMMPNK/ai-signal/issues" target="_blank" rel="noopener">GitHub Issues</a> 告知,我会尽快移除或更正。</p>
+<p class="lc">© 2026 AI 信号站 · 个人非商业项目 · 内容由 AI 辅助生成,请自行核实</p>
+</div></body></html>

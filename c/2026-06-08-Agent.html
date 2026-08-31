@@ -1,0 +1,583 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agent · 2026-06-08</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--paper:#fffefb;--ink:#17140f;--ink2:#574f44;--ink3:#9b9387;--hair:#e8e2d7;--hair2:#f2ede4;--red:#b53326;--cream:#f7f3ea}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Songti SC","Noto Serif SC",serif}
+a{color:inherit}
+.mast{text-align:center;padding:28px 20px 0}
+.mast-line{font-size:11px;letter-spacing:4px;color:var(--ink3);text-transform:uppercase;margin-bottom:8px}
+.mast h1{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:44px;letter-spacing:4px}
+.mast h1 a{text-decoration:none}
+.mast .meta{font-size:12.5px;color:var(--ink2);margin-top:10px;padding-bottom:14px}
+.mast .meta b{color:var(--red)}
+.rule{height:3px;background:var(--ink);max-width:1180px;margin:0 auto}
+.nav{position:sticky;top:0;z-index:30;background:rgba(255,254,251,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);display:flex;justify-content:center;align-items:center;gap:2px;padding:9px 10px;flex-wrap:wrap}
+.nav a{font-family:"Songti SC","Noto Serif SC",serif;font-size:15px;color:var(--ink2);padding:6px 15px;text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--red)}
+.nav a.on{color:var(--ink);font-weight:700;border-bottom-color:var(--red)}
+.search-wrap{position:relative;margin-left:14px}
+.search-wrap input{font-family:inherit;font-size:13px;border:1px solid var(--hair);border-radius:18px;padding:6px 14px 6px 32px;width:170px;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239b9387' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E") no-repeat 11px center;outline:none;transition:.2s}
+.search-wrap input:focus{width:230px;border-color:var(--red)}
+.search-res{position:absolute;top:40px;right:0;width:430px;max-height:60vh;overflow-y:auto;background:var(--paper);border:1px solid var(--hair);border-radius:10px;box-shadow:0 8px 30px rgba(80,60,40,.13);padding:8px;display:none;z-index:40}
+.search-res.show{display:block}
+.search-res .sr-h{font-size:11px;color:var(--ink3);padding:6px 10px;letter-spacing:1px}
+.search-res a{display:block;padding:9px 10px;text-decoration:none;border-radius:7px;border-bottom:1px solid var(--hair2)}
+.search-res a:last-child{border:none}
+.search-res a:hover{background:var(--cream)}
+.search-res .srt{font-size:13.5px;color:var(--ink);font-weight:500}
+.search-res .srm{font-size:11px;color:var(--ink3);margin-top:2px}
+.search-res .sr-empty{padding:16px;color:var(--ink3);font-size:13px;text-align:center}
+.page{max-width:1180px;margin:0 auto;padding:0 24px}
+.leads{display:grid;grid-template-columns:1fr 1fr;margin:22px 0 0;border-top:1px solid var(--hair)}
+.lead{padding:28px 32px}
+.lead.l{border-right:1px solid var(--hair)}
+.kick{font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.kick .dot{width:7px;height:7px;border-radius:50%}
+.kick.sk{color:var(--ink2)}.kick.sk .dot{background:var(--ink2)}
+.kick.tk{color:var(--red)}.kick.tk .dot{background:var(--red)}
+.scbig{float:right;font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:40px;line-height:.8;color:var(--hair);margin-left:14px}
+.scbig.tkc{color:#eccfc8}
+.lead h2{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:26px;line-height:1.28;margin-bottom:14px}
+.lead h2 a{text-decoration:none}.lead h2 a:hover{color:var(--red)}
+.why{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;border-left:3px solid var(--red);padding-left:15px;margin-bottom:14px;line-height:1.6}
+.sum{font-size:13.5px;color:var(--ink2);margin-bottom:14px;line-height:1.7}
+.src{font-size:12px;color:var(--ink3);margin-bottom:16px}
+.lead-foot a{font-weight:600;font-size:13.5px;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+.ai-pending{background:var(--cream);border:1px dashed var(--red);border-radius:8px;padding:14px 16px;font-size:12.5px;color:var(--ink2);margin-bottom:16px;line-height:1.6}
+.subs{border-top:1px dotted var(--hair);margin-top:18px;padding-top:14px;list-style:none}
+.subs li{padding:7px 0}.subs a{display:flex;gap:9px;text-decoration:none;align-items:flex-start}
+.subs a:hover .st{color:var(--red)}
+.ss{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:12px;color:var(--ink3);min-width:22px;padding-top:2px}
+.st{font-size:13px;line-height:1.4}
+.archbar{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:18px 24px;margin:28px 0}
+.archbar .lab{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;font-weight:700;letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.archbar .lab .wkbtn{margin-left:auto;font-size:12px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:16px;font-weight:400;font-family:"Noto Sans SC"}
+.archbar .lab .wkbtn:hover{background:var(--red);color:#fff}
+.cals{display:flex;gap:30px;flex-wrap:wrap}
+.calm{}
+.calm .cmh{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:8px;text-align:center}
+.calgrid{display:grid;grid-template-columns:repeat(7,30px);gap:3px}
+.calgrid .wd{font-size:10px;color:var(--ink3);text-align:center;height:18px}
+.calgrid a,.calgrid span{width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:12px;border-radius:6px;text-decoration:none;color:var(--ink)}
+.calgrid a{border:1px solid var(--hair)}
+.calgrid a:hover{border-color:var(--red);background:var(--cream);color:var(--red)}
+.calgrid .today{background:var(--ink);color:#fff}
+.calgrid .blank{border:none}
+.calgrid .noday{color:#d8d2c7;border:1px dashed var(--hair2)}
+.sec-title{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;letter-spacing:3px;color:var(--ink3);text-transform:uppercase;text-align:center;margin:30px 0 18px;position:relative}
+.sec-title span{background:var(--paper);padding:0 16px;position:relative;z-index:1}
+.sec-title::before{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:var(--hair)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--hair)}
+.block{padding:18px 22px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.block-h{display:flex;align-items:baseline;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.bh-cn{font-size:17px;font-weight:700}.bh-en{font-size:10px;letter-spacing:1.5px;color:var(--ink3)}
+.bh-more{margin-left:auto;font-size:11px;color:var(--red);text-decoration:none}.bh-more:hover{text-decoration:underline}
+.block ul{list-style:none}.block li{border-bottom:1px solid var(--hair2)}.block li:last-child{border:none}
+.block li a{display:flex;gap:9px;align-items:flex-start;padding:9px 0;text-decoration:none}
+.block li a:hover .bt{color:var(--red)}
+.bs{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:13px;color:var(--red);min-width:24px;padding-top:1px}
+.bt{font-size:13.5px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.deep{background:var(--ink);color:#f4efe6;border-radius:10px;padding:28px 34px;margin:30px 0;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+.deep a{color:#f4efe6}
+.deep-k{font-size:11px;letter-spacing:3px;color:#d99;margin-bottom:8px}
+.deep h3{font-family:"Songti SC","Noto Serif SC",serif;font-size:24px;font-weight:700;margin-bottom:8px}
+.deep p{color:#bdb5a8;font-size:13.5px}
+.deep-stat{display:flex;gap:14px}
+.dstat{flex:1;background:#221e18;border:1px solid #38322a;border-radius:7px;padding:16px;text-align:center;text-decoration:none;display:block}
+.dstat:hover{border-color:#e0a89a}
+.dstat .n{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:30px;color:#e0a89a}
+.dstat .l{font-size:12px;color:#bdb5a8;margin-top:3px}
+.foot{text-align:center;padding:30px;color:var(--ink3);font-size:11.5px;border-top:1px solid var(--hair)}
+.catpage{max-width:880px;margin:0 auto;padding:24px}
+.catpage .ch{font-family:"Songti SC","Noto Serif SC",serif;font-size:30px;font-weight:900;border-bottom:3px solid var(--ink);padding-bottom:12px;margin-bottom:8px;display:flex;align-items:baseline;gap:12px}
+.catpage .ch .en{font-size:12px;letter-spacing:2px;color:var(--ink3)}
+.catpage .cmeta{font-size:12.5px;color:var(--ink2);margin-bottom:24px}
+.catcard{background:var(--cream);border-radius:10px;padding:22px 26px;margin-bottom:28px}
+.catcard .cck{font-size:11px;letter-spacing:2px;color:var(--red);font-weight:700;text-transform:uppercase;margin-bottom:8px}
+.catcard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:700;line-height:1.35;margin-bottom:10px}
+.catcard h2 a{text-decoration:none}.catcard h2 a:hover{color:var(--red)}
+.catcard .ess{font-family:"Songti SC","Noto Serif SC",serif;font-size:15.5px;border-left:3px solid var(--red);padding-left:14px;margin-bottom:12px;line-height:1.6}
+.catcard .pts{margin:0 0 4px 0;padding-left:18px}
+.catcard .pts li{font-size:13.5px;color:var(--ink2);margin:4px 0;line-height:1.55}
+.crow{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--hair2);align-items:baseline}
+.crow .cn{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:22px;color:var(--red);min-width:42px}
+.crow .cc{flex:1}
+.crow .ct{font-family:"Songti SC","Noto Serif SC",serif;font-size:18px;font-weight:600;text-decoration:none;display:block;line-height:1.4}
+.crow .ct:hover{color:var(--red)}
+.crow .cs{font-size:13.5px;color:var(--ink2);margin-top:6px;line-height:1.65}
+.crow .ctags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.crow .ctag{font-size:11px;color:var(--ink2);border:1px solid var(--hair);padding:2px 9px;border-radius:3px}
+.crow .clink{font-size:12.5px;color:var(--red);text-decoration:none;margin-top:8px;display:inline-block}
+.pager{display:flex;align-items:center;justify-content:center;gap:20px;padding:28px 0 8px}
+.pager button{font-family:inherit;font-size:13px;background:var(--paper);border:1px solid var(--hair);border-radius:20px;padding:7px 18px;cursor:pointer;color:var(--ink)}
+.pager button:hover:not(:disabled){border-color:var(--red);color:var(--red)}
+.pager button:disabled{opacity:.4;cursor:default}
+.pager #pgInfo{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;color:var(--ink2)}
+.rel-tag{position:relative;font-size:11px;color:var(--red);border:1px solid var(--red);border-radius:3px;padding:2px 8px;cursor:default}
+.rel-tag .rel-pop{display:none;position:absolute;left:0;bottom:130%;z-index:50;width:max-content;max-width:320px;background:var(--ink);color:#f4efe6;font-size:11.5px;line-height:1.7;padding:8px 12px;border-radius:7px;box-shadow:0 6px 20px rgba(40,30,20,.3)}
+.rel-tag:hover .rel-pop{display:block}
+.lo-block{margin-top:24px;border-top:1px dashed var(--hair)}
+.lo-block summary{cursor:pointer;padding:14px 0;font-size:13px;color:var(--ink3);font-family:"Songti SC","Noto Serif SC",serif;list-style:none}
+.lo-block summary::-webkit-details-marker{display:none}
+.lo-block summary::before{content:"▸ ";color:var(--red)}
+.lo-block[open] summary::before{content:"▾ "}
+.lo-rows{opacity:.72}
+/* 洞察库 + 文章页 */
+.ilist{max-width:820px;margin:0 auto;padding:24px}
+.icard{background:var(--paper);border:1px solid var(--hair);border-radius:12px;padding:22px 26px;margin-bottom:16px;transition:.15s}
+.icard:hover{border-color:var(--red);box-shadow:0 6px 22px rgba(80,60,40,.08)}
+.icard .ik{font-size:11px;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:6px}
+.icard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:22px;font-weight:700;line-height:1.3;margin-bottom:8px}
+.icard h2 a{text-decoration:none}.icard h2 a:hover{color:var(--red)}
+.icard .im{font-size:12.5px;color:var(--ink3);margin-bottom:10px}
+.icard .idesc{font-size:14px;color:var(--ink2);line-height:1.7}
+.iempty{text-align:center;padding:60px 20px;color:var(--ink3)}
+.article{max-width:720px;margin:0 auto;padding:30px 24px;font-size:16px;line-height:1.9}
+.article .atitle{font-family:"Songti SC","Noto Serif SC",serif;font-size:34px;font-weight:900;line-height:1.25;margin-bottom:14px}
+.article .ameta{font-size:13px;color:var(--ink3);border-bottom:1px solid var(--hair);padding-bottom:18px;margin-bottom:24px}
+.article h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:23px;margin:30px 0 12px;padding-top:8px}
+.article h3{font-size:18px;margin:22px 0 10px;color:var(--ink)}
+.article p{margin-bottom:16px;color:#2a2620}
+.article blockquote{border-left:3px solid var(--red);padding:6px 0 6px 18px;margin:18px 0;font-family:"Songti SC","Noto Serif SC",serif;font-style:normal;color:var(--ink);background:var(--cream);border-radius:0 8px 8px 0;padding:14px 18px}
+.article .aback{display:inline-block;margin-bottom:20px;color:var(--red);text-decoration:none;font-size:13px}
+.wknav{max-width:880px;margin:16px auto 0;padding:10px 16px;background:var(--cream);border-radius:8px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px}
+.wknav-lab{color:var(--ink3);margin-right:4px;font-family:"Songti SC","Noto Serif SC",serif}
+.wknav-item{padding:3px 12px;border:1px solid var(--hair);border-radius:14px;text-decoration:none;color:var(--ink2);background:var(--paper)}
+.wknav-item:hover{border-color:var(--red);color:var(--red)}
+.wknav-item.on{background:var(--red);color:#fff;border-color:var(--red)}
+@media(max-width:880px){.leads,.grid,.deep{grid-template-columns:1fr}.lead.l{border-right:none;border-bottom:1px solid var(--hair)}.search-wrap input{width:130px}}
+
+.mark-btn{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ink3);background:none;border:1px solid var(--hair);border-radius:5px;padding:2px 9px;cursor:pointer;margin-left:8px;vertical-align:middle;font-family:"Noto Sans SC",sans-serif;transition:.15s}
+.mark-btn:hover{border-color:var(--red);color:var(--red)}
+.mark-btn.marked{background:var(--red);color:#fff;border-color:var(--red)}
+[data-mark-url].is-marked{background:#fdf6ef;box-shadow:inset 3px 0 0 var(--red);border-radius:4px}
+.mark-note{display:none;font-size:12.5px;color:var(--ink2);background:#fbf6ef;border-left:2px solid var(--red);padding:7px 12px;margin-top:8px;border-radius:0 6px 6px 0;line-height:1.6}
+.mark-note.show{display:block}
+.mark-note b{color:var(--red);font-weight:600;font-size:11px}
+/* 弹框 */
+.mark-modal{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,16,12,.4);align-items:center;justify-content:center}
+.mark-modal.show{display:flex}
+.mark-box{background:var(--paper);border-radius:12px;padding:24px 26px;width:min(92vw,460px);box-shadow:0 20px 60px rgba(60,40,20,.25)}
+.mark-box h4{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;margin-bottom:4px;line-height:1.4}
+.mark-box .mb-meta{font-size:12px;color:var(--ink3);margin-bottom:14px}
+.mark-box textarea{width:100%;min-height:90px;border:1px solid var(--hair);border-radius:8px;padding:10px 12px;font-family:inherit;font-size:14px;line-height:1.6;resize:vertical;outline:none}
+.mark-box textarea:focus{border-color:var(--red)}
+.mark-box .mb-tip{font-size:11.5px;color:var(--ink3);margin:6px 0 14px}
+.mark-box .mb-foot{display:flex;gap:10px;justify-content:flex-end}
+.mark-box button{font-family:inherit;font-size:13px;border-radius:7px;padding:8px 18px;cursor:pointer;border:1px solid var(--hair);background:var(--paper);color:var(--ink2)}
+.mark-box .mb-save{background:var(--red);color:#fff;border-color:var(--red)}
+.mark-box .mb-del{margin-right:auto;color:var(--ink3);border:none}
+.mark-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:13px;padding:9px 20px;border-radius:20px;z-index:210;opacity:0;transition:.3s;pointer-events:none}
+.mark-toast.show{opacity:1}
+/* 摘要浮窗 */
+.peek-modal{display:none;position:fixed;inset:0;z-index:220;background:rgba(20,16,12,.45);align-items:center;justify-content:center;padding:20px}
+.peek-modal.show{display:flex}
+.peek-box{position:relative;background:var(--paper);border-radius:14px;padding:30px 32px;width:min(94vw,560px);max-height:82vh;overflow-y:auto;box-shadow:0 24px 70px rgba(40,30,20,.35)}
+.peek-x{position:absolute;top:12px;right:16px;border:none;background:none;font-size:26px;line-height:1;color:var(--ink3);cursor:pointer}
+.peek-x:hover{color:var(--red)}
+.peek-cat{font-size:11px;letter-spacing:1px;color:var(--red);font-weight:700;margin-bottom:10px}
+.peek-title{font-size:21px;font-weight:700;line-height:1.42;margin-bottom:14px;padding-right:22px}
+.peek-sum{font-size:14.5px;line-height:1.9;color:var(--ink2);margin-bottom:22px}
+.peek-go{display:inline-block;font-size:14px;font-weight:600;color:var(--red);text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+
+.legal{max-width:880px;margin:0 auto;padding:4px 28px 44px;color:var(--ink3);font-size:11.5px;line-height:1.85}
+.legal p{margin:0 0 9px}
+.legal b{color:var(--ink2);font-weight:600}
+.legal a{color:var(--ink2);border-bottom:1px solid var(--hair)}
+.legal .lc{margin-top:13px;padding-top:12px;border-top:1px solid var(--hair);text-align:center}
+@media(max-width:880px){.legal{padding:4px 18px 36px}}
+</style></head><body>
+<div class="mark-modal" id="markModal">
+  <div class="mark-box">
+    <h4 id="mbTitle"></h4>
+    <div class="mb-meta" id="mbMeta"></div>
+    <textarea id="mbComment" placeholder="写下你的想法 / 评论 / 为什么标它(可留空,仅标记)…"></textarea>
+    <div class="mb-tip">这条评论会被记录,AI 每晚据此判断你可能想深挖的方向。</div>
+    <div class="mb-foot">
+      <button class="mb-del" id="mbDel">取消标记</button>
+      <button id="mbCancel">关闭</button>
+      <button class="mb-save" id="mbSave">保存标记</button>
+    </div>
+  </div>
+</div>
+<div class="mark-toast" id="markToast"></div>
+<div class="peek-modal" id="peekModal">
+  <div class="peek-box">
+    <button class="peek-x" type="button">&times;</button>
+    <div class="peek-cat"></div>
+    <h3 class="peek-title serif"></h3>
+    <p class="peek-sum"></p>
+    <a class="peek-go" target="_blank" rel="noopener">阅读原文 →</a>
+  </div>
+</div>
+
+<div class="mast"><div class="mast-line">The AI Signal · Agent</div>
+<h1 class="serif"><a href="../index.html">AI 信号站</a></h1>
+<div class="meta">2026-06-08 · Agent 版块 · 共 <b>37</b> 条</div></div>
+<div class="rule"></div>
+<nav class="nav"><a href="../d/2026-06-08.html">头版</a><a href="../c/2026-06-08-Agent.html" class="on">Agent</a><a href="../c/2026-06-08-产品.html">产品</a><a href="../c/2026-06-08-行业.html">行业</a><a href="../c/2026-06-08-论文.html">论文</a><a href="../c/2026-06-08-模型.html">模型</a><a href="../c/2026-06-08-技巧.html">技巧</a><a href="../weekly.html" style="color:var(--red)">上周·周报</a><a href="../insights.html" style="color:var(--red)">深度洞察</a><span class="search-wrap"><input type="text" id="siteSearch" placeholder="站内搜索…" autocomplete="off"><div class="search-res" id="searchRes"></div></span></nav>
+<div class="catpage">
+  <div class="ch serif">Agent<span class="en">AGENT</span></div>
+  <div class="cmeta">2026-06-08 · 该版块全部 37 条,按精选分排序 · <a href="../d/2026-06-08.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="cmeta">2026-06-08 · 全量 37 条 → 去重聚类 37 条 · 默认展示 AIHOT 精选 7 条,其余折叠 · <a href="../d/2026-06-08.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="catcard">
+              <div class="cck">本版块 · 最值得你思考</div>
+              <h2 class="serif"><a href="https://x.com/dotey/status/2063686036895478162" target="_blank">ChatGPT 要变 AgentGPT 了</a></h2>
+              <div class="ess serif">ChatGPT 从&quot;对话框&quot;转向&quot;会自己干活的Agent&quot;——产品形态从&quot;问答&quot;升级到&quot;代办&quot;,交互范式要重写。</div>
+              <div class="cck" style="margin-bottom:6px">思考切口</div><ul class="pts"><li>从&quot;答&quot;到&quot;做&quot;,产品的信任门槛如何变</li><li>Agent化后,什么样的UI才合理</li><li>你的产品该加&quot;会干活&quot;还是&quot;答得准&quot;</li></ul>
+            </div>
+  <div class="sec-title"><span>本版块精选 · 7 条</span></div>
+  <div class="crow crow-pg" data-i="0" data-mark-url="https://x.com/dotey/status/2063686036895478162" data-mark-title="ChatGPT 要变 AgentGPT 了" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">81</span><div class="cc">
+        <a class="ct serif" href="https://x.com/dotey/status/2063686036895478162" target="_blank">ChatGPT 要变 AgentGPT 了</a>
+        <div class="cs">OpenAI 正筹备 ChatGPT 自 2022 年上线以来最大规模改版，从聊天机器人转向超级应用/Agent 平台，整合编程工具 Codex、图像生成及第三方应用（Canva、Booking）。高管称“聊天已死”，目标成为跨平台个人 AI 助手，未来甚至省去用户输入提示词。改…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">Agent</span><span class="ctag">OpenAI</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/dotey/status/2063686036895478162" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="1" data-mark-url="https://x.com/kimmonismus/status/2064001045391462907" data-mark-title="Hivemind推出面向AI编程智能体的持续学习功能，即日起开放" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">78</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2064001045391462907" target="_blank">Hivemind推出面向AI编程智能体的持续学习功能，即日起开放</a>
+        <div class="cs">Hivemind发布面向AI编程智能体的持续学习功能，即日起开放。该工具收集团队运行的每个智能体（Claude Code、Codex、Cursor、Hermes、Pi）的轨迹，转化为可复用技能并推送到所有智能体，数据存储在用户自己的云存储中。内置SkillOpt使技能持续训练：C…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">Agent</span><span class="ctag">开源/仓库</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2064001045391462907" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="2" data-mark-url="https://x.com/shao__meng/status/2063902211978223678" data-mark-title="邵猛开源 Brand to DESIGN.md 技能，提醒复刻易生新“AI Slop”" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">78</span><div class="cc">
+        <a class="ct serif" href="https://x.com/shao__meng/status/2063902211978223678" target="_blank">邵猛开源 Brand to DESIGN.md 技能，提醒复刻易生新“AI Slop”</a>
+        <div class="cs">邵猛关注 Design Skill、Taste Skill、Anti-AI-slop design skill，并开源 Brand to DESIGN.md Skill（GitHub: shaom/brand-to-design-md-skill），让 Agent 学习设计品味后…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">Agent</span><span class="ctag">GitHub</span><span class="ctag">开源/仓库</span></div>
+        <a class="clink" href="https://x.com/shao__meng/status/2063902211978223678" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="3" data-mark-url="https://x.com/alibaba_cloud/status/2063918611954012507" data-mark-title="Qwen3.7-Plus 发布限时八折优惠" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">77</span><div class="cc">
+        <a class="ct serif" href="https://x.com/alibaba_cloud/status/2063918611954012507" target="_blank">Qwen3.7-Plus 发布限时八折优惠</a>
+        <div class="cs">🔥 Qwen3.7-Plus 发布特惠：现在享受八折！
+✅ 多模态交互式智能体
+✅ 编程与生产力助手
+✅ 视觉智能体
+✅ 跨任务泛化
+不要错过升级机会。👇
+https://int.alibabacloud.com/m/1000414123/ 
+
+#Qwen #AI #Multim…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">Agent</span><span class="ctag">多模态</span><span class="ctag">模型发布</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/alibaba_cloud/status/2063918611954012507" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="4" data-mark-url="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D\u0026mid=2647683054\u0026idx=1\u0026sn=dcaa25bd4fdfc9bd5c0211532021bf7c" data-mark-title="微信AI Agent生态曝光：嵌入小程序调用与手机厂商合作" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">71</span><div class="cc">
+        <a class="ct serif" href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D\u0026mid=2647683054\u0026idx=1\u0026sn=dcaa25bd4fdfc9bd5c0211532021bf7c" target="_blank">微信AI Agent生态曝光：嵌入小程序调用与手机厂商合作</a>
+        <div class="cs">腾讯正测试嵌入微信的AI Agent，用户右滑唤出对话窗口，通过自然语言指令调用数百万小程序完成点咖啡等任务。微信还与华为、荣耀、小米、OPPO、vivo合作推出A2A助手能力，可通过手机语音助理发起微信音视频通话或发送消息。6月8日，微信官方发布《关于开发者接入微信AI生态的指…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">Agent</span><span class="ctag">MCP/工具调用</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D\u0026mid=2647683054\u0026idx=1\u0026sn=dcaa25bd4fdfc9bd5c0211532021bf7c" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="5" data-mark-url="https://huggingface.co/blog/openenv-agentic-rl" data-mark-title="开源社区支持 OpenEnv 用于智能体强化学习" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">62</span><div class="cc">
+        <a class="ct serif" href="https://huggingface.co/blog/openenv-agentic-rl" target="_blank">开源社区支持 OpenEnv 用于智能体强化学习</a>
+        <div class="cs">今日，Hugging Face 宣布 OpenEnv 项目进一步开放，由 Meta-PyTorch、Reflection、Unsloth 等组成的委员会协调，并获得 PyTorch Foundation、vLLM、SkyRL（UCB）等机构支持。OpenEnv 是创建终端、浏览器…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">Agent</span><span class="ctag">Hugging Face</span><span class="ctag">MCP/工具调用</span><span class="ctag">Meta</span></div>
+        <a class="clink" href="https://huggingface.co/blog/openenv-agentic-rl" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="6" data-mark-url="https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim-v3" data-mark-title="五个模型经济体中消失的崩溃：控制与涌现" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim-v3" target="_blank">五个模型经济体中消失的崩溃：控制与涌现</a>
+        <div class="cs">用五个不同实验室的AI模型（OpenAI、NVIDIA、OpenBMB及一个自微调的5亿参数模型）各自驱动一个智能体构建经济市场，试图复现此前单一模型下出现的银行挤兑式价格崩溃。结果同一场景下模型不仅不抛售反而囤积，导致价格不跌反涨。通过纯谣言、库存泛滥、加大做空三种方式均无法重…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">Agent</span><span class="ctag">大佬观点</span></div>
+        <a class="clink" href="https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim-v3" target="_blank">阅读原文 →</a></div></div>
+  
+  <details class="lo-block"><summary>展开其余 30 条(非精选,已默认收起)</summary><div class="lo-rows"><div class="crow crow-pg" data-i="7" data-mark-url="https://x.com/dotey/status/2063674134903603302" data-mark-title="baoyu-design：在本地复现 Claude Design 的开发工作流" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">74</span><div class="cc">
+        <a class="ct serif" href="https://x.com/dotey/status/2063674134903603302" target="_blank">baoyu-design：在本地复现 Claude Design 的开发工作流</a>
+        <div class="cs">宝玉分享开发模式：先用 Claude Design 设计 App UI/UX，生成 HTML+CSS+React+data.js（优于 Figma，利于 AI 理解和 Git 版本管理）；再用 Claude Opus 4.8 实现 MVP（GPT 5.5 在 UI 实现上差距明显…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">GitHub</span><span class="ctag">MCP/工具调用</span></div>
+        <a class="clink" href="https://x.com/dotey/status/2063674134903603302" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="8" data-mark-url="https://x.com/shao__meng/status/2063809042959810996" data-mark-title="让 Claude Opus 长时自主运行的五条实战建议" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">73</span><div class="cc">
+        <a class="ct serif" href="https://x.com/shao__meng/status/2063809042959810996" target="_blank">让 Claude Opus 长时自主运行的五条实战建议</a>
+        <div class="cs">Boris Cherny 给出五条让 Claude Opus 自主运行数小时/天的建议：1. 开启 Auto Mode 减少审批；2. 用 Dynamic Workflows 编排数百至数千子 Agent；3. 使用 /goal 或 /loop 指令持续推进；4. 优先用云端 C…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">MCP/工具调用</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://x.com/shao__meng/status/2063809042959810996" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="9" data-mark-url="https://x.com/rohanpaul_ai/status/2063943851291927024" data-mark-title="Kocoro：开源 Mac AI agent 框架，本地化记忆管理" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">68</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2063943851291927024" target="_blank">Kocoro：开源 Mac AI agent 框架，本地化记忆管理</a>
+        <div class="cs">Kocoro 是一个引擎级的开源 Mac AI agent 框架。它通过本地 agent 读取用户的过往会话、文件、应用、浏览器、屏幕和终端，将有用事实压缩为记忆，使 agent 无需重复上下文即可继续工作。安全模型以本地优先：工具操作需授权，危险命令被拦截或二次确认，行为可审计…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">MCP/工具调用</span><span class="ctag">开源/仓库</span><span class="ctag">端侧</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2063943851291927024" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="10" data-mark-url="https://x.com/gdb/status/2063705280270021087" data-mark-title="OpenAI 公布 Codex 数十个实际用例，涵盖软件工程到运维" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">68</span><div class="cc">
+        <a class="ct serif" href="https://x.com/gdb/status/2063705280270021087" target="_blank">OpenAI 公布 Codex 数十个实际用例，涵盖软件工程到运维</a>
+        <div class="cs">OpenAI 公布了数十个 Codex 实际工作流程，展示团队如何用其自动化任务。用例包括：管理收件箱并草拟回复、审阅 GitHub PR、将 Figma 设计转为代码、理解大型代码库、自动分类 bug、用自然语言查询数据集、从提示词部署应用、构建 Mac/iOS 应用、自动创建…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">OpenAI</span><span class="ctag">教程/实践</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/gdb/status/2063705280270021087" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="11" data-mark-url="https://www.ithome.com/0/961/633.htm" data-mark-title="美团接入微信 AI 生态，未来提供外卖等 AI 生活服务体验" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">67</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/961/633.htm" target="_blank">美团接入微信 AI 生态，未来提供外卖等 AI 生活服务体验</a>
+        <div class="cs">微信宣布向开发者提供 AI 生态接入功能，目前处于内测阶段。美团作为首批内测团队，已与微信联合开发并测试接入。未来用户可通过微信 Agent 调用美团外卖等本地生活服务，实现智能便捷的 AI 生活服务体验。此前携程已官宣接入微信 AI 生态，围绕酒店预订、机票等核心场景接入微信 …</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/961/633.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="12" data-mark-url="https://x.com/op7418/status/2063949818033229966" data-mark-title="笑林老师总结设计工程师五种画像" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">67</span><div class="cc">
+        <a class="ct serif" href="https://x.com/op7418/status/2063949818033229966" target="_blank">笑林老师总结设计工程师五种画像</a>
+        <div class="cs">在字节工作8年的动效设计师笑林（@xiaolinbythesea）分享了设计工程师的五种画像：1) AI Design Engineer——将AI能力转化为可交互产品；2) Product UI Craft Engineer——从Figma写出高质量React原型；3) Desi…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/op7418/status/2063949818033229966" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="13" data-mark-url="https://x.com/Khazix0918/status/2063923890272051228" data-mark-title="微信Agent消息频传：内测右滑唤出、联手手机厂商、发布开发者指引" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">67</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Khazix0918/status/2063923890272051228" target="_blank">微信Agent消息频传：内测右滑唤出、联手手机厂商、发布开发者指引</a>
+        <div class="cs">近日微信Agent消息密集：6月2日外媒称腾讯正测试嵌入微信的AI Agent，用户右滑唤出窗口，可通过自然语言调用数百万小程序完成点单等任务；6月4日微信与华为等手机厂商合作推出A2A能力，可通过语音助手发起音视频通话；6月8日发布开发者指引，提供自动接入模式，因小程序运行在微…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/Khazix0918/status/2063923890272051228" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="14" data-mark-url="https://x.com/alibaba_cloud/status/2063923881857945815" data-mark-title="AgentScope Java 2.0 发布" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">66</span><div class="cc">
+        <a class="ct serif" href="https://x.com/alibaba_cloud/status/2063923881857945815" target="_blank">AgentScope Java 2.0 发布</a>
+        <div class="cs">阿里云发布AgentScope Java 2.0，面向企业级AI智能体开发。新版本主要特性：分布式无状态架构，支持K8s弹性扩缩容与会话恢复；多租户隔离，通过Workspace抽象实现安全数据分离；长期稳定性，HarnessAgent负责上下文管理与容错；安全执行，提供细粒度权限…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">开源/仓库</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/alibaba_cloud/status/2063923881857945815" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="15" data-mark-url="https://x.com/omarsar0/status/2064010110314107372" data-mark-title="运行Claude Opus自主Agent数小时/天的5条技巧" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">65</span><div class="cc">
+        <a class="ct serif" href="https://x.com/omarsar0/status/2064010110314107372" target="_blank">运行Claude Opus自主Agent数小时/天的5条技巧</a>
+        <div class="cs">@bcherny 分享5条技巧：1) 开启自动权限模式，免手动确认；2) 采用动态工作流，让Opus协调数百/数千Agent；3) 使用/goal或/loop指令促使持续执行；4) 在云端运行Claude Code，可关闭笔记本；5) 确保Opus能端到端自验证——通过Chrom…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://x.com/omarsar0/status/2064010110314107372" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="16" data-mark-url="https://x.com/mingchikuo/status/2063951426695676278" data-mark-title="WWDC26 不影響 Apple 2H26 股價正向趨勢，但將揭露多頭敘事續航力" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">65</span><div class="cc">
+        <a class="ct serif" href="https://x.com/mingchikuo/status/2063951426695676278" target="_blank">WWDC26 不影響 Apple 2H26 股價正向趨勢，但將揭露多頭敘事續航力</a>
+        <div class="cs">郭明錤指出，Apple 當前多頭核心敘事是「AI 雖落後但最終後來居上」。供應鏈調查顯示其業績將好到今年底，進一步強化此敘事。WWDC26 上無論發布什麼，只要該敘事不被破壞，Apple 2H26 股價正向趨勢就不易改變。真正觀察點在於：Apple 能否用 Gemini 做出比 …</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">大佬观点</span><span class="ctag">端侧</span></div>
+        <a class="clink" href="https://x.com/mingchikuo/status/2063951426695676278" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="17" data-mark-url="https://x.com/hongming731/status/2063762055300300859" data-mark-title="早报：Tony Fadell谈“知情直觉”；OpenAI用Codex零人工写百万行代码；Coding Agent范式转移" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">63</span><div class="cc">
+        <a class="ct serif" href="https://x.com/hongming731/status/2063762055300300859" target="_blank">早报：Tony Fadell谈“知情直觉”；OpenAI用Codex零人工写百万行代码；Coding Agent范式转移</a>
+        <div class="cs">今日早报聚焦AI产品与工程前沿：iPod之父Tony Fadell提出创新依赖“知情直觉”而非数据，并总结“三代法则”；OpenAI内部用Codex全程零人工代码交付约100万行代码，合并1500个PR，效率为手写代码10倍；Thoughtworks专家梳理Coding Agen…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">OpenAI</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/hongming731/status/2063762055300300859" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="18" data-mark-url="https://the-decoder.com/frontier-radar-3-how-agentic-ai-is-turning-tokens-into-a-business-metric" data-mark-title="Frontier Radar #3：智能体AI如何将token转化为业务指标" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">62</span><div class="cc">
+        <a class="ct serif" href="https://the-decoder.com/frontier-radar-3-how-agentic-ai-is-turning-tokens-into-a-business-metric" target="_blank">Frontier Radar #3：智能体AI如何将token转化为业务指标</a>
+        <div class="cs">生成式AI商业模式正从月订阅制转向按token消耗计费。智能体工作流消耗数倍于传统对话的token，可自主运行数小时，使固定费率不可持续。token价格因响应速度、专业化程度及结果经济价值而异。本期报告梳理订阅制向消费制迁移、看似低廉的token单价背后的实际成本，以及为何仅凭t…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://the-decoder.com/frontier-radar-3-how-agentic-ai-is-turning-tokens-into-a-business-metric" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="19" data-mark-url="https://www.ithome.com/0/961/614.htm" data-mark-title="携程作为首批内测团队接入微信 AI 生态，聚焦酒旅出行等场景" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">62</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/961/614.htm" target="_blank">携程作为首批内测团队接入微信 AI 生态，聚焦酒旅出行等场景</a>
+        <div class="cs">6 月 8 日，微信开放平台发布指引，为开发者提供接入微信 AI 生态的能力，开发者可主动授权接入。携程小程序已作为首批内测开发者完成初步适配，未来将围绕酒店预订、机票查询、旅游度假、出行服务等核心场景接入微信 AI Agent。微信提供两种接入模式：自动模式（授权平台读取小程序…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/961/614.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="20" data-mark-url="https://simonwillison.net/2026/Jun/7/datasette-agent-edit" data-mark-title="datasette-agent-edit 0.1a0 发布" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">62</span><div class="cc">
+        <a class="ct serif" href="https://simonwillison.net/2026/Jun/7/datasette-agent-edit" target="_blank">datasette-agent-edit 0.1a0 发布</a>
+        <div class="cs">datasette-agent-edit 0.1a0 插件发布，为 Datasette Agent 提供智能体编辑文本的核心工具。其设计借鉴 Claude text editor，实现三个工具：view（按行号查看文件片段）、str_replace（精确替换唯一字符串）、inse…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">MCP/工具调用</span><span class="ctag">开源/仓库</span></div>
+        <a class="clink" href="https://simonwillison.net/2026/Jun/7/datasette-agent-edit" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="21" data-mark-url="https://x.com/hongming731/status/2063761907891466424" data-mark-title="BestBlogs早报：iPod之父、Codex、Coding Agent" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">61</span><div class="cc">
+        <a class="ct serif" href="https://x.com/hongming731/status/2063761907891466424" target="_blank">BestBlogs早报：iPod之父、Codex、Coding Agent</a>
+        <div class="cs">BestBlogs早报06-08聚焦三篇AI工程实践精讲：iPod之父Tony Fadell系统阐述“知情直觉”与“三代法则”，警告AI时代的“认知投降”和“快时尚软件”；OpenAI工程团队分享使用Codex…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">OpenAI</span><span class="ctag">现象/趋势</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/hongming731/status/2063761907891466424" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="22" data-mark-url="https://x.com/mingchikuo/status/2063951446224310364" data-mark-title="郭明錤：WWDC26不影响苹果2026下半年股价积极趋势，但考验看涨叙事持久力" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">60</span><div class="cc">
+        <a class="ct serif" href="https://x.com/mingchikuo/status/2063951446224310364" target="_blank">郭明錤：WWDC26不影响苹果2026下半年股价积极趋势，但考验看涨叙事持久力</a>
+        <div class="cs">郭明錤指出，苹果核心看涨叙事是“AI暂时落后但最终会迎头赶上”。供应链显示业务势头年底前强劲，强化“无AI已不错，有AI更想象”叙事。故无论WWDC26内容，只要叙事不变，苹果2026下半年股价趋势积极。WWDC26真正看点在于苹果能否用同款Gemini做出比谷歌更好的AI应用、…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Google</span><span class="ctag">大佬观点</span><span class="ctag">推理</span></div>
+        <a class="clink" href="https://x.com/mingchikuo/status/2063951446224310364" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="23" data-mark-url="https://x.com/steipete/status/2063697162748260627" data-mark-title="月度提醒：设计循环提示编码智能体" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">60</span><div class="cc">
+        <a class="ct serif" href="https://x.com/steipete/status/2063697162748260627" target="_blank">月度提醒：设计循环提示编码智能体</a>
+        <div class="cs">这是您的月度提醒：您不应再手动提示编码智能体了。
+
+您应该设计循环来提示您的智能体。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">教程/实践</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/steipete/status/2063697162748260627" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="24" data-mark-url="https://x.com/shao__meng/status/2063785694070280379" data-mark-title="不写 Prompt，写 Loops — Boris Cherny 谈 AI 编程范式转变" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">59</span><div class="cc">
+        <a class="ct serif" href="https://x.com/shao__meng/status/2063785694070280379" target="_blank">不写 Prompt，写 Loops — Boris Cherny 谈 AI 编程范式转变</a>
+        <div class="cs">Anthropic Claude Code 负责人 Boris Cherny 表示，他不再手动写提示词，而是编写 Loops 让 AI 自主决策和解决问题。伴随 Claude Opus 4.8 和 GPT-5.5 等高智能模型出现，手把手写 Prompt 的模式将被取代。但 Lo…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">大佬观点</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/shao__meng/status/2063785694070280379" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="25" data-mark-url="https://x.com/bcherny/status/2063792263067754658" data-mark-title="Claude Opus 长时间运行工作最佳模型及自主运行技巧" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://x.com/bcherny/status/2063792263067754658" target="_blank">Claude Opus 长时间运行工作最佳模型及自主运行技巧</a>
+        <div class="cs">多项基准显示 Claude Opus 是长时间运行工作的最佳模型。SWE-Marathon 基准评估编码智能体在 10 亿 token 预算下自主完成长期软件任务（如重写 JAX 代码为 PyTorch、用 Rust 构建 C 编译器）。Opus 在此类任务上领先。Boris C…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">MCP/工具调用</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://x.com/bcherny/status/2063792263067754658" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="26" data-mark-url="https://x.com/omarsar0/status/2063750411576844684" data-mark-title="超强AI模型即将发布：避免锁定单一供应商" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://x.com/omarsar0/status/2063750411576844684" target="_blank">超强AI模型即将发布：避免锁定单一供应商</a>
+        <div class="cs">未来几周将有超强AI模型发布，模型能力可能迎来阶段性提升。DAIR.AI创始人Elvis Saravia认为，当前最大的错误是从成本或工程角度锁定单一供应商，建议开始利用模型组合（包括开源模型），保持“模型无关”，以便随时切换模型以发挥其各自优势。对于编程智能体，开源模型表现已媲…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">大佬观点</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/omarsar0/status/2063750411576844684" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="27" data-mark-url="https://x.com/berryxia/status/2063781016230297676" data-mark-title="Mac-1模型：6.6B本地运行，487个Mac原生工具" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">54</span><div class="cc">
+        <a class="ct serif" href="https://x.com/berryxia/status/2063781016230297676" target="_blank">Mac-1模型：6.6B本地运行，487个Mac原生工具</a>
+        <div class="cs">CJ Zafir团队发布Mac-1模型（6.6B参数），可在任何Mac本地运行，仅需7GB内存（12GB更佳）。它支持487个MacOS原生工具，能执行多工具链式调用，推理开启，输出速度约65 tok/s。应用层基于Mac原生UI/UX设计。作者认为这种本地小模型+原生工具的组合…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">MCP/工具调用</span><span class="ctag">模型发布</span><span class="ctag">端侧</span></div>
+        <a class="clink" href="https://x.com/berryxia/status/2063781016230297676" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="28" data-mark-url="https://x.com/omarsar0/status/2063983468619477129" data-mark-title="新LLM训练：循环编码提示实现长时执行" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">53</span><div class="cc">
+        <a class="ct serif" href="https://x.com/omarsar0/status/2063983468619477129" target="_blank">新LLM训练：循环编码提示实现长时执行</a>
+        <div class="cs">关键在于，你应该开始实施在自动化中编码带有明确目标的指令/提示词的方法。
+
+这并不是什么新鲜事，但较新的大语言模型正在被训练以更长时间不间断地执行。循环就是利用这一点的一种方式。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">大佬观点</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/omarsar0/status/2063983468619477129" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="29" data-mark-url="https://www.ithome.com/0/961/613.htm" data-mark-title="9.9元/月起，字节火山引擎Agent Plan和Coding Plan限时优惠" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">53</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/961/613.htm" target="_blank">9.9元/月起，字节火山引擎Agent Plan和Coding Plan限时优惠</a>
+        <div class="cs">字节跳动火山引擎宣布Agent Plan和Coding Plan限时优惠，两款套餐均集成MiniMax M3、DeepSeek V4系列、GLM-5.1等模型。即日起至2026年8月27日，新购、升级或续费Coding Plan Lite（原价40元/月）和Coding Plan…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">编码</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/961/613.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="30" data-mark-url="https://x.com/xiaohu/status/2063963156662358168" data-mark-title="人机协作优于完全自动化：关键节点人工介入" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">45</span><div class="cc">
+        <a class="ct serif" href="https://x.com/xiaohu/status/2063963156662358168" target="_blank">人机协作优于完全自动化：关键节点人工介入</a>
+        <div class="cs">小互分享个人经验：此前追求完全自动化，导致不断与AI扯皮、对技能和系统频繁修改，效果反而更差。现在删除所有规则，只在关键节点人工介入，与AI共同完成任务，不仅效果更好，人也轻松许多，不再频繁抱怨AI。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">大佬观点</span></div>
+        <a class="clink" href="https://x.com/xiaohu/status/2063963156662358168" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="31" data-mark-url="https://x.com/alibaba_cloud/status/2063881682810179623" data-mark-title="Qwen Cloud 全球 AI 黑客马拉松启动，总奖金超 $70K" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">44</span><div class="cc">
+        <a class="ct serif" href="https://x.com/alibaba_cloud/status/2063881682810179623" target="_blank">Qwen Cloud 全球 AI 黑客马拉松启动，总奖金超 $70K</a>
+        <div class="cs">准备好打造下一代 AI 智能体并赢取总计超过 70,000 美元的奖品了吗？🚀
+
+Qwen Cloud 全球 AI 黑客马拉松现已启动！利用前沿模型，获得全球曝光，实现你的愿景。查看下方海报了解里程碑。
+
+🔗 立即注册：https://click.qwencloud.com/m/…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/alibaba_cloud/status/2063881682810179623" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="32" data-mark-url="https://x.com/dotey/status/2063800780050608603" data-mark-title="长时间运行 Agent，Agent 能自行验证才是关键，否则可能只是浪费 Token" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">44</span><div class="cc">
+        <a class="ct serif" href="https://x.com/dotey/status/2063800780050608603" target="_blank">长时间运行 Agent，Agent 能自行验证才是关键，否则可能只是浪费 Token</a>
+        <div class="cs">宝玉指出，Agent 能否自我验证是长时间运行的关键，否则可能浪费 Token。@bcherny 的基准测试显示 Claude Opus 最适合长时间运行，并给出 5 条自主运行技巧：1. 使用自动权限模式；2. 部署动态工作流让 Claude 协调数百/数千个 Agent；3.…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">MCP/工具调用</span><span class="ctag">大佬观点</span></div>
+        <a class="clink" href="https://x.com/dotey/status/2063800780050608603" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="33" data-mark-url="https://x.com/shao__meng/status/2063786460172677407" data-mark-title="Warp调查：Codex App成最热门Coding Agent" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">44</span><div class="cc">
+        <a class="ct serif" href="https://x.com/shao__meng/status/2063786460172677407" target="_blank">Warp调查：Codex App成最热门Coding Agent</a>
+        <div class="cs">你现在在用哪个 Coding Agent？
+
+Warp团队 @BHolmesDev 进行的调查得到了 2095 个投票，其中 Codex App 占到 51.1%、Warp CLI 占到 30.9%、Claude App 7.4%
+
+没错，Claude App 只有 7.4%，因…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">现象/趋势</span><span class="ctag">编码</span></div>
+        <a class="clink" href="https://x.com/shao__meng/status/2063786460172677407" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="34" data-mark-url="https://x.com/gabriel1/status/2063992788853658024" data-mark-title="所有工作将变成向AI解释意图" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">40</span><div class="cc">
+        <a class="ct serif" href="https://x.com/gabriel1/status/2063992788853658024" target="_blank">所有工作将变成向AI解释意图</a>
+        <div class="cs">每份工作都将变成向 AI 解释你的意图
+
+向 AI 解释你想要什么其实相当耗时，程序员已经有 80% 的时间花在这上面，而这对每个人来说都将如此。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/gabriel1/status/2063992788853658024" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="35" data-mark-url="https://x.com/alibaba_cloud/status/2063835833346457838" data-mark-title="阿里云Claw Talks：OpenClaw智能体处理邮件与CRM" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">34</span><div class="cc">
+        <a class="ct serif" href="https://x.com/alibaba_cloud/status/2063835833346457838" target="_blank">阿里云Claw Talks：OpenClaw智能体处理邮件与CRM</a>
+        <div class="cs">被行政工作淹没了？📩
+在阿里云 Claw Talks 第 5 期中，Brian Turcotte（Kilo Code）展示了由 OpenClaw 驱动的个人 AI 智能体如何帮你处理邮件、更新 CRM、减少上下文切换。
+
+🎥 首播时间：2026 年 6 月 9 日下午 5 点（U…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">MCP/工具调用</span><span class="ctag">教程/实践</span></div>
+        <a class="clink" href="https://x.com/alibaba_cloud/status/2063835833346457838" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="36" data-mark-url="https://x.com/emollick/status/2063814337353891919" data-mark-title="一年前最接近AI智能体的模型：o3" data-mark-date="2026-06-08" data-mark-cat="Agent"><span class="cn">32</span><div class="cc">
+        <a class="ct serif" href="https://x.com/emollick/status/2063814337353891919" target="_blank">一年前最接近AI智能体的模型：o3</a>
+        <div class="cs">一年前，我们最接近AI智能体的是o3。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">大佬观点</span></div>
+        <a class="clink" href="https://x.com/emollick/status/2063814337353891919" target="_blank">阅读原文 →</a></div></div></div></details>
+</div>
+<div class="foot serif">AI 信号站 · Agent · 2026-06-08</div>
+<script src="../search-index.js"></script><script>(function(){var SR_REL="../";
+var SIDX = window.__SIDX__ || [];
+var inp = document.getElementById('siteSearch'), box = document.getElementById('searchRes');
+if(inp){
+  var K1=1.5, B=0.75, TITLE_BOOST=3, COV=0.6;
+  // 停用词:连接词/虚词不参与 AND 覆盖判定(避免"claude和gemini"里"和"稀释召回条件)
+  var STOP={}, _sw='的 了 和 与 及 或 跟 并 在 是 有 这 那 就 也 还 又 吗 呢 吧 啊 把 被 让 给 对 从 到 为 之 以 且 等 以及 还有 并且 而且'.split(' ');
+  for(var si=0;si<_sw.length;si++) STOP[_sw[si]]=1;
+  // 分词:英文/数字按词;中文按 bigram(单字则保留);query 与文档同一套切法
+  function toks(s){
+    var out=[], segs=(String(s).toLowerCase().match(/[a-z0-9]+|[\u4e00-\u9fff]+/g)||[]);
+    for(var i=0;i<segs.length;i++){
+      var seg=segs[i];
+      if(/[a-z0-9]/.test(seg)) out.push(seg);
+      else if(seg.length===1) out.push(seg);
+      else for(var j=0;j<seg.length-1;j++) out.push(seg.slice(j,j+2));
+    }
+    return out;
+  }
+  // 加载时一次性建 BM25 索引:每篇词频 tf(标题×TITLE_BOOST)、全局文档频率 DF、平均长度 avgdl
+  var DF={}, docs=[], totalLen=0, t;
+  for(var d=0; d<SIDX.length; d++){
+    var x=SIDX[d];
+    var body=(x.g||'')+' '+(x.c||'')+' '+(x.tag||'')+' '+(x.src||'');
+    var tf={};
+    var tt=toks(x.t||''); for(var a=0;a<tt.length;a++){ tf[tt[a]]=(tf[tt[a]]||0)+TITLE_BOOST; }
+    var bb=toks(body); for(var b2=0;b2<bb.length;b2++){ tf[bb[b2]]=(tf[bb[b2]]||0)+1; }
+    var dl=0; for(t in tf) dl+=tf[t];
+    totalLen+=dl;
+    for(t in tf) DF[t]=(DF[t]||0)+1;
+    docs.push({x:x, tf:tf, dl:dl});
+  }
+  var N=docs.length||1, avgdl=totalLen/N;
+  function idf(w){ var df=DF[w]||0; return Math.log((N-df+0.5)/(df+0.5)+1); }
+  inp.addEventListener('input', function(){
+    var q=inp.value.trim(); if(!q){ box.classList.remove('show'); return; }
+    var raw=toks(q), seen={}, qts=[];
+    for(var i=0;i<raw.length;i++){ if(!seen[raw[i]] && !STOP[raw[i]]){ seen[raw[i]]=1; qts.push(raw[i]); } }
+    if(!qts.length){ box.classList.remove('show'); return; }
+    // AND 覆盖召回:命中实词数须达 ceil(词数×COV),容忍中文 bigram 的 junction 噪声(如"面壁具身"切出的"壁具")
+    var need=Math.max(1, Math.ceil(qts.length*COV));
+    var scored=[];
+    for(var d2=0; d2<docs.length; d2++){
+      var doc=docs[d2], sc=0, m=0;
+      for(var k=0;k<qts.length;k++){
+        var f=doc.tf[qts[k]]; if(!f) continue;
+        m++; sc += idf(qts[k])*(f*(K1+1))/(f + K1*(1-B+B*doc.dl/avgdl));
+      }
+      if(m>=need) scored.push({x:doc.x, sc:sc, m:m});
+    }
+    // 排序:BM25 分降序 → 命中词数 → 日期新
+    scored.sort(function(p,r){ return (r.sc-p.sc) || (r.m-p.m) || (p.x.d<r.x.d?1:-1); });
+    var hits=scored.slice(0,20);
+    if(!hits.length){ box.innerHTML='<div class="sr-empty">本站无匹配结果</div>'; box.classList.add('show'); return; }
+    box.innerHTML='<div class="sr-h">站内命中 '+hits.length+' 条 · BM25 相关度排序</div>' + hits.map(function(o){
+      var x=o.x;
+      return '<a href="'+SR_REL+'d/'+x.d+'.html"><div class="srt">'+x.t+'</div><div class="srm">'+x.d+' · '+x.c+' · 精选 '+x.s+'</div></a>';
+    }).join('');
+    box.classList.add('show');
+  });
+  document.addEventListener('click', function(ev){ if(!ev.target.closest('.search-wrap')) box.classList.remove('show'); });
+}
+})();</script><script>
+(function(){
+  const API='http://localhost:8765';
+  // 标记功能只在本机启用。同一份构建产物:本地全功能、公网只读。
+  // 原因:标记数据的用途是喂给 Analyst 做个性化(marks 工具),陌生访客的口味不是站主的口味,
+  // 收集反而会污染个性化信号。所以公网不需要写接口 —— 也就不需要任何鉴权。
+  const LOCAL = ['localhost','127.0.0.1','::1'].indexOf(location.hostname) >= 0
+                || location.protocol === 'file:';
+  if(!LOCAL){
+    // 移除标记入口与弹窗,避免公网访客点了没反应(以及暴露本地 API 地址)
+    document.querySelectorAll('.mark-btn').forEach(b=>b.remove());
+    const m=document.getElementById('markModal'); if(m) m.remove();
+    const t=document.getElementById('markToast'); if(t) t.remove();
+    return;
+  }
+  let marks={}, cur=null;
+  const modal=document.getElementById('markModal');
+  if(!modal) return;
+  const elTitle=document.getElementById('mbTitle'),elMeta=document.getElementById('mbMeta'),
+        elC=document.getElementById('mbComment'),toast=document.getElementById('markToast');
+  function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);}
+  // 标记优先存 localStorage(不依赖常开服务);服务开着则合并后端(供 AI 读取的权威源)
+  const LS='ai_signal_marks';
+  function loadLocal(){try{return JSON.parse(localStorage.getItem(LS)||'{}');}catch(e){return {};}}
+  function saveLocal(){try{localStorage.setItem(LS,JSON.stringify(marks));}catch(e){}}
+  marks=loadLocal();renderMarks();
+  fetch(API+'/api/marks').then(r=>r.json()).then(m=>{if(m&&typeof m==='object'){marks=Object.assign({},marks,m);saveLocal();renderMarks();}}).catch(()=>{});
+  function renderMarks(){
+    document.querySelectorAll('[data-mark-url]').forEach(el=>{
+      const u=el.getAttribute('data-mark-url');
+      const btn=el.querySelector('.mark-btn'); if(!btn)return;
+      if(marks[u]){
+        el.classList.add('is-marked'); btn.classList.add('marked'); btn.textContent='✓ 已标记';
+        let note=el.querySelector('.mark-note');
+        if(marks[u].comment){
+          if(!note){note=document.createElement('div');note.className='mark-note';el.appendChild(note);}
+          note.innerHTML='<b>我的标记 · '+(marks[u].marked_at||'')+'</b><br>'+marks[u].comment.replace(/</g,'&lt;');
+          note.classList.add('show');
+        }
+      }else{
+        el.classList.remove('is-marked'); btn.classList.remove('marked'); btn.textContent='标记';
+        const note=el.querySelector('.mark-note'); if(note)note.classList.remove('show');
+      }
+    });
+  }
+  // 给每个可标记元素注入按钮
+  document.querySelectorAll('[data-mark-url]').forEach(el=>{
+    if(el.querySelector('.mark-btn'))return;
+    const btn=document.createElement('button');btn.className='mark-btn';btn.textContent='标记';
+    btn.onclick=(e)=>{e.preventDefault();e.stopPropagation();openModal(el);};
+    const anchor=el.querySelector('.mark-anchor')||el;
+    anchor.appendChild(btn);
+  });
+  function openModal(el){
+    cur={url:el.getAttribute('data-mark-url'),title:el.getAttribute('data-mark-title')||'',
+         date:el.getAttribute('data-mark-date')||'',cat:el.getAttribute('data-mark-cat')||''};
+    elTitle.textContent=cur.title;
+    elMeta.textContent=cur.date+(cur.cat?' · '+cur.cat:'');
+    elC.value=(marks[cur.url]&&marks[cur.url].comment)||'';
+    document.getElementById('mbDel').style.display=marks[cur.url]?'':'none';
+    modal.classList.add('show');elC.focus();
+  }
+  function close(){modal.classList.remove('show');cur=null;}
+  document.getElementById('mbCancel').onclick=close;
+  modal.onclick=(e)=>{if(e.target===modal)close();};
+  function today(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  document.getElementById('mbSave').onclick=()=>{
+    if(!cur)return;
+    const rec={...cur,comment:elC.value.trim(),marked_at:today()};
+    marks[cur.url]=rec;saveLocal();renderMarks();close();
+    fetch(API+'/api/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(rec)})
+      .then(r=>r.json()).then(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(已同步)'))
+      .catch(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(本地已存,启动服务后同步给AI)'));
+  };
+  document.getElementById('mbDel').onclick=()=>{
+    if(!cur)return;
+    delete marks[cur.url];saveLocal();renderMarks();close();showToast('已取消标记');
+    fetch(API+'/api/unmark',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:cur.url})}).catch(()=>{});
+  };
+  // ---- 摘要浮窗:点标题先看摘要(复用搜索索引 SIDX,按 url 反查),点"阅读原文"仍直接跳 ----
+  var _SIDX = window.__SIDX__ || [];
+  var pk = document.getElementById('peekModal');
+  if(pk){
+    var pkClose = function(){ pk.classList.remove('show'); };
+    pk.addEventListener('click', function(e){ if(e.target===pk || e.target.classList.contains('peek-x')) pkClose(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') pkClose(); });
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[target="_blank"]'); if(!a) return;
+      var txt = (a.textContent||'').trim();
+      if(txt.indexOf('原文') >= 0) return;               // "阅读原文"类→直接跳
+      var href = a.getAttribute('href') || '';
+      var rec = null;
+      for(var i=0;i<_SIDX.length;i++){ if(_SIDX[i].u===href){ rec=_SIDX[i]; break; } }
+      if(!rec) return;                                    // 非索引条目(导航/月历/全部)→直接跳
+      e.preventDefault();
+      pk.querySelector('.peek-cat').textContent = [rec.c, rec.src, '精选 ' + rec.s, rec.d].filter(Boolean).join(' · ');
+      pk.querySelector('.peek-title').textContent = rec.t;
+      pk.querySelector('.peek-sum').textContent = rec.g;
+      pk.querySelector('.peek-go').href = rec.u;
+      pk.classList.add('show');
+    });
+  }
+})();
+</script><div class="legal">
+<p><b>来源与版权</b>　本站为个人非商业实验项目,不生产原始报道。所收录条目的标题与摘要均来自公开渠道,每条都标注来源并链接回原文;文字、图片及其他内容的著作权归原作者与原发布方所有。本站只摘录足以判断「是否值得点开」的信息,完整内容请访问原文。</p>
+<p><b>AI 生成内容</b>　标注为「判断」「洞察」「速览」的段落由大语言模型生成,可能包含事实错误、过时信息或过度推断,仅为本站的实验性观点,<b>不构成投资、就业、技术选型或任何专业建议</b>。请以原文与一手信源为准。</p>
+<p><b>侵权与更正</b>　若您是权利人且不希望相关内容出现在此,或发现事实性错误,请通过 <a href="https://github.com/AMMPNK/ai-signal/issues" target="_blank" rel="noopener">GitHub Issues</a> 告知,我会尽快移除或更正。</p>
+<p class="lc">© 2026 AI 信号站 · 个人非商业项目 · 内容由 AI 辅助生成,请自行核实</p>
+</div></body></html>

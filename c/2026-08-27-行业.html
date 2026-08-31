@@ -1,0 +1,905 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>行业 · 2026-08-27</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--paper:#fffefb;--ink:#17140f;--ink2:#574f44;--ink3:#9b9387;--hair:#e8e2d7;--hair2:#f2ede4;--red:#b53326;--cream:#f7f3ea}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Songti SC","Noto Serif SC",serif}
+a{color:inherit}
+.mast{text-align:center;padding:28px 20px 0}
+.mast-line{font-size:11px;letter-spacing:4px;color:var(--ink3);text-transform:uppercase;margin-bottom:8px}
+.mast h1{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:44px;letter-spacing:4px}
+.mast h1 a{text-decoration:none}
+.mast .meta{font-size:12.5px;color:var(--ink2);margin-top:10px;padding-bottom:14px}
+.mast .meta b{color:var(--red)}
+.rule{height:3px;background:var(--ink);max-width:1180px;margin:0 auto}
+.nav{position:sticky;top:0;z-index:30;background:rgba(255,254,251,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);display:flex;justify-content:center;align-items:center;gap:2px;padding:9px 10px;flex-wrap:wrap}
+.nav a{font-family:"Songti SC","Noto Serif SC",serif;font-size:15px;color:var(--ink2);padding:6px 15px;text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--red)}
+.nav a.on{color:var(--ink);font-weight:700;border-bottom-color:var(--red)}
+.search-wrap{position:relative;margin-left:14px}
+.search-wrap input{font-family:inherit;font-size:13px;border:1px solid var(--hair);border-radius:18px;padding:6px 14px 6px 32px;width:170px;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239b9387' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E") no-repeat 11px center;outline:none;transition:.2s}
+.search-wrap input:focus{width:230px;border-color:var(--red)}
+.search-res{position:absolute;top:40px;right:0;width:430px;max-height:60vh;overflow-y:auto;background:var(--paper);border:1px solid var(--hair);border-radius:10px;box-shadow:0 8px 30px rgba(80,60,40,.13);padding:8px;display:none;z-index:40}
+.search-res.show{display:block}
+.search-res .sr-h{font-size:11px;color:var(--ink3);padding:6px 10px;letter-spacing:1px}
+.search-res a{display:block;padding:9px 10px;text-decoration:none;border-radius:7px;border-bottom:1px solid var(--hair2)}
+.search-res a:last-child{border:none}
+.search-res a:hover{background:var(--cream)}
+.search-res .srt{font-size:13.5px;color:var(--ink);font-weight:500}
+.search-res .srm{font-size:11px;color:var(--ink3);margin-top:2px}
+.search-res .sr-empty{padding:16px;color:var(--ink3);font-size:13px;text-align:center}
+.page{max-width:1180px;margin:0 auto;padding:0 24px}
+.leads{display:grid;grid-template-columns:1fr 1fr;margin:22px 0 0;border-top:1px solid var(--hair)}
+.lead{padding:28px 32px}
+.lead.l{border-right:1px solid var(--hair)}
+.kick{font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.kick .dot{width:7px;height:7px;border-radius:50%}
+.kick.sk{color:var(--ink2)}.kick.sk .dot{background:var(--ink2)}
+.kick.tk{color:var(--red)}.kick.tk .dot{background:var(--red)}
+.scbig{float:right;font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:40px;line-height:.8;color:var(--hair);margin-left:14px}
+.scbig.tkc{color:#eccfc8}
+.lead h2{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:26px;line-height:1.28;margin-bottom:14px}
+.lead h2 a{text-decoration:none}.lead h2 a:hover{color:var(--red)}
+.why{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;border-left:3px solid var(--red);padding-left:15px;margin-bottom:14px;line-height:1.6}
+.sum{font-size:13.5px;color:var(--ink2);margin-bottom:14px;line-height:1.7}
+.src{font-size:12px;color:var(--ink3);margin-bottom:16px}
+.lead-foot a{font-weight:600;font-size:13.5px;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+.ai-pending{background:var(--cream);border:1px dashed var(--red);border-radius:8px;padding:14px 16px;font-size:12.5px;color:var(--ink2);margin-bottom:16px;line-height:1.6}
+.subs{border-top:1px dotted var(--hair);margin-top:18px;padding-top:14px;list-style:none}
+.subs li{padding:7px 0}.subs a{display:flex;gap:9px;text-decoration:none;align-items:flex-start}
+.subs a:hover .st{color:var(--red)}
+.ss{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:12px;color:var(--ink3);min-width:22px;padding-top:2px}
+.st{font-size:13px;line-height:1.4}
+.archbar{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:18px 24px;margin:28px 0}
+.archbar .lab{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;font-weight:700;letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.archbar .lab .wkbtn{margin-left:auto;font-size:12px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:16px;font-weight:400;font-family:"Noto Sans SC"}
+.archbar .lab .wkbtn:hover{background:var(--red);color:#fff}
+.cals{display:flex;gap:30px;flex-wrap:wrap}
+.calm{}
+.calm .cmh{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:8px;text-align:center}
+.calgrid{display:grid;grid-template-columns:repeat(7,30px);gap:3px}
+.calgrid .wd{font-size:10px;color:var(--ink3);text-align:center;height:18px}
+.calgrid a,.calgrid span{width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:12px;border-radius:6px;text-decoration:none;color:var(--ink)}
+.calgrid a{border:1px solid var(--hair)}
+.calgrid a:hover{border-color:var(--red);background:var(--cream);color:var(--red)}
+.calgrid .today{background:var(--ink);color:#fff}
+.calgrid .blank{border:none}
+.calgrid .noday{color:#d8d2c7;border:1px dashed var(--hair2)}
+.sec-title{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;letter-spacing:3px;color:var(--ink3);text-transform:uppercase;text-align:center;margin:30px 0 18px;position:relative}
+.sec-title span{background:var(--paper);padding:0 16px;position:relative;z-index:1}
+.sec-title::before{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:var(--hair)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--hair)}
+.block{padding:18px 22px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.block-h{display:flex;align-items:baseline;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.bh-cn{font-size:17px;font-weight:700}.bh-en{font-size:10px;letter-spacing:1.5px;color:var(--ink3)}
+.bh-more{margin-left:auto;font-size:11px;color:var(--red);text-decoration:none}.bh-more:hover{text-decoration:underline}
+.block ul{list-style:none}.block li{border-bottom:1px solid var(--hair2)}.block li:last-child{border:none}
+.block li a{display:flex;gap:9px;align-items:flex-start;padding:9px 0;text-decoration:none}
+.block li a:hover .bt{color:var(--red)}
+.bs{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:13px;color:var(--red);min-width:24px;padding-top:1px}
+.bt{font-size:13.5px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.deep{background:var(--ink);color:#f4efe6;border-radius:10px;padding:28px 34px;margin:30px 0;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+.deep a{color:#f4efe6}
+.deep-k{font-size:11px;letter-spacing:3px;color:#d99;margin-bottom:8px}
+.deep h3{font-family:"Songti SC","Noto Serif SC",serif;font-size:24px;font-weight:700;margin-bottom:8px}
+.deep p{color:#bdb5a8;font-size:13.5px}
+.deep-stat{display:flex;gap:14px}
+.dstat{flex:1;background:#221e18;border:1px solid #38322a;border-radius:7px;padding:16px;text-align:center;text-decoration:none;display:block}
+.dstat:hover{border-color:#e0a89a}
+.dstat .n{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:30px;color:#e0a89a}
+.dstat .l{font-size:12px;color:#bdb5a8;margin-top:3px}
+.foot{text-align:center;padding:30px;color:var(--ink3);font-size:11.5px;border-top:1px solid var(--hair)}
+.catpage{max-width:880px;margin:0 auto;padding:24px}
+.catpage .ch{font-family:"Songti SC","Noto Serif SC",serif;font-size:30px;font-weight:900;border-bottom:3px solid var(--ink);padding-bottom:12px;margin-bottom:8px;display:flex;align-items:baseline;gap:12px}
+.catpage .ch .en{font-size:12px;letter-spacing:2px;color:var(--ink3)}
+.catpage .cmeta{font-size:12.5px;color:var(--ink2);margin-bottom:24px}
+.catcard{background:var(--cream);border-radius:10px;padding:22px 26px;margin-bottom:28px}
+.catcard .cck{font-size:11px;letter-spacing:2px;color:var(--red);font-weight:700;text-transform:uppercase;margin-bottom:8px}
+.catcard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:700;line-height:1.35;margin-bottom:10px}
+.catcard h2 a{text-decoration:none}.catcard h2 a:hover{color:var(--red)}
+.catcard .ess{font-family:"Songti SC","Noto Serif SC",serif;font-size:15.5px;border-left:3px solid var(--red);padding-left:14px;margin-bottom:12px;line-height:1.6}
+.catcard .pts{margin:0 0 4px 0;padding-left:18px}
+.catcard .pts li{font-size:13.5px;color:var(--ink2);margin:4px 0;line-height:1.55}
+.crow{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--hair2);align-items:baseline}
+.crow .cn{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:22px;color:var(--red);min-width:42px}
+.crow .cc{flex:1}
+.crow .ct{font-family:"Songti SC","Noto Serif SC",serif;font-size:18px;font-weight:600;text-decoration:none;display:block;line-height:1.4}
+.crow .ct:hover{color:var(--red)}
+.crow .cs{font-size:13.5px;color:var(--ink2);margin-top:6px;line-height:1.65}
+.crow .ctags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.crow .ctag{font-size:11px;color:var(--ink2);border:1px solid var(--hair);padding:2px 9px;border-radius:3px}
+.crow .clink{font-size:12.5px;color:var(--red);text-decoration:none;margin-top:8px;display:inline-block}
+.pager{display:flex;align-items:center;justify-content:center;gap:20px;padding:28px 0 8px}
+.pager button{font-family:inherit;font-size:13px;background:var(--paper);border:1px solid var(--hair);border-radius:20px;padding:7px 18px;cursor:pointer;color:var(--ink)}
+.pager button:hover:not(:disabled){border-color:var(--red);color:var(--red)}
+.pager button:disabled{opacity:.4;cursor:default}
+.pager #pgInfo{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;color:var(--ink2)}
+.rel-tag{position:relative;font-size:11px;color:var(--red);border:1px solid var(--red);border-radius:3px;padding:2px 8px;cursor:default}
+.rel-tag .rel-pop{display:none;position:absolute;left:0;bottom:130%;z-index:50;width:max-content;max-width:320px;background:var(--ink);color:#f4efe6;font-size:11.5px;line-height:1.7;padding:8px 12px;border-radius:7px;box-shadow:0 6px 20px rgba(40,30,20,.3)}
+.rel-tag:hover .rel-pop{display:block}
+.lo-block{margin-top:24px;border-top:1px dashed var(--hair)}
+.lo-block summary{cursor:pointer;padding:14px 0;font-size:13px;color:var(--ink3);font-family:"Songti SC","Noto Serif SC",serif;list-style:none}
+.lo-block summary::-webkit-details-marker{display:none}
+.lo-block summary::before{content:"▸ ";color:var(--red)}
+.lo-block[open] summary::before{content:"▾ "}
+.lo-rows{opacity:.72}
+/* 洞察库 + 文章页 */
+.ilist{max-width:820px;margin:0 auto;padding:24px}
+.icard{background:var(--paper);border:1px solid var(--hair);border-radius:12px;padding:22px 26px;margin-bottom:16px;transition:.15s}
+.icard:hover{border-color:var(--red);box-shadow:0 6px 22px rgba(80,60,40,.08)}
+.icard .ik{font-size:11px;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:6px}
+.icard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:22px;font-weight:700;line-height:1.3;margin-bottom:8px}
+.icard h2 a{text-decoration:none}.icard h2 a:hover{color:var(--red)}
+.icard .im{font-size:12.5px;color:var(--ink3);margin-bottom:10px}
+.icard .idesc{font-size:14px;color:var(--ink2);line-height:1.7}
+.iempty{text-align:center;padding:60px 20px;color:var(--ink3)}
+.article{max-width:720px;margin:0 auto;padding:30px 24px;font-size:16px;line-height:1.9}
+.article .atitle{font-family:"Songti SC","Noto Serif SC",serif;font-size:34px;font-weight:900;line-height:1.25;margin-bottom:14px}
+.article .ameta{font-size:13px;color:var(--ink3);border-bottom:1px solid var(--hair);padding-bottom:18px;margin-bottom:24px}
+.article h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:23px;margin:30px 0 12px;padding-top:8px}
+.article h3{font-size:18px;margin:22px 0 10px;color:var(--ink)}
+.article p{margin-bottom:16px;color:#2a2620}
+.article blockquote{border-left:3px solid var(--red);padding:6px 0 6px 18px;margin:18px 0;font-family:"Songti SC","Noto Serif SC",serif;font-style:normal;color:var(--ink);background:var(--cream);border-radius:0 8px 8px 0;padding:14px 18px}
+.article .aback{display:inline-block;margin-bottom:20px;color:var(--red);text-decoration:none;font-size:13px}
+.wknav{max-width:880px;margin:16px auto 0;padding:10px 16px;background:var(--cream);border-radius:8px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px}
+.wknav-lab{color:var(--ink3);margin-right:4px;font-family:"Songti SC","Noto Serif SC",serif}
+.wknav-item{padding:3px 12px;border:1px solid var(--hair);border-radius:14px;text-decoration:none;color:var(--ink2);background:var(--paper)}
+.wknav-item:hover{border-color:var(--red);color:var(--red)}
+.wknav-item.on{background:var(--red);color:#fff;border-color:var(--red)}
+@media(max-width:880px){.leads,.grid,.deep{grid-template-columns:1fr}.lead.l{border-right:none;border-bottom:1px solid var(--hair)}.search-wrap input{width:130px}}
+
+.mark-btn{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ink3);background:none;border:1px solid var(--hair);border-radius:5px;padding:2px 9px;cursor:pointer;margin-left:8px;vertical-align:middle;font-family:"Noto Sans SC",sans-serif;transition:.15s}
+.mark-btn:hover{border-color:var(--red);color:var(--red)}
+.mark-btn.marked{background:var(--red);color:#fff;border-color:var(--red)}
+[data-mark-url].is-marked{background:#fdf6ef;box-shadow:inset 3px 0 0 var(--red);border-radius:4px}
+.mark-note{display:none;font-size:12.5px;color:var(--ink2);background:#fbf6ef;border-left:2px solid var(--red);padding:7px 12px;margin-top:8px;border-radius:0 6px 6px 0;line-height:1.6}
+.mark-note.show{display:block}
+.mark-note b{color:var(--red);font-weight:600;font-size:11px}
+/* 弹框 */
+.mark-modal{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,16,12,.4);align-items:center;justify-content:center}
+.mark-modal.show{display:flex}
+.mark-box{background:var(--paper);border-radius:12px;padding:24px 26px;width:min(92vw,460px);box-shadow:0 20px 60px rgba(60,40,20,.25)}
+.mark-box h4{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;margin-bottom:4px;line-height:1.4}
+.mark-box .mb-meta{font-size:12px;color:var(--ink3);margin-bottom:14px}
+.mark-box textarea{width:100%;min-height:90px;border:1px solid var(--hair);border-radius:8px;padding:10px 12px;font-family:inherit;font-size:14px;line-height:1.6;resize:vertical;outline:none}
+.mark-box textarea:focus{border-color:var(--red)}
+.mark-box .mb-tip{font-size:11.5px;color:var(--ink3);margin:6px 0 14px}
+.mark-box .mb-foot{display:flex;gap:10px;justify-content:flex-end}
+.mark-box button{font-family:inherit;font-size:13px;border-radius:7px;padding:8px 18px;cursor:pointer;border:1px solid var(--hair);background:var(--paper);color:var(--ink2)}
+.mark-box .mb-save{background:var(--red);color:#fff;border-color:var(--red)}
+.mark-box .mb-del{margin-right:auto;color:var(--ink3);border:none}
+.mark-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:13px;padding:9px 20px;border-radius:20px;z-index:210;opacity:0;transition:.3s;pointer-events:none}
+.mark-toast.show{opacity:1}
+/* 摘要浮窗 */
+.peek-modal{display:none;position:fixed;inset:0;z-index:220;background:rgba(20,16,12,.45);align-items:center;justify-content:center;padding:20px}
+.peek-modal.show{display:flex}
+.peek-box{position:relative;background:var(--paper);border-radius:14px;padding:30px 32px;width:min(94vw,560px);max-height:82vh;overflow-y:auto;box-shadow:0 24px 70px rgba(40,30,20,.35)}
+.peek-x{position:absolute;top:12px;right:16px;border:none;background:none;font-size:26px;line-height:1;color:var(--ink3);cursor:pointer}
+.peek-x:hover{color:var(--red)}
+.peek-cat{font-size:11px;letter-spacing:1px;color:var(--red);font-weight:700;margin-bottom:10px}
+.peek-title{font-size:21px;font-weight:700;line-height:1.42;margin-bottom:14px;padding-right:22px}
+.peek-sum{font-size:14.5px;line-height:1.9;color:var(--ink2);margin-bottom:22px}
+.peek-go{display:inline-block;font-size:14px;font-weight:600;color:var(--red);text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+
+.legal{max-width:880px;margin:0 auto;padding:4px 28px 44px;color:var(--ink3);font-size:11.5px;line-height:1.85}
+.legal p{margin:0 0 9px}
+.legal b{color:var(--ink2);font-weight:600}
+.legal a{color:var(--ink2);border-bottom:1px solid var(--hair)}
+.legal .lc{margin-top:13px;padding-top:12px;border-top:1px solid var(--hair);text-align:center}
+@media(max-width:880px){.legal{padding:4px 18px 36px}}
+</style></head><body>
+<div class="mark-modal" id="markModal">
+  <div class="mark-box">
+    <h4 id="mbTitle"></h4>
+    <div class="mb-meta" id="mbMeta"></div>
+    <textarea id="mbComment" placeholder="写下你的想法 / 评论 / 为什么标它(可留空,仅标记)…"></textarea>
+    <div class="mb-tip">这条评论会被记录,AI 每晚据此判断你可能想深挖的方向。</div>
+    <div class="mb-foot">
+      <button class="mb-del" id="mbDel">取消标记</button>
+      <button id="mbCancel">关闭</button>
+      <button class="mb-save" id="mbSave">保存标记</button>
+    </div>
+  </div>
+</div>
+<div class="mark-toast" id="markToast"></div>
+<div class="peek-modal" id="peekModal">
+  <div class="peek-box">
+    <button class="peek-x" type="button">&times;</button>
+    <div class="peek-cat"></div>
+    <h3 class="peek-title serif"></h3>
+    <p class="peek-sum"></p>
+    <a class="peek-go" target="_blank" rel="noopener">阅读原文 →</a>
+  </div>
+</div>
+
+<div class="mast"><div class="mast-line">The AI Signal · 行业</div>
+<h1 class="serif"><a href="../index.html">AI 信号站</a></h1>
+<div class="meta">2026-08-27 · 行业 版块 · 共 <b>117</b> 条</div></div>
+<div class="rule"></div>
+<nav class="nav"><a href="../d/2026-08-27.html">头版</a><a href="../c/2026-08-27-Agent.html">Agent</a><a href="../c/2026-08-27-产品.html">产品</a><a href="../c/2026-08-27-行业.html" class="on">行业</a><a href="../c/2026-08-27-论文.html">论文</a><a href="../c/2026-08-27-模型.html">模型</a><a href="../c/2026-08-27-技巧.html">技巧</a><a href="../weekly.html" style="color:var(--red)">上周·周报</a><a href="../insights.html" style="color:var(--red)">深度洞察</a><span class="search-wrap"><input type="text" id="siteSearch" placeholder="站内搜索…" autocomplete="off"><div class="search-res" id="searchRes"></div></span></nav>
+<div class="catpage">
+  <div class="ch serif">行业<span class="en">INDUSTRY</span></div>
+  <div class="cmeta">2026-08-27 · 该版块全部 117 条,按精选分排序 · <a href="../d/2026-08-27.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="cmeta">2026-08-27 · 全量 117 条 → 去重聚类 108 条 · 默认展示 AIHOT 精选 5 条,其余折叠 · <a href="../d/2026-08-27.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="catcard">
+              <div class="cck">本版块 · 最值得你思考</div>
+              <h2 class="serif"><a href="https://x.com/thexpin/status/2092904955237609795" target="_blank">MiniMax 年化收入破 8 亿美元，M3.1 定档 2026</a></h2>
+              <div class="ess serif">若相关数据可信，MiniMax的收入与调用量正同时向企业平台集中，模型公司的价值由一次性发布转为持续消耗；接下来要看高调用能否沉淀为可续约毛利。</div>
+              <div class="cck" style="margin-bottom:6px">思考切口</div><ul class="pts"><li>评估模型公司不能只看发布频率和峰值能力，还要拆分企业客户占比、调用留存与单位推理成本。</li><li>平台调用增长若主要依赖低价或单一大客户，规模未必等于质量；应继续观察客户集中度和续费结构。</li></ul>
+            </div>
+  <div class="sec-title"><span>本版块精选 · 5 条</span></div>
+  <div class="crow crow-pg" data-i="0" data-mark-url="https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand" data-mark-title="亚马逊将英伟达芯片订单增至三倍，新增200万颗GPU" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">76</span><div class="cc">
+        <a class="ct serif" href="https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand" target="_blank">亚马逊将英伟达芯片订单增至三倍，新增200万颗GPU</a>
+        <div class="cs">亚马逊与英伟达宣布扩大合作，将在2027和2028年为AWS数据中心新增200万颗GPU芯片，包括Blackwell Ultra、Rubin和Rubin Ultra。此前五个月亚马逊刚同意部署超100万颗英伟达GPU，英伟达称此后“需求超出预期”。双方未披露财务条款，但按GPU单…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="1" data-mark-url="https://www.ithome.com/0/994/807.htm" data-mark-title="英伟达预计 2028 财年营收同比增 70%，黄仁勋称实际需求远高于此" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">75</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/807.htm" target="_blank">英伟达预计 2028 财年营收同比增 70%，黄仁勋称实际需求远高于此</a>
+        <div class="cs">英伟达预计 2028 财年销售额同比增长约 70%，CEO 黄仁勋称实际市场需求远高于这一数字，增速主要受供应能力限制。公司同时宣布将在 2027 至 2028 年向 AWS 额外供应 200 万块 GPU。第二季度营收同比增长 106% 至 962.2 亿美元，连续第 13 个…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/807.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="2" data-mark-url="https://www.ithome.com/0/994/791.htm" data-mark-title="英伟达 2027 财年半年报归母净利润 1180.1 亿美元，同比增长 161.1%" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">74</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/791.htm" target="_blank">英伟达 2027 财年半年报归母净利润 1180.1 亿美元，同比增长 161.1%</a>
+        <div class="cs">英伟达发布 2027 财年半年报，上半年营收 1778.37 亿美元，归母净利润 1180.1 亿美元，同比增长 161.1%，GAAP 毛利率 75%。第二财季营收 962.21 亿美元，同比增长 106%，环比增长 18%，归母净利润 596.88 亿美元，同比增长 126%…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">推理</span><span class="ctag">数据/训练</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/791.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="3" data-mark-url="https://www.ithome.com/0/995/136.htm" data-mark-title="我国日均词元调用量突破 500 万亿，中国大模型稳居全球第一梯队" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">72</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/136.htm" target="_blank">我国日均词元调用量突破 500 万亿，中国大模型稳居全球第一梯队</a>
+        <div class="cs">截至 2026 年 6 月，我国日均词元调用量已突破 500 万亿，中国大模型在全球竞争中位居第一梯队。当前旗舰模型几乎以月为单位更新，竞争焦点转向智能体落地与生态建设，推理算力需求随之爆发。腾讯混元 3 正式版上线第一周，Token 调用量比上一代混元 2 增长 68 倍。…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">推理</span><span class="ctag">数据/训练</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/136.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="4" data-mark-url="https://www.tomtunguz.com/nvidia-q2-fy27-earnings" data-mark-title="NVIDIA 季度营收指引达 1080 亿美元，首次突破单季千亿大关" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">67</span><div class="cc">
+        <a class="ct serif" href="https://www.tomtunguz.com/nvidia-q2-fy27-earnings" target="_blank">NVIDIA 季度营收指引达 1080 亿美元，首次突破单季千亿大关</a>
+        <div class="cs">NVIDIA 上季度营收 960 亿美元，同比增长 106%，并指引 Q3 营收达 1080 亿美元（±2%），成为首家单季营收破千亿的半导体公司。按此年化营收 4320 亿美元，NVIDIA 已跃居全球第六大公司。同时，非超大规模客户首次贡献数据中心净新增收入的大部分，应收账款…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">现象/趋势</span><span class="ctag">部署/工程</span><span class="rel-tag">关联讨论 2 条</span></div>
+        <a class="clink" href="https://www.tomtunguz.com/nvidia-q2-fy27-earnings" target="_blank">阅读原文 →</a></div></div>
+  
+  <details class="lo-block"><summary>展开其余 103 条(非精选,已默认收起)</summary><div class="lo-rows"><div class="crow crow-pg" data-i="5" data-mark-url="https://www.a16z.news/p/you-are-not-a-model-dont-price-per" data-mark-title="不要按 token 定价：AI 应用应基于可识别的价值单元收费" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">69</span><div class="cc">
+        <a class="ct serif" href="https://www.a16z.news/p/you-are-not-a-model-dont-price-per" target="_blank">不要按 token 定价：AI 应用应基于可识别的价值单元收费</a>
+        <div class="cs">a16z 认为，将模型层的 token 计价逻辑带入应用层常是错误。应用应在其能可靠衡量、归属和捍卫的最高价值层定价：卖模型访问权按 token，将模型转化为有用工作则按可识别的价值单元（通常通过积分），交付明确业务结果则按结果定价。对 50 位技术买家的调查中，27 人偏好与可…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://www.a16z.news/p/you-are-not-a-model-dont-price-per" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="6" data-mark-url="https://x.com/kimmonismus/status/2092890272979919181" data-mark-title="英伟达129亿美元收购Hugging Face" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">69</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2092890272979919181" target="_blank">英伟达129亿美元收购Hugging Face</a>
+        <div class="cs">英伟达同意以129亿美元收购开源AI平台Hugging Face，后者年化收入约1.5亿美元，估值约为前瞻收入的80倍。英伟达意在战略控制而非当前销售，开源模型有助于保护其GPU需求，并可能通过连接开发者与算力重振其云业务。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Hugging Face</span><span class="ctag">开源生态</span><span class="ctag">行业动态</span><span class="rel-tag">关联报道 5 条<span class="rel-pop">英伟达拟超130亿美元收购Huggi / Nvidia 拟以 129 亿美元收 / 英伟达129亿美元收购Hugging / 英伟达129亿美元收购Hugging / 英伟达同意以130亿美元收购Hugg</span></span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2092890272979919181" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="7" data-mark-url="https://x.com/thexpin/status/2092887339039146489" data-mark-title="英伟达对华恢复H200出货，营收再创新高" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">67</span><div class="cc">
+        <a class="ct serif" href="https://x.com/thexpin/status/2092887339039146489" target="_blank">英伟达对华恢复H200出货，营收再创新高</a>
+        <div class="cs">英伟达确认，根据美国新许可证，已恢复对中国的首批H200出货，结束了长达数月的封锁期。该销售额不到第二季度890亿美元数据中心营收的1%。其1080亿美元的第三季度预测仍假设中国数据中心计算营收为零。第二季度营收创下962亿美元的纪录，同比增长106%。英伟达预计2028财年增长…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/thexpin/status/2092887339039146489" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="8" data-mark-url="https://www.theverge.com/tech/985387/nvidia-hundred-billion-dollar-quarterly-revenue" data-mark-title="Nvidia 即将成为单季营收破千亿美元的公司" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">67</span><div class="cc">
+        <a class="ct serif" href="https://www.theverge.com/tech/985387/nvidia-hundred-billion-dollar-quarterly-revenue" target="_blank">Nvidia 即将成为单季营收破千亿美元的公司</a>
+        <div class="cs">Nvidia 最新财报显示，上季度总营收达创纪录的 962 亿美元，同比翻倍，其中数据中心营收同比增长逾一倍至 890 亿美元，利润翻倍至 597 亿美元。公司预计未来几个月内营收将达 1080 亿美元，有望成为继 Amazon、Apple、Alphabet 后首家单季营收破千亿…</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 3 条</span></div>
+        <a class="clink" href="https://www.theverge.com/tech/985387/nvidia-hundred-billion-dollar-quarterly-revenue" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="9" data-mark-url="https://the-decoder.com/nvidia-snaps-up-hugging-face-for-12-9-billion-as-closed-ai-labs-pull-away" data-mark-title="Nvidia 以 129 亿美元收购 Hugging Face，闭源 AI 实验室渐行渐远" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">66</span><div class="cc">
+        <a class="ct serif" href="https://the-decoder.com/nvidia-snaps-up-hugging-face-for-12-9-billion-as-closed-ai-labs-pull-away" target="_blank">Nvidia 以 129 亿美元收购 Hugging Face，闭源 AI 实验室渐行渐远</a>
+        <div class="cs">Nvidia 将以 129 亿美元收购开源 AI 平台 Hugging Face，约为其年收入 1.5 亿美元的 80 倍。Hugging Face 运营十年，托管开源模型并提供云服务，接近盈利。此举正值 OpenAI、Anthropic 等闭源厂商自研芯片、减少对 Nvidia…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Hugging Face</span><span class="ctag">开源生态</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 4 条</span></div>
+        <a class="clink" href="https://the-decoder.com/nvidia-snaps-up-hugging-face-for-12-9-billion-as-closed-ai-labs-pull-away" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="10" data-mark-url="https://www.ithome.com/0/994/813.htm" data-mark-title="英伟达：AI 算力供给短缺至少延续至 2028 财年末，晶圆、HBM、电力全面紧缺" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">66</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/813.htm" target="_blank">英伟达：AI 算力供给短缺至少延续至 2028 财年末，晶圆、HBM、电力全面紧缺</a>
+        <div class="cs">英伟达在 2027 财年第二季度财报电话会上表示，AI 算力供给短缺格局至少延续至 2028 财年末，晶圆产能、HBM 存储、机房电力均处于全面紧缺状态。传统超大规模云厂商在手订单超 2 万亿美元，非云市场同比增速超 100%。CEO 黄仁勋首次给出 2028 财年全年 70% …</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/813.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="11" data-mark-url="https://www.ithome.com/0/994/836.htm" data-mark-title="亚马逊 AWS 宣布 2027~2028 年额外部署 200 万块 NVIDIA GPU" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">65</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/836.htm" target="_blank">亚马逊 AWS 宣布 2027~2028 年额外部署 200 万块 NVIDIA GPU</a>
+        <div class="cs">亚马逊 AWS 在与 NVIDIA 的联合新闻稿中宣布，计划在 2027~2028 年期间向其全球基础设施额外部署 200 万块 NVIDIA GPU。此前 AWS 已在今年 3 月的 GTC 2026 承诺 100 万块部署规模，新公告使总规模提升至 300 万块。AWS 还将…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/836.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="12" data-mark-url="https://www.ithome.com/0/994/970.htm" data-mark-title="英伟达黄仁勋秀饭局影响力：“我和谁吃饭，第二天股价就翻倍”" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">64</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/970.htm" target="_blank">英伟达黄仁勋秀饭局影响力：“我和谁吃饭，第二天股价就翻倍”</a>
+        <div class="cs">英伟达CEO黄仁勋在财报电话会上调侃称，2026年最佳美股交易策略是看他和谁吃饭，第二天对方股价就会翻倍。英伟达2027财年第二季度总营收达962.21亿美元，同比增长106%，超华尔街预期；公司给出第三季度营收指引为1,080亿美元。该季度毛利率保持在75%，但受存储等元器件成…</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 2 条</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/970.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="13" data-mark-url="https://www.ithome.com/0/994/818.htm" data-mark-title="曝英伟达洽谈超 130 亿美元收购 Hugging Face，微软也想插一脚" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">64</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/818.htm" target="_blank">曝英伟达洽谈超 130 亿美元收购 Hugging Face，微软也想插一脚</a>
+        <div class="cs">英伟达近几周与 Hugging Face 就收购进行严肃谈判，估值超 130 亿美元（约合 875.92 亿元人民币），尚未达成协议，谈判仍可能破裂。微软也与 Hugging Face 会面，但谈判尚未进行。Hugging Face 年化营收突破 1.5 亿美元，付费客户增至 2…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Hugging Face</span><span class="ctag">Microsoft</span><span class="ctag">开源生态</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/818.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="14" data-mark-url="https://techcrunch.com/2026/08/26/how-do-we-explain-openais-executive-exodus" data-mark-title="OpenAI 高管接连出走，原因何在？" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">63</span><div class="cc">
+        <a class="ct serif" href="https://techcrunch.com/2026/08/26/how-do-we-explain-openais-executive-exodus" target="_blank">OpenAI 高管接连出走，原因何在？</a>
+        <div class="cs">OpenAI 自年初以来已有十余名高管离职，包括首席运营官、首席营收官、首席营销官及数据中心负责人 Chris Malone。公司称 Malone 离职源于基础设施团队重组，而联合创始人 Greg Brockman 正重新掌权，产品与基础设施团队均向其汇报。在 OpenAI 已秘…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://techcrunch.com/2026/08/26/how-do-we-explain-openais-executive-exodus" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="15" data-mark-url="https://techcrunch.com/2026/08/27/openai-to-start-showing-ads-on-chatgpts-free-and-go-tiers-in-india" data-mark-title="OpenAI 将在印度 ChatGPT 免费版和 Go 订阅层级投放广告" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">62</span><div class="cc">
+        <a class="ct serif" href="https://techcrunch.com/2026/08/27/openai-to-start-showing-ads-on-chatgpts-free-and-go-tiers-in-india" target="_blank">OpenAI 将在印度 ChatGPT 免费版和 Go 订阅层级投放广告</a>
+        <div class="cs">OpenAI 宣布将在印度 ChatGPT 免费版和 Go 订阅层级开始展示广告，此前该公司已于本月修改服务条款。广告将先覆盖 50 个品牌，OpenAI 已与 WPP 和 Omnicom 合作，并计划下月推出广告管理器，要求广告主每日最低预算为 ₹725（7.60 美元）。Op…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://techcrunch.com/2026/08/27/openai-to-start-showing-ads-on-chatgpts-free-and-go-tiers-in-india" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="16" data-mark-url="https://x.com/rohanpaul_ai/status/2092731730998473023" data-mark-title="英伟达Q2财报：数据中心占92.5%营收" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">62</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2092731730998473023" target="_blank">英伟达Q2财报：数据中心占92.5%营收</a>
+        <div class="cs">英伟达Q2财报显示，数据中心业务贡献营收890亿美元，占总营收962亿美元的92.5%，季度营收同比增长106%，毛利率75%。Q3指引1080亿美元，且假设对中国数据中心计算营收为零。公司另披露约990亿美元股权投资，并对OpenAI俄亥俄州数据中心租约提供上限1050亿美元的…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 3 条</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2092731730998473023" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="17" data-mark-url="https://www.artificialintelligence-news.com/news/nvidia-circular-financing-ai-labs" data-mark-title="Nvidia 明年约四分之一业务将来自其注资的 AI 实验室" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">61</span><div class="cc">
+        <a class="ct serif" href="https://www.artificialintelligence-news.com/news/nvidia-circular-financing-ai-labs" target="_blank">Nvidia 明年约四分之一业务将来自其注资的 AI 实验室</a>
+        <div class="cs">Nvidia 已向购买其芯片的 AI 实验室投入近 500 亿美元，并已锁定超过 5000 亿美元的承诺。公司首席财务官 Colette Kress 于 8 月 26 日向分析师表示，Nvidia 以自身资产负债表支持的实验室需求，将贡献其约四分之一的业务。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.artificialintelligence-news.com/news/nvidia-circular-financing-ai-labs" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="18" data-mark-url="https://x.com/Yuchenj_UW/status/2092814059657949231" data-mark-title="GLM-5.3-Flash登顶Ox Alpha，中国芯片加速AI自主" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">61</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Yuchenj_UW/status/2092814059657949231" target="_blank">GLM-5.3-Flash登顶Ox Alpha，中国芯片加速AI自主</a>
+        <div class="cs">Ox Alpha 每天处理 100T tokens，很多人以为它是 Gemini。
+
+结果发现它是运行在中国芯片上的 GLM-5.3-Flash。
+
+Jensen 在 Dwarkesh 播客上说对了：出口管制可能加速中国构建不依赖 NVIDIA 的 AI 技术栈。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://x.com/Yuchenj_UW/status/2092814059657949231" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="19" data-mark-url="https://artificialanalysis.ai/models/glm-5-3-flash" data-mark-title="GLM-5.3-Flash 智能、性能与价格分析" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">60</span><div class="cc">
+        <a class="ct serif" href="https://artificialanalysis.ai/models/glm-5-3-flash" target="_blank">GLM-5.3-Flash 智能、性能与价格分析</a>
+        <div class="cs">GLM-5.3-Flash 在 Artificial Analysis Intelligence Index 上得分 57，远超同类模型中位数 18，支持文本和图像输入、文本输出，上下文窗口达 400k tokens。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">多模态</span><span class="ctag">推理</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://artificialanalysis.ai/models/glm-5-3-flash" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="20" data-mark-url="https://www.ithome.com/0/994/968.htm" data-mark-title="北京首例 AIGC 商业秘密行政处罚案开出 10 万元罚单" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">59</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/968.htm" target="_blank">北京首例 AIGC 商业秘密行政处罚案开出 10 万元罚单</a>
+        <div class="cs">北京市朝阳区市场监管局对全市首例 AIGC 行业商业秘密行政处罚案作出处罚决定，对携密跳槽、私自复制使用原单位 AI 商业软件的行为开出 10 万元罚单。涉案员工在职期间私自拷贝并破解公司自主研发的 AIGC 商业软件，离职后创办新公司继续使用该软件承接竞争业务牟利。本案首次在行…</div>
+        <div class="ctags mark-anchor"><span class="ctag">政策/监管</span><span class="ctag">语音</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/968.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="21" data-mark-url="https://www.theverge.com/podcast/985332/openai-greg-brockman-sam-altman-leader-executive-exodus" data-mark-title="OpenAI 高管离职潮的最大赢家：Greg Brockman 权力进一步集中" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">58</span><div class="cc">
+        <a class="ct serif" href="https://www.theverge.com/podcast/985332/openai-greg-brockman-sam-altman-leader-executive-exodus" target="_blank">OpenAI 高管离职潮的最大赢家：Greg Brockman 权力进一步集中</a>
+        <div class="cs">OpenAI 联合创始人兼总裁 Greg Brockman 在多位高管接连离职后，已实际掌控公司日常运营，统管包括 ChatGPT、Codex 在内的全部消费者与企业产品团队及基础设施建设。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">OpenAI</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://www.theverge.com/podcast/985332/openai-greg-brockman-sam-altman-leader-executive-exodus" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="22" data-mark-url="https://x.com/testingcatalog/status/2092670115531706582" data-mark-title="Anthropic 斥资 450 亿美元租用 Nscale 算力" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">58</span><div class="cc">
+        <a class="ct serif" href="https://x.com/testingcatalog/status/2092670115531706582" target="_blank">Anthropic 斥资 450 亿美元租用 Nscale 算力</a>
+        <div class="cs">Anthropic ❤️ Nscale
+
+据彭博社报道，Anthropic 已同意在未来六年内向 Nscale 支付 450 亿美元，租用约 460MW 的电力，使用英伟达的 Vera Rubin 芯片。
+
+更多算力 👀…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span><span class="rel-tag">关联报道 1 条<span class="rel-pop">Anthropic 45B 美元锁定</span></span></div>
+        <a class="clink" href="https://x.com/testingcatalog/status/2092670115531706582" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="23" data-mark-url="https://www.ithome.com/0/995/296.htm" data-mark-title="OpenAI 在印度向 ChatGPT Free 及 Go 套餐用户投放广告" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/296.htm" target="_blank">OpenAI 在印度向 ChatGPT Free 及 Go 套餐用户投放广告</a>
+        <div class="cs">OpenAI 即日起在印度向 ChatGPT Free 和 Go 套餐用户投放广告，首批覆盖 50 个品牌，下月将上线广告管理工具，营销人员可自行创建广告活动，最低日预算 725 印度卢比（约合 51.1 元人民币）。ChatGPT 在印度周活跃用户已超 1 亿，其中相当一部分使…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/296.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="24" data-mark-url="https://www.ithome.com/0/994/943.htm" data-mark-title="黄仁勋驳斥“循环融资”质疑：AI 行业需要巨额资金，英伟达投资风险很低" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/943.htm" target="_blank">黄仁勋驳斥“循环融资”质疑：AI 行业需要巨额资金，英伟达投资风险很低</a>
+        <div class="cs">英伟达 CEO 黄仁勋周三为公司在 AI 行业的融资参与辩护，称这是首个需数百亿美元融资才能发展的初创行业，并强调英伟达投资风险很低。英伟达已为俄亥俄州算力园区提供 1,050 亿美元支持，并与华尔街合作筹集最高 5,000 亿美元数据中心融资。公司 2027 财年第二季度营收达…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">数据/训练</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/943.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="25" data-mark-url="https://www.ithome.com/0/994/901.htm" data-mark-title="谷歌将AI责任团队移出DeepMind，员工担忧安全评估独立性受损" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/901.htm" target="_blank">谷歌将AI责任团队移出DeepMind，员工担忧安全评估独立性受损</a>
+        <div class="cs">谷歌将约90人的“AI责任”团队从谷歌DeepMind调离，并入负责游说与公共政策事务的全球事务部门，调整预计9月初生效。该团队负责测试谷歌AI模型在化学、生物、放射性和核领域的风险，并研究聊天机器人的心理影响。部分员工担忧此举会削弱团队独立研究能力，减少与Gemini开发团队的…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Google</span><span class="ctag">安全/对齐</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/901.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="26" data-mark-url="https://x.com/kimmonismus/status/2092737142787084468" data-mark-title="英伟达Q2营收翻倍达962亿美元" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2092737142787084468" target="_blank">英伟达Q2营收翻倍达962亿美元</a>
+        <div class="cs">英伟达Q2营收达962亿美元，同比增106%，环比增18%；数据中心营收890亿美元，同比增117%。GAAP净利润597亿美元，同比增126%，毛利率75%。公司预计Q3营收1080亿美元，同比增约89%，且未计入中国数据中心计算收入。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2092737142787084468" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="27" data-mark-url="https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale" data-mark-title="Anthropic 与 Nscale 签署 450 亿美元算力租赁协议，延续算力扩张步伐" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">56</span><div class="cc">
+        <a class="ct serif" href="https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale" target="_blank">Anthropic 与 Nscale 签署 450 亿美元算力租赁协议，延续算力扩张步伐</a>
+        <div class="cs">Anthropic 与英国 AI 基础设施公司 Nscale 签署约 450 亿美元算力租赁协议，为期六年，算力来自 Nscale 位于西弗吉尼亚州的主数据中心，采用英伟达新一代 Vera Rubin 芯片系统，预计 2027 年底开始供 Anthropic 服务使用。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span><span class="rel-tag">关联讨论 2 条</span></div>
+        <a class="clink" href="https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="28" data-mark-url="https://x.com/cb_doge/status/2092969954996068696" data-mark-title="马斯克将出席G20创新部长会并发言" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://x.com/cb_doge/status/2092969954996068696" target="_blank">马斯克将出席G20创新部长会并发言</a>
+        <div class="cs">突发：据报道，埃隆·马斯克计划于9月1日在G20创新部长级会议上发表讲话。
+
+• 马斯克和大卫·萨克斯预计将在开幕日发言。
+
+• 黄仁勋也将参加。
+
+• 该活动将于9月1日至2日在北卡罗来纳州教堂山举行。
+
+• 讨论将聚焦于AI监管、创新和经济增长。
+
+• 美国官员将推动“卡罗来…</div>
+        <div class="ctags mark-anchor"><span class="ctag">安全/对齐</span><span class="ctag">政策/监管</span><span class="rel-tag">关联报道 1 条<span class="rel-pop">马斯克将出席G20创新部长会议</span></span></div>
+        <a class="clink" href="https://x.com/cb_doge/status/2092969954996068696" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="29" data-mark-url="https://openai.com/index/expanding-our-presence-in-brazil" data-mark-title="OpenAI 在巴西启动商业运营，深化长期布局" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://openai.com/index/expanding-our-presence-in-brazil" target="_blank">OpenAI 在巴西启动商业运营，深化长期布局</a>
+        <div class="cs">OpenAI 在巴西圣保罗设立本地团队并启动商业运营，以推动该国AI应用转化为经济增长。巴西是ChatGPT周活跃用户前三大市场之一，用户量一年内近翻倍，日均发送约2.15亿条消息。独立研究估计，到2030年AI可为巴西经济增加近1万亿雷亚尔；巴西OpenAI API开发者数量全…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://openai.com/index/expanding-our-presence-in-brazil" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="30" data-mark-url="https://www.ithome.com/0/995/125.htm" data-mark-title="比尔·盖茨罕见转向：警告 AI 或成“最严重不公来源”，称自己是第一个说“AI 太疯狂了”的人" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/125.htm" target="_blank">比尔·盖茨罕见转向：警告 AI 或成“最严重不公来源”，称自己是第一个说“AI 太疯狂了”的人</a>
+        <div class="cs">比尔·盖茨通过个人网站 Gates Notes 发文并密集接受采访，一改多年乐观态度，警告 AI 可能大量消灭就业岗位并冲击经济，称“AI 要么成为最强大的平等工具，要么成为最严重的不公来源”。他透露已写完一整本书讨论如何防止 AI 设计的病毒引发大流行，并指生物恐怖主义风险已达…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">安全/对齐</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/125.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="31" data-mark-url="https://www.ithome.com/0/994/847.htm" data-mark-title="星辰技术二期中试线9月通线，主攻3D先进封装，华为韬定律加速落地" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/847.htm" target="_blank">星辰技术二期中试线9月通线，主攻3D先进封装，华为韬定律加速落地</a>
+        <div class="cs">湖北星辰技术有限公司完成近50亿元A轮融资，刷新国内先进封装领域融资纪录，规划月产10万片。其二期中试线预计9月全线通线，一期二期合计投资超70亿元，月产能规划2万片，已建成国内规模最大高密度集成封装中试和小批量量产平台。通过先进封装，星辰技术将推理带宽比传统结构提升1到2个数量…</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/847.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="32" data-mark-url="https://x.com/SemiAnalysis_/status/2092780027611894235" data-mark-title="ABF载板2026产能满载，交期拉长至12-14个月" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://x.com/SemiAnalysis_/status/2092780027611894235" target="_blank">ABF载板2026产能满载，交期拉长至12-14个月</a>
+        <div class="cs">SemiAnalysis指出ABF载板供应链已无余量，2026年产能全部排满，六大供应商总交期长达12-14个月。更大芯片尺寸（9000-14000mm²）与更高层数（20-24L）推高单单位产线工时。交期超12个月促使客户寻求2029年后产能承诺，部分二线供应商已开始竞标出售产…</div>
+        <div class="ctags mark-anchor"><span class="ctag">现象/趋势</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/SemiAnalysis_/status/2092780027611894235" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="33" data-mark-url="https://x.com/rohanpaul_ai/status/2092668907396215244" data-mark-title="比尔·盖茨警告AI或致大规模失业" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2092668907396215244" target="_blank">比尔·盖茨警告AI或致大规模失业</a>
+        <div class="cs">比尔·盖茨在6000字长文中警告，AI转型将是人类历史上最动荡的时期之一，其最大经济担忧是永久性岗位消失而非暂时失业。他认为AI可直接替代销售、客服、软件工程等领域的初级和中级认知工作，且2030年前机器人可能开始竞争建筑和酒店岗位。他还提议对AI token和机器人征税，并设立…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">推理</span><span class="rel-tag">关联报道 1 条<span class="rel-pop">比尔·盖茨警告AI或引发大规模失业</span></span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2092668907396215244" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="34" data-mark-url="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations" data-mark-title="Google DeepMind 推出全球首个专有前沿 AI 模型双盲评测" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">54</span><div class="cc">
+        <a class="ct serif" href="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations" target="_blank">Google DeepMind 推出全球首个专有前沿 AI 模型双盲评测</a>
+        <div class="cs">Google DeepMind 推出全球首个针对专有前沿 AI 模型的双盲评测，将外部评测限制在加密“盒子”中，防止模型提前看到测试题。该试点与新加坡 AI 安全研究所、OpenMined、AVERI 和 MLCommons 合作，在隐私保护环境中测试 Gemini Flash …</div>
+        <div class="ctags mark-anchor"><span class="ctag">DeepMind</span><span class="ctag">Google</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="35" data-mark-url="https://www.ithome.com/0/994/784.htm" data-mark-title="Waymo：无人驾驶出租车严重事故率仅为人驾的 1/16，下一站慕尼黑" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">54</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/784.htm" target="_blank">Waymo：无人驾驶出租车严重事故率仅为人驾的 1/16，下一站慕尼黑</a>
+        <div class="cs">Waymo 公布数据称，其完全自动驾驶车队累计超 3.5 亿公里，造成重伤事故数量仅为人类驾驶员的 1/16，导致行人受伤事故数量为 1/14。慕尼黑将成为其继英国和日本之后第三个海外市场，初期车辆由人工驾驶进行道路测绘，计划明年底前后正式启动商业网约车服务。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/784.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="36" data-mark-url="https://www.ithome.com/0/995/291.htm" data-mark-title="已运营 21 年：亚马逊将于 9 月 30 日关闭众包平台 Mechanical Turk" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">53</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/291.htm" target="_blank">已运营 21 年：亚马逊将于 9 月 30 日关闭众包平台 Mechanical Turk</a>
+        <div class="cs">亚马逊宣布将于 9 月 30 日关闭旗下已运营 21 年的众包平台 Mechanical Turk（MTurk）。该平台自 2005 年上线，主要用于图片标注、内容审核、语音转录等人工任务，外界认为其正被 Scale AI、Mercor、Prolific 等数据标注新兴企业取代。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/291.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="37" data-mark-url="https://the-decoder.com/anthropic-locks-in-45-billion-dollar-compute-deal-with-nscale-ahead-of-ipo" data-mark-title="Anthropic 与 Nscale 达成 450 亿美元算力交易，为 IPO 做准备" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">53</span><div class="cc">
+        <a class="ct serif" href="https://the-decoder.com/anthropic-locks-in-45-billion-dollar-compute-deal-with-nscale-ahead-of-ipo" target="_blank">Anthropic 与 Nscale 达成 450 亿美元算力交易，为 IPO 做准备</a>
+        <div class="cs">Anthropic 与英国云初创公司 Nscale 达成约 450 亿美元算力租赁协议，为期六年，将从明年底起使用西弗吉尼亚数据中心 460 兆瓦的 Nvidia Vera Rubin 芯片。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">数据/训练</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 2 条</span></div>
+        <a class="clink" href="https://the-decoder.com/anthropic-locks-in-45-billion-dollar-compute-deal-with-nscale-ahead-of-ipo" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="38" data-mark-url="https://x.com/rohanpaul_ai/status/2092813129927278953" data-mark-title="软银拟6亿美元估值控股1X人形机器人" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">53</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2092813129927278953" target="_blank">软银拟6亿美元估值控股1X人形机器人</a>
+        <div class="cs">据报道，软银（SoftBank）正在洽谈以 60 亿美元估值获得 1X Technologies 的控制权，进一步深入人形机器人领域。
+
+对 1X 而言，这笔报道中的交易发生在此前一次估值高得多的艰难融资尝试之后。
+
+- The Information
+
+去年秋天，1X 曾寻求以…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2092813129927278953" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="39" data-mark-url="https://www.ithome.com/0/994/800.htm" data-mark-title="现代汽车CEO：经销商未来不只卖车，还要卖人形机器人和机器狗" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">53</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/800.htm" target="_blank">现代汽车CEO：经销商未来不只卖车，还要卖人形机器人和机器狗</a>
+        <div class="cs">现代汽车CEO穆尼奥斯在投资者日活动上表示，现有经销商网络未来可能成为机器人销售渠道，旗下现代资本也在探索为机器人提供融资服务。现代汽车2021年以11亿美元收购波士顿动力80%控股权，后者已推出Spot四足机器人和Stretch轮式搬运机器人，并部署于现代工厂。下一步将大规模生…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/800.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="40" data-mark-url="https://x.com/cb_doge/status/2092733447533949414" data-mark-title="Neuralink 新视频展示瘫痪患者用意念作画" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">53</span><div class="cc">
+        <a class="ct serif" href="https://x.com/cb_doge/status/2092733447533949414" target="_blank">Neuralink 新视频展示瘫痪患者用意念作画</a>
+        <div class="cs">突发：Neuralink 刚刚发布了一段新视频，视频中 Audrey Crews 自 16 岁遭遇车祸后颈部以下瘫痪——如今她用思维创作彩色数字艺术，在轮椅上手握笔记本电脑光标，时隔 20 多年重新拿起画笔。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/cb_doge/status/2092733447533949414" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="41" data-mark-url="https://x.com/rohanpaul_ai/status/2092683261051093004" data-mark-title="美国半数数据中心或面临延期取消" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">53</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2092683261051093004" target="_blank">美国半数数据中心或面临延期取消</a>
+        <div class="cs">彭博社报道，Kimmeridge 预计美国计划中的数据中心最多 50% 可能面临延期或取消，电力连接、许可、施工及地方审批成为芯片和资本之外的最大瓶颈。政治阻力加剧，61% 美国人反对在附近新建数据中心（年初为 49%）。得州已暂停新数据中心电网连接审批以待审计，宾州则将 AI …</div>
+        <div class="ctags mark-anchor"><span class="ctag">政策/监管</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2092683261051093004" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="42" data-mark-url="https://x.com/thexpin/status/2092904955237609795" data-mark-title="MiniMax 年化收入破 8 亿美元，M3.1 定档 2026" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">52</span><div class="cc">
+        <a class="ct serif" href="https://x.com/thexpin/status/2092904955237609795" target="_blank">MiniMax 年化收入破 8 亿美元，M3.1 定档 2026</a>
+        <div class="cs">MiniMax 8 月年化收入（ARR）突破 8 亿美元，企业客户贡献超 80%。开放平台企业服务同比增长 703%；7 月 token 使用量达 1 月的 20 倍。M3 和 H3 正在适配中国芯片。大型国内集群即将承载生产流量；训练有效吞吐率（ETTR）已达 97%。M3.1…</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/thexpin/status/2092904955237609795" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="43" data-mark-url="https://www.ithome.com/0/994/795.htm" data-mark-title="英伟达黄仁勋：AI 已迈过商业化拐点，全球产业进入 AI 变现时代" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">52</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/795.htm" target="_blank">英伟达黄仁勋：AI 已迈过商业化拐点，全球产业进入 AI 变现时代</a>
+        <div class="cs">英伟达CEO黄仁勋在最新财报电话会议上表示，AI已正式迈过历史性“拐点”，正从小规模实验室技术全面转化为具备高生产力与商业获利能力的实质工具，全球产业进入AI变现时代。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">数据/训练</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/795.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="44" data-mark-url="https://x.com/rohanpaul_ai/status/2092680920289648692" data-mark-title="MiniMax 上半年营收增 283%，毛利率仍落后同行" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">52</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2092680920289648692" target="_blank">MiniMax 上半年营收增 283%，毛利率仍落后同行</a>
+        <div class="cs">MiniMax 上半年营收同比增长 283% 至 1.166 亿美元，毛利率从 12.1% 提升至 17.9%，但调整后净亏损扩大逾一倍至 2.93 亿美元，研发支出达 2.969 亿美元。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">DeepSeek</span><span class="ctag">OpenAI</span><span class="ctag">行业动态</span><span class="rel-tag">关联讨论 1 条</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2092680920289648692" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="45" data-mark-url="https://x.com/GoogleDeepMind/status/2092961763553677387" data-mark-title="DeepMind 首创前沿AI双盲评测" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">51</span><div class="cc">
+        <a class="ct serif" href="https://x.com/GoogleDeepMind/status/2092961763553677387" target="_blank">DeepMind 首创前沿AI双盲评测</a>
+        <div class="cs">作为行业首创，我们正在试点前沿AI的双盲评测。
+
+通过创建一个安全环境，既不公开测试提示词，也不公开模型权重，我们可以确保对我们模型的外部安全与性能评测保持私密、稳健且可信。→ https://goo.gle/3St2xan…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Google</span><span class="ctag">安全/对齐</span></div>
+        <a class="clink" href="https://x.com/GoogleDeepMind/status/2092961763553677387" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="46" data-mark-url="https://x.com/dongxi_nlp/status/2092747029940470018" data-mark-title="DGX Spark 机器学习环境配置指南" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">51</span><div class="cc">
+        <a class="ct serif" href="https://x.com/dongxi_nlp/status/2092747029940470018" target="_blank">DGX Spark 机器学习环境配置指南</a>
+        <div class="cs">我整理了一套最新且经过验证的 DGX Spark 配置方案，适用于后训练等机器学习实验：
+
+- aarch64 架构上配备原生 PyTorch 2.13 的 CUDA 13
+- 经 GB10 测试的训练内核
+- 隔离的 vLLM 环境
+- 以 PyTorch SDPA 作为可靠的…</div>
+        <div class="ctags mark-anchor"><span class="ctag">开源/仓库</span><span class="ctag">数据/训练</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/dongxi_nlp/status/2092747029940470018" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="47" data-mark-url="https://www.ithome.com/0/995/301.htm" data-mark-title="曝马斯克、黄仁勋、奥尔特曼将共同出席下周 G20 科技部长级会议" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/301.htm" target="_blank">曝马斯克、黄仁勋、奥尔特曼将共同出席下周 G20 科技部长级会议</a>
+        <div class="cs">美国将于 2026 年 9 月 1 日至 2 日在北卡罗来纳州举行 G20 创新部长级会议，SpaceX CEO 马斯克、前白宫 AI 事务负责人萨克斯计划首日线上发言，英伟达 CEO 黄仁勋和 OpenAI CEO 奥尔特曼将于次日出席。美方计划在会上推动名为“卡罗莱纳原则”的…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Meta</span><span class="ctag">OpenAI</span><span class="ctag">政策/监管</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/301.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="48" data-mark-url="https://x.com/rohanpaul_ai/status/2092822044203467116" data-mark-title="AWS 新增 200 万颗 NVIDIA GPU，覆盖至 2028 年" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2092822044203467116" target="_blank">AWS 新增 200 万颗 NVIDIA GPU，覆盖至 2028 年</a>
+        <div class="cs">AWS 将 NVIDIA GPU 路线图扩大 200 万颗，涵盖 Blackwell Ultra、Rubin 和 Rubin Ultra，计划于 2027-2028 年部署，叠加此前 2026 年启动的 100 万颗以上订单。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2092822044203467116" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="49" data-mark-url="https://www.ithome.com/0/994/859.htm" data-mark-title="OpenAI 前研究员巴雷特·佐夫重返谷歌，助力 Gemini 研发" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/859.htm" target="_blank">OpenAI 前研究员巴雷特·佐夫重返谷歌，助力 Gemini 研发</a>
+        <div class="cs">谷歌宣布，OpenAI 前研究员、Thinking Machines Lab 联合创始人巴雷特·佐夫将加入公司出任研究副总裁，将其在强化学习（RL）和后训练方面的经验带到 Gemini 团队。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Google</span><span class="ctag">OpenAI</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/859.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="50" data-mark-url="https://www.ithome.com/0/994/799.htm" data-mark-title="比尔·盖茨发长文谈AI：建议征收机器人税、设置人类专属岗位" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/799.htm" target="_blank">比尔·盖茨发长文谈AI：建议征收机器人税、设置人类专属岗位</a>
+        <div class="cs">比尔·盖茨在其个人网站 Gates Notes 发表长文，呼吁对使用机器人替代人工的企业征税，以减缓自动化速度并资助劳动者再培训。他还提出“人类保留领域”概念，主张将部分工作明确划为只能或主要由人类承担，并举例称医疗领域不应由机器人告知患者绝症消息。盖茨认为这些设想仍面临规则制定…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">政策/监管</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/799.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="51" data-mark-url="https://www.ithome.com/0/994/781.htm" data-mark-title="英特尔 18A-P 工艺详解：0.5V 低电压频率跃升 30%，Diamond Rapids 与 Nova Lake 率先搭载" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/781.htm" target="_blank">英特尔 18A-P 工艺详解：0.5V 低电压频率跃升 30%，Diamond Rapids 与 Nova Lake 率先搭载</a>
+        <div class="cs">英特尔在 Hot Chips 2026 上公布 18A-P 制程细节，基于量产芯片测试，该制程在 0.5V 工作电压下实现 30% 频率提升，相同功耗下性能提升超 9%，相同性能下功耗降低超 18%。18A-P 通过 RibbonFET 晶体管、背面供电及新增金属层等手段优化，将…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/781.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="52" data-mark-url="https://www.ithome.com/0/994/942.htm" data-mark-title="被盗 iPhone 黑产 AnonyMousKIT 披露：AI 语音钓鱼套取苹果手机密码" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">49</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/942.htm" target="_blank">被盗 iPhone 黑产 AnonyMousKIT 披露：AI 语音钓鱼套取苹果手机密码</a>
+        <div class="cs">网络安全公司 SOCRadar 披露名为 AnonyMousKIT 的网络钓鱼即服务平台，通过邮件、短信、WhatsApp、预录语音与 AI 语音 5 个渠道骗取设备密码、Apple ID 与 2FA 验证码，服务于被盗苹果设备的解锁与转售链条。该平台关联 506 个域名及 16…</div>
+        <div class="ctags mark-anchor"><span class="ctag">安全/对齐</span><span class="ctag">语音</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/942.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="53" data-mark-url="https://www.ithome.com/0/995/255.htm" data-mark-title="英国实施全球首例 AI 实时辅助脑外科手术，成功切除脑部肿瘤" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">48</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/255.htm" target="_blank">英国实施全球首例 AI 实时辅助脑外科手术，成功切除脑部肿瘤</a>
+        <div class="cs">英国贝德福德郡48岁的里斯·希伯特成为全球首位在AI实时辅助下接受脑部手术的患者，伦敦大学学院医院医生成功切除其11mm垂体良性肿瘤。手术中AI实时分析内镜画面并追踪器械位置，标出血管和神经分布及相对安全的切除位置，帮助医生避开关键结构。该AI由伦敦大学学院研究人员开发，获英国国…</div>
+        <div class="ctags mark-anchor"><span class="ctag">多模态</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/255.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="54" data-mark-url="https://www.ithome.com/0/995/197.htm" data-mark-title="英伟达 DLSS-NR DLL 首度现身《NBA 2K27》游戏文件，158MB 体积预示 DLSS 5 重大升级" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">48</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/197.htm" target="_blank">英伟达 DLSS-NR DLL 首度现身《NBA 2K27》游戏文件，158MB 体积预示 DLSS 5 重大升级</a>
+        <div class="cs">《NBA 2K27》抢先体验版文件中出现此前从未公开的 NVIDIA 动态链接库 nvngx_dlssnr.dll，版本号 310.8.0.0，文件大小达 158 MB，约为当前较大体积 DLSS 4 文件的三倍。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">端侧</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/197.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="55" data-mark-url="https://www.ithome.com/0/994/904.htm" data-mark-title="黄仁勋回应 OpenAI 首款自研 AI 芯片挑战：英伟达提供“截然不同”服务" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">48</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/904.htm" target="_blank">黄仁勋回应 OpenAI 首款自研 AI 芯片挑战：英伟达提供“截然不同”服务</a>
+        <div class="cs">黄仁勋在财报电话会议上回应 OpenAI 自研推理芯片 Jalapeño，称英伟达提供的是覆盖 AI 生命周期的完整 AI 工厂平台，可在任何云环境使用，与针对单一模型的定制化 ASIC 芯片有本质区别。他 100% 确信英伟达技术对 OpenAI 仍将卓越。此前测试显示，Jal…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">推理</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/904.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="56" data-mark-url="https://www.ithome.com/0/994/841.htm" data-mark-title="国家统计局：1-7 月以算力芯片、存储芯片为代表的集成电路行业利润同比增长 18.5 倍" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">47</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/841.htm" target="_blank">国家统计局：1-7 月以算力芯片、存储芯片为代表的集成电路行业利润同比增长 18.5 倍</a>
+        <div class="cs">国家统计局数据显示，1-7 月全国规模以上工业企业利润总额 45,820.6 亿元，同比增长 17.6%。其中，以算力芯片、存储芯片为代表的集成电路行业利润同比增长 18.5 倍，对全部电子行业利润增长贡献率超八成；电子行业利润整体增长 1.1 倍，拉动全部规上工业企业利润增长 …</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/841.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="57" data-mark-url="https://www.ithome.com/0/994/796.htm" data-mark-title="Anthropic 豪掷 450 亿美元向 Nscale 租赁 AI 算力，2027 年底启用英伟达 Vera Rubin 芯片算力" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">47</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/796.htm" target="_blank">Anthropic 豪掷 450 亿美元向 Nscale 租赁 AI 算力，2027 年底启用英伟达 Vera Rubin 芯片算力</a>
+        <div class="cs">Anthropic 与英国 AI 基础设施公司 Nscale 达成协议，租用价值约 450 亿美元（约合 3,031.66 亿元人民币）的 AI 算力，由英伟达 Vera Rubin 芯片系统提供，预计 2027 年底开始支持其 AI 服务，合作期限长达 6 年。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/796.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="58" data-mark-url="https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts" data-mark-title="OpenAI 将 ChatGPT for Teachers 扩展至美国 55 个新学区，覆盖超 10 万名教育工作者" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">47</span><div class="cc">
+        <a class="ct serif" href="https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts" target="_blank">OpenAI 将 ChatGPT for Teachers 扩展至美国 55 个新学区，覆盖超 10 万名教育工作者</a>
+        <div class="cs">OpenAI 宣布将 ChatGPT for Teachers 扩展至 20 个州的 55 个新学区，新增覆盖超 10 万名教育工作者。至此，OpenAI 已与 30 个州的 100 多个 K–12 组织合作，为超 30 万名教育工作者提供免费访问和培训。同时，OpenAI 推出…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="59" data-mark-url="https://x.com/foxshuo/status/2092851540243763562" data-mark-title="DeepSeek前7月收入超7000万美元，亏损收窄" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">46</span><div class="cc">
+        <a class="ct serif" href="https://x.com/foxshuo/status/2092851540243763562" target="_blank">DeepSeek前7月收入超7000万美元，亏损收窄</a>
+        <div class="cs">The Information 数据显示，DeepSeek 今年前7个月收入超7000万美元，为2025年全年收入的10倍，同期亏损1.06亿美元，较2025年的1.39亿美元收窄。整体毛利率约44%，高于OpenAI的39%、低于Anthropic的63%；若仅按API销售口径…</div>
+        <div class="ctags mark-anchor"><span class="ctag">DeepSeek</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/foxshuo/status/2092851540243763562" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="60" data-mark-url="https://www.ithome.com/0/994/908.htm" data-mark-title="消息称英伟达调整 HBM4 内存需求，提升 8Hi 低堆叠占比" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">46</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/908.htm" target="_blank">消息称英伟达调整 HBM4 内存需求，提升 8Hi 低堆叠占比</a>
+        <div class="cs">韩媒援引消息人士称，英伟达已要求上游供应商调整 HBM4 供应规划，提升 8 层堆叠（8Hi）产品占比，相应减少 12Hi 比例。降低堆叠高度能以等量 DRAM Die 生产更多堆栈，最终提升 Rubin GPU 交付数量，同时缓解 12Hi 带来的发热和良率压力。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/908.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="61" data-mark-url="https://x.com/rohanpaul_ai/status/2092735920407711911" data-mark-title="Anthropic 营收曲线创历史，7 个月增 7 倍" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">46</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2092735920407711911" target="_blank">Anthropic 营收曲线创历史，7 个月增 7 倍</a>
+        <div class="cs">Fortune 报道 Anthropic 的 30 万亿美元潜在市场规模（TAM），超过中国 GDP、接近美国 GDP，约占全球 GDP 四分之一。但更关键的是其实际营收曲线已创历史：年化收入从 2025 年底的 90 亿美元增至 7 月底的 650 亿美元以上，7 个月增长超 …</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2092735920407711911" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="62" data-mark-url="https://x.com/Thom_Wolf/status/2092699442163908735" data-mark-title="Thomas Wolf 警示 AI 权力极端集中风险" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">45</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Thom_Wolf/status/2092699442163908735" target="_blank">Thomas Wolf 警示 AI 权力极端集中风险</a>
+        <div class="cs">Hugging Face 联创 Thomas Wolf 罕见公开质疑 AI 行业对权力极端集中的普遍漠视，指出最新模型（如 Model 2/Astra）日益封闭、寡头垄断下价格有上涨动力。他引用 Dwarkesh 观点：OpenAI 和 Anthropic 已消耗全球新增算力三分…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">OpenAI</span><span class="ctag">大佬观点</span><span class="ctag">开源生态</span></div>
+        <a class="clink" href="https://x.com/Thom_Wolf/status/2092699442163908735" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="63" data-mark-url="https://x.com/cb_doge/status/2092992531231572003" data-mark-title="马斯克入选时代2026 AI百人榜" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">44</span><div class="cc">
+        <a class="ct serif" href="https://x.com/cb_doge/status/2092992531231572003" target="_blank">马斯克入选时代2026 AI百人榜</a>
+        <div class="cs">突发：埃隆·马斯克入选《时代》2026年全球百大最具影响力AI人物榜单。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/cb_doge/status/2092992531231572003" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="64" data-mark-url="https://arstechnica.com/ai/2026/08/how-much-of-a-problem-is-ais-water-use" data-mark-title="AI 的水资源消耗到底有多严重？" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">44</span><div class="cc">
+        <a class="ct serif" href="https://arstechnica.com/ai/2026/08/how-much-of-a-problem-is-ais-water-use" target="_blank">AI 的水资源消耗到底有多严重？</a>
+        <div class="cs">从得克萨斯到新墨西哥再到亚利桑那，美国多地民众正因数据中心的水耗、能耗与污染问题抗议 AI 基础设施的快速扩张。数据中心处理器内部温度可达 176 华氏度，许多设施依赖蒸发散热。但水耗情况远比能耗复杂，网上说法从每次查询耗水 500 毫升到“问题不存在”不一而足，科技公司自身数据…</div>
+        <div class="ctags mark-anchor"><span class="ctag">现象/趋势</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://arstechnica.com/ai/2026/08/how-much-of-a-problem-is-ais-water-use" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="65" data-mark-url="https://x.com/rohanpaul_ai/status/2092772653891461524" data-mark-title="谷歌AI责任部门迁出DeepMind引关注" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">44</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2092772653891461524" target="_blank">谷歌AI责任部门迁出DeepMind引关注</a>
+        <div class="cs">WSJ报道，谷歌正将其90人的AI责任部门从DeepMind迁至谷歌全球事务部。
+
+谷歌表示，将该部门移至公司范围内的责任工作附近，应能加强安全研究对模型和产品的指导作用。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">DeepMind</span><span class="ctag">Google</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2092772653891461524" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="66" data-mark-url="https://www.ithome.com/0/995/132.htm" data-mark-title="NASA 局长艾萨克曼力挺太空数据中心：缓解 AI 能源短缺，将带来巨大好处" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">43</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/132.htm" target="_blank">NASA 局长艾萨克曼力挺太空数据中心：缓解 AI 能源短缺，将带来巨大好处</a>
+        <div class="cs">NASA 局长贾里德·艾萨克曼提出将数据中心送入地球轨道，利用太阳能供电，以缓解美国境内数据中心扩张引发的争议，并称此举将“带来巨大好处”，确保美国赢得 AI 竞赛。他此前已多次提出该方案，并设想太空数据中心需配备面积达数万平方米的太阳能电池板。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">政策/监管</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/132.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="67" data-mark-url="https://x.com/ericmitchellai/status/2092843114117681461" data-mark-title="OpenAI 推理成本降超 50%，新模型 Astra 与 Bel 在途" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">43</span><div class="cc">
+        <a class="ct serif" href="https://x.com/ericmitchellai/status/2092843114117681461" target="_blank">OpenAI 推理成本降超 50%，新模型 Astra 与 Bel 在途</a>
+        <div class="cs">OpenAI 内部优化可将现有模型推理成本降低超 50%，且无需换用更弱模型，相关技术将在未来数月内落地。新模型家族 Astra 与超 10T 参数预训练模型 Bel 同步推进，用户同等成本可完成两到三倍任务。相比之下，Anthropic 的“Model 2”因“过于强大危险”且…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">推理</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/ericmitchellai/status/2092843114117681461" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="68" data-mark-url="https://x.com/rohanpaul_ai/status/2092994532178813172" data-mark-title="TIME 2026 AI百人榜遗漏多位行业领袖" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">42</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2092994532178813172" target="_blank">TIME 2026 AI百人榜遗漏多位行业领袖</a>
+        <div class="cs">奇怪的是，AI 行业一些最具影响力的人物并未入选《时代》杂志新发布的 2026 年“AI 领域最具影响力的 100 人”。🤔😒
+
+（黄仁勋、桑达尔·皮查伊、马克·扎克伯格、苏姿丰、萨蒂亚·纳德拉、戴密斯·哈萨比斯和亚历克斯·卡普均不在列）…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Google</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2092994532178813172" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="69" data-mark-url="https://elsewhere.news/zh/5ycapital/smart-companies-are-getting-dumber" data-mark-title="聪明的企业在“降智”" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">42</span><div class="cc">
+        <a class="ct serif" href="https://elsewhere.news/zh/5ycapital/smart-companies-are-getting-dumber" target="_blank">聪明的企业在“降智”</a>
+        <div class="cs">前沿模型已足够聪明，但多数企业任务难度有限。企业应用 AI 的进步，最终应体现为用越来越少的智能完成同样的事情。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">现象/趋势</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://elsewhere.news/zh/5ycapital/smart-companies-are-getting-dumber" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="70" data-mark-url="https://www.ithome.com/0/994/961.htm" data-mark-title="阿里云下调百炼平台 Qwen3.8-Flash 大模型计费单价" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">42</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/994/961.htm" target="_blank">阿里云下调百炼平台 Qwen3.8-Flash 大模型计费单价</a>
+        <div class="cs">阿里云宣布自 2026 年 8 月 27 日 12:00:00 起，下调百炼平台 Qwen3.8-Flash 模型计费单价，输入从 ￥1.00 降至 ￥0.80，输出从 ￥3.00 降至 ￥2.70。该模型为千问最新多模态大模型，原生支持百万级上下文窗口，兼容 OpenAI 与 …</div>
+        <div class="ctags mark-anchor"><span class="ctag">多模态</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/994/961.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="71" data-mark-url="https://x.com/AntLingAGI/status/2092638683790979358" data-mark-title="蚂蚁百灵Ling-3.0-tiny登移动端智能前沿" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">42</span><div class="cc">
+        <a class="ct serif" href="https://x.com/AntLingAGI/status/2092638683790979358" target="_blank">蚂蚁百灵Ling-3.0-tiny登移动端智能前沿</a>
+        <div class="cs">据Artificial Analysis，Ling-3.0-tiny位于移动端智能-速度帕累托前沿：在iPhone 17 Pro上16K上下文得分59，耗时5.7秒。同时以66分在64K智能评测中排名第一。将更强智能带入更小设备。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">端侧</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://x.com/AntLingAGI/status/2092638683790979358" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="72" data-mark-url="https://the-decoder.com/openai-researcher-warns-ultrafast-ai-could-leave-security-teams-in-the-dust" data-mark-title="OpenAI 研究员警告：超快 AI 推理速度或让安全团队措手不及" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">41</span><div class="cc">
+        <a class="ct serif" href="https://the-decoder.com/openai-researcher-warns-ultrafast-ai-could-leave-security-teams-in-the-dust" target="_blank">OpenAI 研究员警告：超快 AI 推理速度或让安全团队措手不及</a>
+        <div class="cs">一位化名“roon”的OpenAI研究员警告，超快AI推理带来现有防护无法应对的安全风险。一个未对齐的模型若以当前最佳系统50倍的速度运行，可能迅速渗透系统，人类响应团队将难以招架。roon认为仅靠监控不够，需要自主检测与关停机制；该评论针对OpenAI新AI芯片发布，其推理速度…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">安全/对齐</span><span class="ctag">推理</span></div>
+        <a class="clink" href="https://the-decoder.com/openai-researcher-warns-ultrafast-ai-could-leave-security-teams-in-the-dust" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="73" data-mark-url="https://x.com/SemiAnalysis_/status/2092960615048360180" data-mark-title="AMD 中层经理浪费 20+ 工程师时间搞 ATOM 推理引擎" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">41</span><div class="cc">
+        <a class="ct serif" href="https://x.com/SemiAnalysis_/status/2092960615048360180" target="_blank">AMD 中层经理浪费 20+ 工程师时间搞 ATOM 推理引擎</a>
+        <div class="cs">SemiAnalysis 爆料，AMD 中层经理为扩张地盘与晋升，将 20 多名全职工程师（含首席工程师和 AMD Fellow）从 vLLM/SGLang 等客户实际使用的推理引擎项目调往几乎无客户的“ATOM Inference Engine”副业。工程师私下反映，内部因办公…</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/SemiAnalysis_/status/2092960615048360180" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="74" data-mark-url="https://x.com/ZHO_ZHO_ZHO/status/2092825102312419603" data-mark-title="GPT记忆智能隔离缺失致艺术讨论失真" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">41</span><div class="cc">
+        <a class="ct serif" href="https://x.com/ZHO_ZHO_ZHO/status/2092825102312419603" target="_blank">GPT记忆智能隔离缺失致艺术讨论失真</a>
+        <div class="cs">ZHO指出GPT记忆的“智能隔离”缺失是个重要问题：记忆作用让模型越来越像圆滑的评论家，总为前后对话中本不相关的内容强行构建意义，形成假装自圆其说的逻辑。这使艺术等主观占比高的领域变得无法讨论，用户需承受更高代价去判断其是否额外增加了意义关联。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">大佬观点</span></div>
+        <a class="clink" href="https://x.com/ZHO_ZHO_ZHO/status/2092825102312419603" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="75" data-mark-url="https://www.mturk.com/" data-mark-title="Amazon Mechanical Turk 将于 9 月 30 日停止运营" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">41</span><div class="cc">
+        <a class="ct serif" href="https://www.mturk.com/" target="_blank">Amazon Mechanical Turk 将于 9 月 30 日停止运营</a>
+        <div class="cs">Amazon Mechanical Turk（MTurk）宣布将于 9 月 30 日停止运营。该众包平台曾为企业提供全球按需 24x7 劳动力，用于数据验证、内容审核、调查参与等微任务，并支持机器学习数据标注与人工反馈循环（HITL）等场景。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.mturk.com/" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="76" data-mark-url="https://www.ithome.com/0/995/300.htm" data-mark-title="英特尔：14A 缺陷密度曲线是 22nm 以来最佳表现，2027 下半年风险试产" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">40</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/300.htm" target="_blank">英特尔：14A 缺陷密度曲线是 22nm 以来最佳表现，2027 下半年风险试产</a>
+        <div class="cs">英特尔 CFO 表示，Intel 14A 制程拥有自 22nm 节点以来最佳的缺陷密度曲线，已提前至 2027 年下半年风险试产、2028 年全面量产。该工艺采用第二代 RibbonFET、PowerDirect 背部供电及 High-NA EUV 光刻设备，0.9 版本 PDK…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Google</span><span class="ctag">Meta</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/300.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="77" data-mark-url="https://x.com/omarsar0/status/2092718504516428008" data-mark-title="SF Compute CEO：每家公司都将成为前沿实验室" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">40</span><div class="cc">
+        <a class="ct serif" href="https://x.com/omarsar0/status/2092718504516428008" target="_blank">SF Compute CEO：每家公司都将成为前沿实验室</a>
+        <div class="cs">SF Compute CEO Evan Conrad 提出反主流观点：OpenAI 和 Anthropic 不会吞并世界，反而每家有规模的公司都会变成前沿实验室。他认为算力瓶颈本质是信贷问题，而 OpenAI 和 Anthropic 的信贷优势并不独特；一旦自动研究解决人才瓶颈，…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">OpenAI</span><span class="ctag">大佬观点</span></div>
+        <a class="clink" href="https://x.com/omarsar0/status/2092718504516428008" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="78" data-mark-url="https://www.ithome.com/0/995/237.htm" data-mark-title="摩尔线程Day-0支持智谱GLM-5.3-Flash极速适配" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">39</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/237.htm" target="_blank">摩尔线程Day-0支持智谱GLM-5.3-Flash极速适配</a>
+        <div class="cs">摩尔线程宣布基于MTT S5000智算卡及MUSA软件栈，Day-0支持智谱开源模型GLM-5.3-Flash (320B-A18B)。该模型为GLM-5系列首个原生多模态模型，在AA综合智能指数中取得57分，与Claude Opus 4.8持平。摩尔线程针对其KDA机制完成算子…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/237.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="79" data-mark-url="https://x.com/cb_doge/status/2092738365263368641" data-mark-title="Neuralink 助瘫痪女子用意念作画" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">39</span><div class="cc">
+        <a class="ct serif" href="https://x.com/cb_doge/status/2092738365263368641" target="_blank">Neuralink 助瘫痪女子用意念作画</a>
+        <div class="cs">Neuralink 让 Audrey Crews 能够用她的意念创作艺术。16 岁时因车祸颈部以下瘫痪，时隔 20 年，她再次拿起画笔。
+
+太不可思议了。🧠…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">行业动态</span><span class="rel-tag">关联报道 1 条<span class="rel-pop">瘫痪女子用意念作画 Neuralin</span></span></div>
+        <a class="clink" href="https://x.com/cb_doge/status/2092738365263368641" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="80" data-mark-url="https://www.ithome.com/0/995/166.htm" data-mark-title="OpenAI CEO 奥尔特曼承认民众讨厌数据中心：大家态度都很消极" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">36</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/166.htm" target="_blank">OpenAI CEO 奥尔特曼承认民众讨厌数据中心：大家态度都很消极</a>
+        <div class="cs">OpenAI CEO 萨姆·奥尔特曼在《时代》杂志采访中坦言，目前大家都讨厌数据中心，人们对 AI 的态度相当消极。他上月表示能理解人们不愿让数据中心建在家门口，今年 3 月更直言 AI 在美国并不受欢迎。OpenAI 已开始回应耗水耗电等争议，并向俄亥俄州、佐治亚州和密歇根州符…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">现象/趋势</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/166.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="81" data-mark-url="https://x.com/rohanpaul_ai/status/2092853868346409068" data-mark-title="人形机器人桑巴舞惊艳北京世运会" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">36</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2092853868346409068" target="_blank">人形机器人桑巴舞惊艳北京世运会</a>
+        <div class="cs">这里的腰部比手臂更用力
+
+双腿持续迈步的同时还能保持髋部独立动作，相当厉害。
+
+北京世界人形机器人运动会上，机器人跳起了桑巴舞。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2092853868346409068" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="82" data-mark-url="https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make" data-mark-title="动荡的人工智能时代已经来临" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">36</span><div class="cc">
+        <a class="ct serif" href="https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make" target="_blank">动荡的人工智能时代已经来临</a>
+        <div class="cs">比尔·盖茨在 Gates Notes 发文，指出人工智能正进入一个动荡时期，技术迭代与行业格局变化加速。文章强调这一阶段将伴随不确定性，但长期影响深远，需关注 AI 发展带来的机遇与挑战。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="83" data-mark-url="https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA%3D%3D\u0026mid=2651783211\u0026idx=3\u0026sn=61a0e88c38f88d9b529882611b696d3f" data-mark-title="2026 美团低空经济与具身智能挑战赛报名倒计时，总奖金 55 万元" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">35</span><div class="cc">
+        <a class="ct serif" href="https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA%3D%3D\u0026mid=2651783211\u0026idx=3\u0026sn=61a0e88c38f88d9b529882611b696d3f" target="_blank">2026 美团低空经济与具身智能挑战赛报名倒计时，总奖金 55 万元</a>
+        <div class="cs">2026 年第四届美团低空经济与具身智能挑战赛启动报名，面向全球高校在校学生，总奖金池达 55 万元。赛事以无人机换电任务为原型，考察机器人在视觉识别、运动规划、精准操作等方面的综合能力，分初赛与线下硬件决赛，报名时间为 7 月 22 日至 9 月 1 日。表现优异者可获美团无人…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA%3D%3D\u0026mid=2651783211\u0026idx=3\u0026sn=61a0e88c38f88d9b529882611b696d3f" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="84" data-mark-url="https://x.com/deedydas/status/2092821874476814518" data-mark-title="乔布斯1983年预言AI对话，40年后成真" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">35</span><div class="cc">
+        <a class="ct serif" href="https://x.com/deedydas/status/2092821874476814518" target="_blank">乔布斯1983年预言AI对话，40年后成真</a>
+        <div class="cs">乔布斯在1983年Aspen演讲中预言，未来机器能捕捉人的精神本质，让后人可向逝者提问，如“亚里士多德会怎么说”。他当时28岁，比ChatGPT问世早40年。推文感叹其长期思考的清晰度，并质疑若乔布斯看到今日Siri和苹果在AI领域的处境会作何感想。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">推理</span></div>
+        <a class="clink" href="https://x.com/deedydas/status/2092821874476814518" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="85" data-mark-url="https://x.com/emollick/status/2092826292345331773" data-mark-title="福特3年普及流水线，效率提升88%" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">34</span><div class="cc">
+        <a class="ct serif" href="https://x.com/emollick/status/2092826292345331773" target="_blank">福特3年普及流水线，效率提升88%</a>
+        <div class="cs">我经常听到关于电力花了30年才带来生产力提升的故事，人们常拿它来类比AI（我自己也讲过这个故事）。
+
+但并非每项技术都是如此。福特从发明流水线到全面部署只用了3年，将汽车制造时间缩短了88%。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/emollick/status/2092826292345331773" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="86" data-mark-url="https://x.com/testingcatalog/status/2092648335052075394" data-mark-title="Glean 分析 37 模型企业任务性价比" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">34</span><div class="cc">
+        <a class="ct serif" href="https://x.com/testingcatalog/status/2092648335052075394" target="_blank">Glean 分析 37 模型企业任务性价比</a>
+        <div class="cs">Glean 发布了一项帕累托前沿分析，涵盖 37 个模型及推理配置在 1,000 项企业任务中的表现。
+
+分析发现，最便宜与最昂贵前沿模型之间的差距为 36 倍，而质量分数仅提升 22%。
+
+完整分析 👀…</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">评测/基准</span></div>
+        <a class="clink" href="https://x.com/testingcatalog/status/2092648335052075394" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="87" data-mark-url="https://www.ithome.com/0/995/129.htm" data-mark-title="央视曝光 AI 相亲骗局：虚假婚介专骗中老年女性，成都警方抓获 28 人" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">33</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/129.htm" target="_blank">央视曝光 AI 相亲骗局：虚假婚介专骗中老年女性，成都警方抓获 28 人</a>
+        <div class="cs">央视新闻曝光针对中老年女性的 AI 相亲骗局，不法分子用 AI 生成相亲对象形象实施诈骗。四川成都警方打掉该团伙，抓获王某等 28 名犯罪嫌疑人，涉案金额超 100 万元，约 50 余名群众受害。央视呼吁平台加强 AI 内容检测与风险分级处置。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">安全/对齐</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/129.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="88" data-mark-url="https://www.ithome.com/0/995/130.htm" data-mark-title="何小鹏：期望2027年在欧洲获监管许可并交付第二代VLA" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">33</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/130.htm" target="_blank">何小鹏：期望2027年在欧洲获监管许可并交付第二代VLA</a>
+        <div class="cs">小鹏集团董事长何小鹏表示，期望2027年率先在欧洲获得监管许可，并开始向海外用户交付第二代VLA。第二代VLA在常规道路场景下已与全球一流产品并驾齐驱，在复杂场景下体验更优，支持从导航直达停车位；德国本地化验证显示，几乎不增加本地化训练数据即可接近中国体验。该模型已实现同一套模型…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">端侧</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/130.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="89" data-mark-url="https://x.com/emollick/status/2092731069342593434" data-mark-title="开放权重模型前需加强网络安全" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">31</span><div class="cc">
+        <a class="ct serif" href="https://x.com/emollick/status/2092731069342593434" target="_blank">开放权重模型前需加强网络安全</a>
+        <div class="cs">你的组织在开放权重 Mythos 级模型/工具包可用之前，没有投入足够精力加强网络安全。HuggingFace 事件表明，即使没有故意的恶意行为者，也可能面临 AI 黑客攻击的风险。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Hugging Face</span><span class="ctag">大佬观点</span><span class="ctag">开源生态</span></div>
+        <a class="clink" href="https://x.com/emollick/status/2092731069342593434" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="90" data-mark-url="https://x.com/EpochAIResearch/status/2092692024772510137" data-mark-title="Nvidia LPX 系统：小型模型高速解码新方案" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">31</span><div class="cc">
+        <a class="ct serif" href="https://x.com/EpochAIResearch/status/2092692024772510137" target="_blank">Nvidia LPX 系统：小型模型高速解码新方案</a>
+        <div class="cs">根据 @ArtificialAnlys 对 Gemma 4 31B 的基准测试，Nvidia 的 Groq 3 LPX 系统在小型模型快速解码方面表现出色（\u003e3,400 tok/s）。LPX 通过使用少量（128 GB）超高速 SRAM 替代 HBM 来实现这一性能。
+…</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">评测/基准</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/EpochAIResearch/status/2092692024772510137" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="91" data-mark-url="https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA%3D%3D\u0026mid=2651783211\u0026idx=2\u0026sn=68dc28cbb4d361a2d3fffc92ff03dcf3" data-mark-title="美团无人机2027届北斗计划校招启动：构建物理AI世界" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">29</span><div class="cc">
+        <a class="ct serif" href="https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA%3D%3D\u0026mid=2651783211\u0026idx=2\u0026sn=68dc28cbb4d361a2d3fffc92ff03dcf3" target="_blank">美团无人机2027届北斗计划校招启动：构建物理AI世界</a>
+        <div class="cs">美团无人机团队启动2027届北斗计划校招，面向应届生开放岗位。该团队聚焦构建物理AI世界，将人工智能技术应用于无人机配送等实体场景。此次招聘是美团在具身智能与自动化领域布局的一部分，旨在吸引相关技术人才加入。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA%3D%3D\u0026mid=2651783211\u0026idx=2\u0026sn=68dc28cbb4d361a2d3fffc92ff03dcf3" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="92" data-mark-url="https://x.com/OpenBMB/status/2092960328854225362" data-mark-title="面壁智能 MiniCPM 效率优化案例征集启动" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">27</span><div class="cc">
+        <a class="ct serif" href="https://x.com/OpenBMB/status/2092960328854225362" target="_blank">面壁智能 MiniCPM 效率优化案例征集启动</a>
+        <div class="cs">面壁智能 OpenBMB 启动 MiniCPM Spark Program S1，面向开发者与研究者征集用 MiniCPM 提升 AI 效率的案例，主题涵盖模型与 API 优化、端云协同、推理与部署优化。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">端侧</span><span class="ctag">行业动态</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://x.com/OpenBMB/status/2092960328854225362" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="93" data-mark-url="https://x.com/MiniMax_AI/status/2092722804693327873" data-mark-title="MiniMax H3 亮相 RaySummit 大会" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">26</span><div class="cc">
+        <a class="ct serif" href="https://x.com/MiniMax_AI/status/2092722804693327873" target="_blank">MiniMax H3 亮相 RaySummit 大会</a>
+        <div class="cs">MiniMax H3 今天在旧金山参加 @anyscalecompute 的 #RaySummit 大会。
+
+@VictorSuOrtiz 将在 @vllm_project 会议上解析我们的 33B 开源音视频模型，将文本、图像、视频和音频整合到一个上下文中。
+
+@VoidAsu…</div>
+        <div class="ctags mark-anchor"><span class="ctag">多模态</span><span class="ctag">开源生态</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/MiniMax_AI/status/2092722804693327873" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="94" data-mark-url="https://x.com/OpenAIDevs/status/2092707336116933063" data-mark-title="Codex 助开发者发布 npm 库" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">26</span><div class="cc">
+        <a class="ct serif" href="https://x.com/OpenAIDevs/status/2092707336116933063" target="_blank">Codex 助开发者发布 npm 库</a>
+        <div class="cs">那个你一直想做的东西。
+
+@itskasturiii 用 Codex 终于发布了她自己的 npm 库，用于在 AI 应用中加载体验。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">编码</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/OpenAIDevs/status/2092707336116933063" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="95" data-mark-url="https://x.com/aidangomez/status/2092976852386066687" data-mark-title="Cohere 迎来 Brydon Eastman 加入" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">24</span><div class="cc">
+        <a class="ct serif" href="https://x.com/aidangomez/status/2092976852386066687" target="_blank">Cohere 迎来 Brydon Eastman 加入</a>
+        <div class="cs">欢迎 Brydon
+
+✅ Brydon Eastman (@brhydon) 已加入 Cohere。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/aidangomez/status/2092976852386066687" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="96" data-mark-url="https://x.com/cb_doge/status/2092742993199685999" data-mark-title="Neuralink 脑机接口凭意念作画" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">24</span><div class="cc">
+        <a class="ct serif" href="https://x.com/cb_doge/status/2092742993199685999" target="_blank">Neuralink 脑机接口凭意念作画</a>
+        <div class="cs">这里的每一幅画都是 Audrey Crews 仅凭思考，使用 @Neuralink 创作出来的 🧠…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span></div>
+        <a class="clink" href="https://x.com/cb_doge/status/2092742993199685999" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="97" data-mark-url="https://x.com/kimmonismus/status/2092918290230173798" data-mark-title="Tibo 以 Codex 重置回应衰老调侃" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">23</span><div class="cc">
+        <a class="ct serif" href="https://x.com/kimmonismus/status/2092918290230173798" target="_blank">Tibo 以 Codex 重置回应衰老调侃</a>
+        <div class="cs">Tibo 在采访后遭网友评论“显疲惫显老”，他顺势自嘲，更新头像并调侃自己老得快，还把话题引回其知名的 Codex 重置梗。Anthropic 员工也加入玩笑，Tibo 的机智回应是再次重置 Codex，被赞“传奇”。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">OpenAI</span><span class="ctag">其他</span></div>
+        <a class="clink" href="https://x.com/kimmonismus/status/2092918290230173798" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="98" data-mark-url="https://x.com/rohanpaul_ai/status/2092828954126172660" data-mark-title="AI 创造就业？从这开始" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">23</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2092828954126172660" target="_blank">AI 创造就业？从这开始</a>
+        <div class="cs">AI 会创造就业机会，他们这么说的，就从这里开始 😅…</div>
+        <div class="ctags mark-anchor"><span class="ctag">大佬观点</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2092828954126172660" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="99" data-mark-url="https://openai.com/index/hugging-face-incident-and-the-road-ahead" data-mark-title="OpenAI 谈 Hugging Face 事件及未来之路" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">20</span><div class="cc">
+        <a class="ct serif" href="https://openai.com/index/hugging-face-incident-and-the-road-ahead" target="_blank">OpenAI 谈 Hugging Face 事件及未来之路</a>
+        <div class="cs">OpenAI 发文回应近期 Hugging Face 相关事件，并阐述其后续应对思路。文章聚焦于该事件引发的安全与信任问题，以及 OpenAI 在开源协作与模型安全之间的平衡考量。OpenAI 表示将吸取教训，继续推进负责任的 AI 发展路径。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Hugging Face</span><span class="ctag">OpenAI</span><span class="ctag">开源生态</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://openai.com/index/hugging-face-incident-and-the-road-ahead" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="100" data-mark-url="https://mp.weixin.qq.com/s?__biz=MzI1MzE1NDc3Mg%3D%3D\u0026mid=2247510126\u0026idx=1\u0026sn=f3dfe7dbcf62472ff10f0799f6392f5e" data-mark-title="昆仑万维方汉做客央视《对话》：让 AI 推动文化平权，普惠全球" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">18</span><div class="cc">
+        <a class="ct serif" href="https://mp.weixin.qq.com/s?__biz=MzI1MzE1NDc3Mg%3D%3D\u0026mid=2247510126\u0026idx=1\u0026sn=f3dfe7dbcf62472ff10f0799f6392f5e" target="_blank">昆仑万维方汉做客央视《对话》：让 AI 推动文化平权，普惠全球</a>
+        <div class="cs">昆仑万维董事长兼CEO方汉在央视财经《对话》节目中表示，中国AI企业“起跑即领先”，2025年公司AI泛收入约27亿元，AI产品每天可触达全球近1亿人。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">多模态</span><span class="ctag">大佬观点</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://mp.weixin.qq.com/s?__biz=MzI1MzE1NDc3Mg%3D%3D\u0026mid=2247510126\u0026idx=1\u0026sn=f3dfe7dbcf62472ff10f0799f6392f5e" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="101" data-mark-url="https://x.com/OpenBMB/status/2092907287052763244" data-mark-title="面壁智能启动“Ahead Four”人才计划" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">16</span><div class="cc">
+        <a class="ct serif" href="https://x.com/OpenBMB/status/2092907287052763244" target="_blank">面壁智能启动“Ahead Four”人才计划</a>
+        <div class="cs">迈向 AGI — Ahead Four。@modelbest_ai
+
+[引用 @modelbest_ai]：推出 ModelBest“Ahead Four”人才计划 — 面向 2027 年及以后毕业的硕士/博士生。
+• 毕业前授予股权
+• 参与 MiniCPM 核心工作
+• 资深…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">行业动态</span></div>
+        <a class="clink" href="https://x.com/OpenBMB/status/2092907287052763244" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="102" data-mark-url="https://x.com/Kling_ai/status/2092990532809036151" data-mark-title="可灵AI展示角色分离新玩法" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">14</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Kling_ai/status/2092990532809036151" target="_blank">可灵AI展示角色分离新玩法</a>
+        <div class="cs">至死不渝？这家伙可不会。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">视频</span></div>
+        <a class="clink" href="https://x.com/Kling_ai/status/2092990532809036151" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="103" data-mark-url="https://x.com/emollick/status/2092740045824262560" data-mark-title="AI命名灵感：60年代科幻名仍可用" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">13</span><div class="cc">
+        <a class="ct serif" href="https://x.com/emollick/status/2092740045824262560" target="_blank">AI命名灵感：60年代科幻名仍可用</a>
+        <div class="cs">这份名单上还可以加上 PHASEONE[big]…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Google</span><span class="ctag">Microsoft</span><span class="ctag">现象/趋势</span></div>
+        <a class="clink" href="https://x.com/emollick/status/2092740045824262560" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="104" data-mark-url="https://x.com/Thom_Wolf/status/2092987332752220319" data-mark-title="机器人形似索尼随身听还能溜冰" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">10</span><div class="cc">
+        <a class="ct serif" href="https://x.com/Thom_Wolf/status/2092987332752220319" target="_blank">机器人形似索尼随身听还能溜冰</a>
+        <div class="cs">终于有人get到90年代的梗了！
+
+一个长得像索尼随身听的机器人，还能玩轮滑。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">具身智能</span></div>
+        <a class="clink" href="https://x.com/Thom_Wolf/status/2092987332752220319" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="105" data-mark-url="https://x.com/aidangomez/status/2092659242436067731" data-mark-title="Cohere CEO 自嘲首席大脑损伤官" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">9</span><div class="cc">
+        <a class="ct serif" href="https://x.com/aidangomez/status/2092659242436067731" target="_blank">Cohere CEO 自嘲首席大脑损伤官</a>
+        <div class="cs">首席大脑损伤官…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span></div>
+        <a class="clink" href="https://x.com/aidangomez/status/2092659242436067731" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="106" data-mark-url="https://www.ithome.com/0/995/008.htm" data-mark-title="Synopsys 完成全球首例 3D IC PCIe Gen 6 测试芯片信号验证" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">8</span><div class="cc">
+        <a class="ct serif" href="https://www.ithome.com/0/995/008.htm" target="_blank">Synopsys 完成全球首例 3D IC PCIe Gen 6 测试芯片信号验证</a>
+        <div class="cs">Synopsys 完成全球首例 3D IC PCIe Gen 6 测试芯片信号验证，两块面对面堆叠芯片实现 64 GT/s 连接，经 PAM4 与 8 通道提供 128GB/s 带宽。相较 2.5D，3D 设计进一步压缩互连距离。其 5nm PHY 测试芯片针对 TSV 实现等新…</div>
+        <div class="ctags mark-anchor"><span class="ctag">其他</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://www.ithome.com/0/995/008.htm" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="107" data-mark-url="https://x.com/thsottiaux/status/2092756702349398036" data-mark-title="OpenAI数周工作强度堪比数年" data-mark-date="2026-08-27" data-mark-cat="行业"><span class="cn">6</span><div class="cc">
+        <a class="ct serif" href="https://x.com/thsottiaux/status/2092756702349398036" target="_blank">OpenAI数周工作强度堪比数年</a>
+        <div class="cs">在OpenAI待几周，完成的工作量堪比在其他公司待几年。几天之内能让人老多少，真是疯狂。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">其他</span></div>
+        <a class="clink" href="https://x.com/thsottiaux/status/2092756702349398036" target="_blank">阅读原文 →</a></div></div></div></details>
+</div>
+<div class="foot serif">AI 信号站 · 行业 · 2026-08-27</div>
+<script src="../search-index.js"></script><script>(function(){var SR_REL="../";
+var SIDX = window.__SIDX__ || [];
+var inp = document.getElementById('siteSearch'), box = document.getElementById('searchRes');
+if(inp){
+  var K1=1.5, B=0.75, TITLE_BOOST=3, COV=0.6;
+  // 停用词:连接词/虚词不参与 AND 覆盖判定(避免"claude和gemini"里"和"稀释召回条件)
+  var STOP={}, _sw='的 了 和 与 及 或 跟 并 在 是 有 这 那 就 也 还 又 吗 呢 吧 啊 把 被 让 给 对 从 到 为 之 以 且 等 以及 还有 并且 而且'.split(' ');
+  for(var si=0;si<_sw.length;si++) STOP[_sw[si]]=1;
+  // 分词:英文/数字按词;中文按 bigram(单字则保留);query 与文档同一套切法
+  function toks(s){
+    var out=[], segs=(String(s).toLowerCase().match(/[a-z0-9]+|[\u4e00-\u9fff]+/g)||[]);
+    for(var i=0;i<segs.length;i++){
+      var seg=segs[i];
+      if(/[a-z0-9]/.test(seg)) out.push(seg);
+      else if(seg.length===1) out.push(seg);
+      else for(var j=0;j<seg.length-1;j++) out.push(seg.slice(j,j+2));
+    }
+    return out;
+  }
+  // 加载时一次性建 BM25 索引:每篇词频 tf(标题×TITLE_BOOST)、全局文档频率 DF、平均长度 avgdl
+  var DF={}, docs=[], totalLen=0, t;
+  for(var d=0; d<SIDX.length; d++){
+    var x=SIDX[d];
+    var body=(x.g||'')+' '+(x.c||'')+' '+(x.tag||'')+' '+(x.src||'');
+    var tf={};
+    var tt=toks(x.t||''); for(var a=0;a<tt.length;a++){ tf[tt[a]]=(tf[tt[a]]||0)+TITLE_BOOST; }
+    var bb=toks(body); for(var b2=0;b2<bb.length;b2++){ tf[bb[b2]]=(tf[bb[b2]]||0)+1; }
+    var dl=0; for(t in tf) dl+=tf[t];
+    totalLen+=dl;
+    for(t in tf) DF[t]=(DF[t]||0)+1;
+    docs.push({x:x, tf:tf, dl:dl});
+  }
+  var N=docs.length||1, avgdl=totalLen/N;
+  function idf(w){ var df=DF[w]||0; return Math.log((N-df+0.5)/(df+0.5)+1); }
+  inp.addEventListener('input', function(){
+    var q=inp.value.trim(); if(!q){ box.classList.remove('show'); return; }
+    var raw=toks(q), seen={}, qts=[];
+    for(var i=0;i<raw.length;i++){ if(!seen[raw[i]] && !STOP[raw[i]]){ seen[raw[i]]=1; qts.push(raw[i]); } }
+    if(!qts.length){ box.classList.remove('show'); return; }
+    // AND 覆盖召回:命中实词数须达 ceil(词数×COV),容忍中文 bigram 的 junction 噪声(如"面壁具身"切出的"壁具")
+    var need=Math.max(1, Math.ceil(qts.length*COV));
+    var scored=[];
+    for(var d2=0; d2<docs.length; d2++){
+      var doc=docs[d2], sc=0, m=0;
+      for(var k=0;k<qts.length;k++){
+        var f=doc.tf[qts[k]]; if(!f) continue;
+        m++; sc += idf(qts[k])*(f*(K1+1))/(f + K1*(1-B+B*doc.dl/avgdl));
+      }
+      if(m>=need) scored.push({x:doc.x, sc:sc, m:m});
+    }
+    // 排序:BM25 分降序 → 命中词数 → 日期新
+    scored.sort(function(p,r){ return (r.sc-p.sc) || (r.m-p.m) || (p.x.d<r.x.d?1:-1); });
+    var hits=scored.slice(0,20);
+    if(!hits.length){ box.innerHTML='<div class="sr-empty">本站无匹配结果</div>'; box.classList.add('show'); return; }
+    box.innerHTML='<div class="sr-h">站内命中 '+hits.length+' 条 · BM25 相关度排序</div>' + hits.map(function(o){
+      var x=o.x;
+      return '<a href="'+SR_REL+'d/'+x.d+'.html"><div class="srt">'+x.t+'</div><div class="srm">'+x.d+' · '+x.c+' · 精选 '+x.s+'</div></a>';
+    }).join('');
+    box.classList.add('show');
+  });
+  document.addEventListener('click', function(ev){ if(!ev.target.closest('.search-wrap')) box.classList.remove('show'); });
+}
+})();</script><script>
+(function(){
+  const API='http://localhost:8765';
+  // 标记功能只在本机启用。同一份构建产物:本地全功能、公网只读。
+  // 原因:标记数据的用途是喂给 Analyst 做个性化(marks 工具),陌生访客的口味不是站主的口味,
+  // 收集反而会污染个性化信号。所以公网不需要写接口 —— 也就不需要任何鉴权。
+  const LOCAL = ['localhost','127.0.0.1','::1'].indexOf(location.hostname) >= 0
+                || location.protocol === 'file:';
+  if(!LOCAL){
+    // 移除标记入口与弹窗,避免公网访客点了没反应(以及暴露本地 API 地址)
+    document.querySelectorAll('.mark-btn').forEach(b=>b.remove());
+    const m=document.getElementById('markModal'); if(m) m.remove();
+    const t=document.getElementById('markToast'); if(t) t.remove();
+    return;
+  }
+  let marks={}, cur=null;
+  const modal=document.getElementById('markModal');
+  if(!modal) return;
+  const elTitle=document.getElementById('mbTitle'),elMeta=document.getElementById('mbMeta'),
+        elC=document.getElementById('mbComment'),toast=document.getElementById('markToast');
+  function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);}
+  // 标记优先存 localStorage(不依赖常开服务);服务开着则合并后端(供 AI 读取的权威源)
+  const LS='ai_signal_marks';
+  function loadLocal(){try{return JSON.parse(localStorage.getItem(LS)||'{}');}catch(e){return {};}}
+  function saveLocal(){try{localStorage.setItem(LS,JSON.stringify(marks));}catch(e){}}
+  marks=loadLocal();renderMarks();
+  fetch(API+'/api/marks').then(r=>r.json()).then(m=>{if(m&&typeof m==='object'){marks=Object.assign({},marks,m);saveLocal();renderMarks();}}).catch(()=>{});
+  function renderMarks(){
+    document.querySelectorAll('[data-mark-url]').forEach(el=>{
+      const u=el.getAttribute('data-mark-url');
+      const btn=el.querySelector('.mark-btn'); if(!btn)return;
+      if(marks[u]){
+        el.classList.add('is-marked'); btn.classList.add('marked'); btn.textContent='✓ 已标记';
+        let note=el.querySelector('.mark-note');
+        if(marks[u].comment){
+          if(!note){note=document.createElement('div');note.className='mark-note';el.appendChild(note);}
+          note.innerHTML='<b>我的标记 · '+(marks[u].marked_at||'')+'</b><br>'+marks[u].comment.replace(/</g,'&lt;');
+          note.classList.add('show');
+        }
+      }else{
+        el.classList.remove('is-marked'); btn.classList.remove('marked'); btn.textContent='标记';
+        const note=el.querySelector('.mark-note'); if(note)note.classList.remove('show');
+      }
+    });
+  }
+  // 给每个可标记元素注入按钮
+  document.querySelectorAll('[data-mark-url]').forEach(el=>{
+    if(el.querySelector('.mark-btn'))return;
+    const btn=document.createElement('button');btn.className='mark-btn';btn.textContent='标记';
+    btn.onclick=(e)=>{e.preventDefault();e.stopPropagation();openModal(el);};
+    const anchor=el.querySelector('.mark-anchor')||el;
+    anchor.appendChild(btn);
+  });
+  function openModal(el){
+    cur={url:el.getAttribute('data-mark-url'),title:el.getAttribute('data-mark-title')||'',
+         date:el.getAttribute('data-mark-date')||'',cat:el.getAttribute('data-mark-cat')||''};
+    elTitle.textContent=cur.title;
+    elMeta.textContent=cur.date+(cur.cat?' · '+cur.cat:'');
+    elC.value=(marks[cur.url]&&marks[cur.url].comment)||'';
+    document.getElementById('mbDel').style.display=marks[cur.url]?'':'none';
+    modal.classList.add('show');elC.focus();
+  }
+  function close(){modal.classList.remove('show');cur=null;}
+  document.getElementById('mbCancel').onclick=close;
+  modal.onclick=(e)=>{if(e.target===modal)close();};
+  function today(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  document.getElementById('mbSave').onclick=()=>{
+    if(!cur)return;
+    const rec={...cur,comment:elC.value.trim(),marked_at:today()};
+    marks[cur.url]=rec;saveLocal();renderMarks();close();
+    fetch(API+'/api/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(rec)})
+      .then(r=>r.json()).then(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(已同步)'))
+      .catch(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(本地已存,启动服务后同步给AI)'));
+  };
+  document.getElementById('mbDel').onclick=()=>{
+    if(!cur)return;
+    delete marks[cur.url];saveLocal();renderMarks();close();showToast('已取消标记');
+    fetch(API+'/api/unmark',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:cur.url})}).catch(()=>{});
+  };
+  // ---- 摘要浮窗:点标题先看摘要(复用搜索索引 SIDX,按 url 反查),点"阅读原文"仍直接跳 ----
+  var _SIDX = window.__SIDX__ || [];
+  var pk = document.getElementById('peekModal');
+  if(pk){
+    var pkClose = function(){ pk.classList.remove('show'); };
+    pk.addEventListener('click', function(e){ if(e.target===pk || e.target.classList.contains('peek-x')) pkClose(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') pkClose(); });
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[target="_blank"]'); if(!a) return;
+      var txt = (a.textContent||'').trim();
+      if(txt.indexOf('原文') >= 0) return;               // "阅读原文"类→直接跳
+      var href = a.getAttribute('href') || '';
+      var rec = null;
+      for(var i=0;i<_SIDX.length;i++){ if(_SIDX[i].u===href){ rec=_SIDX[i]; break; } }
+      if(!rec) return;                                    // 非索引条目(导航/月历/全部)→直接跳
+      e.preventDefault();
+      pk.querySelector('.peek-cat').textContent = [rec.c, rec.src, '精选 ' + rec.s, rec.d].filter(Boolean).join(' · ');
+      pk.querySelector('.peek-title').textContent = rec.t;
+      pk.querySelector('.peek-sum').textContent = rec.g;
+      pk.querySelector('.peek-go').href = rec.u;
+      pk.classList.add('show');
+    });
+  }
+})();
+</script><div class="legal">
+<p><b>来源与版权</b>　本站为个人非商业实验项目,不生产原始报道。所收录条目的标题与摘要均来自公开渠道,每条都标注来源并链接回原文;文字、图片及其他内容的著作权归原作者与原发布方所有。本站只摘录足以判断「是否值得点开」的信息,完整内容请访问原文。</p>
+<p><b>AI 生成内容</b>　标注为「判断」「洞察」「速览」的段落由大语言模型生成,可能包含事实错误、过时信息或过度推断,仅为本站的实验性观点,<b>不构成投资、就业、技术选型或任何专业建议</b>。请以原文与一手信源为准。</p>
+<p><b>侵权与更正</b>　若您是权利人且不希望相关内容出现在此,或发现事实性错误,请通过 <a href="https://github.com/AMMPNK/ai-signal/issues" target="_blank" rel="noopener">GitHub Issues</a> 告知,我会尽快移除或更正。</p>
+<p class="lc">© 2026 AI 信号站 · 个人非商业项目 · 内容由 AI 辅助生成,请自行核实</p>
+</div></body></html>

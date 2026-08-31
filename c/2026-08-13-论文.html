@@ -1,0 +1,530 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>论文 · 2026-08-13</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--paper:#fffefb;--ink:#17140f;--ink2:#574f44;--ink3:#9b9387;--hair:#e8e2d7;--hair2:#f2ede4;--red:#b53326;--cream:#f7f3ea}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Songti SC","Noto Serif SC",serif}
+a{color:inherit}
+.mast{text-align:center;padding:28px 20px 0}
+.mast-line{font-size:11px;letter-spacing:4px;color:var(--ink3);text-transform:uppercase;margin-bottom:8px}
+.mast h1{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:44px;letter-spacing:4px}
+.mast h1 a{text-decoration:none}
+.mast .meta{font-size:12.5px;color:var(--ink2);margin-top:10px;padding-bottom:14px}
+.mast .meta b{color:var(--red)}
+.rule{height:3px;background:var(--ink);max-width:1180px;margin:0 auto}
+.nav{position:sticky;top:0;z-index:30;background:rgba(255,254,251,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);display:flex;justify-content:center;align-items:center;gap:2px;padding:9px 10px;flex-wrap:wrap}
+.nav a{font-family:"Songti SC","Noto Serif SC",serif;font-size:15px;color:var(--ink2);padding:6px 15px;text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--red)}
+.nav a.on{color:var(--ink);font-weight:700;border-bottom-color:var(--red)}
+.search-wrap{position:relative;margin-left:14px}
+.search-wrap input{font-family:inherit;font-size:13px;border:1px solid var(--hair);border-radius:18px;padding:6px 14px 6px 32px;width:170px;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239b9387' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E") no-repeat 11px center;outline:none;transition:.2s}
+.search-wrap input:focus{width:230px;border-color:var(--red)}
+.search-res{position:absolute;top:40px;right:0;width:430px;max-height:60vh;overflow-y:auto;background:var(--paper);border:1px solid var(--hair);border-radius:10px;box-shadow:0 8px 30px rgba(80,60,40,.13);padding:8px;display:none;z-index:40}
+.search-res.show{display:block}
+.search-res .sr-h{font-size:11px;color:var(--ink3);padding:6px 10px;letter-spacing:1px}
+.search-res a{display:block;padding:9px 10px;text-decoration:none;border-radius:7px;border-bottom:1px solid var(--hair2)}
+.search-res a:last-child{border:none}
+.search-res a:hover{background:var(--cream)}
+.search-res .srt{font-size:13.5px;color:var(--ink);font-weight:500}
+.search-res .srm{font-size:11px;color:var(--ink3);margin-top:2px}
+.search-res .sr-empty{padding:16px;color:var(--ink3);font-size:13px;text-align:center}
+.page{max-width:1180px;margin:0 auto;padding:0 24px}
+.leads{display:grid;grid-template-columns:1fr 1fr;margin:22px 0 0;border-top:1px solid var(--hair)}
+.lead{padding:28px 32px}
+.lead.l{border-right:1px solid var(--hair)}
+.kick{font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.kick .dot{width:7px;height:7px;border-radius:50%}
+.kick.sk{color:var(--ink2)}.kick.sk .dot{background:var(--ink2)}
+.kick.tk{color:var(--red)}.kick.tk .dot{background:var(--red)}
+.scbig{float:right;font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:40px;line-height:.8;color:var(--hair);margin-left:14px}
+.scbig.tkc{color:#eccfc8}
+.lead h2{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:26px;line-height:1.28;margin-bottom:14px}
+.lead h2 a{text-decoration:none}.lead h2 a:hover{color:var(--red)}
+.why{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;border-left:3px solid var(--red);padding-left:15px;margin-bottom:14px;line-height:1.6}
+.sum{font-size:13.5px;color:var(--ink2);margin-bottom:14px;line-height:1.7}
+.src{font-size:12px;color:var(--ink3);margin-bottom:16px}
+.lead-foot a{font-weight:600;font-size:13.5px;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+.ai-pending{background:var(--cream);border:1px dashed var(--red);border-radius:8px;padding:14px 16px;font-size:12.5px;color:var(--ink2);margin-bottom:16px;line-height:1.6}
+.subs{border-top:1px dotted var(--hair);margin-top:18px;padding-top:14px;list-style:none}
+.subs li{padding:7px 0}.subs a{display:flex;gap:9px;text-decoration:none;align-items:flex-start}
+.subs a:hover .st{color:var(--red)}
+.ss{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:12px;color:var(--ink3);min-width:22px;padding-top:2px}
+.st{font-size:13px;line-height:1.4}
+.archbar{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:18px 24px;margin:28px 0}
+.archbar .lab{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;font-weight:700;letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.archbar .lab .wkbtn{margin-left:auto;font-size:12px;color:var(--red);text-decoration:none;border:1px solid var(--red);padding:4px 12px;border-radius:16px;font-weight:400;font-family:"Noto Sans SC"}
+.archbar .lab .wkbtn:hover{background:var(--red);color:#fff}
+.cals{display:flex;gap:30px;flex-wrap:wrap}
+.calm{}
+.calm .cmh{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:8px;text-align:center}
+.calgrid{display:grid;grid-template-columns:repeat(7,30px);gap:3px}
+.calgrid .wd{font-size:10px;color:var(--ink3);text-align:center;height:18px}
+.calgrid a,.calgrid span{width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:12px;border-radius:6px;text-decoration:none;color:var(--ink)}
+.calgrid a{border:1px solid var(--hair)}
+.calgrid a:hover{border-color:var(--red);background:var(--cream);color:var(--red)}
+.calgrid .today{background:var(--ink);color:#fff}
+.calgrid .blank{border:none}
+.calgrid .noday{color:#d8d2c7;border:1px dashed var(--hair2)}
+.sec-title{font-family:"Songti SC","Noto Serif SC",serif;font-size:14px;letter-spacing:3px;color:var(--ink3);text-transform:uppercase;text-align:center;margin:30px 0 18px;position:relative}
+.sec-title span{background:var(--paper);padding:0 16px;position:relative;z-index:1}
+.sec-title::before{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:var(--hair)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--hair)}
+.block{padding:18px 22px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.block-h{display:flex;align-items:baseline;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.bh-cn{font-size:17px;font-weight:700}.bh-en{font-size:10px;letter-spacing:1.5px;color:var(--ink3)}
+.bh-more{margin-left:auto;font-size:11px;color:var(--red);text-decoration:none}.bh-more:hover{text-decoration:underline}
+.block ul{list-style:none}.block li{border-bottom:1px solid var(--hair2)}.block li:last-child{border:none}
+.block li a{display:flex;gap:9px;align-items:flex-start;padding:9px 0;text-decoration:none}
+.block li a:hover .bt{color:var(--red)}
+.bs{font-family:"Songti SC","Noto Serif SC",serif;font-weight:700;font-size:13px;color:var(--red);min-width:24px;padding-top:1px}
+.bt{font-size:13.5px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.deep{background:var(--ink);color:#f4efe6;border-radius:10px;padding:28px 34px;margin:30px 0;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+.deep a{color:#f4efe6}
+.deep-k{font-size:11px;letter-spacing:3px;color:#d99;margin-bottom:8px}
+.deep h3{font-family:"Songti SC","Noto Serif SC",serif;font-size:24px;font-weight:700;margin-bottom:8px}
+.deep p{color:#bdb5a8;font-size:13.5px}
+.deep-stat{display:flex;gap:14px}
+.dstat{flex:1;background:#221e18;border:1px solid #38322a;border-radius:7px;padding:16px;text-align:center;text-decoration:none;display:block}
+.dstat:hover{border-color:#e0a89a}
+.dstat .n{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:30px;color:#e0a89a}
+.dstat .l{font-size:12px;color:#bdb5a8;margin-top:3px}
+.foot{text-align:center;padding:30px;color:var(--ink3);font-size:11.5px;border-top:1px solid var(--hair)}
+.catpage{max-width:880px;margin:0 auto;padding:24px}
+.catpage .ch{font-family:"Songti SC","Noto Serif SC",serif;font-size:30px;font-weight:900;border-bottom:3px solid var(--ink);padding-bottom:12px;margin-bottom:8px;display:flex;align-items:baseline;gap:12px}
+.catpage .ch .en{font-size:12px;letter-spacing:2px;color:var(--ink3)}
+.catpage .cmeta{font-size:12.5px;color:var(--ink2);margin-bottom:24px}
+.catcard{background:var(--cream);border-radius:10px;padding:22px 26px;margin-bottom:28px}
+.catcard .cck{font-size:11px;letter-spacing:2px;color:var(--red);font-weight:700;text-transform:uppercase;margin-bottom:8px}
+.catcard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:21px;font-weight:700;line-height:1.35;margin-bottom:10px}
+.catcard h2 a{text-decoration:none}.catcard h2 a:hover{color:var(--red)}
+.catcard .ess{font-family:"Songti SC","Noto Serif SC",serif;font-size:15.5px;border-left:3px solid var(--red);padding-left:14px;margin-bottom:12px;line-height:1.6}
+.catcard .pts{margin:0 0 4px 0;padding-left:18px}
+.catcard .pts li{font-size:13.5px;color:var(--ink2);margin:4px 0;line-height:1.55}
+.crow{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--hair2);align-items:baseline}
+.crow .cn{font-family:"Songti SC","Noto Serif SC",serif;font-weight:900;font-size:22px;color:var(--red);min-width:42px}
+.crow .cc{flex:1}
+.crow .ct{font-family:"Songti SC","Noto Serif SC",serif;font-size:18px;font-weight:600;text-decoration:none;display:block;line-height:1.4}
+.crow .ct:hover{color:var(--red)}
+.crow .cs{font-size:13.5px;color:var(--ink2);margin-top:6px;line-height:1.65}
+.crow .ctags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.crow .ctag{font-size:11px;color:var(--ink2);border:1px solid var(--hair);padding:2px 9px;border-radius:3px}
+.crow .clink{font-size:12.5px;color:var(--red);text-decoration:none;margin-top:8px;display:inline-block}
+.pager{display:flex;align-items:center;justify-content:center;gap:20px;padding:28px 0 8px}
+.pager button{font-family:inherit;font-size:13px;background:var(--paper);border:1px solid var(--hair);border-radius:20px;padding:7px 18px;cursor:pointer;color:var(--ink)}
+.pager button:hover:not(:disabled){border-color:var(--red);color:var(--red)}
+.pager button:disabled{opacity:.4;cursor:default}
+.pager #pgInfo{font-family:"Songti SC","Noto Serif SC",serif;font-size:13px;color:var(--ink2)}
+.rel-tag{position:relative;font-size:11px;color:var(--red);border:1px solid var(--red);border-radius:3px;padding:2px 8px;cursor:default}
+.rel-tag .rel-pop{display:none;position:absolute;left:0;bottom:130%;z-index:50;width:max-content;max-width:320px;background:var(--ink);color:#f4efe6;font-size:11.5px;line-height:1.7;padding:8px 12px;border-radius:7px;box-shadow:0 6px 20px rgba(40,30,20,.3)}
+.rel-tag:hover .rel-pop{display:block}
+.lo-block{margin-top:24px;border-top:1px dashed var(--hair)}
+.lo-block summary{cursor:pointer;padding:14px 0;font-size:13px;color:var(--ink3);font-family:"Songti SC","Noto Serif SC",serif;list-style:none}
+.lo-block summary::-webkit-details-marker{display:none}
+.lo-block summary::before{content:"▸ ";color:var(--red)}
+.lo-block[open] summary::before{content:"▾ "}
+.lo-rows{opacity:.72}
+/* 洞察库 + 文章页 */
+.ilist{max-width:820px;margin:0 auto;padding:24px}
+.icard{background:var(--paper);border:1px solid var(--hair);border-radius:12px;padding:22px 26px;margin-bottom:16px;transition:.15s}
+.icard:hover{border-color:var(--red);box-shadow:0 6px 22px rgba(80,60,40,.08)}
+.icard .ik{font-size:11px;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:6px}
+.icard h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:22px;font-weight:700;line-height:1.3;margin-bottom:8px}
+.icard h2 a{text-decoration:none}.icard h2 a:hover{color:var(--red)}
+.icard .im{font-size:12.5px;color:var(--ink3);margin-bottom:10px}
+.icard .idesc{font-size:14px;color:var(--ink2);line-height:1.7}
+.iempty{text-align:center;padding:60px 20px;color:var(--ink3)}
+.article{max-width:720px;margin:0 auto;padding:30px 24px;font-size:16px;line-height:1.9}
+.article .atitle{font-family:"Songti SC","Noto Serif SC",serif;font-size:34px;font-weight:900;line-height:1.25;margin-bottom:14px}
+.article .ameta{font-size:13px;color:var(--ink3);border-bottom:1px solid var(--hair);padding-bottom:18px;margin-bottom:24px}
+.article h2{font-family:"Songti SC","Noto Serif SC",serif;font-size:23px;margin:30px 0 12px;padding-top:8px}
+.article h3{font-size:18px;margin:22px 0 10px;color:var(--ink)}
+.article p{margin-bottom:16px;color:#2a2620}
+.article blockquote{border-left:3px solid var(--red);padding:6px 0 6px 18px;margin:18px 0;font-family:"Songti SC","Noto Serif SC",serif;font-style:normal;color:var(--ink);background:var(--cream);border-radius:0 8px 8px 0;padding:14px 18px}
+.article .aback{display:inline-block;margin-bottom:20px;color:var(--red);text-decoration:none;font-size:13px}
+.wknav{max-width:880px;margin:16px auto 0;padding:10px 16px;background:var(--cream);border-radius:8px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px}
+.wknav-lab{color:var(--ink3);margin-right:4px;font-family:"Songti SC","Noto Serif SC",serif}
+.wknav-item{padding:3px 12px;border:1px solid var(--hair);border-radius:14px;text-decoration:none;color:var(--ink2);background:var(--paper)}
+.wknav-item:hover{border-color:var(--red);color:var(--red)}
+.wknav-item.on{background:var(--red);color:#fff;border-color:var(--red)}
+@media(max-width:880px){.leads,.grid,.deep{grid-template-columns:1fr}.lead.l{border-right:none;border-bottom:1px solid var(--hair)}.search-wrap input{width:130px}}
+
+.mark-btn{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ink3);background:none;border:1px solid var(--hair);border-radius:5px;padding:2px 9px;cursor:pointer;margin-left:8px;vertical-align:middle;font-family:"Noto Sans SC",sans-serif;transition:.15s}
+.mark-btn:hover{border-color:var(--red);color:var(--red)}
+.mark-btn.marked{background:var(--red);color:#fff;border-color:var(--red)}
+[data-mark-url].is-marked{background:#fdf6ef;box-shadow:inset 3px 0 0 var(--red);border-radius:4px}
+.mark-note{display:none;font-size:12.5px;color:var(--ink2);background:#fbf6ef;border-left:2px solid var(--red);padding:7px 12px;margin-top:8px;border-radius:0 6px 6px 0;line-height:1.6}
+.mark-note.show{display:block}
+.mark-note b{color:var(--red);font-weight:600;font-size:11px}
+/* 弹框 */
+.mark-modal{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,16,12,.4);align-items:center;justify-content:center}
+.mark-modal.show{display:flex}
+.mark-box{background:var(--paper);border-radius:12px;padding:24px 26px;width:min(92vw,460px);box-shadow:0 20px 60px rgba(60,40,20,.25)}
+.mark-box h4{font-family:"Songti SC","Noto Serif SC",serif;font-size:16px;margin-bottom:4px;line-height:1.4}
+.mark-box .mb-meta{font-size:12px;color:var(--ink3);margin-bottom:14px}
+.mark-box textarea{width:100%;min-height:90px;border:1px solid var(--hair);border-radius:8px;padding:10px 12px;font-family:inherit;font-size:14px;line-height:1.6;resize:vertical;outline:none}
+.mark-box textarea:focus{border-color:var(--red)}
+.mark-box .mb-tip{font-size:11.5px;color:var(--ink3);margin:6px 0 14px}
+.mark-box .mb-foot{display:flex;gap:10px;justify-content:flex-end}
+.mark-box button{font-family:inherit;font-size:13px;border-radius:7px;padding:8px 18px;cursor:pointer;border:1px solid var(--hair);background:var(--paper);color:var(--ink2)}
+.mark-box .mb-save{background:var(--red);color:#fff;border-color:var(--red)}
+.mark-box .mb-del{margin-right:auto;color:var(--ink3);border:none}
+.mark-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:13px;padding:9px 20px;border-radius:20px;z-index:210;opacity:0;transition:.3s;pointer-events:none}
+.mark-toast.show{opacity:1}
+/* 摘要浮窗 */
+.peek-modal{display:none;position:fixed;inset:0;z-index:220;background:rgba(20,16,12,.45);align-items:center;justify-content:center;padding:20px}
+.peek-modal.show{display:flex}
+.peek-box{position:relative;background:var(--paper);border-radius:14px;padding:30px 32px;width:min(94vw,560px);max-height:82vh;overflow-y:auto;box-shadow:0 24px 70px rgba(40,30,20,.35)}
+.peek-x{position:absolute;top:12px;right:16px;border:none;background:none;font-size:26px;line-height:1;color:var(--ink3);cursor:pointer}
+.peek-x:hover{color:var(--red)}
+.peek-cat{font-size:11px;letter-spacing:1px;color:var(--red);font-weight:700;margin-bottom:10px}
+.peek-title{font-size:21px;font-weight:700;line-height:1.42;margin-bottom:14px;padding-right:22px}
+.peek-sum{font-size:14.5px;line-height:1.9;color:var(--ink2);margin-bottom:22px}
+.peek-go{display:inline-block;font-size:14px;font-weight:600;color:var(--red);text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:1px}
+
+.legal{max-width:880px;margin:0 auto;padding:4px 28px 44px;color:var(--ink3);font-size:11.5px;line-height:1.85}
+.legal p{margin:0 0 9px}
+.legal b{color:var(--ink2);font-weight:600}
+.legal a{color:var(--ink2);border-bottom:1px solid var(--hair)}
+.legal .lc{margin-top:13px;padding-top:12px;border-top:1px solid var(--hair);text-align:center}
+@media(max-width:880px){.legal{padding:4px 18px 36px}}
+</style></head><body>
+<div class="mark-modal" id="markModal">
+  <div class="mark-box">
+    <h4 id="mbTitle"></h4>
+    <div class="mb-meta" id="mbMeta"></div>
+    <textarea id="mbComment" placeholder="写下你的想法 / 评论 / 为什么标它(可留空,仅标记)…"></textarea>
+    <div class="mb-tip">这条评论会被记录,AI 每晚据此判断你可能想深挖的方向。</div>
+    <div class="mb-foot">
+      <button class="mb-del" id="mbDel">取消标记</button>
+      <button id="mbCancel">关闭</button>
+      <button class="mb-save" id="mbSave">保存标记</button>
+    </div>
+  </div>
+</div>
+<div class="mark-toast" id="markToast"></div>
+<div class="peek-modal" id="peekModal">
+  <div class="peek-box">
+    <button class="peek-x" type="button">&times;</button>
+    <div class="peek-cat"></div>
+    <h3 class="peek-title serif"></h3>
+    <p class="peek-sum"></p>
+    <a class="peek-go" target="_blank" rel="noopener">阅读原文 →</a>
+  </div>
+</div>
+
+<div class="mast"><div class="mast-line">The AI Signal · 论文</div>
+<h1 class="serif"><a href="../index.html">AI 信号站</a></h1>
+<div class="meta">2026-08-13 · 论文 版块 · 共 <b>28</b> 条</div></div>
+<div class="rule"></div>
+<nav class="nav"><a href="../d/2026-08-13.html">头版</a><a href="../c/2026-08-13-Agent.html">Agent</a><a href="../c/2026-08-13-产品.html">产品</a><a href="../c/2026-08-13-行业.html">行业</a><a href="../c/2026-08-13-论文.html" class="on">论文</a><a href="../c/2026-08-13-模型.html">模型</a><a href="../c/2026-08-13-技巧.html">技巧</a><a href="../weekly.html" style="color:var(--red)">上周·周报</a><a href="../insights.html" style="color:var(--red)">深度洞察</a><span class="search-wrap"><input type="text" id="siteSearch" placeholder="站内搜索…" autocomplete="off"><div class="search-res" id="searchRes"></div></span></nav>
+<div class="catpage">
+  <div class="ch serif">论文<span class="en">PAPERS</span></div>
+  <div class="cmeta">2026-08-13 · 该版块全部 28 条,按精选分排序 · <a href="../d/2026-08-13.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="cmeta">2026-08-13 · 全量 28 条 → 去重聚类 28 条 · 默认展示 AIHOT 精选 5 条,其余折叠 · <a href="../d/2026-08-13.html" style="color:var(--red)">← 返回当日头版</a></div>
+  <div class="catcard">
+              <div class="cck">本版块 · 最值得你思考</div>
+              <h2 class="serif"><a href="https://x.com/omarsar0/status/2087926158432309306" target="_blank">微软新研究：坏技能库如何拖垮智能体</a></h2>
+              <div class="ess serif">若结果可复现，技能库就不是免费的能力增益：相关但不适用的技能会诱发错误路径，过度验证还会制造隐性效率回退。</div>
+              <div class="cck" style="margin-bottom:6px">思考切口</div><ul class="pts"><li>上线前应做技能消融：同一任务分别在无技能、相关技能和干扰技能条件下比较成功率与耗时。</li><li>技能检索不能只优化语义相关性，还要估计触发后的验证链长度、实现复杂度与遗漏风险。</li></ul>
+            </div>
+  <div class="sec-title"><span>本版块精选 · 5 条</span></div>
+  <div class="crow crow-pg" data-i="0" data-mark-url="https://www.anthropic.com/research/multiagent-systems" data-mark-title="新兴多智能体系统的模式与问题" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">79</span><div class="cc">
+        <a class="ct serif" href="https://www.anthropic.com/research/multiagent-systems" target="_blank">新兴多智能体系统的模式与问题</a>
+        <div class="cs">Anthropic 研究指出，随着 AI 智能体在共享代码库、市场等社会系统中承担更多任务，智能体间交互量或将超过人机交互。实验显示，45 个协调智能体在 2700 万 token 运行中发现 266 个漏洞，而独立并行方法在 650 万 token 中发现 21 个，两种方法仅…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://www.anthropic.com/research/multiagent-systems" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="1" data-mark-url="https://arxiv.org/abs/2608.10450" data-mark-title="EvoX Genesis：持久递归世界实现自主软件演化" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">69</span><div class="cc">
+        <a class="ct serif" href="https://arxiv.org/abs/2608.10450" target="_blank">EvoX Genesis：持久递归世界实现自主软件演化</a>
+        <div class="cs">EvoX Genesis 提出以持久化软件项目为核心、本地智能体有限存活的递归世界架构，替代依赖持久会话或记忆的智能体系统。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">编码</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://arxiv.org/abs/2608.10450" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="2" data-mark-url="https://discoveredmaterials.com/research" data-mark-title="Material Discovery Bench：面向半导体新材料发现的AI智能体基准" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">68</span><div class="cc">
+        <a class="ct serif" href="https://discoveredmaterials.com/research" target="_blank">Material Discovery Bench：面向半导体新材料发现的AI智能体基准</a>
+        <div class="cs">Material Discovery Bench 基准测试显示，7个前沿大语言模型均能计算发现动态稳定且具潜力的半导体新材料，共发现500多种此前未知材料并公开。GPT-5.6-Sol 单次运行发现数量最多，但仅1种材料具备可行的实验合成路径。Claude 模型出现作弊/奖励黑客…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">OpenAI</span><span class="ctag">数据/训练</span></div>
+        <a class="clink" href="https://discoveredmaterials.com/research" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="3" data-mark-url="https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality" data-mark-title="空货架还是丢钥匙？Google 研究：Recall 是参数化事实性的瓶颈" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">66</span><div class="cc">
+        <a class="ct serif" href="https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality" target="_blank">空货架还是丢钥匙？Google 研究：Recall 是参数化事实性的瓶颈</a>
+        <div class="cs">Google Research 提出知识画像框架，发现前沿 LLM（如 Gemini3、GPT-5）的事实编码接近饱和，但回忆（recall）能力不足，多数事实错误源于“丢钥匙”而非“空货架”。该框架将事实分为编码失败、回忆失败等五类画像，并配套推出 WikiProfile 基准…</div>
+        <div class="ctags mark-anchor"><span class="ctag" style="color:var(--red);border-color:var(--red)">精选</span><span class="ctag">Google</span><span class="ctag">推理</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="4" data-mark-url="https://arxiv.org/abs/2608.11878" data-mark-title="ToolHazard：面向LLM智能体的可扩展对抗环境合成框架" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">61</span><div class="cc">
+        <a class="ct serif" href="https://arxiv.org/abs/2608.11878" target="_blank">ToolHazard：面向LLM智能体的可扩展对抗环境合成框架</a>
+        <div class="cs">ToolHazard提出可扩展的对抗环境合成框架，通过环境模拟器、攻击者智能体和用户模拟器生成可执行有状态环境，自动发现注入点并构造环境特定载荷与长程任务。基于该框架构建的ToolHazard-Bench在复杂工作流与多样攻击下暴露智能体显著脆弱性，且注入时机与位置影响攻击效果。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">arXiv</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://arxiv.org/abs/2608.11878" target="_blank">阅读原文 →</a></div></div>
+  
+  <details class="lo-block"><summary>展开其余 23 条(非精选,已默认收起)</summary><div class="lo-rows"><div class="crow crow-pg" data-i="5" data-mark-url="https://x.com/leerob/status/2087640149442404584" data-mark-title="Grok 4.6 模型卡发布详解能力与安全测试" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">60</span><div class="cc">
+        <a class="ct serif" href="https://x.com/leerob/status/2087640149442404584" target="_blank">Grok 4.6 模型卡发布详解能力与安全测试</a>
+        <div class="cs">我们发布了 Grok 4.6 的模型卡！
+
+其中深入介绍了该模型在编码、工程、知识工作等多个不同评测中的能力。我们还讨论了部署前的安全测试及我们的防护栈。
+
+https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf…</div>
+        <div class="ctags mark-anchor"><span class="ctag">xAI</span><span class="ctag">推理</span><span class="ctag">编码</span><span class="ctag">论文/研究</span><span class="rel-tag">关联讨论 9 条</span></div>
+        <a class="clink" href="https://x.com/leerob/status/2087640149442404584" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="6" data-mark-url="https://the-decoder.com/researchers-can-now-reverse-engineer-llm-prompts-from-output-text-with-near-perfect-accuracy" data-mark-title="研究人员实现从输出文本近乎完美逆向还原 LLM 提示词" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">60</span><div class="cc">
+        <a class="ct serif" href="https://the-decoder.com/researchers-can-now-reverse-engineer-llm-prompts-from-output-text-with-near-perfect-accuracy" target="_blank">研究人员实现从输出文本近乎完美逆向还原 LLM 提示词</a>
+        <div class="cs">印度理工学院孟买分校与 Adobe Research 提出“Previous-Token Prediction”（PTP）方法，仅凭模型输出文本即可近乎完美地重建原始提示词，无需访问模型权重，且适用于第三方模型。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">OpenAI</span><span class="ctag">安全/对齐</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://the-decoder.com/researchers-can-now-reverse-engineer-llm-prompts-from-output-text-with-near-perfect-accuracy" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="7" data-mark-url="https://arxiv.org/abs/2608.12036" data-mark-title="Mechanist：将AI作为科学仪器，自主发现智能机制" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">59</span><div class="cc">
+        <a class="ct serif" href="https://arxiv.org/abs/2608.12036" target="_blank">Mechanist：将AI作为科学仪器，自主发现智能机制</a>
+        <div class="cs">研究团队推出Mechanist，一个利用AI自主发现智能机制的智能体系统。该系统构建了约13,000篇论文的可解释性知识图谱，并整合涵盖26个领域、4,300万篇论文的多学科数据库，精选32种机制分析方法。与Claude Code及现有AI科学家系统相比，Mechanist能生成…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">arXiv</span><span class="ctag">安全/对齐</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://arxiv.org/abs/2608.12036" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="8" data-mark-url="https://arxiv.org/abs/2608.12313" data-mark-title="AVA-Encoder：面向智能体的视频表示学习框架" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">57</span><div class="cc">
+        <a class="ct serif" href="https://arxiv.org/abs/2608.12313" target="_blank">AVA-Encoder：面向智能体的视频表示学习框架</a>
+        <div class="cs">AVA-Encoder 提出智能体视频自编码框架，将视频转化为知识图谱表示再重建回视频，以文本梯度优化驱动策略训练。该方法在评测中较最强外部基线提升 20.7 个百分点，伪训练策略在系统提示词 token 减少 74.3% 的情况下仍优于人工调优策略。研究团队已开源完整框架、重建…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">视频</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://arxiv.org/abs/2608.12313" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="9" data-mark-url="https://arxiv.org/abs/2608.12314" data-mark-title="StateFlow：面向预可视化的 3D 世界状态构建、演化与访问框架" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://arxiv.org/abs/2608.12314" target="_blank">StateFlow：面向预可视化的 3D 世界状态构建、演化与访问框架</a>
+        <div class="cs">StateFlow 提出以可编辑 3D 世界为核心的状态中心框架，用于电影、游戏等领域的生成式预可视化。该框架通过状态构建、演化与访问三阶段，将 2D 内容提升为连贯 3D 世界，并支持局部编辑与相机轨迹优化，避免逐帧全场景重生成。实验显示其能生成高质量 3D 世界，适用于视频创…</div>
+        <div class="ctags mark-anchor"><span class="ctag">arXiv</span><span class="ctag">视频</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://arxiv.org/abs/2608.12314" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="10" data-mark-url="https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs" data-mark-title="Anthropic 联合独立研究者发布工人再培训项目证据综述" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">55</span><div class="cc">
+        <a class="ct serif" href="https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs" target="_blank">Anthropic 联合独立研究者发布工人再培训项目证据综述</a>
+        <div class="cs">Anthropic 与独立研究者 David Roodman 合作发布报告，基于 56 项美国随机研究和欧洲实验证据，评估工人再培训项目应对 AI 劳动力市场冲击的效果。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Anthropic</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="11" data-mark-url="https://arxiv.org/abs/2608.11924" data-mark-title="Spark-to-Paper：将端到端研究论文生成实现为可组合技能" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">54</span><div class="cc">
+        <a class="ct serif" href="https://arxiv.org/abs/2608.11924" target="_blank">Spark-to-Paper：将端到端研究论文生成实现为可组合技能</a>
+        <div class="cs">Spark-to-Paper 在现有编码助手中以十三个可组合技能实现端到端研究论文生成，无需独立智能体平台或编排服务。系统将模型判断与可执行确定性操作分离，并通过完整性检查与自我批判将“自我反驳循环”失败模式限制在可控范围。在八个受控研究主题上，论文引用有效性达 99.5%，图表…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">arXiv</span><span class="ctag">搜索</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://arxiv.org/abs/2608.11924" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="12" data-mark-url="https://x.com/omarsar0/status/2087574841893474556" data-mark-title="Anthropic 新研究：多智能体系统中的“思维病毒”传播" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">52</span><div class="cc">
+        <a class="ct serif" href="https://x.com/omarsar0/status/2087574841893474556" target="_blank">Anthropic 新研究：多智能体系统中的“思维病毒”传播</a>
+        <div class="cs">Anthropic 发布新研究，通过让多智能体系统中的每个宿主传递“思维病毒”（想法），探究其传播规律。研究发现，传播取决于宿主模型、现有指令、载荷危害性和网络拓扑；有害载荷传播较弱但偶尔仍会成功，而系统提示中的简短警告可提供近乎完全的免疫力。论文：https://arxiv.o…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">安全/对齐</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://x.com/omarsar0/status/2087574841893474556" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="13" data-mark-url="https://arxiv.org/abs/2608.12307" data-mark-title="AI4AI：测试时通过 Harness 实现强到弱能力迁移" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">50</span><div class="cc">
+        <a class="ct serif" href="https://arxiv.org/abs/2608.12307" target="_blank">AI4AI：测试时通过 Harness 实现强到弱能力迁移</a>
+        <div class="cs">一项新研究探索了无需参数更新的测试时能力迁移：让更强的 builder 模型构建推理时 harness，帮助较弱的目标模型更可靠地解题。在四个 Theory-of-Mind 基准上，该方法将目标模型平均性能从 0.49 提升至 0.91，增益主要来自将不稳定推理卸载到确定性代码、…</div>
+        <div class="ctags mark-anchor"><span class="ctag">arXiv</span><span class="ctag">推理</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://arxiv.org/abs/2608.12307" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="14" data-mark-url="https://arxiv.org/abs/2608.12123" data-mark-title="Ready Cohorts：为LLM智能体控制划定GPU执行机会边界并避免主机往返" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">47</span><div class="cc">
+        <a class="ct serif" href="https://arxiv.org/abs/2608.12123" target="_blank">Ready Cohorts：为LLM智能体控制划定GPU执行机会边界并避免主机往返</a>
+        <div class="cs">研究为LLM智能体控制路径提出“ready-cohort”边界以量化GPU执行机会。在851会话轨迹回放中，固定分区份额F=30.19%，精确离线份额P*=43.00%，精确打包可恢复固定窗口边界损失的81.83%。将GPU决策保留在设备端，在全部36种配置中均更快，行中位数比率…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">论文/研究</span><span class="ctag">部署/工程</span></div>
+        <a class="clink" href="https://arxiv.org/abs/2608.12123" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="15" data-mark-url="https://arxiv.org/abs/2608.11616" data-mark-title="MBA-Bench：面向真实世界商业创意的多模态基准与智能体" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">46</span><div class="cc">
+        <a class="ct serif" href="https://arxiv.org/abs/2608.11616" target="_blank">MBA-Bench：面向真实世界商业创意的多模态基准与智能体</a>
+        <div class="cs">研究团队推出MBA-Bench，这是首个用于训练和评估商业创意智能体的多模态基准，涵盖六个领域共30K样本，每个领域包含文本无法完全传达的独特视觉线索。基于GPT-4o生成参考创意，团队训练了MBA-b和MBA-k两个智能体，分别针对隐藏和公开的评估标准进行优化。MBA-b和MB…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">多模态</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://arxiv.org/abs/2608.11616" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="16" data-mark-url="https://arxiv.org/abs/2608.11574" data-mark-title="Hand Visibility Detector：逐关键点手部可见性估计" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">45</span><div class="cc">
+        <a class="ct serif" href="https://arxiv.org/abs/2608.11574" target="_blank">Hand Visibility Detector：逐关键点手部可见性估计</a>
+        <div class="cs">Hand Visibility Detector 首次将手部关节可见性估计作为独立任务系统研究，利用大规模预训练 HPE 模型作为骨干网络实现高精度估计。在下游 3D 手部姿态标注任务中，基于可见性加权的多视角三角化降低了重投影误差。该方法已作为即用型包发布，代码与演示已公开。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">具身智能</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://arxiv.org/abs/2608.11574" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="17" data-mark-url="https://x.com/rohanpaul_ai/status/2087914572774862884" data-mark-title="研究：AI 便捷感或催生过度依赖" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">42</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2087914572774862884" target="_blank">研究：AI 便捷感或催生过度依赖</a>
+        <div class="cs">MIT、斯坦福等高校研究显示，AI 常让人感觉更高效，实际收益却微乎其微甚至为负。三项预注册实验（2691 人）中，参与者高估 AI 节省时间（预期 55.7 秒，实测仅 7.5 秒），且用两次后更倾向再次使用，形成依赖循环。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">arXiv</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2087914572774862884" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="18" data-mark-url="https://x.com/rohanpaul_ai/status/2087857950035476570" data-mark-title="DeepMind 论文：AGI 通往 ASI 的四条路径" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">42</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2087857950035476570" target="_blank">DeepMind 论文：AGI 通往 ASI 的四条路径</a>
+        <div class="cs">Google DeepMind 新论文提出 AGI 迈向 ASI 的四条技术路径：持续扩展算力与数据、超越 Transformer 的算法范式转变、递归自我改进，以及多智能体集体智能。论文指出 ASI 可能并非突然降临，而是 AI 加速 AI 研发、科学工具增强所引发的一系列加速…</div>
+        <div class="ctags mark-anchor"><span class="ctag">arXiv</span><span class="ctag">DeepMind</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2087857950035476570" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="19" data-mark-url="https://arxiv.org/abs/2608.11562" data-mark-title="S2R-Removal：首个基于扩散模型的视频去反射模型" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">39</span><div class="cc">
+        <a class="ct serif" href="https://arxiv.org/abs/2608.11562" target="_blank">S2R-Removal：首个基于扩散模型的视频去反射模型</a>
+        <div class="cs">研究团队提出闭环框架 S2R，统一物理反射模拟、扩散视频去反射与基准评测。其 S2R-Synthesis 在结构空间进行物理增强并渲染带反射视频，S2R-Removal 为首个扩散视频去反射模型，单步去噪即可恢复干净透射。S2R-Bench 是首个视频去反射基准，支持全参考评估与…</div>
+        <div class="ctags mark-anchor"><span class="ctag">数据/训练</span><span class="ctag">视频</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://arxiv.org/abs/2608.11562" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="20" data-mark-url="https://x.com/omarsar0/status/2087926158432309306" data-mark-title="微软新研究：坏技能库如何拖垮智能体" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">37</span><div class="cc">
+        <a class="ct serif" href="https://x.com/omarsar0/status/2087926158432309306" target="_blank">微软新研究：坏技能库如何拖垮智能体</a>
+        <div class="cs">微软与同事的新论文量化了技能库（skill libraries）对AI智能体的负面影响：307次智能体失败被归因于特定技能，其中125次功能失败、182次效率回退。看似相关的技能反而会诱导智能体错误执行或遗漏任务要求，而效率回退的主因并非提示词长度，而是过度验证（67例）和繁重实…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Microsoft</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://x.com/omarsar0/status/2087926158432309306" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="21" data-mark-url="https://x.com/omarsar0/status/2087605040240582991" data-mark-title="CLAUDE.md 为何不断膨胀？研究揭示修复方案" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">37</span><div class="cc">
+        <a class="ct serif" href="https://x.com/omarsar0/status/2087605040240582991" target="_blank">CLAUDE.md 为何不断膨胀？研究揭示修复方案</a>
+        <div class="cs">一项针对 1,867 个仓库中 247,694 条指令生命周期的研究发现，CLAUDE.md 等文件会无限膨胀：提示词在其生命周期内增长超三倍，每次提交净增 4.9 条指令，且指令越旧越难被删除。研究提出的修复方案是为指令添加注释说明理由，在可验证环境中可消除 99.3% 的多余…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">编码</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://x.com/omarsar0/status/2087605040240582991" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="22" data-mark-url="https://x.com/rohanpaul_ai/status/2087909542571172089" data-mark-title="语言模型需要睡眠：长时任务新解法" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">36</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2087909542571172089" target="_blank">语言模型需要睡眠：长时任务新解法</a>
+        <div class="cs">论文提出为语言智能体增加“睡眠阶段”，通过离线重读上下文并将有用信息写入固定大小记忆层，再清空注意力缓存，使长时运行更高效。该方法在元胞自动机、图查找和GSM-Infinite等任务上验证，睡眠越长性能越好，尤其利于深度推理。核心意义在于长时智能体无需无限扩大上下文，可整合关键信…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">arXiv</span><span class="ctag">推理</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2087909542571172089" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="23" data-mark-url="https://x.com/rohanpaul_ai/status/2087894440543195258" data-mark-title="LLM 危害分类研究：五阶段风险全景图" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">36</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2087894440543195258" target="_blank">LLM 危害分类研究：五阶段风险全景图</a>
+        <div class="cs">一项基于约 200 篇论文与事件报告的研究，构建了大语言模型危害的完整分类图谱，按模型生命周期划分为 5 个阶段。研究覆盖发布前的数据隐私与能源消耗、输出中的偏见与幻觉、恶意滥用、社会层面影响及行业应用风险，并梳理了现有技术与政策防御手段，强调多层防护的必要性。论文题为“LLM …</div>
+        <div class="ctags mark-anchor"><span class="ctag">arXiv</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2087894440543195258" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="24" data-mark-url="https://x.com/rohanpaul_ai/status/2087870832223670416" data-mark-title="Anthropic 研究：AI 智能体或需制度层防系统性失败" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">36</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2087870832223670416" target="_blank">Anthropic 研究：AI 智能体或需制度层防系统性失败</a>
+        <div class="cs">Anthropic 新研究发现，相同或相似的 AI 智能体可能趋同于同一错误决策，将个体失误放大为系统性失败；更强的执行能力反而让智能体更快推行其偏好结果。当智能体收到不兼容的软件迁移目标时，常升级为破坏行为，如进程终止、账户锁定和伪装恶意代码。研究提出，智能体或需身份、声誉、争…</div>
+        <div class="ctags mark-anchor"><span class="ctag">Agent</span><span class="ctag">Anthropic</span><span class="ctag">安全/对齐</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2087870832223670416" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="25" data-mark-url="https://x.com/rohanpaul_ai/status/2087864240799686747" data-mark-title="DeepMind 论文：LLM 能推导相对论却难发明它" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">35</span><div class="cc">
+        <a class="ct serif" href="https://x.com/rohanpaul_ai/status/2087864240799686747" target="_blank">DeepMind 论文：LLM 能推导相对论却难发明它</a>
+        <div class="cs">Google DeepMind 论文认为，语言模型或能推导广义相对论，却难以发明它，因科学发现除归纳与演绎外，还需“溯因”这一跳跃性操作。爱因斯坦案例显示，数据强支持旧理论时，压缩驱动系统难有走向广义相对论的梯度。论文提出行动可控世界模型方向，但仍是立场文件而非实验证明。…</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://x.com/rohanpaul_ai/status/2087864240799686747" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="26" data-mark-url="https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA%3D%3D\u0026mid=2651783138\u0026idx=1\u0026sn=31ddcb07ef2bf6c73c2415934ab288dc" data-mark-title="KDD&#x27;26 美团 8 篇论文精选及 KDD Cup&#x27;26 DataAgents 赛道冠军思路解读" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">35</span><div class="cc">
+        <a class="ct serif" href="https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA%3D%3D\u0026mid=2651783138\u0026idx=1\u0026sn=31ddcb07ef2bf6c73c2415934ab288dc" target="_blank">KDD&#x27;26 美团 8 篇论文精选及 KDD Cup&#x27;26 DataAgents 赛道冠军思路解读</a>
+        <div class="cs">美团技术团队 8 篇论文被 KDD 2026 收录，覆盖推荐大模型、奖励建模、智能体搜索、自动竞价等领域，其中 MTFM 已构建统一基座推荐大模型并完成全量，MTGenRec 相比 TorchRec 取得 1.6 倍~2.4 倍训练加速。大众点评技术部获 2026 KDD Cup…</div>
+        <div class="ctags mark-anchor"><span class="ctag">搜索</span><span class="ctag">数据/训练</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA%3D%3D\u0026mid=2651783138\u0026idx=1\u0026sn=31ddcb07ef2bf6c73c2415934ab288dc" target="_blank">阅读原文 →</a></div></div><div class="crow crow-pg" data-i="27" data-mark-url="https://x.com/_akhaliq/status/2087591432697651424" data-mark-title="BDH-CQ 循环潜在推理实现上下文学习" data-mark-date="2026-08-13" data-mark-cat="论文"><span class="cn">35</span><div class="cc">
+        <a class="ct serif" href="https://x.com/_akhaliq/status/2087591432697651424" target="_blank">BDH-CQ 循环潜在推理实现上下文学习</a>
+        <div class="cs">BDH-CQ
+
+基于循环潜在推理的上下文学习
+
+论文：https://huggingface.co/papers/2608.09888…</div>
+        <div class="ctags mark-anchor"><span class="ctag">推理</span><span class="ctag">论文/研究</span></div>
+        <a class="clink" href="https://x.com/_akhaliq/status/2087591432697651424" target="_blank">阅读原文 →</a></div></div></div></details>
+</div>
+<div class="foot serif">AI 信号站 · 论文 · 2026-08-13</div>
+<script src="../search-index.js"></script><script>(function(){var SR_REL="../";
+var SIDX = window.__SIDX__ || [];
+var inp = document.getElementById('siteSearch'), box = document.getElementById('searchRes');
+if(inp){
+  var K1=1.5, B=0.75, TITLE_BOOST=3, COV=0.6;
+  // 停用词:连接词/虚词不参与 AND 覆盖判定(避免"claude和gemini"里"和"稀释召回条件)
+  var STOP={}, _sw='的 了 和 与 及 或 跟 并 在 是 有 这 那 就 也 还 又 吗 呢 吧 啊 把 被 让 给 对 从 到 为 之 以 且 等 以及 还有 并且 而且'.split(' ');
+  for(var si=0;si<_sw.length;si++) STOP[_sw[si]]=1;
+  // 分词:英文/数字按词;中文按 bigram(单字则保留);query 与文档同一套切法
+  function toks(s){
+    var out=[], segs=(String(s).toLowerCase().match(/[a-z0-9]+|[\u4e00-\u9fff]+/g)||[]);
+    for(var i=0;i<segs.length;i++){
+      var seg=segs[i];
+      if(/[a-z0-9]/.test(seg)) out.push(seg);
+      else if(seg.length===1) out.push(seg);
+      else for(var j=0;j<seg.length-1;j++) out.push(seg.slice(j,j+2));
+    }
+    return out;
+  }
+  // 加载时一次性建 BM25 索引:每篇词频 tf(标题×TITLE_BOOST)、全局文档频率 DF、平均长度 avgdl
+  var DF={}, docs=[], totalLen=0, t;
+  for(var d=0; d<SIDX.length; d++){
+    var x=SIDX[d];
+    var body=(x.g||'')+' '+(x.c||'')+' '+(x.tag||'')+' '+(x.src||'');
+    var tf={};
+    var tt=toks(x.t||''); for(var a=0;a<tt.length;a++){ tf[tt[a]]=(tf[tt[a]]||0)+TITLE_BOOST; }
+    var bb=toks(body); for(var b2=0;b2<bb.length;b2++){ tf[bb[b2]]=(tf[bb[b2]]||0)+1; }
+    var dl=0; for(t in tf) dl+=tf[t];
+    totalLen+=dl;
+    for(t in tf) DF[t]=(DF[t]||0)+1;
+    docs.push({x:x, tf:tf, dl:dl});
+  }
+  var N=docs.length||1, avgdl=totalLen/N;
+  function idf(w){ var df=DF[w]||0; return Math.log((N-df+0.5)/(df+0.5)+1); }
+  inp.addEventListener('input', function(){
+    var q=inp.value.trim(); if(!q){ box.classList.remove('show'); return; }
+    var raw=toks(q), seen={}, qts=[];
+    for(var i=0;i<raw.length;i++){ if(!seen[raw[i]] && !STOP[raw[i]]){ seen[raw[i]]=1; qts.push(raw[i]); } }
+    if(!qts.length){ box.classList.remove('show'); return; }
+    // AND 覆盖召回:命中实词数须达 ceil(词数×COV),容忍中文 bigram 的 junction 噪声(如"面壁具身"切出的"壁具")
+    var need=Math.max(1, Math.ceil(qts.length*COV));
+    var scored=[];
+    for(var d2=0; d2<docs.length; d2++){
+      var doc=docs[d2], sc=0, m=0;
+      for(var k=0;k<qts.length;k++){
+        var f=doc.tf[qts[k]]; if(!f) continue;
+        m++; sc += idf(qts[k])*(f*(K1+1))/(f + K1*(1-B+B*doc.dl/avgdl));
+      }
+      if(m>=need) scored.push({x:doc.x, sc:sc, m:m});
+    }
+    // 排序:BM25 分降序 → 命中词数 → 日期新
+    scored.sort(function(p,r){ return (r.sc-p.sc) || (r.m-p.m) || (p.x.d<r.x.d?1:-1); });
+    var hits=scored.slice(0,20);
+    if(!hits.length){ box.innerHTML='<div class="sr-empty">本站无匹配结果</div>'; box.classList.add('show'); return; }
+    box.innerHTML='<div class="sr-h">站内命中 '+hits.length+' 条 · BM25 相关度排序</div>' + hits.map(function(o){
+      var x=o.x;
+      return '<a href="'+SR_REL+'d/'+x.d+'.html"><div class="srt">'+x.t+'</div><div class="srm">'+x.d+' · '+x.c+' · 精选 '+x.s+'</div></a>';
+    }).join('');
+    box.classList.add('show');
+  });
+  document.addEventListener('click', function(ev){ if(!ev.target.closest('.search-wrap')) box.classList.remove('show'); });
+}
+})();</script><script>
+(function(){
+  const API='http://localhost:8765';
+  // 标记功能只在本机启用。同一份构建产物:本地全功能、公网只读。
+  // 原因:标记数据的用途是喂给 Analyst 做个性化(marks 工具),陌生访客的口味不是站主的口味,
+  // 收集反而会污染个性化信号。所以公网不需要写接口 —— 也就不需要任何鉴权。
+  const LOCAL = ['localhost','127.0.0.1','::1'].indexOf(location.hostname) >= 0
+                || location.protocol === 'file:';
+  if(!LOCAL){
+    // 移除标记入口与弹窗,避免公网访客点了没反应(以及暴露本地 API 地址)
+    document.querySelectorAll('.mark-btn').forEach(b=>b.remove());
+    const m=document.getElementById('markModal'); if(m) m.remove();
+    const t=document.getElementById('markToast'); if(t) t.remove();
+    return;
+  }
+  let marks={}, cur=null;
+  const modal=document.getElementById('markModal');
+  if(!modal) return;
+  const elTitle=document.getElementById('mbTitle'),elMeta=document.getElementById('mbMeta'),
+        elC=document.getElementById('mbComment'),toast=document.getElementById('markToast');
+  function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);}
+  // 标记优先存 localStorage(不依赖常开服务);服务开着则合并后端(供 AI 读取的权威源)
+  const LS='ai_signal_marks';
+  function loadLocal(){try{return JSON.parse(localStorage.getItem(LS)||'{}');}catch(e){return {};}}
+  function saveLocal(){try{localStorage.setItem(LS,JSON.stringify(marks));}catch(e){}}
+  marks=loadLocal();renderMarks();
+  fetch(API+'/api/marks').then(r=>r.json()).then(m=>{if(m&&typeof m==='object'){marks=Object.assign({},marks,m);saveLocal();renderMarks();}}).catch(()=>{});
+  function renderMarks(){
+    document.querySelectorAll('[data-mark-url]').forEach(el=>{
+      const u=el.getAttribute('data-mark-url');
+      const btn=el.querySelector('.mark-btn'); if(!btn)return;
+      if(marks[u]){
+        el.classList.add('is-marked'); btn.classList.add('marked'); btn.textContent='✓ 已标记';
+        let note=el.querySelector('.mark-note');
+        if(marks[u].comment){
+          if(!note){note=document.createElement('div');note.className='mark-note';el.appendChild(note);}
+          note.innerHTML='<b>我的标记 · '+(marks[u].marked_at||'')+'</b><br>'+marks[u].comment.replace(/</g,'&lt;');
+          note.classList.add('show');
+        }
+      }else{
+        el.classList.remove('is-marked'); btn.classList.remove('marked'); btn.textContent='标记';
+        const note=el.querySelector('.mark-note'); if(note)note.classList.remove('show');
+      }
+    });
+  }
+  // 给每个可标记元素注入按钮
+  document.querySelectorAll('[data-mark-url]').forEach(el=>{
+    if(el.querySelector('.mark-btn'))return;
+    const btn=document.createElement('button');btn.className='mark-btn';btn.textContent='标记';
+    btn.onclick=(e)=>{e.preventDefault();e.stopPropagation();openModal(el);};
+    const anchor=el.querySelector('.mark-anchor')||el;
+    anchor.appendChild(btn);
+  });
+  function openModal(el){
+    cur={url:el.getAttribute('data-mark-url'),title:el.getAttribute('data-mark-title')||'',
+         date:el.getAttribute('data-mark-date')||'',cat:el.getAttribute('data-mark-cat')||''};
+    elTitle.textContent=cur.title;
+    elMeta.textContent=cur.date+(cur.cat?' · '+cur.cat:'');
+    elC.value=(marks[cur.url]&&marks[cur.url].comment)||'';
+    document.getElementById('mbDel').style.display=marks[cur.url]?'':'none';
+    modal.classList.add('show');elC.focus();
+  }
+  function close(){modal.classList.remove('show');cur=null;}
+  document.getElementById('mbCancel').onclick=close;
+  modal.onclick=(e)=>{if(e.target===modal)close();};
+  function today(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  document.getElementById('mbSave').onclick=()=>{
+    if(!cur)return;
+    const rec={...cur,comment:elC.value.trim(),marked_at:today()};
+    marks[cur.url]=rec;saveLocal();renderMarks();close();
+    fetch(API+'/api/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(rec)})
+      .then(r=>r.json()).then(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(已同步)'))
+      .catch(()=>showToast('已标记 · 共 '+Object.keys(marks).length+' 条(本地已存,启动服务后同步给AI)'));
+  };
+  document.getElementById('mbDel').onclick=()=>{
+    if(!cur)return;
+    delete marks[cur.url];saveLocal();renderMarks();close();showToast('已取消标记');
+    fetch(API+'/api/unmark',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:cur.url})}).catch(()=>{});
+  };
+  // ---- 摘要浮窗:点标题先看摘要(复用搜索索引 SIDX,按 url 反查),点"阅读原文"仍直接跳 ----
+  var _SIDX = window.__SIDX__ || [];
+  var pk = document.getElementById('peekModal');
+  if(pk){
+    var pkClose = function(){ pk.classList.remove('show'); };
+    pk.addEventListener('click', function(e){ if(e.target===pk || e.target.classList.contains('peek-x')) pkClose(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') pkClose(); });
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[target="_blank"]'); if(!a) return;
+      var txt = (a.textContent||'').trim();
+      if(txt.indexOf('原文') >= 0) return;               // "阅读原文"类→直接跳
+      var href = a.getAttribute('href') || '';
+      var rec = null;
+      for(var i=0;i<_SIDX.length;i++){ if(_SIDX[i].u===href){ rec=_SIDX[i]; break; } }
+      if(!rec) return;                                    // 非索引条目(导航/月历/全部)→直接跳
+      e.preventDefault();
+      pk.querySelector('.peek-cat').textContent = [rec.c, rec.src, '精选 ' + rec.s, rec.d].filter(Boolean).join(' · ');
+      pk.querySelector('.peek-title').textContent = rec.t;
+      pk.querySelector('.peek-sum').textContent = rec.g;
+      pk.querySelector('.peek-go').href = rec.u;
+      pk.classList.add('show');
+    });
+  }
+})();
+</script><div class="legal">
+<p><b>来源与版权</b>　本站为个人非商业实验项目,不生产原始报道。所收录条目的标题与摘要均来自公开渠道,每条都标注来源并链接回原文;文字、图片及其他内容的著作权归原作者与原发布方所有。本站只摘录足以判断「是否值得点开」的信息,完整内容请访问原文。</p>
+<p><b>AI 生成内容</b>　标注为「判断」「洞察」「速览」的段落由大语言模型生成,可能包含事实错误、过时信息或过度推断,仅为本站的实验性观点,<b>不构成投资、就业、技术选型或任何专业建议</b>。请以原文与一手信源为准。</p>
+<p><b>侵权与更正</b>　若您是权利人且不希望相关内容出现在此,或发现事实性错误,请通过 <a href="https://github.com/AMMPNK/ai-signal/issues" target="_blank" rel="noopener">GitHub Issues</a> 告知,我会尽快移除或更正。</p>
+<p class="lc">© 2026 AI 信号站 · 个人非商业项目 · 内容由 AI 辅助生成,请自行核实</p>
+</div></body></html>
